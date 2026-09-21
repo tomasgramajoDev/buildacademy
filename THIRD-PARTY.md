@@ -7,3 +7,4 @@
 - Fichas oficiales de ASUS, MSI, Intel, AMD, Sapphire, Noctua y Corsair: enlazadas por componente en `dist/data.js`. Datos consultados el 21/09/2026; confirmar revisión exacta de producto. Las geometrías de la web son propias y esquemáticas.
 - Dataset BIS497 Motherboard Part Locater: identificado como candidato, CC BY 4.0 según Roboflow Universe. No descargado ni incorporado. Sus métricas públicas no son resultados de BuildAcademy.
 - PDF y encuesta del usuario: usados como contexto. No se publican los archivos originales ni respuestas individuales.
+- ONNX Runtime Web 1.22.0: MIT, licencia en dist/vendor/ort/LICENSE.txt. Motor local preparado para la futura exportación YOLO ONNX; no incluye pesos entrenados.

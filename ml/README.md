@@ -24,3 +24,13 @@ El script usa CUDA si PyTorch la tiene disponible y CPU en caso contrario. Para 
 El entrenamiento descarga la inicialización oficial YOLO11n; guarda pesos, métricas por clase, gráficos y exportación ONNX. Ultralytics utiliza AGPL-3.0 o licencia comercial: revisar sus términos para la distribución elegida. No se publica automáticamente un modelo que sólo terminó de entrenar. Medir falsos positivos, recall de conectores pequeños, fotos fuera de distribución y rendimiento en placas no vistas, además de mAP. Conservar procedencia, licencias y versión del dataset.
 
 Fuentes: https://docs.ultralytics.com/modes/train/ ; https://universe.roboflow.com/bis497/motherboard-part-locater ; https://github.com/miraclefactory/motherboard-dataset ; https://pytorch.org/get-started/locally/
+
+## Importar el piloto público de cuatro clases
+
+Cuando esté disponible el ZIP YOLOv8 de BIS497 Motherboard Part Locater, ejecutar:
+
+```powershell
+.\.venv\Scripts\python.exe ml/import_roboflow.py "C:\Users\torik\Downloads\dataset.zip" --output datasets/bis497-pilot
+```
+
+El importador conserva CPU_SOCKET, DIMM_SLOT, PCIE_SLOT y POWER_CONNECTOR. No divide artificialmente las dos categorías generales en subtipos que no estén etiquetados. Comprueba rutas del ZIP y excluye duplicados de píxeles y nombres originales entre splits. Esto no prueba separación por placa física: el piloto no permite afirmar generalización a modelos de motherboard nuevos. Conserva atribución CC BY 4.0 y un registro de exclusiones. El entrenamiento y publicación de pesos requieren una descarga real y evaluación posterior; manifest.json permanece ready:false.

@@ -2,9 +2,13 @@
   "name": "buildacademy",
   "private": true,
   "type": "module",
-  "scripts": {"test":"node --test tests/*.test.mjs","build:ai":"esbuild node_modules/@mlc-ai/web-llm/lib/index.js --bundle --format=esm --minify --outfile=dist/vendor/webllm.js"},
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build:ai": "esbuild node_modules/@mlc-ai/web-llm/lib/index.js --bundle --format=esm --minify --outfile=dist/vendor/webllm.js"
+  },
   "dependencies": {
     "@mlc-ai/web-llm": "0.2.85",
-    "esbuild": "0.25.10"
+    "esbuild": "0.25.10",
+    "onnxruntime-web": "1.22.0"
   }
 }

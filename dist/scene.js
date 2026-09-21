@@ -33,7 +33,16 @@ export function createScene(host,onSelect=()=>{}){
  const cpu=group('cpu');box(cpu,1.3,.11,1.3,-.45,.32,-1.2,mat(0x567c65));box(cpu,1.17,.1,1.17,-.45,.42,-1.2,silver);box(cpu,.14,.015,.14,-.92,.478,-1.67,gold);
  const ram=group('ram');for(const x of [1.44,2.08]){box(ram,.1,.92,2.65,x,.77,-1.17,black);box(ram,.16,.14,2.73,x,1.29,-1.17,lime);for(let j=0;j<7;j++)box(ram,.135,.4,.23,x,.82,-2.22+j*.34,dark)}
  const ssd=group('ssd');box(ssd,2.1,.07,.64,-.17,.27,.25,mat(0x253f4a));box(ssd,1.25,.04,.53,-.2,.33,.25,black);box(ssd,.72,.009,.39,-.28,.356,.25,silver);box(ssd,.15,.025,.59,.87,.28,.25,gold);
- const cooler=group('cooler');for(let i=0;i<12;i++)box(cooler,1.55,.055,1.5,-.45,.64+i*.074,-1.2,silver);box(cooler,1.7,.18,1.65,-.45,1.55,-1.2,black);cylinder(cooler,.68,.14,-.45,1.69,-1.2,dark);cylinder(cooler,.2,.16,-.45,1.74,-1.2,lime);for(let i=0;i<7;i++){let blade=box(cooler,.22,.09,.53,0,0,0,black);let a=i/7*Math.PI*2;blade.position.set(-.45+Math.sin(a)*.39,1.78,-1.2+Math.cos(a)*.39);blade.rotation.y=a+.5;}
+ const cooler=group('cooler');
+ // Tower-style air cooler with a side-mounted fan, schematic of the selected air-cooling profile.
+ box(cooler,1.1,.12,1.1,-.45,.55,-1.2,silver);
+ for(const x of [-.95,-.62,-.28,.05])cylinder(cooler,.055,2.65,x,1.92,-1.2,gold);
+ for(let i=0;i<23;i++)box(cooler,2.5,.045,1.02,-.45,.9+i*.1,-1.2,silver);
+ box(cooler,2.55,.09,1.06,-.45,3.16,-1.2,dark);
+ box(cooler,2.42,2.42,.17,-.45,1.95,-.54,black);
+ const coolerFan=cylinder(cooler,1.04,.14,0,0,0,dark);coolerFan.rotation.x=Math.PI/2;coolerFan.position.set(-.45,1.95,-.4);
+ const coolerHub=cylinder(cooler,.24,.17,0,0,0,lime);coolerHub.rotation.x=Math.PI/2;coolerHub.position.set(-.45,1.95,-.28);
+ for(let i=0;i<9;i++){const a=i/9*Math.PI*2;let blade=box(cooler,.28,.8,.07,-.45+Math.sin(a)*.56,1.95+Math.cos(a)*.56,-.3,black);blade.rotation.z=-a+.55;}
  const pcCase=group('case');const caseMat=new THREE.MeshStandardMaterial({color:0x759087,metalness:.5,roughness:.6,transparent:true,opacity:.23,depthWrite:false});box(pcCase,6.1,.12,7.1,0,-.38,0,caseMat);for(const x of [-3,3]){box(pcCase,.06,1.6,7.1,x,.35,0,caseMat);for(const z of [-3.5,3.5])box(pcCase,.07,2.1,.07,x,.55,z,silver)}box(pcCase,6,.07,.07,0,1.6,-3.5,silver);box(pcCase,6,.07,.07,0,1.6,3.5,silver);
  const gpu=group('gpu');box(gpu,3.6,1.15,.45,-.4,.94,1,black);box(gpu,3.7,.13,.5,-.4,1.58,1,silver);for(const x of [-1.28,.5]){let fan=cylinder(gpu,.44,.075,x,0,0,dark);fan.rotation.x=Math.PI/2;fan.position.set(x,.98,1.27);let hub=cylinder(gpu,.12,.09,x,0,0,lime);hub.rotation.x=Math.PI/2;hub.position.set(x,.98,1.33)}box(gpu,.07,1.6,.65,-2.35,.92,1,silver);
  const power=group('power');box(power,1.8,1.1,1.6,4.1,.1,1.8,black);box(power,1.3,.02,1.1,4.1,.67,1.8,dark);for(let i=0;i<8;i++)box(power,.07,.025,1.05,3.6+i*.14,.69,1.8,silver);

@@ -1,1 +1,33 @@
-{"ready":false,"classes":[],"inputSize":640,"reason":"Pendiente de recibir el dataset y entrenar un detector evaluado."}
+{
+  "ready": true,
+  "version": "bis497-v5-yolo11n-pilot-1",
+  "classes": [
+    "CPU_SOCKET",
+    "PCIE_SLOT",
+    "POWER_CONNECTOR",
+    "DIMM_SLOT"
+  ],
+  "inputSize": 320,
+  "sha256": "8312df3e829f590093845813e1abc81e9ba935be984e0d057160b79f3d52a03d",
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "Dataset CC BY 4.0; modelo derivado de Ultralytics YOLO11 AGPL-3.0",
+  "author": "BIS497; entrenamiento local BuildAcademy",
+  "test": {
+    "metrics/precision(B)": 0.8505951789444731,
+    "metrics/recall(B)": 0.813992356118354,
+    "metrics/mAP50(B)": 0.8688898131997115,
+    "metrics/mAP50-95(B)": 0.5558709209442967,
+    "fitness": 0.5558709209442967
+  },
+  "perClassMap50_95": {
+    "CPU_SOCKET": 0.6513470502578781,
+    "PCIE_SLOT": 0.4865346009513944,
+    "POWER_CONNECTOR": 0.46234196734733146,
+    "DIMM_SLOT": 0.6232600652205823
+  },
+  "limitations": [
+    "Piloto de cuatro clases: no identifica PCIe x1/x16, ATX/EPS, M.2, SATA o FAN_HEADER por separado.",
+    "24 imagenes de test; separacion por modelo fisico de motherboard no verificada.",
+    "Una deteccion no comprueba compatibilidad, protocolo ni estado fisico."
+  ]
+}

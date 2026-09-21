@@ -1,7 +1,7 @@
 # Validación de la ampliación · 21/09/2026
 
 - 19 pruebas Node: incompatibilidades, memoria CPU/placa, restricción M2_2/SATA8, dimensiones y cables, datos ausentes, mediciones limitadas por FPS, valores inválidos, contexto del asistente y normalización de fichas.
-- 7 pruebas Python: preparación de splits, placa repetida entre splits, duplicados de píxeles, cajas fuera de rango y clases ausentes. Usan imágenes sintéticas únicamente como fixtures del validador; no entrenan ni evalúan visión artificial.
+- 11 pruebas Python (8 del dataset y 3 del descargador): preparación de splits, placa repetida entre splits, duplicados de píxeles, cajas fuera de rango y clases ausentes. Usan imágenes sintéticas únicamente como fixtures del validador; no entrenan ni evalúan visión artificial.
 - Navegador: once coincidencias en la configuración inicial y un resultado pendiente de validación integral. Fuente desconocida produce cuatro pendientes. Ficha de GPU creada, persistida tras recarga y eliminada; su procedencia permanece explícitamente no verificada.
 - Captura de prueba importada: señal exploratoria de GPU; al activar límite de FPS deja de presentarla como posible saturación de GPU. Son datos de prueba, no benchmarks del equipo.
 - IA: modelo Qwen2.5 1.5B descargado (~830 MB de parámetros) y ejecutado con WebGPU. Las pruebas de generación libre produjeron una expansión incorrecta de EPS y una recomendación incorrecta sobre RAM. Se reemplazó ese flujo por clasificación semántica con JSON restringido a temas permitidos y respuestas construidas desde contenido del proyecto. No se muestran instrucciones técnicas generadas por el modelo.
@@ -10,4 +10,4 @@
 - Posprocesamiento YOLO: inversión de letterbox, supresión de cajas duplicadas por clase y filtrado de confianza, probado con tensores de prueba; no equivale a validar un modelo entrenado.
 - Visor funcionando con piezas, instrucciones y controles; revisión de escritorio y móvil, sin desborde horizontal detectado ni errores de consola en los flujos probados.
 
-No se ha entrenado un detector de conectores. No se han medido precisión/recall/mAP, latencia de visión, exactitud de montaje físico ni rendimiento real de las PCs del catálogo. No se garantiza ausencia de errores de lenguaje ni compatibilidad integral. Los resultados automatizados y de navegador se distinguen de estas validaciones pendientes.
+Se entrenó y evaluó un detector piloto de cuatro clases; ver ml/EVALUACION-PILOTO.md. No se ha medido exactitud de montaje físico ni rendimiento real de las PCs del catálogo. No se garantiza ausencia de errores de lenguaje ni compatibilidad integral. Los resultados automatizados y de navegador se distinguen de estas validaciones pendientes.

@@ -34,3 +34,15 @@ Cuando esté disponible el ZIP YOLOv8 de BIS497 Motherboard Part Locater, ejecut
 ```
 
 El importador conserva CPU_SOCKET, DIMM_SLOT, PCIE_SLOT y POWER_CONNECTOR. No divide artificialmente las dos categorías generales en subtipos que no estén etiquetados. Comprueba rutas del ZIP y excluye duplicados de píxeles y nombres originales entre splits. Esto no prueba separación por placa física: el piloto no permite afirmar generalización a modelos de motherboard nuevos. Conserva atribución CC BY 4.0 y un registro de exclusiones. El entrenamiento y publicación de pesos requieren una descarga real y evaluación posterior; manifest.json permanece ready:false.
+
+## Si la ventana de exportación de Roboflow se queda trabada
+
+Ejecutar `Descargar-Dataset.cmd` desde la raíz del proyecto. Solicita la Private API Key existente mediante entrada oculta, la envía únicamente a api.roboflow.com por cabecera Authorization y no la guarda. Obtiene el enlace por la API oficial, limita la espera de exportación, valida destinos de redirección y comprueba que el archivo recibido sea un ZIP íntegro. No sobrescribe archivos existentes ni importa etiquetas automáticamente. La clave se encuentra en https://app.roboflow.com/settings/api . No debe enviarse por chat ni incorporarse al repositorio.
+
+Comprobado el 21/09/2026: localhost responde HTTP 200. La API del dataset responde HTTP 401 sin clave; aún no hay una descarga autenticada verificada. Las tres pruebas del descargador verifican autenticación por cabecera, rechazo de destinos inesperados, ZIP y preservación de archivos. El candidato de Zenodo 19689558 sí se descargó y coincide con su MD5, pero sus imágenes y clases battery/connector_0..4 no corresponden al objetivo de sockets de motherboards; no se incorporó al entrenamiento.
+
+## Descarga y preparación confirmadas
+
+El ZIP BIS497 v5 se recibió el 21/09/2026 por la API. SHA-256: 5021e1337d6c60de540ba8c79723818708ff367c0db379671ba4f69cc8df2442. Contiene 472 imágenes (399 train, 49 val, 24 test), derivadas de 206 grupos de nombres originales. El importador convirtió 1616 polígonos a sus cajas rectangulares envolventes; preservó las cajas existentes y verificó coordenadas y clases. Los originales permanecen intactos en raw. No se encontraron duplicados exactos ni cruces de grupo por nombre; esto no prueba separación por modelo físico de placa.
+
+La salida preparada está en datasets/bis497-detection/prepared. El entrenamiento piloto usa YOLO11n, entrada 320, 30 épocas y semilla 42. La evaluación final y exportación se escriben al terminar. `prepare_web_model.py` valida el contrato ONNX y prepara los pesos para la demo únicamente después de revisar esa evaluación.

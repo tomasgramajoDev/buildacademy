@@ -3,7 +3,7 @@ from pathlib import Path
 from PIL import Image
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'ml'))
 from prepare_dataset import validate,prepare
-from import_roboflow import run as import_roboflow
+from import_roboflow import run as import_roboflow, detection_labels
 
 class DatasetTests(unittest.TestCase):
     def setUp(self):
@@ -40,6 +40,11 @@ class DatasetTests(unittest.TestCase):
         audit=json.loads((self.root/'pilot/prepared/audit.json').read_text())
         self.assertEqual(audit['classes'],['CPU_SOCKET','PCIE_SLOT','POWER_CONNECTOR','DIMM_SLOT'])
         self.assertIn('NOT verified',audit['grouping'])
+    def test_polygon_to_enclosing_box(self):
+        text,count=detection_labels('2 .1 .2 .8 .2 .8 .9 .1 .9')
+        values=list(map(float,text.split()));self.assertEqual(count,1)
+        for actual,expected in zip(values,[2,.45,.55,.7,.7]):self.assertAlmostEqual(actual,expected)
+        with self.assertRaises(ValueError):detection_labels('0 .1 .2 .3 .4 .5')
     def test_zip_cannot_escape_target(self):
         archive=self.root/'invalid.zip'
         with zipfile.ZipFile(archive,'w') as z:z.writestr('../escape.txt','no')

@@ -1,3 +1,9 @@
 tmp/
 node_modules/
 *.zip
+
+.venv/
+datasets/
+runs/
+*.pt
+__pycache__/

@@ -1,47 +1,46 @@
 # BuildAcademy
 
-Prototipo web funcional de acompañamiento para ensamblar una PC. La configuración elegida conecta comprobaciones de compatibilidad, orientación de rendimiento y una guía 3D educativa.
+Prototipo funcional de acompañamiento para armar una PC: componentes, compatibilidad explicada, guía 3D y asistente. La encuesta orienta las prioridades; el análisis agregado está en ENCUESTA-Y-PRIORIDADES.md.
 
-## Ejecutar localmente
+## Abrir
 
-Desde este directorio, con Python instalado:
+Para ejecución local, doble clic en Iniciar-BuildAcademy.cmd o ejecutar desde esta carpeta:
 
 ```powershell
 python -m http.server 8765 --bind 127.0.0.1 --directory dist
 ```
 
-Abrir http://127.0.0.1:8765/ en un navegador con WebGL. No abrir index.html mediante doble clic: los módulos necesitan un servidor HTTP.
+Abrir http://127.0.0.1:8765/ . Los módulos requieren HTTP; no abrir el HTML directamente.
 
-## Funciones implementadas
+## Implementado
 
-- Visor Three.js con motherboard y piezas esquemáticas, rotación, zoom, vista separada y animación de inserción.
-- Ocho pasos educativos con explicación y contexto de la configuración seleccionada. Acceso al manual de la placa.
-- Catálogo acotado: AMD Ryzen 5 7600, Intel Core i5-12400F, ASUS PRIME B650-PLUS, MSI PRO B760-P DDR4, familias NVIDIA RTX 4060 y AMD RX 7600. RAM y SSD son perfiles genéricos.
-- Reglas de socket, generación y capacidad de memoria, y protocolo M.2. Incluye restricción M2_2/SATA8 de la placa MSI. La capacidad considera CPU y motherboard.
-- Orientación de posibles límites según uso. No calcula FPS ni porcentajes y no confirma cuellos de botella sin benchmarks.
-- Fotos locales con marcado manual de las nueve clases de conectores, eliminación y cancelación. Sin envío de imágenes al servidor.
-- Configuración y pasos revisados guardados en el navegador. Cambiar componentes reinicia los pasos revisados para no conservar una revisión de otra configuración.
-- Interfaz adaptable a móvil y escritorio. WebMCP opcional para leer estado y navegar pasos.
+- Ocho pasos, escena Three.js esquemática, rotación, zoom, animación, vista separada y selección de piezas visibles. Algunos perfiles cambian proporciones/color; no es CAD de las piezas reales.
+- Configuración de CPU, motherboard, RAM, SSD, GPU exacta, gabinete, cooler y fuente. Referencias Intel/AMD, ASUS/MSI, MSI/Sapphire, Corsair y Noctua.
+- Once comprobaciones: socket, generación/capacidad de RAM, M.2, formato, medidas, potencia recomendada y conectores. Los datos ausentes quedan pendientes. BIOS y validación integral no están confirmadas.
+- Incorporación local de GPU, gabinete ATX, cooler de aire y fuente ATX mediante texto estructurado, extracción y revisión antes de guardar. Procedencia obligatoria, contradicciones y magnitudes validadas. Las fichas aportadas no se convierten en datos oficiales por importarlas. No hay scraping universal ni lectura automática de PDFs.
+- Asistente Qwen2.5 1.5B con WebLLM/WebGPU. Activación voluntaria, descarga inicial aproximada de 1 GB y caché del navegador. Sin clave de API ni servicio de IA pago. Conoce paso, configuración y resultados del motor. Puede equivocarse; no verifica físicamente el armado. Requiere navegador/GPU compatibles y acceso inicial a Hugging Face/MLC. La guía contextual funciona sin cargar el modelo y se identifica como sin IA.
+- Orientación de rendimiento por uso e importación JSON de 30–10.000 muestras. Reglas exploratorias para GPU, CPU, RAM y VRAM, con tratamiento de FPS limitados. No inventa porcentajes de cuello de botella ni predice otra configuración.
+- Fotos locales, cajas manuales, exportación JSON/YOLO de nueve clases, cancelación y eliminación. Las marcas manuales no tienen confianza IA.
+- Persistencia local, respaldo/restauración de configuración y fichas, impresión del resumen, interfaz móvil y WebMCP opcional de lectura/navegación.
+- Pipeline Python: validación de etiquetas y procedencia, separación por placa, duplicados exactos, entrenamiento, evaluación de test y exportación ONNX. Ver ml/README.md.
 
-## Alcance pendiente
+## Bloqueos y límites reales
 
-No hay detector YOLO entrenado, extracción automática de especificaciones, base de datos remota ni certificación de compatibilidad completa. Las geometrías y animaciones son genéricas: no reproducen mecanismos, ubicaciones ni montaje exacto de cada modelo. Faltan perfiles detallados de cooler, gabinete, fuente, variantes de GPU, BIOS y kits de memoria. El análisis de rendimiento es orientativo, no un detector validado mediante mediciones.
+**Detector:** no hay dataset propio descargado. El usuario ya tiene cuenta de Roboflow en Edge; su descarga aún está pendiente. No se entrenó YOLO y no hay detección automática publicada. El candidato público tiene cuatro categorías generales. Se necesitan etiquetas de las nueve clases, placas de prueba reservadas y evaluación real. El pipeline no sustituye esos datos.
 
-Las fichas oficiales están enlazadas en la interfaz y en dist/data.js; se consultaron el 21/09/2026. Las selecciones son ejemplos del catálogo inicial, no recomendaciones de compra ni cobertura de todos los fabricantes.
+**Guía física:** faltan activos y revisión de mecanismos/posiciones por modelo para una réplica exacta. No se conoce la BIOS instalada ni el kit exacto de RAM/SSD. El visor y los márgenes nominales no certifican todas las interferencias ni el armado.
 
-## Verificación
+**Datos:** almacenamiento en navegador y respaldos JSON. No hay cuenta multiusuario, sincronización ni base central; PostgreSQL/FastAPI en la propuesta son alternativas, no servicios desplegados. El análisis de rendimiento usa datos aportados y no recoge sensores.
+
+## Verificar y reconstruir
 
 ```powershell
-node --test tests/rules.test.mjs
+npm ci
+npm test
+npm run build:ai
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p test_dataset.py
 ```
 
-Las pruebas cubren incompatibilidades independientes, límite CPU/placa, restricciones M.2, estados incompletos, escenarios de uso e entradas inválidas. Se revisan además visor e interacciones en navegador. Three.js 0.180.0 está incluido en dist/vendor junto con su licencia MIT; las fuentes web tienen fallback local.
+ML tiene dependencias separadas en ml/requirements.txt. El entorno instalado usa PyTorch CPU; se interrumpió la descarga CUDA al confirmar que faltaba el dataset. Las pruebas no implican entrenamiento o evaluación de un detector.
 
-## Estructura
-
-- dist/index.html y style.css: interfaz.
-- dist/data.js: catálogo, pasos y reglas puras.
-- dist/scene.js: representación 3D esquemática.
-- dist/app.js: interacción y persistencia local.
-- PROPUESTA-TECNICA.md: arquitectura futura y criterios de desarrollo.
-
+Dist contiene los activos publicables. La encuesta, fotos originales, pruebas, entorno Python y pesos de entrenamiento quedan excluidos. Dependencias y fuentes: THIRD-PARTY.md.

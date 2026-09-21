@@ -19,17 +19,37 @@ export const catalog={
  ssd:{label:'SSD · perfiles genéricos',options:[{id:'nvme',name:'M.2 2280 · NVMe',protocol:'NVMe'},{id:'sata',name:'M.2 2280 · SATA',protocol:'SATA'}]},
  gpu:{label:'Placa de video · familia',options:[{id:'rtx4060',name:'NVIDIA GeForce RTX 4060 · 8 GB',vram:8,source:'https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4060-4060ti/'},{id:'rx7600',name:'AMD Radeon RX 7600 · 8 GB',vram:8,source:'https://ir.amd.com/news-events/press-releases/detail/1133/amd-introduces-amd-radeon-rx-7600-graphics-card-for-superb-next-gen-1080p-gaming'}]}
 };
-export const initialConfig={board:'am5',cpu:'cpu5',ram:'ddr5',ssd:'nvme',gpu:'rtx4060'};
+Object.assign(catalog.gpu.options[0],{name:'MSI RTX 4060 VENTUS 2X BLACK 8G OC',length:199,thickness:41,minPsu:550,pcie8:1,source:'https://www.msi.com/Graphics-Card/GeForce-RTX-4060-VENTUS-2X-BLACK-8G-OC/Specification'});
+Object.assign(catalog.gpu.options[1],{name:'SAPPHIRE PULSE RX 7600 8 GB',length:240,thickness:44.07,minPsu:550,pcie8:1,source:'https://www.sapphiretech.com/en/consumer/pulse-radeon-rx-7600-8g-gddr6'});
+catalog.gpu.label='Placa de video · modelo exacto';
+catalog.case={label:'Gabinete',options:[{id:'4000d',name:'Corsair 4000D AIRFLOW',formats:['ATX','MicroATX','Mini-ITX'],gpuMax:360,coolerMax:170,psuMax:220,psuFormat:'ATX',source:'https://www.corsair.com/tw/tw/p/pc-cases/cc-9011200-ww/4000d-airflow-tempered-glass-mid-tower-atx-cas',manual:'https://assets.corsair.com/image/upload/v1684779868/corsairmedia/sys_master/productcontent/WW_4000D_4000D_Airflow_QSG_AB.pdf'},{id:'case-unknown',name:'Otro gabinete · datos pendientes'}]};
+catalog.cooler={label:'Refrigeración del CPU',options:[{id:'redux',name:'Noctua NH-U12S redux · kit actual',sockets:['AM5','LGA1700'],height:158,source:'https://www.noctua.at/en/products/nh-u12s-redux/specifications',manual:'https://cdn.noctua.at/media/noctua_nh_u12s_redux_manual_en_web.pdf'},{id:'cooler-unknown',name:'Otro cooler · datos pendientes'}]};
+catalog.psu={label:'Fuente de alimentación',options:[{id:'rm650',name:'Corsair RM650 · CP-9020280 · 650 W',watts:650,length:140,format:'ATX',atx24:1,eps8:2,pcie8:2,source:'https://www.corsair.com/ww/en/p/psu/cp-9020280-na/rm-series-rm650-650-watt-80-plus-gold-fully-modular-atx-power-supply-cp-9020280-na',manual:'https://www.corsair.com/explorer/diy-builder/power-supply-units/power-supply-manual/'},{id:'psu-unknown',name:'Otra fuente · datos pendientes'}]};
+catalog.board.options.forEach(b=>Object.assign(b,{format:'ATX',eps8:b.id==='intel'?2:1}));
+export const initialConfig={board:'am5',cpu:'cpu5',ram:'ddr5',ssd:'nvme',gpu:'rtx4060',case:'4000d',cooler:'redux',psu:'rm650'};
+export function selected(config){return Object.fromEntries(Object.entries(catalog).map(([k,c])=>{const item=c.options.find(o=>o.id===config[k]);if(!item)throw new Error('Configuración desconocida');return[k,item]}))}
+export function physicalRules(parts){
+ const {board:b,gpu:g,case:box,cooler:k,psu:p}=parts;
+ const check=(name,known,ok,detail)=>({name,status:!known?'unknown':ok?'pass':'fail',detail:known?detail:'Faltan especificaciones verificadas para esta comprobación.'});
+ return [check('Formato de motherboard y gabinete',box.formats,box.formats?.includes(b.format),`${b.format}: formatos admitidos ${box.formats?.join(', ')}.`),
+ check('Largo de la GPU',Number.isFinite(box.gpuMax)&&Number.isFinite(g.length),g.length<=box.gpuMax,`${g.length} mm frente a ${box.gpuMax} mm disponibles. Margen longitudinal: ${box.gpuMax-g.length} mm. Límite nominal sin radiador frontal añadido; no verifica ancho ni recorrido de cables.`),
+ check('Montaje del cooler',k.sockets,k.sockets?.includes(b.socket),`Socket ${b.socket}; kit declarado para ${k.sockets?.join(', ')}. Confirmá que tu caja incluya ese kit; las unidades antiguas pueden requerir actualización.`),
+ check('Altura del cooler',Number.isFinite(k.height)&&Number.isFinite(box.coolerMax),k.height<=box.coolerMax,`${k.height} mm frente a ${box.coolerMax} mm del gabinete. Margen: ${box.coolerMax-k.height} mm con el ventilador en posición estándar.`),
+ check('Formato y largo de fuente',p.format&&box.psuFormat&&Number.isFinite(p.length)&&Number.isFinite(box.psuMax),p.format===box.psuFormat&&p.length<=box.psuMax,`${p.format}, ${p.length} mm; gabinete ${box.psuFormat} hasta ${box.psuMax} mm. Reservá espacio adicional para los cables.`),
+ check('Potencia recomendada por fabricante de GPU',Number.isFinite(p.watts)&&Number.isFinite(g.minPsu),p.watts>=g.minPsu,`${p.watts} W nominales frente a ${g.minPsu} W recomendados para esta GPU. No es una medición del consumo total ni certifica transitorios o calidad eléctrica.`),
+ check('Conectores de alimentación',Number.isInteger(p.atx24)&&Number.isInteger(p.eps8)&&Number.isInteger(p.pcie8),p.atx24>=1&&p.eps8>=b.eps8&&p.pcie8>=g.pcie8,`Fuente: ${p.atx24} ATX24, ${p.eps8} EPS 4+4 y ${p.pcie8} PCIe 6+2. Placa: ${b.id==='intel'?'8+4':'8'} pines CPU; GPU: ${g.pcie8} × 8 pines. EPS y PCIe no son intercambiables. Usá los cables originales de esta fuente.`)];
+}
 export function evaluate(config){
- const get=k=>catalog[k].options.find(o=>o.id===config[k]);
- const b=get('board'),c=get('cpu'),r=get('ram'),s=get('ssd'),g=get('gpu');
+ const parts=selected(config),{board:b,cpu:c,ram:r,ssd:s,gpu:g}=parts;
  if(!b||!c||!r||!s||!g)throw new Error('Configuración desconocida');
  return [
  {name:'Socket del procesador',status:b.socket===c.socket?'pass':'fail',detail:`La placa declara ${b.socket} y el procesador ${c.socket}. ${b.socket===c.socket?'Coinciden en socket; todavía falta verificar soporte del modelo y BIOS.':'Los sockets no coinciden.'}`},
  {name:'Generación de memoria',status:b.memory===r.memory?'pass':'fail',detail:`La placa usa ${b.memory} y el kit seleccionado ${r.memory}. ${b.memory===r.memory?'Coinciden en generación.':'Este kit no corresponde a las ranuras de la placa.'}`},
  {name:'Capacidad de memoria',status:r.capacity<=Math.min(b.maxRam,c.maxRam)?'pass':'fail',detail:`Seleccionaste ${r.capacity} GB. La ficha de la placa indica ${b.maxRam} GB y la del procesador ${c.maxRam} GB. Se toma el menor límite; falta verificar el kit exacto y su soporte.`},
  {name:'Protocolo del SSD',status:b.ssd===s.protocol||b.id==='intel'?'pass':'fail',detail:s.protocol==='SATA'?(b.id==='intel'?'El SSD M.2 SATA requiere M2_2 en esta MSI; al usarlo queda deshabilitado SATA8. No corresponde a M2_1.':'Los conectores M.2 de almacenamiento de esta ASUS son PCIe; el perfil M.2 SATA seleccionado no corresponde.'):'El perfil NVMe 2280 coincide con el tipo admitido. Revisá el conector elegido y la fijación en el manual.'},
- {name:'Verificación del equipo completo',status:'unknown',detail:'Información insuficiente: faltan modelos exactos, soporte de BIOS, fuente, dimensiones, cooler y distribución de líneas.'}
+ ...physicalRules(parts),
+ ...Object.values(parts).some(p=>p.provided)?[{name:'Procedencia de especificaciones aportadas',status:'unknown',detail:'Hay fichas ingresadas por el usuario. Las comparaciones usan esos valores, pero el sistema no verificó su exactitud con el fabricante.'}]:[],
+ {name:'BIOS, kit exacto y montaje completo',status:'unknown',detail:'Todavía hay que comprobar la versión de BIOS instalada y la lista de soporte de CPU, el kit exacto de RAM/SSD, interferencias locales y periféricos. Una coincidencia de las reglas anteriores no certifica todo el equipo.'}
  ];
 }
 export const connectorTypes=['CPU_SOCKET','DIMM_SLOT','PCIe_X16','PCIe_X1','M2_SLOT','SATA_PORT','ATX_POWER','CPU_POWER','FAN_HEADER'];

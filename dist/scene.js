@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 
-export function createScene(host){
+export function createScene(host,onSelect=()=>{}){
  const scene=new THREE.Scene();scene.background=new THREE.Color('#111e20');scene.fog=new THREE.Fog('#111e20',19,40);
  const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.outputColorSpace=THREE.SRGBColorSpace;host.appendChild(renderer.domElement);
  const camera=new THREE.PerspectiveCamera(38,1,.1,80);const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=7;controls.maxDistance=23;controls.maxPolarAngle=Math.PI*.48;controls.target.set(0,.3,0);
@@ -13,7 +13,7 @@ export function createScene(host){
  const green=mat(0x1d5750),black=mat(0x202829),dark=mat(0x303c3d),silver=mat(0xb4bdb7,.75),gold=mat(0xbda467,.65),lime=mat(0xaadb77,.3);
  function box(parent,w,h,d,x,y,z,material){let m=new THREE.Mesh(new THREE.BoxGeometry(w,h,d),material);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m}
  function cylinder(parent,r,h,x,y,z,material){let m=new THREE.Mesh(new THREE.CylinderGeometry(r,r,h,24),material);m.position.set(x,y,z);m.castShadow=true;parent.add(m);return m}
- function group(name){let g=new THREE.Group();groups[name]=g;root.add(g);return g}
+ function group(name){let g=new THREE.Group();g.userData.part=name;groups[name]=g;root.add(g);return g}
  const board=group('board');box(board,5.4,.14,6.5,0,0,0,green);
  // Functional simplified board geometry: connectors, retention parts, traces and standoffs.
  for(let x=-2.5;x<2.6;x+=.42){box(board,.018,.006,5.9,x,.076,0,mat(0x31685b));}
@@ -44,5 +44,14 @@ export function createScene(host){
  function setStep(i){current=i;start=performance.now();animating=!reduce;for(let n=0;n<order.length;n++){groups[order[n]].visible=n<=i;groups[order[n]].position.y=0}const [x,y,z,r]=locations[order[i]];focusRing.position.set(x,y,z);focusRing.scale.set(r,r,1);focusRing.visible=true;}
  function animate(t){requestAnimationFrame(animate);if(!host.clientWidth||document.hidden)return;let elapsed=Math.min(1,(t-start)/1300);const ease=1-Math.pow(1-elapsed,3);order.forEach((name,i)=>{let target=exploded&&i>0&&name!=='case'?i*.35+.35:0;groups[name].position.y=target+(animating&&i===current&&i>0&&name!=='case'?(1-ease)*2.5:0)});if(elapsed===1)animating=false;focusRing.material.opacity=reduce?.5:.42+Math.sin(t/700)*.16;controls.update();renderer.render(scene,camera)}
  const obs=new ResizeObserver(()=>{const w=host.clientWidth,h=host.clientHeight;if(!w||!h)return;camera.aspect=w/h;camera.updateProjectionMatrix();renderer.setSize(w,h)});obs.observe(host);setStep(0);requestAnimationFrame(animate);
- return {setStep,reset,replay(){start=performance.now();animating=!reduce},explode(v){exploded=v},zoom(factor){camera.position.sub(controls.target).multiplyScalar(factor).add(controls.target);controls.update()}};
+ const ray=new THREE.Raycaster();let down=null;
+ renderer.domElement.addEventListener('pointerdown',e=>down={x:e.clientX,y:e.clientY});
+ renderer.domElement.addEventListener('pointerup',e=>{if(!down||Math.hypot(e.clientX-down.x,e.clientY-down.y)>5)return;const r=renderer.domElement.getBoundingClientRect();ray.setFromCamera(new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1),camera);for(const hit of ray.intersectObjects(Object.values(groups).filter(g=>g.visible),true)){let object=hit.object;while(object&&!object.userData.part)object=object.parent;if(object){onSelect(order.indexOf(object.userData.part));break}}});
+ return {setStep,reset,setConfig(config){
+  // Educational proportions vary by profile; this is not a dimensional CAD model.
+  green.color.set(config.board==='intel'?0x34444d:0x1d5750);
+  cpu.scale.z=config.cpu==='intelcpu'?1.18:1;gpu.scale.x=config.gpu==='rx7600'?240/199:1;
+  ram.children.forEach((part,i)=>part.visible=config.ram!=='small4'||i<9);
+  lime.color.set(config.ram==='ddr4'||config.ram==='small4'?0x90b9e2:0xaadb77);
+ },replay(){start=performance.now();animating=!reduce},explode(v){exploded=v},zoom(factor){camera.position.sub(controls.target).multiplyScalar(factor).add(controls.target);controls.update()}};
 }

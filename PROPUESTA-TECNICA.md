@@ -4,7 +4,7 @@ Estado: prototipo web implementado en dist/. Incluye guía 3D genérica, selecci
 
 ## Propósito
 
-Ayudar a identificar conexiones de una motherboard, comprobar una configuración de PC con evidencia técnica y aprender a ensamblarla mediante una guía interactiva. La primera entrega del seminario fundamenta la necesidad de centralizar información y explicar cómo interactúan los componentes. Sus cifras de encuesta son datos declarados por el documento; no se verificaron contra las respuestas originales.
+Ayudar a identificar conexiones de una motherboard, comprobar una configuración de PC con evidencia técnica y aprender a ensamblarla mediante una guía interactiva. La primera entrega del seminario fundamenta la necesidad de centralizar información y explicar cómo interactúan los componentes. Las 223 respuestas originales aportadas después se analizaron en ENCUESTA-Y-PRIORIDADES.md, que registra resultados, correcciones respecto del PDF y limitaciones de las escalas.
 
 ## Experiencia propuesta
 

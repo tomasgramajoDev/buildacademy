@@ -50,3 +50,9 @@ Dist contiene los activos publicables. La encuesta, fotos originales, pruebas, e
 El repositorio incluye la web, dependencias web necesarias para servirla, código y pruebas, documentación, pesos ONNX para el navegador y el checkpoint PyTorch entrenado en `ml/artifacts/bis497-pilot/best.pt`. Esa carpeta también conserva resultados por época y la evaluación final. El historial de desarrollo está incluido.
 
 No se incluyen claves, entornos instalados, cachés, ZIPs ni el dataset de terceros. El dataset se obtiene con `Descargar-Dataset.cmd`; su procedencia y preparación se documentan en `ml/README.md`. La encuesta original permanece fuera del repositorio; se incluye el análisis agregado.
+
+### Biblioteca y compañero de PC
+
+La sección Explorar ofrece cuatro fotos iniciales y búsqueda paginada en la API pública de Wikimedia Commons, sin clave. Una búsqueda puede devolver placas antiguas o detalles; se recomienda una vista frontal completa. Al elegir una imagen se ejecuta el detector local de cuatro categorías. La foto no modifica la configuración ni confirma compatibilidad; las nueve categorías objetivo siguen pendientes de entrenamiento adicional.
+
+El asistente emergente cubre armado, conceptos, compatibilidad, rendimiento, temperaturas, encendido, mejoras y software con respuestas controladas. Usa las piezas seleccionadas y, cuando existen, las mediciones importadas. El modelo local opcional clasifica consultas; no genera instrucciones de hardware sin validar. No equivale a un asistente general con conocimiento ilimitado ni consulta precios o novedades en vivo.

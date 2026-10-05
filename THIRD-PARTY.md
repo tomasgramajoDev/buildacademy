@@ -8,3 +8,14 @@
 - Dataset BIS497 Motherboard Part Locater: CC BY 4.0 según Roboflow Universe. Incorporado al piloto; 1616 polígonos convertidos a cajas envolventes. Sus métricas públicas no son resultados de BuildAcademy.
 - PDF y encuesta del usuario: usados como contexto. No se publican los archivos originales ni respuestas individuales.
 - ONNX Runtime Web 1.22.0: MIT, licencia en dist/vendor/ort/LICENSE.txt. Ejecuta la exportación ONNX del detector piloto.
+
+## Galería de motherboards
+
+Cuatro fotografías de Wikimedia Commons, redistribuidas como miniaturas sin edición. Autor, licencia y enlace al original constan en `dist/gallery/catalog.json` y en cada tarjeta de la interfaz. Las licencias son CC BY 4.0 o CC BY-SA 4.0 según la imagen. La búsqueda consulta la API pública de Commons y conserva los créditos devueltos por ella. Los nombres proceden de los títulos de archivo; no verifican el modelo ni sus especificaciones.
+
+## Referencias de rendimiento
+
+- Intel, What Is Bottlenecking My PC?: https://www.intel.com/content/www/us/en/gaming/resources/what-is-bottlenecking-my-pc.html
+- Intel, Locate and Resolve CPU-GPU Bottlenecks: https://www.intel.com/content/www/us/en/developer/articles/technical/locate-and-resolve-cpu-gpu-bottlenecks.html
+
+Las explicaciones son orientativas. Los umbrales de mediciones son reglas exploratorias propias, no un diagnóstico ni una metodología certificada por Intel.

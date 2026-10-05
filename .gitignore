@@ -7,3 +7,11 @@ datasets/
 runs/
 *.pt
 __pycache__/
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Retained trained checkpoint
+!ml/artifacts/bis497-pilot/best.pt

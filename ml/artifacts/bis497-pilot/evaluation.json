@@ -1,0 +1,57 @@
+{
+  "model": "ml/artifacts/bis497-pilot/best.pt",
+  "data_audit": {
+    "images": 472,
+    "boxes": {
+      "train": [
+        387,
+        861,
+        618,
+        420
+      ],
+      "val": [
+        47,
+        93,
+        68,
+        48
+      ],
+      "test": [
+        23,
+        60,
+        41,
+        26
+      ]
+    },
+    "classes": [
+      "CPU_SOCKET",
+      "PCIE_SLOT",
+      "POWER_CONNECTOR",
+      "DIMM_SLOT"
+    ],
+    "manifest_sha256": "5b6ac9b464c766c5f2a49aa8a2ebc0af65615a5fcdd0b7d0411ed516049264b5",
+    "limitation": "El validador detecta duplicados exactos; revisar manualmente similares y la identidad de cada placa.",
+    "polygons_converted_to_enclosing_boxes": 1616,
+    "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+    "license": "CC BY 4.0",
+    "author": "BIS497",
+    "excluded": [],
+    "grouping": "Original filename and exact pixels only. Physical motherboard/model identity is unavailable; split by unseen hardware is NOT verified.",
+    "original_filename_groups": 206,
+    "archive_sha256": "5021e1337d6c60de540ba8c79723818708ff367c0db379671ba4f69cc8df2442"
+  },
+  "input_size": 320,
+  "test": {
+    "metrics/precision(B)": 0.8505951789444731,
+    "metrics/recall(B)": 0.813992356118354,
+    "metrics/mAP50(B)": 0.8688898131997115,
+    "metrics/mAP50-95(B)": 0.5558709209442967,
+    "fitness": 0.5558709209442967
+  },
+  "per_class_map50_95": {
+    "CPU_SOCKET": 0.6513470502578781,
+    "PCIE_SLOT": 0.4865346009513944,
+    "POWER_CONNECTOR": 0.46234196734733146,
+    "DIMM_SLOT": 0.6232600652205823
+  },
+  "claim": "Evaluaci\u00f3n de este dataset. No certifica generalizaci\u00f3n a nuevas placas ni compatibilidad el\u00e9ctrica."
+}

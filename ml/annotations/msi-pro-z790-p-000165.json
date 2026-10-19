@@ -1,0 +1,226 @@
+{
+  "image": "datasets/connectors-nine-review/images/000165.jpg",
+  "model_id": "MSI PRO Z790-P",
+  "model_group": "msi-pro-z790-p",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.msi.com/archive/mnu_exe/mb/PROZ790-P_PROZ790-PWIFI.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      281,
+      136,
+      390,
+      292
+    ],
+    [
+      "DIMM_SLOT",
+      414,
+      74,
+      436,
+      338
+    ],
+    [
+      "DIMM_SLOT",
+      432,
+      73,
+      453,
+      339
+    ],
+    [
+      "DIMM_SLOT",
+      449,
+      71,
+      472,
+      341
+    ],
+    [
+      "DIMM_SLOT",
+      467,
+      70,
+      493,
+      341
+    ],
+    [
+      "PCIe_X16",
+      168,
+      365,
+      358,
+      396
+    ],
+    [
+      "PCIe_X16",
+      155,
+      481,
+      358,
+      513
+    ],
+    [
+      "PCIe_X16",
+      145,
+      564,
+      344,
+      592
+    ],
+    [
+      "PCIe_X1",
+      162,
+      446,
+      219,
+      467
+    ],
+    [
+      "M2_SLOT",
+      357,
+      424,
+      380,
+      475
+    ],
+    [
+      "M2_SLOT",
+      295,
+      509,
+      316,
+      559
+    ],
+    [
+      "M2_SLOT",
+      470,
+      506,
+      491,
+      556
+    ],
+    [
+      "SATA_PORT",
+      497,
+      476,
+      532,
+      510
+    ],
+    [
+      "SATA_PORT",
+      496,
+      509,
+      531,
+      551
+    ],
+    [
+      "SATA_PORT",
+      397,
+      602,
+      440,
+      625
+    ],
+    [
+      "SATA_PORT",
+      440,
+      603,
+      483,
+      626
+    ],
+    [
+      "ATX_POWER",
+      516,
+      113,
+      539,
+      211
+    ],
+    [
+      "CPU_POWER",
+      190,
+      56,
+      221,
+      79
+    ],
+    [
+      "CPU_POWER",
+      220,
+      54,
+      250,
+      77
+    ],
+    [
+      "FAN_HEADER",
+      433,
+      34,
+      470,
+      54
+    ],
+    [
+      "FAN_HEADER",
+      472,
+      33,
+      498,
+      51
+    ],
+    [
+      "FAN_HEADER",
+      500,
+      29,
+      524,
+      49
+    ],
+    [
+      "FAN_HEADER",
+      537,
+      52,
+      553,
+      74
+    ],
+    [
+      "FAN_HEADER",
+      536,
+      77,
+      552,
+      97
+    ],
+    [
+      "FAN_HEADER",
+      213,
+      295,
+      238,
+      311
+    ],
+    [
+      "FAN_HEADER",
+      175,
+      599,
+      197,
+      617
+    ],
+    [
+      "FAN_HEADER",
+      199,
+      599,
+      221,
+      617
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "e7f4d56c4f479295f69fe94ecbb85ea92e33b0c0a988a99f95badef98d94e932",
+  "split": "train",
+  "notes": [
+    "PCB model text and connector layout matched to official manual overview page 25.",
+    "M2_1 is concealed by its heatsink and excluded. Three uncovered M.2 connector bodies annotated.",
+    "Four SATA housings: two stacked side-facing housings and two discrete bottom-facing connectors.",
+    "Eight fan/pump headers matched to the manufacturer diagram; RGB and USB headers excluded.",
+    "Perspective creates some overlap of axis-aligned DIMM boxes."
+  ]
+}

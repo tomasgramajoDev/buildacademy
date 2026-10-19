@@ -1,0 +1,149 @@
+{
+  "image": "datasets/connectors-nine-review/images/000140.jpg",
+  "model_id": "MSI A55M-E35",
+  "model_group": "msi-a55m-e35",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://gzhls.at/blob/ldb/b/4/b/c/7450d044f409c853c5bbb77b71b6b0e72794.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      359,
+      205,
+      479,
+      313
+    ],
+    [
+      "DIMM_SLOT",
+      509,
+      74,
+      535,
+      406
+    ],
+    [
+      "DIMM_SLOT",
+      532,
+      74,
+      558,
+      406
+    ],
+    [
+      "PCIe_X16",
+      252,
+      396,
+      482,
+      430
+    ],
+    [
+      "PCIe_X1",
+      252,
+      447,
+      308,
+      467
+    ],
+    [
+      "SATA_PORT",
+      544,
+      459,
+      561,
+      498
+    ],
+    [
+      "SATA_PORT",
+      563,
+      459,
+      581,
+      498
+    ],
+    [
+      "SATA_PORT",
+      582,
+      459,
+      600,
+      498
+    ],
+    [
+      "SATA_PORT",
+      544,
+      500,
+      561,
+      539
+    ],
+    [
+      "SATA_PORT",
+      563,
+      500,
+      581,
+      539
+    ],
+    [
+      "SATA_PORT",
+      582,
+      500,
+      600,
+      539
+    ],
+    [
+      "ATX_POWER",
+      572,
+      267,
+      594,
+      377
+    ],
+    [
+      "CPU_POWER",
+      230,
+      111,
+      253,
+      134
+    ],
+    [
+      "FAN_HEADER",
+      474,
+      95,
+      492,
+      124
+    ],
+    [
+      "FAN_HEADER",
+      569,
+      381,
+      587,
+      405
+    ],
+    [
+      "FAN_HEADER",
+      300,
+      365,
+      316,
+      385
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "65be66757141f3d58a79eb6bcf332cf956f348ff0f829b3163c62ea90a5ac787",
+  "split": "val",
+  "notes": [
+    "Identity and connector positions checked against MSI MS-7721v6.0 manufacturer specification sheet, hosted by a distributor.",
+    "Official identity corroboration: https://storage-asset.msi.com/datasheet/original/mb/global/A55M-E35.pdf",
+    "No M.2 present. The long black legacy PCI slot is excluded from PCIe classes.",
+    "CPU socket body excludes separate cooler mounting brackets. Three fan headers confirmed in manufacturer diagram.",
+    "Reserved for validation before training; all photos of this model must remain in validation."
+  ]
+}

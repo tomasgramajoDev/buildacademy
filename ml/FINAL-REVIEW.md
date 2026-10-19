@@ -8,7 +8,7 @@ Después de guardar la selección, verifica los hashes del conjunto independient
 .\.venv\Scripts\python.exe ml/finalize_candidates.py tmp/nine-v3-job tmp/nine-v4-crops-job --holdout datasets/nine-independent-v1 --output tmp/nine-final-review
 ```
 
-En esta sesión el comando quedó programado localmente para ejecutarse al finalizar el proceso de v4, mediante una espera del sistema operativo sin consultas periódicas al modelo conversacional. No ejecutarlo nuevamente mientras esa tarea esté pendiente.
+La tarea terminó correctamente el 19 de octubre de 2026. Eligió v3 usando validación y guardó su única evaluación independiente: 9 aciertos, 0 falsos positivos y 9 omisiones. Los informes se conservan en `ml/SELECCION-NUEVE-CLASES.json` y `ml/EVALUACION-INDEPENDIENTE-V3.json`. No repetir la inferencia ni ajustar el modelo con esta placa como si siguiera siendo una prueba nueva.
 
 La evaluación independiente disponible contiene **una motherboard y 18 cajas**. Es una comprobación adicional pequeña, no evidencia suficiente para afirmar generalización a todas las placas. Las anotaciones fueron revisadas visualmente, sin certificación humana independiente. La segunda imagen investigada (`000134`) permanece excluida por identidad ambigua.
 

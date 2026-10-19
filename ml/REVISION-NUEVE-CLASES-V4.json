@@ -1,0 +1,321 @@
+{
+  "status": "evaluated_not_selected_not_deployed",
+  "epochs_completed": 100,
+  "model_sha256": "432b2419db01019dc4cc30cef4c227b4e26f76bb97ed081cb8ff9f0184d4fae6",
+  "evaluation": {
+    "model": "runs/detect/runs/buildacademy/nine-reviewed-20models-crops-v4/weights/best.pt",
+    "data_audit": {
+      "images": 76,
+      "boards": 20,
+      "boxes": {
+        "train": [
+          70,
+          146,
+          106,
+          42,
+          62,
+          125,
+          36,
+          37,
+          176
+        ],
+        "val": [
+          3,
+          8,
+          4,
+          3,
+          3,
+          16,
+          3,
+          4,
+          12
+        ],
+        "test": [
+          3,
+          10,
+          6,
+          3,
+          2,
+          9,
+          3,
+          4,
+          15
+        ]
+      },
+      "classes": [
+        "CPU_SOCKET",
+        "DIMM_SLOT",
+        "PCIe_X16",
+        "PCIe_X1",
+        "M2_SLOT",
+        "SATA_PORT",
+        "ATX_POWER",
+        "CPU_POWER",
+        "FAN_HEADER"
+      ],
+      "manifest_sha256": "a4df1b95d87daf8346a41efebb5177a01a75d358f90c02e009432535cfb9cecf",
+      "limitation": "El validador detecta duplicados exactos; revisar manualmente similares y la identidad de cada placa.",
+      "review_gate": "passed",
+      "model_count": 20,
+      "augmentation": {
+        "source_manifest_sha256": "932079ef86b3d6184e4c8823e89ea8befbb09e4aaf0fdecad8191f8899cc0ced",
+        "original_images": 20,
+        "derived_train_crops": 56,
+        "held_out_originals": [
+          {
+            "model_id": "ASRock B550M Steel Legend",
+            "split": "val",
+            "image_sha256": "8eda754b03cf477aa123a94a9485844a0c074762655b0882214511e04572563c",
+            "label_sha256": "defd4027d4b958fe3f8c034ec50fa222720b924b90951f985c470ca04e787a2b"
+          },
+          {
+            "model_id": "Gigabyte B460M GAMING HD",
+            "split": "test",
+            "image_sha256": "09358764b83214919543f7890e11b53d5dc35d1822c37b5ae7d81991cb0e3ae0",
+            "label_sha256": "69e7579a7b31bfb301aaa6b1b01213f1f52ce299506bd7f910e2697528bf42e5"
+          },
+          {
+            "model_id": "Gigabyte H610M S2H DDR4",
+            "split": "val",
+            "image_sha256": "c95fe3f4a67fbfba721a828574b45e2c2bec253dc7795b7911414395cb93bc85",
+            "label_sha256": "f8f051cf1c27f37e00db8e6193339432d66038161ea80333c67f409909cee41c"
+          },
+          {
+            "model_id": "Gigabyte X670 GAMING X AX",
+            "split": "test",
+            "image_sha256": "fb037ac920eb181a477e44d844b7ba079c028eaabad005869c7fa8e7bdae3386",
+            "label_sha256": "1d8f58b229761e6eb6ce8bfd5f443b75eff3f84fbf5f915753ef0dc0214d8aa1"
+          },
+          {
+            "model_id": "MSI A55M-E35",
+            "split": "val",
+            "image_sha256": "65be66757141f3d58a79eb6bcf332cf956f348ff0f829b3163c62ea90a5ac787",
+            "label_sha256": "7862aca2cb5d6c629a0463a43e531e066ebcdd1cb828d00b1ea74ae7087acfb3"
+          },
+          {
+            "model_id": "MSI B550-A PRO",
+            "split": "test",
+            "image_sha256": "f2144e7032163dd0611d2296b242ca693bcec2cca1c09398a0cad7826515d4fa",
+            "label_sha256": "16cf81e896bc62b9c1d439e79ce962172209f54f3323c7a7d0f82a8408015299"
+          }
+        ],
+        "limitation": "Crops are augmentation, not new motherboards or independent samples. Partial visible boxes retained."
+      }
+    },
+    "input_size": 640,
+    "test": {
+      "metrics/precision(B)": 0.7391466044287087,
+      "metrics/recall(B)": 0.6944930727927652,
+      "metrics/mAP50(B)": 0.7712286644820445,
+      "metrics/mAP50-95(B)": 0.434043944894249,
+      "fitness": 0.434043944894249
+    },
+    "per_class_map50_95": {
+      "CPU_SOCKET": 0.6751666666666667,
+      "DIMM_SLOT": 0.27387117710357145,
+      "PCIe_X16": 0.2540066666666666,
+      "PCIe_X1": 0.493,
+      "M2_SLOT": 0.4801666666666666,
+      "SATA_PORT": 0.2510095238095238,
+      "ATX_POWER": 0.8955,
+      "CPU_POWER": 0.51525,
+      "FAN_HEADER": 0.06842480313514492
+    },
+    "claim": "Evaluación de este dataset. No certifica generalización a nuevas placas ni compatibilidad eléctrica."
+  },
+  "runtime_validation": {
+    "split": "val",
+    "model": "nine-reviewed-20models-crops-v4",
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "DIMM_SLOT": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 7,
+        "precision": 0.5,
+        "recall": 0.125
+      },
+      "PCIe_X16": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0
+      },
+      "PCIe_X1": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666
+      },
+      "M2_SLOT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "SATA_PORT": {
+        "tp": 10,
+        "fp": 5,
+        "fn": 6,
+        "precision": 0.6666666666666666,
+        "recall": 0.625
+      },
+      "ATX_POWER": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666
+      },
+      "CPU_POWER": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "FAN_HEADER": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 12,
+        "precision": 0.0,
+        "recall": 0.0
+      }
+    },
+    "images": [
+      {
+        "image": "000005.jpg",
+        "tp": 8,
+        "fp": 5,
+        "fn": 17
+      },
+      {
+        "image": "000057.jpg",
+        "tp": 6,
+        "fp": 2,
+        "fn": 9
+      },
+      {
+        "image": "000059.jpg",
+        "tp": 10,
+        "fp": 3,
+        "fn": 6
+      }
+    ],
+    "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+  },
+  "runtime_reused_test": {
+    "split": "test",
+    "model": "nine-reviewed-20models-crops-v4",
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666
+      },
+      "DIMM_SLOT": {
+        "tp": 4,
+        "fp": 3,
+        "fn": 6,
+        "precision": 0.5714285714285714,
+        "recall": 0.4
+      },
+      "PCIe_X16": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 4,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "PCIe_X1": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666
+      },
+      "M2_SLOT": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "SATA_PORT": {
+        "tp": 7,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.875,
+        "recall": 0.7777777777777778
+      },
+      "ATX_POWER": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "CPU_POWER": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "FAN_HEADER": {
+        "tp": 3,
+        "fp": 4,
+        "fn": 12,
+        "precision": 0.42857142857142855,
+        "recall": 0.2
+      }
+    },
+    "images": [
+      {
+        "image": "000041.jpg",
+        "tp": 8,
+        "fp": 0,
+        "fn": 6
+      },
+      {
+        "image": "000058.jpg",
+        "tp": 7,
+        "fp": 4,
+        "fn": 11
+      },
+      {
+        "image": "000060.jpg",
+        "tp": 11,
+        "fp": 4,
+        "fn": 12
+      }
+    ],
+    "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+  },
+  "http_checks": {
+    "real_model_http": true,
+    "invalid_image_400": true,
+    "unsupported_type_415": true,
+    "method_405": true
+  },
+  "deployment_approved": false
+}

@@ -1,0 +1,77 @@
+{
+  "model": "runs/detect/runs/buildacademy/nine-reviewed-18models-v3/weights/best.pt",
+  "data_audit": {
+    "images": 18,
+    "boards": 18,
+    "boxes": {
+      "train": [
+        12,
+        40,
+        25,
+        13,
+        23,
+        47,
+        12,
+        15,
+        59
+      ],
+      "val": [
+        3,
+        8,
+        4,
+        3,
+        3,
+        16,
+        3,
+        4,
+        12
+      ],
+      "test": [
+        3,
+        10,
+        6,
+        3,
+        2,
+        9,
+        3,
+        4,
+        15
+      ]
+    },
+    "classes": [
+      "CPU_SOCKET",
+      "DIMM_SLOT",
+      "PCIe_X16",
+      "PCIe_X1",
+      "M2_SLOT",
+      "SATA_PORT",
+      "ATX_POWER",
+      "CPU_POWER",
+      "FAN_HEADER"
+    ],
+    "manifest_sha256": "00ef7dafaae32b2c34dee6b41b3611e62a2a9ee15f39c4553f1f16066660e118",
+    "limitation": "El validador detecta duplicados exactos; revisar manualmente similares y la identidad de cada placa.",
+    "review_gate": "passed",
+    "model_count": 18
+  },
+  "input_size": 640,
+  "test": {
+    "metrics/precision(B)": 0.6235022226910153,
+    "metrics/recall(B)": 0.7534817652215753,
+    "metrics/mAP50(B)": 0.7191029151047993,
+    "metrics/mAP50-95(B)": 0.3883590148930605,
+    "fitness": 0.3883590148930605
+  },
+  "per_class_map50_95": {
+    "CPU_SOCKET": 0.81275,
+    "DIMM_SLOT": 0.23789167080015367,
+    "PCIe_X16": 0.2644285714285714,
+    "PCIe_X1": 0.41137499999999994,
+    "M2_SLOT": 0.38116666666666665,
+    "SATA_PORT": 0.18413600464576077,
+    "ATX_POWER": 0.7300000000000001,
+    "CPU_POWER": 0.44258333333333333,
+    "FAN_HEADER": 0.030899887163058044
+  },
+  "claim": "Evaluación de este dataset. No certifica generalización a nuevas placas ni compatibilidad eléctrica."
+}

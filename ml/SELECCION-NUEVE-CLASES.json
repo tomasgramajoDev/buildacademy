@@ -1,0 +1,163 @@
+{
+  "selection_split": "val",
+  "selection_metric": "macro F1 across nine classes",
+  "preferred_for_further_review": "nine-reviewed-18models-v3",
+  "candidates": [
+    {
+      "model": "nine-reviewed-18models-v3",
+      "macro_f1": 0.5816048149381482,
+      "per_class": {
+        "CPU_SOCKET": {
+          "f1": 1.0,
+          "recall": 1.0,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "DIMM_SLOT": {
+          "f1": 0.18181818181818182,
+          "recall": 0.125,
+          "tp": 1,
+          "fp": 2,
+          "fn": 7
+        },
+        "PCIe_X16": {
+          "f1": 0.8888888888888888,
+          "recall": 1.0,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0
+        },
+        "PCIe_X1": {
+          "f1": 0.8,
+          "recall": 0.6666666666666666,
+          "tp": 2,
+          "fp": 0,
+          "fn": 1
+        },
+        "M2_SLOT": {
+          "f1": 0.5,
+          "recall": 0.3333333333333333,
+          "tp": 1,
+          "fp": 0,
+          "fn": 2
+        },
+        "SATA_PORT": {
+          "f1": 0.6923076923076923,
+          "recall": 0.5625,
+          "tp": 9,
+          "fp": 1,
+          "fn": 7
+        },
+        "ATX_POWER": {
+          "f1": 0.5,
+          "recall": 0.3333333333333333,
+          "tp": 1,
+          "fp": 0,
+          "fn": 2
+        },
+        "CPU_POWER": {
+          "f1": 0.5714285714285714,
+          "recall": 0.5,
+          "tp": 2,
+          "fp": 1,
+          "fn": 2
+        },
+        "FAN_HEADER": {
+          "f1": 0.1,
+          "recall": 0.08333333333333333,
+          "tp": 1,
+          "fp": 7,
+          "fn": 11
+        }
+      },
+      "zero_recall_classes": []
+    },
+    {
+      "model": "nine-reviewed-20models-crops-v4",
+      "macro_f1": 0.5408203902827559,
+      "per_class": {
+        "CPU_SOCKET": {
+          "f1": 1.0,
+          "recall": 1.0,
+          "tp": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "DIMM_SLOT": {
+          "f1": 0.2,
+          "recall": 0.125,
+          "tp": 1,
+          "fp": 1,
+          "fn": 7
+        },
+        "PCIe_X16": {
+          "f1": 0.8888888888888888,
+          "recall": 1.0,
+          "tp": 4,
+          "fp": 1,
+          "fn": 0
+        },
+        "PCIe_X1": {
+          "f1": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "tp": 2,
+          "fp": 1,
+          "fn": 1
+        },
+        "M2_SLOT": {
+          "f1": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 0,
+          "fn": 3
+        },
+        "SATA_PORT": {
+          "f1": 0.6451612903225806,
+          "recall": 0.625,
+          "tp": 10,
+          "fp": 5,
+          "fn": 6
+        },
+        "ATX_POWER": {
+          "f1": 0.8,
+          "recall": 0.6666666666666666,
+          "tp": 2,
+          "fp": 0,
+          "fn": 1
+        },
+        "CPU_POWER": {
+          "f1": 0.6666666666666666,
+          "recall": 0.5,
+          "tp": 2,
+          "fp": 0,
+          "fn": 2
+        },
+        "FAN_HEADER": {
+          "f1": 0.0,
+          "recall": 0.0,
+          "tp": 0,
+          "fp": 2,
+          "fn": 12
+        }
+      },
+      "zero_recall_classes": [
+        "M2_SLOT",
+        "FAN_HEADER"
+      ]
+    }
+  ],
+  "operating": {
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU"
+  },
+  "validation_images": 3,
+  "deployment_approved": false,
+  "limitations": [
+    "Small reused validation set; ranking is not independent certification.",
+    "Test metrics were not read or used to rank candidates.",
+    "Inspect class failures and fresh held-out boards before deployment."
+  ]
+}

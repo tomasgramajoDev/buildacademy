@@ -1,0 +1,116 @@
+{
+  "result": {
+    "split": "test",
+    "model": "nine-reviewed-18models-v3",
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "DIMM_SLOT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": null,
+        "recall": 0.0
+      },
+      "PCIe_X16": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "PCIe_X1": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "M2_SLOT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "SATA_PORT": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "ATX_POWER": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "CPU_POWER": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "FAN_HEADER": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25
+      }
+    },
+    "images": [
+      {
+        "image": "000000.jpg",
+        "tp": 9,
+        "fp": 0,
+        "fn": 9
+      }
+    ],
+    "claim": "Independent post-selection diagnostic on a small manually reviewed holdout; not production certification.",
+    "selection_used_this_data": false
+  },
+  "provenance": {
+    "purpose": "independent_post_selection_only",
+    "review_gate": "not_a_training_dataset",
+    "classes": [
+      "CPU_SOCKET",
+      "DIMM_SLOT",
+      "PCIe_X16",
+      "PCIe_X1",
+      "M2_SLOT",
+      "SATA_PORT",
+      "ATX_POWER",
+      "CPU_POWER",
+      "FAN_HEADER"
+    ],
+    "images": 1,
+    "models": 1,
+    "files": [
+      {
+        "model_id": "Gigabyte B660M DS3H AX DDR4",
+        "image_sha256": "1d02ac8768db3b1a9e432867243c1602d485ac271071c56c980ad6e04557d568",
+        "label_sha256": "800f86e88c6ef9a41a92ab8aa756441b1c9be413a6dc8173732f9749739f24b3",
+        "annotation_sha256": "cc2d5d56da4eb92fdb87b249bab9f1f497411cf45edb9123b8b48c3594f88bf4",
+        "boxes": 18,
+        "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_b660m-ds3h-ax-ddr4_e_230213.pdf"
+      }
+    ],
+    "evaluated": false,
+    "limitation": "Small manually annotated holdout; not independent human certification. Never use for candidate selection."
+  },
+  "deployment_approved": false,
+  "decision": "Retain experimental status: 9 of 18 boxes detected on one reserved board. RAM and M.2 missed; fan recall 1/4. Do not tune on this holdout."
+}

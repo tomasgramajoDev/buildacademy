@@ -1,5 +1,5 @@
 {
-  "status": "training",
+  "status": "trained_evaluated_not_selected",
   "prepared_data": "datasets\\connectors-nine-prepared-20models-crops\\data.yaml",
   "audit": {
     "images": 76,

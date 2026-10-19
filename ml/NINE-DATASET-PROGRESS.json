@@ -80,7 +80,7 @@
     "path": "datasets/connectors-nine-prepared-20models/data.yaml",
     "manifest_sha256": "932079ef86b3d6184e4c8823e89ea8befbb09e4aaf0fdecad8191f8899cc0ced",
     "trained": false,
-    "note": "Adds AM5 Gene and Intel G1.Sniper 5 training models beyond the currently running immutable 18-model v3 dataset. Validation/test membership unchanged."
+    "note": "20-model source dataset used with derived crops for completed v4. Validation/test membership unchanged."
   },
   "previous_training": {
     "name": "nine-reviewed-16models-long-20261019",
@@ -96,12 +96,12 @@
   "crop_experiment": {
     "data": "datasets/connectors-nine-prepared-20models-crops/data.yaml",
     "report": "ml/NINE-CROP-DATASET.json",
-    "trained": false,
+    "trained": true,
     "images": 76,
     "independent_models": 20,
     "derived_train_crops": 56,
     "held_out_transformed": false,
-    "status": "training",
+    "status": "completed_not_selected",
     "name": "nine-reviewed-20models-crops-v4",
     "epochs": 100,
     "batch": 2,
@@ -110,5 +110,8 @@
     "queue_status": "tmp/nine-v4-queue.json",
     "note": "One queued experiment; 70 training images including crops. Same original validation/test files. Combined data-and-crop experiment, not an isolated crop ablation."
   },
-  "third_run_review": "ml/REVISION-NUEVE-CLASES-V3.json"
+  "third_run_review": "ml/REVISION-NUEVE-CLASES-V3.json",
+  "fourth_run_review": "ml/REVISION-NUEVE-CLASES-V4.json",
+  "selection": "ml/SELECCION-NUEVE-CLASES.json",
+  "independent_evaluation": "ml/EVALUACION-INDEPENDIENTE-V3.json"
 }

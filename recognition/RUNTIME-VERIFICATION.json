@@ -14,5 +14,6 @@
     "method_405": true
   },
   "command": "python ml/smoke_integration.py --model-dir ml/artifacts/nine-reviewed-v2 --image datasets/connectors-nine-review/images/000031.jpg --output tmp/runtime-only-smoke.json",
-  "scope": "Installation and HTTP integration only. Not model accuracy or other-platform certification."
+  "scope": "Installation and HTTP integration only. Not model accuracy or other-platform certification.",
+  "additional_model_verified_with_same_checks": "ml/artifacts/nine-reviewed-v3"
 }

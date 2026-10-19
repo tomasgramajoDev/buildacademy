@@ -1,5 +1,5 @@
 {
-  "status": "evaluated_pending_crop_comparison_not_deployed",
+  "status": "selected_on_validation_experimental_not_deployed",
   "epochs_completed": 300,
   "model_sha256": "2bd181e3090af829c3db94a33d7d17fb356392b07073145fba9774bb02661de2",
   "evaluation": {
@@ -77,7 +77,7 @@
       "CPU_POWER": 0.44258333333333333,
       "FAN_HEADER": 0.030899887163058044
     },
-    "claim": "Evaluaci\u00f3n de este dataset. No certifica generalizaci\u00f3n a nuevas placas ni compatibilidad el\u00e9ctrica."
+    "claim": "Evaluación de este dataset. No certifica generalización a nuevas placas ni compatibilidad eléctrica."
   },
   "runtime_val": {
     "split": "val",
@@ -275,5 +275,6 @@
   },
   "deployment_approved": false,
   "reason": "Runtime M2 recall remains zero on reused test and fan-header recall remains low. Wait for validation comparison with v4.",
-  "independent_holdout_used": false
+  "independent_holdout_used": false,
+  "independent_review": "ml/EVALUACION-INDEPENDIENTE-V3.json"
 }

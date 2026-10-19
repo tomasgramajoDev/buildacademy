@@ -1,0 +1,120 @@
+{
+  "image": "datasets/connectors-nine-review/images/000048.jpg",
+  "model_id": "Gigabyte GA-AM1M-S2H",
+  "model_group": "gigabyte-ga-am1m-s2h",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download1.gigabyte.com/Files/Manual/mb_ga-am1m-s2h_e.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      366,
+      249,
+      506,
+      455
+    ],
+    [
+      "DIMM_SLOT",
+      226,
+      506,
+      631,
+      542
+    ],
+    [
+      "DIMM_SLOT",
+      226,
+      540,
+      632,
+      579
+    ],
+    [
+      "PCIe_X16",
+      160,
+      171,
+      206,
+      544
+    ],
+    [
+      "PCIe_X1",
+      108,
+      170,
+      145,
+      280
+    ],
+    [
+      "PCIe_X1",
+      52,
+      170,
+      88,
+      280
+    ],
+    [
+      "SATA_PORT",
+      244,
+      345,
+      272,
+      422
+    ],
+    [
+      "SATA_PORT",
+      271,
+      345,
+      301,
+      422
+    ],
+    [
+      "ATX_POWER",
+      209,
+      589,
+      369,
+      640
+    ],
+    [
+      "CPU_POWER",
+      557,
+      176,
+      602,
+      229
+    ],
+    [
+      "FAN_HEADER",
+      277,
+      211,
+      316,
+      244
+    ],
+    [
+      "FAN_HEADER",
+      595,
+      449,
+      631,
+      485
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "6f8d57b704a9281d00c0f1908377a1d9c448da86b2a608eef48a52ebd63b35ff",
+  "split": "train",
+  "notes": [
+    "Photo rotated relative to official schematic; connector locations checked after accounting for rotation.",
+    "No M.2 present.",
+    "Long PCIEX4-labelled slot uses physical x16 form; class describes length, not four wired lanes.",
+    "PCB revision 1.0 visible; grouped conservatively with all revisions of this model."
+  ]
+}

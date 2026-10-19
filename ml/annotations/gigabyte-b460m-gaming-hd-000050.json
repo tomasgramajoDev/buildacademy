@@ -1,0 +1,133 @@
+{
+  "image": "datasets/connectors-nine-review/images/000050.jpg",
+  "model_id": "Gigabyte B460M GAMING HD",
+  "model_group": "gigabyte-b460m-gaming-hd",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_b460m-gaming-hd_e_v2.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      239,
+      131,
+      446,
+      348
+    ],
+    [
+      "DIMM_SLOT",
+      489,
+      0,
+      520,
+      424
+    ],
+    [
+      "DIMM_SLOT",
+      520,
+      0,
+      551,
+      424
+    ],
+    [
+      "PCIe_X16",
+      164,
+      445,
+      520,
+      482
+    ],
+    [
+      "PCIe_X1",
+      163,
+      559,
+      257,
+      593
+    ],
+    [
+      "M2_SLOT",
+      434,
+      375,
+      471,
+      442
+    ],
+    [
+      "ATX_POWER",
+      588,
+      55,
+      628,
+      216
+    ],
+    [
+      "CPU_POWER",
+      151,
+      7,
+      215,
+      47
+    ],
+    [
+      "SATA_PORT",
+      566,
+      269,
+      593,
+      316
+    ],
+    [
+      "SATA_PORT",
+      595,
+      269,
+      625,
+      316
+    ],
+    [
+      "SATA_PORT",
+      566,
+      318,
+      593,
+      365
+    ],
+    [
+      "SATA_PORT",
+      595,
+      318,
+      625,
+      365
+    ],
+    [
+      "FAN_HEADER",
+      123,
+      54,
+      153,
+      93
+    ],
+    [
+      "FAN_HEADER",
+      449,
+      7,
+      489,
+      33
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "09358764b83214919543f7890e11b53d5dc35d1822c37b5ae7d81991cb0e3ae0",
+  "split": "test",
+  "notes": [
+    "Reserved for test before training; no performance-guided selection.",
+    "Two fan headers confirmed in the manufacturer layout; no bottom fan header.",
+    "Four discrete SATA housings; USB3 header below them excluded."
+  ]
+}

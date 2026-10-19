@@ -1,0 +1,140 @@
+{
+  "image": "datasets/connectors-nine-review/images/000063.jpg",
+  "model_id": "Gigabyte H610M S2H DDR4",
+  "model_group": "gigabyte-h610m-s2h-ddr4",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_h610m-s2h-ddr4_1001_e_230213.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      296,
+      120,
+      465,
+      361
+    ],
+    [
+      "DIMM_SLOT",
+      513,
+      25,
+      539,
+      434
+    ],
+    [
+      "DIMM_SLOT",
+      540,
+      25,
+      567,
+      434
+    ],
+    [
+      "PCIe_X16",
+      150,
+      437,
+      454,
+      475
+    ],
+    [
+      "PCIe_X1",
+      150,
+      552,
+      224,
+      583
+    ],
+    [
+      "M2_SLOT",
+      397,
+      367,
+      430,
+      435
+    ],
+    [
+      "ATX_POWER",
+      597,
+      107,
+      628,
+      263
+    ],
+    [
+      "CPU_POWER",
+      158,
+      5,
+      221,
+      42
+    ],
+    [
+      "SATA_PORT",
+      576,
+      265,
+      603,
+      312
+    ],
+    [
+      "SATA_PORT",
+      604,
+      265,
+      633,
+      312
+    ],
+    [
+      "SATA_PORT",
+      576,
+      313,
+      603,
+      359
+    ],
+    [
+      "SATA_PORT",
+      604,
+      313,
+      633,
+      359
+    ],
+    [
+      "FAN_HEADER",
+      133,
+      7,
+      159,
+      45
+    ],
+    [
+      "FAN_HEADER",
+      467,
+      33,
+      509,
+      61
+    ],
+    [
+      "FAN_HEADER",
+      477,
+      597,
+      517,
+      627
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "c95fe3f4a67fbfba721a828574b45e2c2bec253dc7795b7911414395cb93bc85",
+  "split": "val",
+  "notes": [
+    "Model name printed on PCB, layout matched to official rev.1.0 manual.",
+    "Reserved for validation; never assign other photos of this model to train or test.",
+    "Four discrete SATA housings and three fan headers; USB3 header excluded."
+  ]
+}

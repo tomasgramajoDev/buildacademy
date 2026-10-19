@@ -1,0 +1,183 @@
+{
+  "image": "datasets/connectors-nine-review/images/000085.jpg",
+  "model_id": "Gigabyte B560 HD3",
+  "model_group": "gigabyte-b560-hd3",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_b560-hd3_e_v1.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      373,
+      250,
+      543,
+      425
+    ],
+    [
+      "DIMM_SLOT",
+      305,
+      467,
+      615,
+      495
+    ],
+    [
+      "DIMM_SLOT",
+      305,
+      490,
+      615,
+      518
+    ],
+    [
+      "DIMM_SLOT",
+      305,
+      513,
+      615,
+      541
+    ],
+    [
+      "DIMM_SLOT",
+      305,
+      536,
+      615,
+      565
+    ],
+    [
+      "PCIe_X16",
+      244,
+      139,
+      277,
+      431
+    ],
+    [
+      "PCIe_X16",
+      117,
+      139,
+      149,
+      433
+    ],
+    [
+      "PCIe_X1",
+      200,
+      139,
+      229,
+      215
+    ],
+    [
+      "PCIe_X1",
+      33,
+      138,
+      64,
+      216
+    ],
+    [
+      "M2_SLOT",
+      274,
+      140,
+      324,
+      173
+    ],
+    [
+      "M2_SLOT",
+      58,
+      398,
+      118,
+      427
+    ],
+    [
+      "ATX_POWER",
+      424,
+      591,
+      543,
+      628
+    ],
+    [
+      "CPU_POWER",
+      601,
+      181,
+      631,
+      232
+    ],
+    [
+      "SATA_PORT",
+      168,
+      601,
+      204,
+      638
+    ],
+    [
+      "SATA_PORT",
+      202,
+      601,
+      239,
+      638
+    ],
+    [
+      "SATA_PORT",
+      237,
+      601,
+      274,
+      638
+    ],
+    [
+      "FAN_HEADER",
+      613,
+      130,
+      632,
+      168
+    ],
+    [
+      "FAN_HEADER",
+      612,
+      389,
+      632,
+      425
+    ],
+    [
+      "FAN_HEADER",
+      612,
+      424,
+      632,
+      454
+    ],
+    [
+      "FAN_HEADER",
+      393,
+      597,
+      425,
+      623
+    ],
+    [
+      "FAN_HEADER",
+      11,
+      504,
+      30,
+      541
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "28c5a624eb7a848b5663bfc0df0cc9a8c4d1c542dbcd180f59bed33e0fa20536",
+  "split": "train",
+  "notes": [
+    "Photo rotated 90 degrees relative to official schematic; model name on PCB and matching connector layout verified.",
+    "Five fan headers include CPU_OPT; cropped views checked against manual labels.",
+    "Three visible stacked SATA housings; no assertion of three individual ports.",
+    "Long PCIEX4 slot assigned physical PCIe_X16, independent of wired lanes."
+  ]
+}

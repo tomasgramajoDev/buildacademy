@@ -1,0 +1,13 @@
+{
+  "buildId": "demo-build",
+  "contextId": "bios-warning",
+  "mode": "compatibility",
+  "revision": "demo-1",
+  "title": "Soporte de BIOS pendiente de verificar",
+  "status": "unknown",
+  "evidence": [
+    {"id": "parts", "text": "Selección del ejemplo: AMD Ryzen 5 5600X y ASUS TUF B550M-PLUS. No se conoce la versión de BIOS instalada."},
+    {"id": "diagnosis", "text": "El motor no confirmó el soporte del procesador con la BIOS instalada. Hay que consultar la lista oficial de CPU soportadas para el modelo y revisión exactos y compararla con la versión instalada. No se verificó un procedimiento de actualización ni disponibilidad de FlashBack."}
+  ],
+  "history": []
+}

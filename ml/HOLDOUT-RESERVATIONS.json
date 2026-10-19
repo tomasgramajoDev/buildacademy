@@ -1,0 +1,22 @@
+{
+  "purpose": "Independent post-selection evaluation; never use for training, validation or candidate ranking.",
+  "reservations": [
+    {
+      "image": "datasets/connectors-nine-review/images/000141.jpg",
+      "image_sha256": "1d02ac8768db3b1a9e432867243c1602d485ac271071c56c980ad6e04557d568",
+      "model_id": "Gigabyte B660M DS3H AX DDR4",
+      "excluded_model_ids": [
+        "Gigabyte B660M DS3H AX DDR4",
+        "Gigabyte B660M DS3H DDR4"
+      ],
+      "status": "identity_checked_annotations_pending",
+      "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_b660m-ds3h-ax-ddr4_e_230213.pdf",
+      "notes": [
+        "Name visible on PCB after mirroring source for inspection. Source pixels remain unchanged.",
+        "AX variant has rear wireless antenna connectors. Conservatively reserve non-AX sibling too.",
+        "Manufacturer motherboard layout inspected; bounding boxes not yet reviewed.",
+        "Do not run either candidate on this image until selection based on existing validation is finalized."
+      ]
+    }
+  ]
+}

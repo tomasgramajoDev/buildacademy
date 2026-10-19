@@ -26,3 +26,7 @@ Las discrepancias de identidad se registran en `ml/annotation-review-notes`. Una
 `python ml/augment_training.py MANIFIESTO_REVISADO --output DIRECTORIO_NUEVO` conserva las fotos completas y añade cuatro recortes por foto de entrenamiento. Cada recorte ocupa el 60 % del ancho y alto original y conserva todas las intersecciones positivas de las cajas, incluidas partes recortadas. No infiere conexiones ocultas ni genera etiquetas nuevas mediante el detector.
 
 Cada variante conserva el modelo y grupo de la placa original. Las fotos y etiquetas de validación/prueba se referencian sin transformaciones y sus hashes quedan registrados. Los recortes no aumentan la cantidad de placas independientes. Pasar el manifiesto resultante por `review_gate.py` antes de entrenar. Evaluar después sobre fotos completas: ampliar detalles durante entrenamiento no demuestra por sí mismo una mejora en inferencia.
+
+## Reserva para evaluación independiente
+
+`ml/HOLDOUT-RESERVATIONS.json` registra placas excluidas del conjunto de desarrollo. La reserva no equivale a anotaciones terminadas. `build_reviewed_manifest.py` rechaza los nombres de modelo reservados; revisar manualmente variantes, nombres alternativos y fotos duplicadas. Mantener sus etiquetas en una colección separada. No generar propuestas con los candidatos ni medirlos sobre esas fotos antes de fijar la selección mediante validación. Registrar el primer resultado independiente, incluso si es malo; usarlo después para ajustes convierte ese conjunto en datos de desarrollo y requiere otra reserva futura.

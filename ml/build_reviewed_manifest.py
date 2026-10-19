@@ -8,6 +8,8 @@ from prepare_dataset import CLASSES
 ROOT=Path(__file__).resolve().parents[1]
 
 def build():
+    reservations=ROOT/'ml/HOLDOUT-RESERVATIONS.json'
+    reserved={name.strip().casefold() for row in json.loads(reservations.read_text(encoding='utf-8'))['reservations'] for name in row['excluded_model_ids']} if reservations.exists() else set()
     output=ROOT/'datasets/nine-reviewed'
     (output/'labels').mkdir(parents=True,exist_ok=True)
     (output/'previews').mkdir(exist_ok=True)
@@ -15,6 +17,8 @@ def build():
     for record in sorted((ROOT/'ml/annotations').glob('*.json')):
         data=json.loads(record.read_text(encoding='utf-8'))
         if data['status']!='reviewed' or data.get('unresolved'):continue
+        if data['model_id'].strip().casefold() in reserved:
+            raise ValueError('Placa reservada para evaluación independiente: no mezclar con el dataset de desarrollo.')
         image=ROOT/data['image']
         if hashlib.sha256(image.read_bytes()).hexdigest()!=data['image_sha256']:raise ValueError('La foto cambió desde la revisión.')
         with Image.open(image) as source:preview=source.convert('RGB')

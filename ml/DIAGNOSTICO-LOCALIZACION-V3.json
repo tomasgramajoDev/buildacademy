@@ -1,0 +1,376 @@
+{
+  "split": "val",
+  "model": "nine-reviewed-18models-v3",
+  "diagnostic_threshold": 0.25,
+  "note": "Nearest-box diagnostic, not one-to-one AP evaluation. Green RAM ground truth; red RAM predictions in local overlays. No independent test read.",
+  "rows": [
+    {
+      "image": "000001.jpg",
+      "class": "DIMM_SLOT",
+      "box": [
+        450.0,
+        41.99999999999999,
+        468.0,
+        417.0
+      ],
+      "best_same_class_iou": 0.7207652037919654,
+      "best_same_class_score": 0.31545090675354004,
+      "best_any_class": [
+        0.7207652037919654,
+        "DIMM_SLOT"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "DIMM_SLOT",
+      "box": [
+        468.00000000000006,
+        41.99999999999999,
+        486.0,
+        417.0
+      ],
+      "best_same_class_iou": 0.37909815459532786,
+      "best_same_class_score": 0.2779977321624756,
+      "best_any_class": [
+        0.37909815459532786,
+        "DIMM_SLOT"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "DIMM_SLOT",
+      "box": [
+        486.0,
+        41.99999999999999,
+        504.0,
+        417.0
+      ],
+      "best_same_class_iou": 0.0,
+      "best_same_class_score": 0.31545090675354004,
+      "best_any_class": [
+        0.0,
+        "PCIe_X16"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "DIMM_SLOT",
+      "box": [
+        504.0,
+        41.99999999999999,
+        522.0,
+        417.0
+      ],
+      "best_same_class_iou": 0.0,
+      "best_same_class_score": 0.31545090675354004,
+      "best_any_class": [
+        0.0,
+        "PCIe_X16"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "M2_SLOT",
+      "box": [
+        282.0,
+        519.0,
+        302.0,
+        573.0
+      ],
+      "best_same_class_iou": 0.8319520310578772,
+      "best_same_class_score": 0.5483943223953247,
+      "best_any_class": [
+        0.8319520310578772,
+        "M2_SLOT"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "M2_SLOT",
+      "box": [
+        552.0,
+        555.0,
+        566.0,
+        608.0
+      ],
+      "best_same_class_iou": 0.0,
+      "best_same_class_score": 0.5483943223953247,
+      "best_any_class": [
+        0.0,
+        "PCIe_X16"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        428.00000000000006,
+        28.000000000000004,
+        451.0,
+        41.00000000000001
+      ],
+      "best_same_class_iou": 0.5447433442443528,
+      "best_same_class_score": 0.49390989542007446,
+      "best_any_class": [
+        0.5447433442443528,
+        "FAN_HEADER"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        428.00000000000006,
+        42.0,
+        451.0,
+        56.00000000000001
+      ],
+      "best_same_class_iou": 0.5546610262261201,
+      "best_same_class_score": 0.748058021068573,
+      "best_any_class": [
+        0.5546610262261201,
+        "FAN_HEADER"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        205.99999999999997,
+        345.0,
+        223.0,
+        372.0
+      ],
+      "best_same_class_iou": 0.0,
+      "best_same_class_score": 0.8666045665740967,
+      "best_any_class": [
+        0.0,
+        "PCIe_X16"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        247.0,
+        615.0,
+        286.0,
+        635.0
+      ],
+      "best_same_class_iou": 0.8022883378242718,
+      "best_same_class_score": 0.4958568513393402,
+      "best_any_class": [
+        0.8022883378242718,
+        "FAN_HEADER"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        287.0,
+        615.0,
+        315.0,
+        635.0
+      ],
+      "best_same_class_iou": 0.4602317034514185,
+      "best_same_class_score": 0.5167909860610962,
+      "best_any_class": [
+        0.4602317034514185,
+        "FAN_HEADER"
+      ]
+    },
+    {
+      "image": "000001.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        397.0,
+        615.0,
+        422.0,
+        635.0
+      ],
+      "best_same_class_iou": 0.1655067932162603,
+      "best_same_class_score": 0.5686492919921875,
+      "best_any_class": [
+        0.1655067932162603,
+        "FAN_HEADER"
+      ]
+    },
+    {
+      "image": "000011.jpg",
+      "class": "DIMM_SLOT",
+      "box": [
+        513.0,
+        25.0,
+        539.0,
+        434.0
+      ],
+      "best_same_class_iou": 0.49183238029497867,
+      "best_same_class_score": 0.7575652599334717,
+      "best_any_class": [
+        0.49183238029497867,
+        "DIMM_SLOT"
+      ]
+    },
+    {
+      "image": "000011.jpg",
+      "class": "DIMM_SLOT",
+      "box": [
+        540.0,
+        25.0,
+        567.0,
+        434.0
+      ],
+      "best_same_class_iou": 0.6011878929212875,
+      "best_same_class_score": 0.5673270225524902,
+      "best_any_class": [
+        0.6011878929212875,
+        "DIMM_SLOT"
+      ]
+    },
+    {
+      "image": "000011.jpg",
+      "class": "M2_SLOT",
+      "box": [
+        397.0,
+        367.0,
+        430.0,
+        435.0
+      ],
+      "best_same_class_iou": 0.8590437131240266,
+      "best_same_class_score": 0.30032840371131897,
+      "best_any_class": [
+        0.8590437131240266,
+        "M2_SLOT"
+      ]
+    },
+    {
+      "image": "000011.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        133.0,
+        7.000000000000002,
+        159.0,
+        45.0
+      ],
+      "best_same_class_iou": 0.0,
+      "best_same_class_score": 0.7443036437034607,
+      "best_any_class": [
+        0.0,
+        "SATA_PORT"
+      ]
+    },
+    {
+      "image": "000011.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        466.99999999999994,
+        33.0,
+        509.0,
+        61.0
+      ],
+      "best_same_class_iou": 0.0,
+      "best_same_class_score": 0.7443036437034607,
+      "best_any_class": [
+        0.032092709182754,
+        "DIMM_SLOT"
+      ]
+    },
+    {
+      "image": "000011.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        477.0,
+        597.0,
+        517.0,
+        627.0
+      ],
+      "best_same_class_iou": 0.18930723014799697,
+      "best_same_class_score": 0.4719100594520569,
+      "best_any_class": [
+        0.18930723014799697,
+        "FAN_HEADER"
+      ]
+    },
+    {
+      "image": "000013.jpg",
+      "class": "DIMM_SLOT",
+      "box": [
+        509.00000000000006,
+        73.99999999999999,
+        535.0,
+        406.0
+      ],
+      "best_same_class_iou": 0.4974837396336022,
+      "best_same_class_score": 0.5213140845298767,
+      "best_any_class": [
+        0.4974837396336022,
+        "DIMM_SLOT"
+      ]
+    },
+    {
+      "image": "000013.jpg",
+      "class": "DIMM_SLOT",
+      "box": [
+        532.0,
+        73.99999999999999,
+        558.0,
+        406.0
+      ],
+      "best_same_class_iou": 0.6051544565606986,
+      "best_same_class_score": 0.34960615634918213,
+      "best_any_class": [
+        0.6051544565606986,
+        "DIMM_SLOT"
+      ]
+    },
+    {
+      "image": "000013.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        474.0,
+        95.0,
+        491.99999999999994,
+        123.99999999999999
+      ],
+      "best_same_class_iou": 0,
+      "best_same_class_score": null,
+      "best_any_class": [
+        0.0,
+        "SATA_PORT"
+      ]
+    },
+    {
+      "image": "000013.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        569.0,
+        380.99999999999994,
+        587.0,
+        405.0
+      ],
+      "best_same_class_iou": 0,
+      "best_same_class_score": null,
+      "best_any_class": [
+        0.0,
+        "SATA_PORT"
+      ]
+    },
+    {
+      "image": "000013.jpg",
+      "class": "FAN_HEADER",
+      "box": [
+        300.0,
+        365.0,
+        316.0,
+        385.0
+      ],
+      "best_same_class_iou": 0,
+      "best_same_class_score": null,
+      "best_any_class": [
+        0.0,
+        "SATA_PORT"
+      ]
+    }
+  ]
+}

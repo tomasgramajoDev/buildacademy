@@ -1,0 +1,581 @@
+{
+  "status": "evaluated_not_approved_for_deployment",
+  "reason": "Limited generalization with only 10 training motherboard images; additional diverse reviewed annotations required.",
+  "evaluation": {
+    "model": "runs/detect/runs/buildacademy/nine-reviewed-16models-long-20261019/weights/best.pt",
+    "data_audit": {
+      "images": 16,
+      "boards": 16,
+      "boxes": {
+        "train": [
+          10,
+          34,
+          22,
+          10,
+          19,
+          38,
+          10,
+          13,
+          49
+        ],
+        "val": [
+          3,
+          8,
+          4,
+          3,
+          3,
+          16,
+          3,
+          4,
+          12
+        ],
+        "test": [
+          3,
+          10,
+          6,
+          3,
+          2,
+          9,
+          3,
+          4,
+          15
+        ]
+      },
+      "classes": [
+        "CPU_SOCKET",
+        "DIMM_SLOT",
+        "PCIe_X16",
+        "PCIe_X1",
+        "M2_SLOT",
+        "SATA_PORT",
+        "ATX_POWER",
+        "CPU_POWER",
+        "FAN_HEADER"
+      ],
+      "manifest_sha256": "b5e1e52ac4fe362726379a2686763a2aaf139bec9ed608547614e3e76cfd23a1",
+      "limitation": "El validador detecta duplicados exactos; revisar manualmente similares y la identidad de cada placa.",
+      "review_gate": "passed",
+      "model_count": 16
+    },
+    "input_size": 640,
+    "test": {
+      "metrics/precision(B)": 0.5141434311298814,
+      "metrics/recall(B)": 0.581630738038543,
+      "metrics/mAP50(B)": 0.6001361560136425,
+      "metrics/mAP50-95(B)": 0.35250204731276236,
+      "fitness": 0.35250204731276236
+    },
+    "per_class_map50_95": {
+      "CPU_SOCKET": 0.742875,
+      "DIMM_SLOT": 0.16644711368919504,
+      "PCIe_X16": 0.27471345539706193,
+      "PCIe_X1": 0.2676333333333334,
+      "M2_SLOT": 0.10455555555555555,
+      "SATA_PORT": 0.405851338612368,
+      "ATX_POWER": 0.7635000000000001,
+      "CPU_POWER": 0.43137500000000006,
+      "FAN_HEADER": 0.015567629227347257
+    },
+    "claim": "Evaluaci\u00f3n de este dataset. No certifica generalizaci\u00f3n a nuevas placas ni compatibilidad el\u00e9ctrica."
+  },
+  "runtime_default": {
+    "split": "test",
+    "model": "nine-reviewed-v2",
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "DIMM_SLOT": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 7,
+        "precision": 1.0,
+        "recall": 0.3
+      },
+      "PCIe_X16": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666
+      },
+      "PCIe_X1": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "M2_SLOT": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.0,
+        "recall": 0.0
+      },
+      "SATA_PORT": {
+        "tp": 7,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.7777777777777778,
+        "recall": 0.7777777777777778
+      },
+      "ATX_POWER": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "CPU_POWER": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25
+      },
+      "FAN_HEADER": {
+        "tp": 1,
+        "fp": 3,
+        "fn": 14,
+        "precision": 0.25,
+        "recall": 0.06666666666666667
+      }
+    },
+    "images": [
+      {
+        "image": "000006.jpg",
+        "tp": 7,
+        "fp": 1,
+        "fn": 7
+      },
+      {
+        "image": "000010.jpg",
+        "tp": 6,
+        "fp": 4,
+        "fn": 12
+      },
+      {
+        "image": "000012.jpg",
+        "tp": 6,
+        "fp": 1,
+        "fn": 17
+      }
+    ],
+    "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+  },
+  "validation_calibration": {
+    "selection_split": "val",
+    "selection_metric": "micro F1 at IoU .5",
+    "selected_threshold": 0.35,
+    "candidates": [
+      {
+        "threshold": 0.25,
+        "tp": 25,
+        "fp": 17,
+        "fn": 31,
+        "f1": 0.5102040816326531,
+        "detail": {
+          "split": "val",
+          "model": "nine-reviewed-v2",
+          "confidence_threshold": 0.25,
+          "nms_iou": 0.45,
+          "matching_iou": 0.5,
+          "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+          "per_class": {
+            "CPU_SOCKET": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.6666666666666666
+            },
+            "DIMM_SLOT": {
+              "tp": 2,
+              "fp": 2,
+              "fn": 6,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            "PCIe_X16": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8,
+              "recall": 1.0
+            },
+            "PCIe_X1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            "M2_SLOT": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "SATA_PORT": {
+              "tp": 11,
+              "fp": 1,
+              "fn": 5,
+              "precision": 0.9166666666666666,
+              "recall": 0.6875
+            },
+            "ATX_POWER": {
+              "tp": 2,
+              "fp": 2,
+              "fn": 1,
+              "precision": 0.5,
+              "recall": 0.6666666666666666
+            },
+            "CPU_POWER": {
+              "tp": 2,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.6666666666666666,
+              "recall": 0.5
+            },
+            "FAN_HEADER": {
+              "tp": 2,
+              "fp": 9,
+              "fn": 10,
+              "precision": 0.18181818181818182,
+              "recall": 0.16666666666666666
+            }
+          },
+          "images": [
+            {
+              "image": "000000.jpg",
+              "tp": 9,
+              "fp": 10,
+              "fn": 16
+            },
+            {
+              "image": "000009.jpg",
+              "tp": 8,
+              "fp": 5,
+              "fn": 7
+            },
+            {
+              "image": "000011.jpg",
+              "tp": 8,
+              "fp": 2,
+              "fn": 8
+            }
+          ],
+          "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+        }
+      },
+      {
+        "threshold": 0.35,
+        "tp": 23,
+        "fp": 11,
+        "fn": 33,
+        "f1": 0.5111111111111111,
+        "detail": {
+          "split": "val",
+          "model": "nine-reviewed-v2",
+          "confidence_threshold": 0.35,
+          "nms_iou": 0.45,
+          "matching_iou": 0.5,
+          "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+          "per_class": {
+            "CPU_SOCKET": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.6666666666666666
+            },
+            "DIMM_SLOT": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 7,
+              "precision": 1.0,
+              "recall": 0.125
+            },
+            "PCIe_X16": {
+              "tp": 4,
+              "fp": 1,
+              "fn": 0,
+              "precision": 0.8,
+              "recall": 1.0
+            },
+            "PCIe_X1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            "M2_SLOT": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "SATA_PORT": {
+              "tp": 10,
+              "fp": 0,
+              "fn": 6,
+              "precision": 1.0,
+              "recall": 0.625
+            },
+            "ATX_POWER": {
+              "tp": 2,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.6666666666666666,
+              "recall": 0.6666666666666666
+            },
+            "CPU_POWER": {
+              "tp": 2,
+              "fp": 1,
+              "fn": 2,
+              "precision": 0.6666666666666666,
+              "recall": 0.5
+            },
+            "FAN_HEADER": {
+              "tp": 2,
+              "fp": 7,
+              "fn": 10,
+              "precision": 0.2222222222222222,
+              "recall": 0.16666666666666666
+            }
+          },
+          "images": [
+            {
+              "image": "000000.jpg",
+              "tp": 8,
+              "fp": 5,
+              "fn": 17
+            },
+            {
+              "image": "000009.jpg",
+              "tp": 7,
+              "fp": 4,
+              "fn": 8
+            },
+            {
+              "image": "000011.jpg",
+              "tp": 8,
+              "fp": 2,
+              "fn": 8
+            }
+          ],
+          "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+        }
+      },
+      {
+        "threshold": 0.5,
+        "tp": 17,
+        "fp": 6,
+        "fn": 39,
+        "f1": 0.43037974683544306,
+        "detail": {
+          "split": "val",
+          "model": "nine-reviewed-v2",
+          "confidence_threshold": 0.5,
+          "nms_iou": 0.45,
+          "matching_iou": 0.5,
+          "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+          "per_class": {
+            "CPU_SOCKET": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 1,
+              "precision": 1.0,
+              "recall": 0.6666666666666666
+            },
+            "DIMM_SLOT": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 7,
+              "precision": 1.0,
+              "recall": 0.125
+            },
+            "PCIe_X16": {
+              "tp": 3,
+              "fp": 1,
+              "fn": 1,
+              "precision": 0.75,
+              "recall": 0.75
+            },
+            "PCIe_X1": {
+              "tp": 0,
+              "fp": 0,
+              "fn": 3,
+              "precision": null,
+              "recall": 0.0
+            },
+            "M2_SLOT": {
+              "tp": 0,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.0,
+              "recall": 0.0
+            },
+            "SATA_PORT": {
+              "tp": 9,
+              "fp": 0,
+              "fn": 7,
+              "precision": 1.0,
+              "recall": 0.5625
+            },
+            "ATX_POWER": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 2,
+              "precision": 1.0,
+              "recall": 0.3333333333333333
+            },
+            "CPU_POWER": {
+              "tp": 1,
+              "fp": 1,
+              "fn": 3,
+              "precision": 0.5,
+              "recall": 0.25
+            },
+            "FAN_HEADER": {
+              "tp": 0,
+              "fp": 3,
+              "fn": 12,
+              "precision": 0.0,
+              "recall": 0.0
+            }
+          },
+          "images": [
+            {
+              "image": "000000.jpg",
+              "tp": 3,
+              "fp": 3,
+              "fn": 22
+            },
+            {
+              "image": "000009.jpg",
+              "tp": 6,
+              "fp": 1,
+              "fn": 9
+            },
+            {
+              "image": "000011.jpg",
+              "tp": 8,
+              "fp": 2,
+              "fn": 8
+            }
+          ],
+          "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+        }
+      }
+    ]
+  },
+  "runtime_calibrated_diagnostic": {
+    "split": "test",
+    "model": "nine-reviewed-v2",
+    "confidence_threshold": 0.35,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "DIMM_SLOT": {
+        "tp": 4,
+        "fp": 4,
+        "fn": 6,
+        "precision": 0.5,
+        "recall": 0.4
+      },
+      "PCIe_X16": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 3,
+        "precision": 0.75,
+        "recall": 0.5
+      },
+      "PCIe_X1": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "M2_SLOT": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.5,
+        "recall": 0.5
+      },
+      "SATA_PORT": {
+        "tp": 7,
+        "fp": 3,
+        "fn": 2,
+        "precision": 0.7,
+        "recall": 0.7777777777777778
+      },
+      "ATX_POWER": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "CPU_POWER": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "FAN_HEADER": {
+        "tp": 2,
+        "fp": 4,
+        "fn": 13,
+        "precision": 0.3333333333333333,
+        "recall": 0.13333333333333333
+      }
+    },
+    "images": [
+      {
+        "image": "000006.jpg",
+        "tp": 8,
+        "fp": 3,
+        "fn": 6
+      },
+      {
+        "image": "000010.jpg",
+        "tp": 8,
+        "fp": 9,
+        "fn": 10
+      },
+      {
+        "image": "000012.jpg",
+        "tp": 9,
+        "fp": 1,
+        "fn": 14
+      }
+    ],
+    "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+  },
+  "deployment_changed": false,
+  "test_caveat": "Same three test boards reused across experiments; not an independent final certification."
+}

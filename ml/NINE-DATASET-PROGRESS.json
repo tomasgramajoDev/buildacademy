@@ -7,7 +7,7 @@
     "val": 3,
     "test": 3
   },
-  "status": "first_run_evaluated_rejected_longer_training_started",
+  "status": "second_run_evaluated_more_diverse_annotations_required",
   "coverage": {
     "train": [
       10,
@@ -68,7 +68,9 @@
     "data": "datasets/connectors-nine-prepared-16models/data.yaml",
     "manifest_sha256": "b5e1e52ac4fe362726379a2686763a2aaf139bec9ed608547614e3e76cfd23a1",
     "publication_approved": false,
-    "patience": 100
+    "patience": 100,
+    "completed": true
   },
-  "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json"
+  "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
+  "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json"
 }

@@ -5,6 +5,13 @@ from PIL import Image
 from recognition.detector import ConnectorDetector, RecognitionError, decode
 
 class RecognitionTests(unittest.TestCase):
+    def test_threshold_rejected_before_loading_model(self):
+        for threshold in [True, False, None, '0.5', 0, -1, 1.1, float('nan'), float('inf')]:
+            with self.subTest(threshold=threshold):
+                with self.assertRaises(RecognitionError) as error:
+                    ConnectorDetector('missing-model-directory', threshold=threshold)
+                self.assertEqual(error.exception.code, 'invalid_threshold')
+
     @classmethod
     def setUpClass(cls): cls.detector=ConnectorDetector()
 

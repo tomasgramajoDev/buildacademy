@@ -52,7 +52,10 @@ def decode(output, classes, width, height, rw, rh, px, py, threshold):
 
 class ConnectorDetector:
     """Create one instance per backend worker; pass only trusted model paths."""
-    def __init__(self, model_dir=None):
+    def __init__(self, model_dir=None, threshold=0.5):
+        if isinstance(threshold, bool) or not isinstance(threshold, (int, float)) or not math.isfinite(threshold) or not 0 < threshold <= 1:
+            raise RecognitionError('invalid_threshold', 'Umbral de inferencia invalido.')
+        self.threshold = threshold
         root = Path(model_dir) if model_dir else Path(__file__).resolve().parents[1]/'dist/models'
         manifest = json.loads((root/'manifest.json').read_text(encoding='utf-8'))
         self.classes = manifest.get('classes')
@@ -89,7 +92,7 @@ class ConnectorDetector:
         canvas.paste(im.resize((rw,rh), Image.Resampling.BILINEAR), (px,py))
         tensor = np.asarray(canvas, dtype=np.float32).transpose(2,0,1)[None]/255
         output = self.session.run(None, {self.input.name: tensor})[0]
-        detections = decode(output, self.classes, width, height, rw, rh, px, py, .5)
+        detections = decode(output, self.classes, width, height, rw, rh, px, py, self.threshold)
         return {'schemaVersion': 1, 'model': {'version': self.version, 'classes': self.classes,
                 'coversNineClasses': self.classes == TARGET_CLASSES},
                 'image': {'width': width, 'height': height, 'orientation': 'exif_transposed'},

@@ -74,6 +74,10 @@ node --test tests/recognition.test.mjs
 
 ## Modelo ampliado pendiente
 
+La segunda corrida de nueve clases terminó (300 épocas, 16 modelos de placa separados: 10/3/3). La revisión está en `ml/REVISION-NUEVE-CLASES-V2.json`. A umbral 0,5 encontró 19 de 55 conexiones de prueba con 6 falsos positivos. Una comparación limitada de umbrales en validación seleccionó 0,35; en el test reutilizado encontró 25 de 55 con 13 falsos positivos. Esto todavía no justifica desplegarlo: faltan ejemplos diversos, especialmente de conectores pequeños. Se conserva el detector actual de cuatro clases.
+
+`ConnectorDetector(model_dir=..., threshold=0.35)` permite reproducir esa evaluación experimental desde código de backend. El valor por defecto sigue en 0,5. No exponer este parámetro ni la confianza en la interfaz. Los resultados del test reutilizado son diagnósticos y requieren otra evaluación independiente antes de afirmar generalización.
+
 El contrato admite el orden de nueve clases de `ml/prepare_dataset.py`. Cambiar el manifiesto sin entrenar pesos de nueve clases no agrega capacidades. Antes de integrar ese modelo: completar anotaciones revisadas, separar por motherboard/modelo, entrenar, evaluar fotos independientes y validar el ONNX. El objetivo de nueve categorías sigue abierto.
 
 ## Paquetes de candidatos

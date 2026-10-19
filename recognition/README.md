@@ -1,6 +1,6 @@
 # Reconocimiento de conectores: integración
 
-Estado: módulo ejecutable con el piloto de cuatro clases. El modelo de nueve clases está pendiente de completar y revisar el dataset. `coversNineClasses` es false para el modelo actual. No asumir categorías que el modelo no admite.
+Estado: módulo ejecutable con el piloto de cuatro clases por defecto y soporte probado para paquetes de nueve clases. El primer candidato de nueve clases completó entrenamiento y prueba HTTP, pero fue rechazado por baja detección; una segunda corrida está en curso. `coversNineClasses` describe el contrato del modelo cargado, no certifica precisión. No cambiar el modelo predeterminado hasta aprobar su evaluación.
 
 ## Backend Python
 
@@ -88,3 +88,7 @@ python -m recognition.server --model-dir tmp/candidato --port 8771
 ```
 
 No se cambia el contrato de respuesta ni se muestran porcentajes de confianza al usuario. La ubicación del modelo es configuración del servidor, nunca un parámetro del cliente HTTP.
+
+## Verificación de integración
+
+`python ml/smoke_integration.py --model-dir PAQUETE --image FOTO_JPG --output INFORME_JSON` levanta un servidor efímero en loopback, envía una imagen al modelo real y verifica respuestas 200/400/415/405. Cierra el servidor al finalizar. El campo `result` del informe puede pasarse a `toDisplayBoxes` para probar el frontend. No certifica precisión del detector ni sustituye las pruebas del backend de producción.

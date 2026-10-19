@@ -1,0 +1,24 @@
+{
+  "candidate": "nine-reviewed-v1",
+  "model_classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "checks": {
+    "real_model_http": true,
+    "invalid_image_400": true,
+    "unsupported_type_415": true,
+    "method_405": true
+  },
+  "frontend_real_response_scaled_without_confidence": true,
+  "default_web_model_replaced": false,
+  "deployment_approved": false,
+  "limitation": "Protocol/runtime validation only; not evidence of detection accuracy."
+}

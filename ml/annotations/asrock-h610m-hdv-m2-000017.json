@@ -1,0 +1,157 @@
+{
+  "image": "datasets/connectors-nine-review/images/000017.jpg",
+  "model_id": "ASRock H610M-HDV/M.2",
+  "model_group": "asrock-h610m-hdv-m2",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.asrock.com/Manual/H610M-HDVM.2.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      282,
+      188,
+      424,
+      340
+    ],
+    [
+      "DIMM_SLOT",
+      467,
+      118,
+      491,
+      382
+    ],
+    [
+      "DIMM_SLOT",
+      489,
+      115,
+      520,
+      382
+    ],
+    [
+      "PCIe_X16",
+      189,
+      387,
+      435,
+      411
+    ],
+    [
+      "PCIe_X1",
+      189,
+      462,
+      261,
+      483
+    ],
+    [
+      "PCIe_X1",
+      194,
+      500,
+      266,
+      522
+    ],
+    [
+      "M2_SLOT",
+      246,
+      422,
+      261,
+      462
+    ],
+    [
+      "M2_SLOT",
+      454,
+      470,
+      472,
+      519
+    ],
+    [
+      "SATA_PORT",
+      531,
+      348,
+      549,
+      380
+    ],
+    [
+      "SATA_PORT",
+      549,
+      347,
+      568,
+      379
+    ],
+    [
+      "SATA_PORT",
+      534,
+      388,
+      587,
+      426
+    ],
+    [
+      "ATX_POWER",
+      533,
+      182,
+      563,
+      277
+    ],
+    [
+      "CPU_POWER",
+      182,
+      121,
+      232,
+      152
+    ],
+    [
+      "FAN_HEADER",
+      432,
+      122,
+      459,
+      137
+    ],
+    [
+      "FAN_HEADER",
+      513,
+      114,
+      542,
+      131
+    ],
+    [
+      "FAN_HEADER",
+      226,
+      351,
+      249,
+      383
+    ],
+    [
+      "FAN_HEADER",
+      363,
+      519,
+      402,
+      539
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "c5cfd7d827d4b26c69d73fe5773ca0edbd679db1c54c91c51e033b75cf935dd4",
+  "split": "train",
+  "notes": [
+    "Model name visible on PCB and product box; roles checked against manufacturer manual printed pages 6-7.",
+    "Real photographed board with perspective and background, unlike clean catalogue cutouts.",
+    "Two separate upright SATA housings plus one inseparable right-angle stacked housing; three boxes do not imply only three ports.",
+    "Two M.2 connectors visible, SSD and Wi-Fi. Two physical x1 slots.",
+    "Four fan/pump headers checked against manual, excluding bottom USB and speaker headers.",
+    "New model assigned train; future views of same model must share the split."
+  ]
+}

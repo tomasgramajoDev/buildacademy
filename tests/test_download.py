@@ -12,6 +12,13 @@ class Session:
  def __init__(self,responses):self.responses=iter(responses);self.calls=[]
  def get(self,url,**kwargs):self.calls.append((url,kwargs));return next(self.responses)
 class DownloadTests(unittest.TestCase):
+ def test_custom_export_endpoint_cannot_send_key_elsewhere(self):
+  with self.assertRaises(m.DownloadError):
+   m.export_link('test-secret',endpoint='https://example.com/steal')
+  s=Session([Response(data={'export':{'link':'https://app.roboflow.com/ds/example'}})])
+  endpoint='https://api.roboflow.com/computer-vision-assembly-instructions/motherboard-sockets/2/yolov8'
+  m.export_link('test-secret',session=s,endpoint=endpoint)
+  self.assertEqual(s.calls[0][0],endpoint)
  def test_existing_key_only_sent_as_api_header(self):
   s=Session([Response(data={'export':{'link':'https://app.roboflow.com/ds/example'}})])
   self.assertEqual(m.export_link('test-secret',session=s),'https://app.roboflow.com/ds/example')

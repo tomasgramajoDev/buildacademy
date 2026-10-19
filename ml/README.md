@@ -59,6 +59,19 @@ Se eligió completar las anotaciones y entrenar YOLO. No se reemplaza el detecto
 
 La cola local contiene 206 fotos de 472 variantes; ninguna está todavía revisada para las nueve clases. Para cada foto, identificar marca/modelo y placa física cuando sea posible, dibujar todas las conexiones visibles, separar ranuras DIMM individuales, comprobar formato físico PCIe y distinguir ATX/EPS. No etiquetar un disipador como un socket M.2 oculto ni un soporte de ventilador como FAN_HEADER. Reservar placas/modelos completos para validación y test. Una vez revisadas, crear el manifiesto descrito arriba y ejecutar la validación antes del entrenamiento.
 
-Fuente adicional candidata: [Motherboard Sockets](https://universe.roboflow.com/computer-vision-assembly-instructions/motherboard-sockets), Computer Vision Assembly Instructions, CC BY 4.0. Publica clases de alimentación y M.2, pero requiere revisión y no resuelve por sí sola SATA, FAN_HEADER ni la división PCIe x1/x16. Su descarga autenticada aún está pendiente; ROBOFLOW_API_KEY debe mantenerse sólo en el entorno local.
+Fuente adicional candidata: [Motherboard Sockets](https://universe.roboflow.com/computer-vision-assembly-instructions/motherboard-sockets), Computer Vision Assembly Instructions, CC BY 4.0. Publica clases de alimentación y M.2, pero requiere revisión y no resuelve por sí sola SATA, FAN_HEADER ni la división PCIe x1/x16. Descarga autenticada completada el 19/10/2026; ROBOFLOW_API_KEY permanece sólo en el entorno local. La auditoría detectó problemas de etiquetas y separación: ver CANDIDATO-SOCKETS-V2.json. No está aprobado para entrenar sin corregirlo.
 
 La pantalla no muestra porcentajes ni un selector de confianza. El detector conserva su umbral interno de 0.5 y NMS; el campo confidence sigue en las anotaciones técnicas exportadas.
+
+### Resultado de la auditoría del candidato
+
+La exportación v2 contiene 4.399 imágenes de 640×640 (4.051 train, 348 test, sin validación), 13 clases y 3.745 polígonos. Hay 163 grupos de nombres originales compartidos entre train y test, aunque no se encontraron duplicados exactos de píxeles entre ambos. La revisión visual de muestras encontró M.2 etiquetado sobre el disipador que lo oculta y ranuras PCIe visibles sin etiquetar. No se convirtió este candidato en datos de entrenamiento ni se reemplazó el modelo piloto.
+
+Los originales y 13 hojas de muestras permanecen en `datasets/motherboard-sockets-v2-audited/`. El informe reproducible sin imágenes ni secretos está en `ml/CANDIDATO-SOCKETS-V2.json`. Las anotaciones deben corregirse y completarse en todas las fotos seleccionadas, incluyendo SATA y FAN_HEADER, y separarse por placa/modelo antes de entrenar.
+
+```powershell
+.\.venv\Scripts\python.exe ml/download_roboflow.py --endpoint https://api.roboflow.com/computer-vision-assembly-instructions/motherboard-sockets/2/yolov8 --output datasets/motherboard-sockets-v2-yolov8.zip
+.\.venv\Scripts\python.exe ml/audit_candidate.py datasets/motherboard-sockets-v2-yolov8.zip --output datasets/motherboard-sockets-v2-audited
+```
+
+Ambos comandos preservan salidas existentes. El descargador toma ROBOFLOW_API_KEY del entorno o de .env; si falta, la solicita de forma oculta. Sólo envía la clave por cabecera al endpoint de exportación de api.roboflow.com.

@@ -1,0 +1,57 @@
+{
+  "archive_sha256": "2bb901b225951f9c22f5d4c46d69cc8c744c8f4566c9f3eb3a73bee411dca346",
+  "images": {
+    "test": 348,
+    "train": 4051
+  },
+  "classes": [
+    "atx_12v",
+    "atx_power",
+    "cpu",
+    "cpu-slot",
+    "cpu_heatsink",
+    "cpu_open",
+    "cpu_pass",
+    "fan_bracket",
+    "m.2-ssd",
+    "m.2-ssd-slot",
+    "pcie-slot",
+    "ram",
+    "ram-slot"
+  ],
+  "boxes": {
+    "cpu_heatsink": 336,
+    "fan_bracket": 678,
+    "atx_12v": 3198,
+    "atx_power": 1485,
+    "cpu_pass": 558,
+    "m.2-ssd": 641,
+    "m.2-ssd-slot": 468,
+    "pcie-slot": 471,
+    "cpu-slot": 474,
+    "ram-slot": 1889,
+    "cpu": 408,
+    "cpu_open": 298,
+    "ram": 604
+  },
+  "image_sizes": {
+    "(640, 640)": 4399
+  },
+  "filename_groups": 1073,
+  "polygons_previewed_as_enclosing_boxes": 3745,
+  "filename_groups_crossing_splits": 163,
+  "pixel_hashes_crossing_splits": 0,
+  "status": "candidate_only_requires_visual_review_and_board_identity",
+  "source": "https://universe.roboflow.com/computer-vision-assembly-instructions/motherboard-sockets/dataset/2",
+  "author": "Computer Vision Assembly Instructions",
+  "license": "CC BY 4.0",
+  "visual_review": {
+    "scope": "Six first examples for each of atx_power, m.2-ssd, m.2-ssd-slot, ram-slot and pcie-slot; not exhaustive.",
+    "findings": [
+      "Inspected m.2-ssd-slot boxes enclose the heatsink covering the slot, not the visible connector.",
+      "Sampled images repeatedly show the same board; filename groups do not represent unique motherboards.",
+      "PCIe samples mark only the main long slot; other visible slots are not exhaustively labeled."
+    ],
+    "decision": "Do not train the nine-class connector detector on these labels as-is."
+  }
+}

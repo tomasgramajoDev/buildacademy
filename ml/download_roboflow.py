@@ -1,7 +1,10 @@
 """Download the public pilot through Roboflow's API, without the export dialog.
 The user's existing key is entered privately; it is never stored or printed.
 """
+import argparse
 import getpass
+import os
+import re
 import time
 import zipfile
 from pathlib import Path
@@ -17,9 +20,11 @@ def allowed_url(url):
     p=urlsplit(url);host=p.hostname or ''
     return p.scheme=='https' and not p.username and not p.password and (host=='roboflow.com' or host.endswith('.roboflow.com') or host=='roboflow.io' or host.endswith('.roboflow.io') or host=='storage.googleapis.com')
 
-def export_link(key,session=requests,wait=time.sleep):
+def export_link(key,session=requests,wait=time.sleep,endpoint=ENDPOINT):
+    if not re.fullmatch(r'https://api\.roboflow\.com/[a-zA-Z0-9_-]+/[a-zA-Z0-9_-]+/[1-9][0-9]*/yolov8', endpoint):
+        raise DownloadError('Endpoint de exportacion invalido.')
     for attempt in range(36):
-        with session.get(ENDPOINT,headers={'Authorization':'Bearer '+key},timeout=(15,30),allow_redirects=False) as response:
+        with session.get(endpoint,headers={'Authorization':'Bearer '+key},timeout=(15,30),allow_redirects=False) as response:
             if response.status_code in (401,403):raise DownloadError('Roboflow rechazo la clave o el acceso al dataset. Revisa tu Private API Key.')
             if response.status_code!=200:raise DownloadError(f'Roboflow respondio HTTP {response.status_code}. No se descargo el dataset.')
             data=response.json()
@@ -56,13 +61,24 @@ def download(link,target=TARGET,session=requests):
     raise DownloadError('Demasiadas redirecciones de descarga.')
 
 def main():
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--endpoint',default=ENDPOINT)
+    parser.add_argument('--output',type=Path,default=TARGET)
+    args=parser.parse_args()
     print('BuildAcademy - descarga directa por API de Roboflow')
     print('Copia tu Private API Key existente desde Roboflow > Settings > API Keys.')
     print('Pegala aqui. No se vera al escribir, no se guarda y solo se envia a api.roboflow.com.')
-    key=getpass.getpass('Private API Key: ').strip()
+    key=os.environ.get('ROBOFLOW_API_KEY','').strip()
+    env=Path(__file__).resolve().parents[1]/'.env'
+    if not key and env.is_file():
+        for line in env.read_text(encoding='utf-8-sig').splitlines():
+            name,sep,value=line.partition('=')
+            if sep and name.strip()=='ROBOFLOW_API_KEY':
+                key=value.strip().strip('"').strip("'")
+    if not key:key=getpass.getpass('Private API Key: ').strip()
     if not key:raise DownloadError('No se ingreso una clave.')
-    link=export_link(key);key=None
-    result=download(link)
+    link=export_link(key,endpoint=args.endpoint);key=None
+    result=download(link,args.output)
     print('ZIP descargado:',result)
     print('Avisame para validar sus etiquetas y comenzar el entrenamiento.')
 

@@ -1,0 +1,120 @@
+{
+  "image": "datasets/connectors-nine-review/images/000160.jpg",
+  "model_id": "MSI Z370I GAMING PRO CARBON AC",
+  "model_group": "msi-z370i-gaming-pro-carbon-ac",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://gzhls.at/blob/ldb/c/2/f/8/aa0fff58626aa2fd7d07d6837d003aeeb316.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      240,
+      147,
+      436,
+      398
+    ],
+    [
+      "DIMM_SLOT",
+      443,
+      17,
+      494,
+      532
+    ],
+    [
+      "DIMM_SLOT",
+      474,
+      13,
+      525,
+      536
+    ],
+    [
+      "PCIe_X16",
+      157,
+      562,
+      486,
+      610
+    ],
+    [
+      "SATA_PORT",
+      432,
+      444,
+      457,
+      498
+    ],
+    [
+      "SATA_PORT",
+      430,
+      500,
+      454,
+      557
+    ],
+    [
+      "SATA_PORT",
+      536,
+      343,
+      558,
+      403
+    ],
+    [
+      "SATA_PORT",
+      535,
+      406,
+      557,
+      464
+    ],
+    [
+      "ATX_POWER",
+      523,
+      43,
+      570,
+      231
+    ],
+    [
+      "CPU_POWER",
+      184,
+      44,
+      243,
+      87
+    ],
+    [
+      "FAN_HEADER",
+      245,
+      437,
+      272,
+      456
+    ],
+    [
+      "FAN_HEADER",
+      535,
+      303,
+      560,
+      341
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "856aeace93ddc37801727888f93ade76826db4be69e6bb1d21a288659e99f2f6",
+  "split": "train",
+  "notes": [
+    "Manufacturer manual overview page 25 used; PDF hosted by distributor.",
+    "Mini-ITX board with two DIMM slots and one x16 slot.",
+    "SSD M.2 slot is on underside, not visible in this photo. Wi-Fi M.2 connector is concealed by installed module and excluded.",
+    "Four discrete SATA housings and two fan headers; JRGB/JCORSAIR lighting headers excluded."
+  ]
+}

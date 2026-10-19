@@ -1,0 +1,233 @@
+{
+  "image": "datasets/connectors-nine-review/images/000172.jpg",
+  "model_id": "ASRock Z790 Taichi Lite",
+  "model_group": "asrock-z790-taichi-lite",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.asrock.com/Manual/Z790%20Taichi%20Lite.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      359,
+      318,
+      526,
+      449
+    ],
+    [
+      "DIMM_SLOT",
+      313,
+      493,
+      590,
+      515
+    ],
+    [
+      "DIMM_SLOT",
+      313,
+      514,
+      590,
+      534
+    ],
+    [
+      "DIMM_SLOT",
+      313,
+      532,
+      590,
+      550
+    ],
+    [
+      "DIMM_SLOT",
+      313,
+      549,
+      590,
+      566
+    ],
+    [
+      "PCIe_X16",
+      249,
+      124,
+      275,
+      371
+    ],
+    [
+      "PCIe_X16",
+      131,
+      124,
+      155,
+      371
+    ],
+    [
+      "PCIe_X16",
+      46,
+      124,
+      75,
+      371
+    ],
+    [
+      "M2_SLOT",
+      276,
+      138,
+      323,
+      157
+    ],
+    [
+      "M2_SLOT",
+      276,
+      339,
+      323,
+      361
+    ],
+    [
+      "M2_SLOT",
+      153,
+      319,
+      199,
+      339
+    ],
+    [
+      "M2_SLOT",
+      79,
+      319,
+      124,
+      339
+    ],
+    [
+      "M2_SLOT",
+      79,
+      521,
+      124,
+      541
+    ],
+    [
+      "SATA_PORT",
+      72,
+      596,
+      107,
+      638
+    ],
+    [
+      "SATA_PORT",
+      107,
+      596,
+      141,
+      638
+    ],
+    [
+      "SATA_PORT",
+      141,
+      596,
+      175,
+      638
+    ],
+    [
+      "SATA_PORT",
+      175,
+      596,
+      209,
+      638
+    ],
+    [
+      "ATX_POWER",
+      411,
+      607,
+      520,
+      637
+    ],
+    [
+      "CPU_POWER",
+      590,
+      118,
+      610,
+      160
+    ],
+    [
+      "CPU_POWER",
+      590,
+      160,
+      610,
+      202
+    ],
+    [
+      "FAN_HEADER",
+      595,
+      427,
+      610,
+      453
+    ],
+    [
+      "FAN_HEADER",
+      595,
+      457,
+      610,
+      484
+    ],
+    [
+      "FAN_HEADER",
+      315,
+      472,
+      338,
+      489
+    ],
+    [
+      "FAN_HEADER",
+      28,
+      550,
+      45,
+      576
+    ],
+    [
+      "FAN_HEADER",
+      29,
+      459,
+      43,
+      484
+    ],
+    [
+      "FAN_HEADER",
+      44,
+      459,
+      59,
+      484
+    ],
+    [
+      "FAN_HEADER",
+      29,
+      183,
+      43,
+      207
+    ],
+    [
+      "FAN_HEADER",
+      29,
+      208,
+      43,
+      232
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "606d331a3195b949c63997d5a22580437d541981952f2874632ac8cb136cd1f0",
+  "split": "train",
+  "notes": [
+    "Photo rotated clockwise relative to official layout page 7; PCB model text confirms identity.",
+    "Five visible SSD M.2 connector bodies; installed Wi-Fi module conceals its connector, omitted.",
+    "Three physical x16 slots and four stacked SATA housings.",
+    "PD60W_12V1 six-pin connector near ATX is for fast charging, not CPU power, and is excluded.",
+    "Eight fan/pump headers matched to manufacturer layout; RGB and USB headers excluded."
+  ]
+}

@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 10,
-  "models": 10,
-  "boxes": 195,
+  "reviewed_images": 12,
+  "models": 12,
+  "boxes": 235,
   "splits": {
-    "train": 6,
+    "train": 8,
     "val": 2,
     "test": 2
   },
   "status": "annotation_in_progress_not_training_ready",
   "coverage": {
     "train": [
-      6,
-      22,
-      14,
-      7,
-      11,
-      22,
-      6,
       8,
-      31
+      28,
+      18,
+      7,
+      16,
+      30,
+      8,
+      11,
+      41
     ],
     "val": [
       2,

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-19",
+  "platform": "Windows x64",
+  "python": "3.13.14",
+  "environment": "Fresh venv installed from recognition/requirements.txt",
+  "torch_installed": false,
+  "ultralytics_installed": false,
+  "model": "ml/artifacts/nine-reviewed-v2",
+  "input": "datasets/connectors-nine-review/images/000031.jpg",
+  "checks": {
+    "real_model_http_200": true,
+    "invalid_image_400": true,
+    "unsupported_type_415": true,
+    "method_405": true
+  },
+  "command": "python ml/smoke_integration.py --model-dir ml/artifacts/nine-reviewed-v2 --image datasets/connectors-nine-review/images/000031.jpg --output tmp/runtime-only-smoke.json",
+  "scope": "Installation and HTTP integration only. Not model accuracy or other-platform certification."
+}

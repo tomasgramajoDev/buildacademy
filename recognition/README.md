@@ -75,3 +75,16 @@ node --test tests/recognition.test.mjs
 ## Modelo ampliado pendiente
 
 El contrato admite el orden de nueve clases de `ml/prepare_dataset.py`. Cambiar el manifiesto sin entrenar pesos de nueve clases no agrega capacidades. Antes de integrar ese modelo: completar anotaciones revisadas, separar por motherboard/modelo, entrenar, evaluar fotos independientes y validar el ONNX. El objetivo de nueve categorías sigue abierto.
+
+## Paquetes de candidatos
+
+`ml/prepare_web_model.py RUN --output NUEVO_DIRECTORIO --version VERSION` acepta los contratos de cuatro y nueve clases. Requiere evaluación terminada y ONNX compatible; para nueve clases también exige la auditoría de revisión. Produce connectors.onnx, manifest.json y evaluation.json. Rechaza sobrescribir directorios existentes o dist/models. `ready` significa que el paquete puede cargarse, no aprobación de precisión; `releaseStatus: experimental` exige revisar las métricas y errores antes de desplegar.
+
+El backend puede cargarlo con `ConnectorDetector(model_dir=...)` y entregarlo a `create_app(detector)`. Para pruebas locales independientes:
+
+```powershell
+python -m recognition foto.jpg --model-dir tmp/candidato
+python -m recognition.server --model-dir tmp/candidato --port 8771
+```
+
+No se cambia el contrato de respuesta ni se muestran porcentajes de confianza al usuario. La ubicación del modelo es configuración del servidor, nunca un parámetro del cliente HTTP.

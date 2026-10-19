@@ -42,7 +42,12 @@ def create_app(detector=None):
 
 
 if __name__=='__main__':
+    import argparse
     from wsgiref.simple_server import make_server
-    with make_server('127.0.0.1',8770,create_app()) as server:
-        print('Recognition development adapter: http://127.0.0.1:8770/v1/recognitions',flush=True)
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--model-dir',help='Paquete local de modelo revisado')
+    parser.add_argument('--port',type=int,default=8770)
+    args=parser.parse_args()
+    with make_server('127.0.0.1',args.port,create_app(ConnectorDetector(args.model_dir))) as server:
+        print(f'Recognition development adapter: http://127.0.0.1:{args.port}/v1/recognitions',flush=True)
         server.serve_forever()

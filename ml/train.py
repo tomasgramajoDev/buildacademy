@@ -18,7 +18,7 @@ def run(args):
     if args.resume:
         model.train(resume=True,device=device,workers=0)
     else:
-        model.train(data=str(data),epochs=args.epochs,imgsz=args.size,batch=args.batch,device=device,workers=0,seed=42,deterministic=True,project='runs/buildacademy',name=args.name,exist_ok=False,patience=20)
+        model.train(data=str(data),epochs=args.epochs,imgsz=args.size,batch=args.batch,device=device,workers=0,seed=42,deterministic=True,project='runs/buildacademy',name=args.name,exist_ok=False,patience=args.patience)
     best=YOLO(str(model.trainer.best))
     result=best.val(data=str(data),split='test',imgsz=args.size,device=device,plots=True)
     report={'model':str(model.trainer.best),'data_audit':audit,'input_size':args.size,'test':result.results_dict,'per_class_map50_95':dict(zip(classes,result.box.maps.tolist())),'claim':'Evaluación de este dataset. No certifica generalización a nuevas placas ni compatibilidad eléctrica.'}
@@ -27,4 +27,4 @@ def run(args):
     print(f'Resultados: {report_path}. Revisá errores por clase antes de publicar los pesos.')
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--data',default='datasets/prepared/data.yaml');p.add_argument('--epochs',type=int,default=80);p.add_argument('--batch',type=int,default=8);p.add_argument('--size',type=int,choices=[320,416,640],default=640);p.add_argument('--name',default='connectors');p.add_argument('--resume',help='Checkpoint last.pt para continuar el entrenamiento interrumpido');run(p.parse_args())
+    p=argparse.ArgumentParser();p.add_argument('--data',default='datasets/prepared/data.yaml');p.add_argument('--epochs',type=int,default=80);p.add_argument('--patience',type=int,default=20);p.add_argument('--batch',type=int,default=8);p.add_argument('--size',type=int,choices=[320,416,640],default=640);p.add_argument('--name',default='connectors');p.add_argument('--resume',help='Checkpoint last.pt para continuar el entrenamiento interrumpido');run(p.parse_args())

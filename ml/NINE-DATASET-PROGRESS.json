@@ -7,7 +7,7 @@
     "val": 3,
     "test": 3
   },
-  "status": "initial_nine_class_training_started",
+  "status": "first_run_evaluated_rejected_longer_training_started",
   "coverage": {
     "train": [
       10,
@@ -61,12 +61,14 @@
   },
   "note": "Collection target is a practical initial diversity target, not a guarantee of generalization or sufficient statistical power.",
   "training": {
-    "name": "nine-reviewed-16models-20261019",
-    "epochs": 80,
+    "name": "nine-reviewed-16models-long-20261019",
+    "epochs": 300,
     "input_size": 640,
-    "batch": 4,
+    "batch": 2,
     "data": "datasets/connectors-nine-prepared-16models/data.yaml",
     "manifest_sha256": "b5e1e52ac4fe362726379a2686763a2aaf139bec9ed608547614e3e76cfd23a1",
-    "publication_approved": false
-  }
+    "publication_approved": false,
+    "patience": 100
+  },
+  "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json"
 }

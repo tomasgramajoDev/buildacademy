@@ -1,0 +1,177 @@
+{
+  "model": "nine-reviewed-16models-20261019/weights/best.pt",
+  "data_audit": {
+    "images": 16,
+    "boards": 16,
+    "boxes": {
+      "train": [
+        10,
+        34,
+        22,
+        10,
+        19,
+        38,
+        10,
+        13,
+        49
+      ],
+      "val": [
+        3,
+        8,
+        4,
+        3,
+        3,
+        16,
+        3,
+        4,
+        12
+      ],
+      "test": [
+        3,
+        10,
+        6,
+        3,
+        2,
+        9,
+        3,
+        4,
+        15
+      ]
+    },
+    "classes": [
+      "CPU_SOCKET",
+      "DIMM_SLOT",
+      "PCIe_X16",
+      "PCIe_X1",
+      "M2_SLOT",
+      "SATA_PORT",
+      "ATX_POWER",
+      "CPU_POWER",
+      "FAN_HEADER"
+    ],
+    "manifest_sha256": "b5e1e52ac4fe362726379a2686763a2aaf139bec9ed608547614e3e76cfd23a1",
+    "limitation": "El validador detecta duplicados exactos; revisar manualmente similares y la identidad de cada placa.",
+    "review_gate": "passed",
+    "model_count": 16
+  },
+  "input_size": 640,
+  "test": {
+    "metrics/precision(B)": 0.7353992105053104,
+    "metrics/recall(B)": 0.2052300253134415,
+    "metrics/mAP50(B)": 0.2952560617938204,
+    "metrics/mAP50-95(B)": 0.14177534864390928,
+    "fitness": 0.14177534864390928
+  },
+  "per_class_map50_95": {
+    "CPU_SOCKET": 0.5367142857142857,
+    "DIMM_SLOT": 0.01711542362763047,
+    "PCIe_X16": 0.28155080940564814,
+    "PCIe_X1": 0.0,
+    "M2_SLOT": 0.03182142857142857,
+    "SATA_PORT": 0.33263333333333334,
+    "ATX_POWER": 0.07614285714285715,
+    "CPU_POWER": 0.0,
+    "FAN_HEADER": 0.0
+  },
+  "claim": "Evaluaci\u00f3n de este dataset. No certifica generalizaci\u00f3n a nuevas placas ni compatibilidad el\u00e9ctrica.",
+  "runtime_test": {
+    "split": "test",
+    "model": "nine-reviewed-v1",
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666
+      },
+      "DIMM_SLOT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "precision": null,
+        "recall": 0.0
+      },
+      "PCIe_X16": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 6,
+        "precision": null,
+        "recall": 0.0
+      },
+      "PCIe_X1": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "M2_SLOT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": null,
+        "recall": 0.0
+      },
+      "SATA_PORT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "precision": null,
+        "recall": 0.0
+      },
+      "ATX_POWER": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 3,
+        "precision": null,
+        "recall": 0.0
+      },
+      "CPU_POWER": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "precision": null,
+        "recall": 0.0
+      },
+      "FAN_HEADER": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 15,
+        "precision": null,
+        "recall": 0.0
+      }
+    },
+    "images": [
+      {
+        "image": "000006.jpg",
+        "tp": 1,
+        "fp": 0,
+        "fn": 13
+      },
+      {
+        "image": "000010.jpg",
+        "tp": 1,
+        "fp": 0,
+        "fn": 17
+      },
+      {
+        "image": "000012.jpg",
+        "tp": 0,
+        "fp": 0,
+        "fn": 23
+      }
+    ],
+    "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+  },
+  "runtime_train_totals": {
+    "tp": 19,
+    "fp": 1,
+    "fn": 186
+  },
+  "decision": "Rejected for deployment: only 2/55 test boxes and 19/205 training boxes detected at integration threshold."
+}

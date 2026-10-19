@@ -1,0 +1,317 @@
+{
+  "current": {
+    "tp": 100,
+    "fp": 7,
+    "fn": 50,
+    "precision": 0.9345794392523364,
+    "recall": 0.6666666666666666,
+    "images": [
+      {
+        "image": "000000.jpg",
+        "tp": 3,
+        "fp": 0,
+        "fn": 5
+      },
+      {
+        "image": "000001.jpg",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "000002.jpg",
+        "tp": 4,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "image": "000003.jpg",
+        "tp": 3,
+        "fp": 0,
+        "fn": 3
+      },
+      {
+        "image": "000004.jpg",
+        "tp": 1,
+        "fp": 0,
+        "fn": 4
+      },
+      {
+        "image": "000005.jpg",
+        "tp": 2,
+        "fp": 0,
+        "fn": 6
+      },
+      {
+        "image": "000006.jpg",
+        "tp": 6,
+        "fp": 1,
+        "fn": 2
+      },
+      {
+        "image": "000007.jpg",
+        "tp": 6,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "image": "000008.jpg",
+        "tp": 8,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "image": "000009.jpg",
+        "tp": 3,
+        "fp": 1,
+        "fn": 1
+      },
+      {
+        "image": "000010.jpg",
+        "tp": 9,
+        "fp": 0,
+        "fn": 3
+      },
+      {
+        "image": "000011.jpg",
+        "tp": 2,
+        "fp": 1,
+        "fn": 6
+      },
+      {
+        "image": "000012.jpg",
+        "tp": 6,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "image": "000013.jpg",
+        "tp": 1,
+        "fp": 1,
+        "fn": 4
+      },
+      {
+        "image": "000014.jpg",
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "000015.jpg",
+        "tp": 2,
+        "fp": 0,
+        "fn": 4
+      },
+      {
+        "image": "000016.jpg",
+        "tp": 5,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "image": "000017.jpg",
+        "tp": 3,
+        "fp": 1,
+        "fn": 2
+      },
+      {
+        "image": "000018.jpg",
+        "tp": 5,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "image": "000019.jpg",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "000020.jpg",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "000021.jpg",
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "000022.jpg",
+        "tp": 3,
+        "fp": 1,
+        "fn": 3
+      },
+      {
+        "image": "000023.jpg",
+        "tp": 4,
+        "fp": 1,
+        "fn": 1
+      }
+    ]
+  },
+  "candidate": {
+    "tp": 98,
+    "fp": 11,
+    "fn": 52,
+    "precision": 0.8990825688073395,
+    "recall": 0.6533333333333333,
+    "images": [
+      {
+        "image": "000000.jpg",
+        "tp": 4,
+        "fp": 0,
+        "fn": 4
+      },
+      {
+        "image": "000001.jpg",
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      },
+      {
+        "image": "000002.jpg",
+        "tp": 3,
+        "fp": 0,
+        "fn": 2
+      },
+      {
+        "image": "000003.jpg",
+        "tp": 2,
+        "fp": 1,
+        "fn": 4
+      },
+      {
+        "image": "000004.jpg",
+        "tp": 1,
+        "fp": 1,
+        "fn": 4
+      },
+      {
+        "image": "000005.jpg",
+        "tp": 3,
+        "fp": 0,
+        "fn": 5
+      },
+      {
+        "image": "000006.jpg",
+        "tp": 7,
+        "fp": 1,
+        "fn": 1
+      },
+      {
+        "image": "000007.jpg",
+        "tp": 5,
+        "fp": 2,
+        "fn": 2
+      },
+      {
+        "image": "000008.jpg",
+        "tp": 7,
+        "fp": 0,
+        "fn": 2
+      },
+      {
+        "image": "000009.jpg",
+        "tp": 2,
+        "fp": 1,
+        "fn": 2
+      },
+      {
+        "image": "000010.jpg",
+        "tp": 11,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "image": "000011.jpg",
+        "tp": 3,
+        "fp": 1,
+        "fn": 5
+      },
+      {
+        "image": "000012.jpg",
+        "tp": 4,
+        "fp": 0,
+        "fn": 3
+      },
+      {
+        "image": "000013.jpg",
+        "tp": 2,
+        "fp": 0,
+        "fn": 3
+      },
+      {
+        "image": "000014.jpg",
+        "tp": 5,
+        "fp": 0,
+        "fn": 2
+      },
+      {
+        "image": "000015.jpg",
+        "tp": 3,
+        "fp": 0,
+        "fn": 3
+      },
+      {
+        "image": "000016.jpg",
+        "tp": 4,
+        "fp": 0,
+        "fn": 2
+      },
+      {
+        "image": "000017.jpg",
+        "tp": 4,
+        "fp": 2,
+        "fn": 1
+      },
+      {
+        "image": "000018.jpg",
+        "tp": 4,
+        "fp": 0,
+        "fn": 2
+      },
+      {
+        "image": "000019.jpg",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "000020.jpg",
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      {
+        "image": "000021.jpg",
+        "tp": 5,
+        "fp": 0,
+        "fn": 1
+      },
+      {
+        "image": "000022.jpg",
+        "tp": 3,
+        "fp": 1,
+        "fn": 3
+      },
+      {
+        "image": "000023.jpg",
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      }
+    ]
+  },
+  "protocol": {
+    "images": 24,
+    "confidence": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "ONNX Runtime through Ultralytics; browser execution not tested",
+    "selection_warning": "Reused test set: descriptive comparison, not an independent certification."
+  },
+  "decision": "Keep current web model: candidate has fewer true positives and more false positives at the operational threshold."
+}

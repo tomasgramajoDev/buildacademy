@@ -75,3 +75,22 @@ Los originales y 13 hojas de muestras permanecen en `datasets/motherboard-socket
 ```
 
 Ambos comandos preservan salidas existentes. El descargador toma ROBOFLOW_API_KEY del entorno o de .env; si falta, la solicita de forma oculta. Sólo envía la clave por cabecera al endpoint de exportación de api.roboflow.com.
+
+## Revisión posterior al entrenamiento de 40 épocas
+
+`review_models.py` compara ambos ONNX con confianza 0,5, NMS 0,45 y coincidencia IoU 0,5 sobre las mismas 24 imágenes de test (150 cajas). Usa el preprocesado de Ultralytics; no equivale a una prueba en navegador. Resultados reproducibles en REVISION-CUATRO-CLASES.json:
+
+| Modelo | TP | FP | FN | Precisión | Recall |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Actual, 320 px | 100 | 7 | 50 | 93,46 % | 66,67 % |
+| Candidato, 416 px | 98 | 11 | 52 | 89,91 % | 65,33 % |
+
+Aunque el candidato mejora el mAP global, no mejora este punto de operación. Se conserva el modelo actual en la web. El test reutilizado no sirve como certificación independiente de generalización.
+
+## Anotaciones e identidad
+
+ANOTACION-Z690-BORRADOR.json registra 27 cajas propuestas para una foto de MSI PRO Z690-A DDR4, contrastadas con el esquema del manual oficial. Incluye nueve categorías, pero sigue siendo un borrador: la vista no separa los puertos SATA apilados y quedan límites de cajas pequeños por revisar. No es un dataset de entrenamiento. Las fotos 000010 y 000031 de la cola corresponden al mismo modelo y deben permanecer juntas. El resto de las identidades y anotaciones siguen pendientes; no se afirma haber revisado 206 imágenes.
+
+`review_gate.py manifest.json --output datasets/connectors-nine-prepared` exige identidad con evidencia, revisión completa, ausencia de ambigüedades y separación por modelo. Luego ejecuta la validación geométrica y de cobertura. Estos controles verifican lo declarado en el manifiesto, no sustituyen la inspección de fotos. `train.py` exige este informe para entrenar las nueve clases. La auditoría de cuatro clases conserva su flujo existente.
+
+Estado: revisión del candidato de cuatro clases terminada; anotación de nueve clases y separación global por modelo incompletas; entrenamiento de nueve clases no iniciado.

@@ -1,0 +1,98 @@
+{
+  "ready": true,
+  "releaseStatus": "experimental",
+  "version": "nine-reviewed-v2",
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "inputSize": 640,
+  "sha256": "534e3f0b3398fe3c2dc9c38c030093ff7587d49d7a526aeb2ce75a949a875af0",
+  "source": "Anotaciones revisadas de BIS497, versión 5",
+  "license": "Dataset CC BY 4.0; modelo derivado de Ultralytics YOLO11 AGPL-3.0",
+  "test": {
+    "metrics/precision(B)": 0.5141434311298814,
+    "metrics/recall(B)": 0.581630738038543,
+    "metrics/mAP50(B)": 0.6001361560136425,
+    "metrics/mAP50-95(B)": 0.35250204731276236,
+    "fitness": 0.35250204731276236
+  },
+  "perClassMap50_95": {
+    "CPU_SOCKET": 0.742875,
+    "DIMM_SLOT": 0.16644711368919504,
+    "PCIe_X16": 0.27471345539706193,
+    "PCIe_X1": 0.2676333333333334,
+    "M2_SLOT": 0.10455555555555555,
+    "SATA_PORT": 0.405851338612368,
+    "ATX_POWER": 0.7635000000000001,
+    "CPU_POWER": 0.43137500000000006,
+    "FAN_HEADER": 0.015567629227347257
+  },
+  "dataAudit": {
+    "images": 16,
+    "boards": 16,
+    "boxes": {
+      "train": [
+        10,
+        34,
+        22,
+        10,
+        19,
+        38,
+        10,
+        13,
+        49
+      ],
+      "val": [
+        3,
+        8,
+        4,
+        3,
+        3,
+        16,
+        3,
+        4,
+        12
+      ],
+      "test": [
+        3,
+        10,
+        6,
+        3,
+        2,
+        9,
+        3,
+        4,
+        15
+      ]
+    },
+    "classes": [
+      "CPU_SOCKET",
+      "DIMM_SLOT",
+      "PCIe_X16",
+      "PCIe_X1",
+      "M2_SLOT",
+      "SATA_PORT",
+      "ATX_POWER",
+      "CPU_POWER",
+      "FAN_HEADER"
+    ],
+    "manifest_sha256": "b5e1e52ac4fe362726379a2686763a2aaf139bec9ed608547614e3e76cfd23a1",
+    "limitation": "El validador detecta duplicados exactos; revisar manualmente similares y la identidad de cada placa.",
+    "review_gate": "passed",
+    "model_count": 16
+  },
+  "limitations": [
+    "Una detección no comprueba compatibilidad, protocolo ni estado físico.",
+    "Conjunto inicial pequeño; requiere revisar métricas por clase antes de usarlo.",
+    "M.2 incluye conectores Wi-Fi; no implica compatibilidad con SSD.",
+    "Las cajas SATA representan carcasas visibles, no número de puertos."
+  ]
+}

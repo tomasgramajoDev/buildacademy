@@ -2,6 +2,8 @@
 
 Prototipo funcional de acompañamiento para armar una PC: componentes, compatibilidad explicada, guía 3D y asistente. La encuesta orienta las prioridades; el análisis agregado está en ENCUESTA-Y-PRIORIDADES.md.
 
+Para integrar los módulos de consultas y reconocimiento en el front y back del equipo, ver [INTEGRACION.md](INTEGRACION.md). Incluye el paquete experimental de nueve clases y sus límites; la web de demostración conserva el piloto de cuatro clases.
+
 ## Abrir
 
 Para ejecución local, doble clic en Iniciar-BuildAcademy.cmd o ejecutar desde esta carpeta:

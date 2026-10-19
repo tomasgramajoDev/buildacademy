@@ -1,6 +1,6 @@
 # Reconocimiento de conectores: integración
 
-Estado: módulo ejecutable con el piloto de cuatro clases por defecto y soporte probado para paquetes de nueve clases. El primer candidato de nueve clases completó entrenamiento y prueba HTTP, pero fue rechazado por baja detección; una segunda corrida está en curso. `coversNineClasses` describe el contrato del modelo cargado, no certifica precisión. No cambiar el modelo predeterminado hasta aprobar su evaluación.
+Estado: módulo ejecutable con el piloto de cuatro clases por defecto y soporte probado para paquetes de nueve clases. Las dos corridas de nueve clases terminaron; el segundo candidato se conserva en `ml/artifacts/nine-reviewed-v2` para pruebas de integración. Todavía requiere mejorar su detección. `coversNineClasses` describe el contrato del modelo cargado, no certifica precisión. No cambiar el modelo predeterminado hasta aprobar su evaluación. Ver `INTEGRACION.md` para la entrega conjunta con el chatbot.
 
 ## Backend Python
 

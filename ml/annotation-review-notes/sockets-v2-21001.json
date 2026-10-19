@@ -1,0 +1,15 @@
+{
+  "image": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_21001_jpg.rf.43be53d79137f96b361e4e713f24e25c.jpg",
+  "source": "https://universe.roboflow.com/computer-vision-assembly-instructions/motherboard-sockets/dataset/2",
+  "license": "CC BY 4.0",
+  "status": "candidate_requires_identity_and_complete_reannotation",
+  "candidate_family": "Gigabyte Intel UD DDR4; exact variant not confirmed",
+  "findings": [
+    "Real assembly photo inspected. Two RAM modules installed; connector bodies obscured by modules must not be labelled as exposed slots.",
+    "M.2 locations are covered by heatsinks; existing source annotations must not be imported as visible connector truth.",
+    "Useful candidate for assembled-board negatives and exposed empty slots after exact model identification and full connector review.",
+    "Other frames show the same board. Source train/test membership cannot be reused; group all verified same-model photos together in the development split."
+  ],
+  "split": null,
+  "included_in_training": false
+}

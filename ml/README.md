@@ -1,6 +1,8 @@
 # Detección de conectores
 
-Estado: piloto YOLO de cuatro clases entrenado y exportado; ver EVALUACION-PILOTO.md. La ampliación a nueve clases está pendiente de nuevas anotaciones revisadas. El dataset Motherboard Part Locater de BIS497 (CC BY 4.0) tiene 4 clases generales, requiere cuenta de Roboflow para exportar y no cubre las 9 clases del proyecto. El dataset de miraclefactory es de defectos de fabricación y fue descartado para esta tarea.
+Estado actual: piloto de cuatro clases conservado y cuatro corridas de nueve clases terminadas. V3 fue elegido frente a v4 por validación y se distribuye como experimental en `ml/artifacts/nine-reviewed-v3`; la prueba independiente encontró 9/18 conexiones y no permite aprobar su reemplazo en la web. El conjunto revisado se amplió después a 21 placas y 416 cajas; esta última ampliación aún no se entrenó. Ver `NINE-DATASET-PROGRESS.json`, `SELECCION-NUEVE-CLASES.json` e `INTEGRACION.md` en la raíz para el estado de entrega. Las secciones siguientes conservan antecedentes de preparación y corridas anteriores.
+
+El dataset original Motherboard Part Locater de BIS497 (CC BY 4.0) tiene cuatro clases generales. Las nueve categorías provienen de nuevas anotaciones revisadas, no de renombrar esas cuatro clases. El dataset de miraclefactory es de defectos de fabricación y fue descartado para esta tarea. La colección Motherboard Sockets contiene fotos de armado útiles como candidatas, pero sus etiquetas y particiones no se importan automáticamente: hay conectores ocultos y vistas repetidas de la misma placa.
 
 ## Recolección
 

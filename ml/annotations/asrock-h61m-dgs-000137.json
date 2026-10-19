@@ -1,0 +1,134 @@
+{
+  "image": "datasets/connectors-nine-review/images/000137.jpg",
+  "model_id": "ASRock H61M-DGS",
+  "model_group": "asrock-h61m-dgs",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.asrock.com/Manual/H61M-DGS.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      157,
+      239,
+      380,
+      409
+    ],
+    [
+      "DIMM_SLOT",
+      15,
+      452,
+      439,
+      493
+    ],
+    [
+      "DIMM_SLOT",
+      15,
+      481,
+      440,
+      519
+    ],
+    [
+      "PCIe_X16",
+      443,
+      199,
+      486,
+      511
+    ],
+    [
+      "PCIe_X1",
+      559,
+      196,
+      591,
+      273
+    ],
+    [
+      "SATA_PORT",
+      598,
+      410,
+      619,
+      465
+    ],
+    [
+      "SATA_PORT",
+      620,
+      410,
+      640,
+      465
+    ],
+    [
+      "SATA_PORT",
+      598,
+      475,
+      619,
+      527
+    ],
+    [
+      "SATA_PORT",
+      620,
+      475,
+      640,
+      527
+    ],
+    [
+      "ATX_POWER",
+      231,
+      535,
+      380,
+      574
+    ],
+    [
+      "CPU_POWER",
+      32,
+      405,
+      67,
+      437
+    ],
+    [
+      "FAN_HEADER",
+      16,
+      432,
+      38,
+      463
+    ],
+    [
+      "FAN_HEADER",
+      405,
+      219,
+      429,
+      247
+    ],
+    [
+      "FAN_HEADER",
+      614,
+      528,
+      639,
+      558
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "3ac31975be04d5ef59858551170a42cbb0f08b080759777452a70ec708f7cf4e",
+  "split": "train",
+  "notes": [
+    "Identity printed on PCB; positions matched to manufacturer layout page 12 after accounting for rotation/reflection of source image.",
+    "No M.2. One x16 slot and one x1 slot, two DIMMs and four discrete SATA connectors.",
+    "CPU_FAN1, CHA_FAN1 and PWR_FAN1 are fan headers per manufacturer layout; PWR_FAN is not a CPU power connector.",
+    "Rightmost SATA connectors partially clipped by image boundary."
+  ]
+}

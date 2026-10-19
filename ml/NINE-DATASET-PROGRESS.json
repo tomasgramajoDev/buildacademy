@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 12,
-  "models": 12,
-  "boxes": 235,
+  "reviewed_images": 14,
+  "models": 14,
+  "boxes": 267,
   "splits": {
-    "train": 8,
+    "train": 9,
     "val": 2,
-    "test": 2
+    "test": 3
   },
   "status": "annotation_in_progress_not_training_ready",
   "coverage": {
     "train": [
-      8,
-      28,
-      18,
-      7,
-      16,
+      9,
       30,
+      19,
       8,
-      11,
-      41
+      16,
+      34,
+      9,
+      12,
+      44
     ],
     "val": [
       2,
@@ -32,15 +32,15 @@
       6
     ],
     "test": [
-      2,
+      3,
+      10,
       6,
       3,
+      2,
+      9,
       3,
-      2,
-      7,
-      2,
-      2,
-      10
+      4,
+      15
     ]
   },
   "classes": [

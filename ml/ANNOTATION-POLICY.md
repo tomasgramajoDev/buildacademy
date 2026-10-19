@@ -14,3 +14,9 @@ El objetivo es localizar conexiones visibles para orientar al usuario. No determ
 Cajas ajustadas al cuerpo visible; no inventar cajas de partes totalmente ocultas. Una foto ambigua permanece fuera del entrenamiento hasta resolver la duda. Registrar fabricante/modelo, fuente, licencia y manual. Todas las fotos del mismo modelo permanecen en un solo split, incluso si no se conoce qué unidad física se fotografió. Este agrupamiento conservador no afirma conocer la identidad física.
 
 Las revisiones visuales asistidas por el manual no son una certificación humana independiente. Los estados de revisión no sustituyen inspección, diversidad ni evaluación en placas reservadas.
+
+## Borradores para ampliar la colección
+
+`python ml/propose_annotations.py --model-dir PAQUETE_NUEVE_CLASES --output DIRECTORIO_NUEVO` genera propuestas y vistas numeradas para las fotos todavía no anotadas. Los números corresponden al orden de clases del detector. Conserva fuente y hash, no asigna modelo ni split y no escribe en `ml/annotations`. Revisar también las fotos sin detecciones: el modelo omite conectores y no debe decidir qué existe en la imagen.
+
+Las discrepancias de identidad se registran en `ml/annotation-review-notes`. Una foto con identidad sin resolver no se incorpora al entrenamiento. Las propuestas no reemplazan la inspección del manual ni las anotaciones canónicas revisadas.

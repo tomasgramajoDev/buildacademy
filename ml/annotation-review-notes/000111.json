@@ -1,0 +1,14 @@
+{
+  "image": "datasets\\connectors-nine-review\\images\\000111.jpg",
+  "image_sha256": "c97df8dbe7c1ec9ba9ae415e5f77c1a2aaf36633e86e06d75f6d0617bd2d32b2",
+  "status": "identity_unresolved_exclude_from_training",
+  "candidate_identity": "MSI B450I GAMING PLUS AC",
+  "reference_checked": "https://download-2.msi.com/archive/mnu_exe/mb/E7A40v2.2.pdf",
+  "manual_page": 23,
+  "findings": [
+    "Photo rotated; AM4 socket and two red DIMM slots visible.",
+    "SATA housing placement and large I/O cover do not clearly establish a match to the manual.",
+    "Do not assign a motherboard identity or reviewed fan-header labels from this similarity alone."
+  ],
+  "split": null
+}

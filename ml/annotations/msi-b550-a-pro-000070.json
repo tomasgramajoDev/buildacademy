@@ -1,0 +1,198 @@
+{
+  "image": "datasets/connectors-nine-review/images/000070.jpg",
+  "model_id": "MSI B550-A PRO",
+  "model_group": "msi-b550-a-pro",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.msi.com/archive/mnu_exe/mb/B550-APRO_EN.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      276,
+      152,
+      403,
+      258
+    ],
+    [
+      "DIMM_SLOT",
+      433,
+      68,
+      454,
+      344
+    ],
+    [
+      "DIMM_SLOT",
+      454,
+      67,
+      475,
+      344
+    ],
+    [
+      "DIMM_SLOT",
+      475,
+      67,
+      495,
+      344
+    ],
+    [
+      "DIMM_SLOT",
+      495,
+      67,
+      515,
+      344
+    ],
+    [
+      "PCIe_X16",
+      167,
+      368,
+      384,
+      400
+    ],
+    [
+      "PCIe_X16",
+      166,
+      488,
+      384,
+      519
+    ],
+    [
+      "PCIe_X1",
+      166,
+      448,
+      229,
+      474
+    ],
+    [
+      "PCIe_X1",
+      167,
+      573,
+      229,
+      596
+    ],
+    [
+      "M2_SLOT",
+      376,
+      518,
+      399,
+      566
+    ],
+    [
+      "SATA_PORT",
+      519,
+      431,
+      553,
+      467
+    ],
+    [
+      "SATA_PORT",
+      519,
+      469,
+      553,
+      505
+    ],
+    [
+      "SATA_PORT",
+      519,
+      508,
+      553,
+      543
+    ],
+    [
+      "ATX_POWER",
+      536,
+      168,
+      560,
+      272
+    ],
+    [
+      "CPU_POWER",
+      165,
+      28,
+      201,
+      50
+    ],
+    [
+      "FAN_HEADER",
+      431,
+      27,
+      454,
+      44
+    ],
+    [
+      "FAN_HEADER",
+      457,
+      27,
+      480,
+      44
+    ],
+    [
+      "FAN_HEADER",
+      545,
+      62,
+      561,
+      85
+    ],
+    [
+      "FAN_HEADER",
+      545,
+      90,
+      561,
+      114
+    ],
+    [
+      "FAN_HEADER",
+      524,
+      547,
+      541,
+      570
+    ],
+    [
+      "FAN_HEADER",
+      327,
+      599,
+      349,
+      619
+    ],
+    [
+      "FAN_HEADER",
+      218,
+      599,
+      240,
+      619
+    ],
+    [
+      "FAN_HEADER",
+      179,
+      301,
+      202,
+      316
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "f2144e7032163dd0611d2296b242ca693bcec2cca1c09398a0cad7826515d4fa",
+  "split": "test",
+  "notes": [
+    "PCB model text and connector positions checked against manufacturer overview page 26.",
+    "M2_1 hidden under heatsink and excluded; uncovered M2_2 connector annotated.",
+    "Eight fan/pump headers and three stacked SATA housings, matched to manufacturer layout.",
+    "Photo has limited sharpness; connector boundaries checked at enlarged scale without inventing hidden connectors.",
+    "Reserved for test before training; all images of this board model must stay out of train and validation."
+  ]
+}

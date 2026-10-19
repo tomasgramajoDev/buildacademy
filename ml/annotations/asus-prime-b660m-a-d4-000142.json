@@ -1,0 +1,163 @@
+{
+  "image": "datasets/connectors-nine-review/images/000142.jpg",
+  "model_id": "ASUS PRIME B660M-A D4",
+  "model_group": "asus-prime-b660m-a-d4",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1700/PRIME%20B660M-A%20D4/E19186_PRIME_B660M-A_D4_UM_WEB.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      271,
+      150,
+      395,
+      362
+    ],
+    [
+      "DIMM_SLOT",
+      405,
+      112,
+      444,
+      429
+    ],
+    [
+      "DIMM_SLOT",
+      424,
+      119,
+      461,
+      433
+    ],
+    [
+      "DIMM_SLOT",
+      443,
+      126,
+      480,
+      438
+    ],
+    [
+      "DIMM_SLOT",
+      461,
+      132,
+      500,
+      444
+    ],
+    [
+      "PCIe_X16",
+      161,
+      382,
+      398,
+      449
+    ],
+    [
+      "PCIe_X16",
+      147,
+      494,
+      395,
+      543
+    ],
+    [
+      "PCIe_X16",
+      141,
+      554,
+      390,
+      597
+    ],
+    [
+      "M2_SLOT",
+      514,
+      569,
+      538,
+      625
+    ],
+    [
+      "SATA_PORT",
+      518,
+      492,
+      563,
+      536
+    ],
+    [
+      "SATA_PORT",
+      442,
+      625,
+      472,
+      640
+    ],
+    [
+      "SATA_PORT",
+      475,
+      628,
+      506,
+      640
+    ],
+    [
+      "ATX_POWER",
+      511,
+      203,
+      563,
+      320
+    ],
+    [
+      "CPU_POWER",
+      187,
+      15,
+      247,
+      58
+    ],
+    [
+      "FAN_HEADER",
+      352,
+      71,
+      383,
+      94
+    ],
+    [
+      "FAN_HEADER",
+      380,
+      78,
+      407,
+      103
+    ],
+    [
+      "FAN_HEADER",
+      125,
+      355,
+      144,
+      382
+    ],
+    [
+      "FAN_HEADER",
+      502,
+      236,
+      521,
+      267
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "115eb84e2ee1f1e79762620a1f08cb39cb722184bcc8655ecacf57dbad14a616",
+  "split": "train",
+  "notes": [
+    "Model visible on PCB and positions checked against official motherboard overview page 1-1.",
+    "Three physical x16 slots; no x1-length slots. The lowest two long slots do not imply x16 electrical connectivity.",
+    "M2_1 is covered by heatsink; only uncovered M2_2 body annotated.",
+    "Two bottom SATA housings are partially cut off by image edge; boxes clipped to visible area. One side-facing stacked housing annotated.",
+    "Four fan headers including CPU_OPT; perspective produces overlapping axis-aligned DIMM boxes."
+  ]
+}

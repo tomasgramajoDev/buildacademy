@@ -1,0 +1,165 @@
+{
+  "image": "datasets/connectors-nine-review/images/000202.jpg",
+  "model_id": "ASUS ROG CROSSHAIR X670E GENE",
+  "model_group": "asus-rog-crosshair-x670e-gene",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/Socket%20AM5/ROG%20CROSSHAIR%20X670E%20GENE/E21171_ROG_CROSSHAIR_X670E_GENE_UM_V2_WEB.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      266,
+      187,
+      402,
+      335
+    ],
+    [
+      "DIMM_SLOT",
+      431,
+      105,
+      453,
+      390
+    ],
+    [
+      "DIMM_SLOT",
+      454,
+      105,
+      475,
+      390
+    ],
+    [
+      "PCIe_X16",
+      144,
+      382,
+      378,
+      412
+    ],
+    [
+      "PCIe_X1",
+      144,
+      503,
+      207,
+      523
+    ],
+    [
+      "SATA_PORT",
+      536,
+      459,
+      564,
+      494
+    ],
+    [
+      "SATA_PORT",
+      416,
+      520,
+      452,
+      535
+    ],
+    [
+      "SATA_PORT",
+      416,
+      535,
+      452,
+      550
+    ],
+    [
+      "ATX_POWER",
+      537,
+      212,
+      561,
+      314
+    ],
+    [
+      "CPU_POWER",
+      146,
+      83,
+      187,
+      109
+    ],
+    [
+      "CPU_POWER",
+      189,
+      83,
+      230,
+      109
+    ],
+    [
+      "FAN_HEADER",
+      361,
+      89,
+      389,
+      103
+    ],
+    [
+      "FAN_HEADER",
+      469,
+      88,
+      494,
+      102
+    ],
+    [
+      "FAN_HEADER",
+      495,
+      88,
+      519,
+      102
+    ],
+    [
+      "FAN_HEADER",
+      173,
+      372,
+      197,
+      386
+    ],
+    [
+      "FAN_HEADER",
+      533,
+      372,
+      558,
+      386
+    ],
+    [
+      "FAN_HEADER",
+      507,
+      513,
+      532,
+      526
+    ],
+    [
+      "FAN_HEADER",
+      475,
+      537,
+      503,
+      550
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "527e6030a3d20b44809294ee60ba6c90475802092515e1116ebb44173591d4fe",
+  "split": "train",
+  "notes": [
+    "PCB identity reads CROSSHAIR X670E GENE, not HERO; official manual layout page 1-2 inspected.",
+    "AM5 socket retention assembly visible. Two DDR5 slots; GEN-Z.2 expansion connector is not a DIMM slot and is excluded.",
+    "PCIe-labelled 6-pin auxiliary power connector below main ATX is not CPU_POWER; excluded. Both top EPS connectors included.",
+    "Onboard SSD M.2 and Wi-Fi M.2 bodies concealed by heatsinks/I-O cover; no hidden M.2 box inferred.",
+    "Seven fan/pump headers including FS_FAN1/2/3 matched to manual. RGB, USB and sense headers excluded.",
+    "Three visible SATA housings including right-side stacked housing; box count is not port count.",
+    "Additional AM5 training model. Does not modify the immutable 18-model v3 training dataset."
+  ]
+}

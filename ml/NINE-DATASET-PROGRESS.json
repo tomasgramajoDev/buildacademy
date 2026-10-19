@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 21,
+  "reviewed_images": 22,
   "models": 21,
-  "boxes": 416,
+  "boxes": 440,
   "splits": {
-    "train": 15,
+    "train": 16,
     "val": 3,
     "test": 3
   },
   "status": "selected_v3_experimental_expanding_training_data",
   "coverage": {
     "train": [
-      15,
-      48,
-      31,
-      17,
-      23,
-      59,
-      15,
+      16,
+      52,
+      34,
       19,
-      78
+      26,
+      63,
+      16,
+      20,
+      83
     ],
     "val": [
       3,
@@ -77,10 +77,10 @@
   "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
   "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
   "next_dataset": {
-    "path": "datasets/connectors-nine-prepared-21models/data.yaml",
-    "manifest_sha256": "39f814ef38885c9e0851c052b7bd3772097372ba25e039994ad39b58109a8119",
+    "path": "datasets/connectors-nine-prepared-22images-21models/data.yaml",
+    "manifest_sha256": "a97fa5ec013e7230c374bca6846b8c42042ff6485d18db865f599dc4688e7868",
     "trained": false,
-    "note": "Adds B550I AORUS PRO AX after v4. Same validation/test boards; no new training launched."
+    "note": "21 models, 22 images: adds B550I and another H670 view; same-model views stay in training."
   },
   "previous_training": {
     "name": "nine-reviewed-16models-long-20261019",

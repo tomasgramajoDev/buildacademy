@@ -1,0 +1,206 @@
+{
+  "image": "datasets/connectors-nine-review/images/000082.jpg",
+  "model_id": "ASUS PRIME H670-PLUS D4",
+  "model_group": "asus-prime-h670-plus-d4",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1700/PRIME%20H670-PLUS%20D4/Q18756_PRIME_H670-PLUS_D4_QSG_WEB.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      282,
+      115,
+      454,
+      285
+    ],
+    [
+      "DIMM_SLOT",
+      451,
+      67,
+      477,
+      329
+    ],
+    [
+      "DIMM_SLOT",
+      475,
+      68,
+      498,
+      330
+    ],
+    [
+      "DIMM_SLOT",
+      497,
+      69,
+      520,
+      331
+    ],
+    [
+      "DIMM_SLOT",
+      519,
+      70,
+      542,
+      332
+    ],
+    [
+      "PCIe_X16",
+      163,
+      371,
+      391,
+      396
+    ],
+    [
+      "PCIe_X16",
+      160,
+      489,
+      399,
+      514
+    ],
+    [
+      "PCIe_X16",
+      153,
+      570,
+      399,
+      603
+    ],
+    [
+      "PCIe_X1",
+      159,
+      342,
+      211,
+      360
+    ],
+    [
+      "PCIe_X1",
+      159,
+      455,
+      210,
+      476
+    ],
+    [
+      "M2_SLOT",
+      317,
+      402,
+      348,
+      446
+    ],
+    [
+      "M2_SLOT",
+      362,
+      507,
+      390,
+      554
+    ],
+    [
+      "M2_SLOT",
+      393,
+      506,
+      420,
+      553
+    ],
+    [
+      "ATX_POWER",
+      591,
+      143,
+      631,
+      241
+    ],
+    [
+      "CPU_POWER",
+      165,
+      24,
+      216,
+      51
+    ],
+    [
+      "SATA_PORT",
+      584,
+      387,
+      626,
+      416
+    ],
+    [
+      "SATA_PORT",
+      584,
+      416,
+      625,
+      446
+    ],
+    [
+      "SATA_PORT",
+      449,
+      566,
+      493,
+      587
+    ],
+    [
+      "SATA_PORT",
+      492,
+      564,
+      537,
+      586
+    ],
+    [
+      "FAN_HEADER",
+      136,
+      300,
+      157,
+      320
+    ],
+    [
+      "FAN_HEADER",
+      135,
+      322,
+      156,
+      342
+    ],
+    [
+      "FAN_HEADER",
+      585,
+      449,
+      605,
+      474
+    ],
+    [
+      "FAN_HEADER",
+      390,
+      574,
+      419,
+      594
+    ],
+    [
+      "FAN_HEADER",
+      420,
+      571,
+      448,
+      593
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "33a5961235b86aa98a447729254fdd51206a5bb7dcb5ed12726684fb17eda293",
+  "split": "train",
+  "notes": [
+    "PCB model name visible; same manufacturer layout as reviewed photo 000060. Both views remain in train.",
+    "Alternate near-frontal view adds individual DIMM geometry and an uncovered CPU socket, without increasing independent model count.",
+    "M2_1 covered by heatsink and omitted. Three other visible M.2 connector bodies include Wi-Fi socket.",
+    "CPU_FAN, AIO_PUMP and three CHA_FAN headers checked against layout. RGB/USB headers excluded.",
+    "Image is soft at small connectors; boxes checked against visible bodies and manufacturer layout. No independent human certification.",
+    "Added after v4 evaluation; not yet used in training."
+  ]
+}

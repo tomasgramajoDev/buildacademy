@@ -1,0 +1,234 @@
+{
+  "image": "datasets/connectors-nine-review/images/000035.jpg",
+  "model_id": "Gigabyte G1.Sniper 5",
+  "model_group": "gigabyte-g1-sniper-5",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download1.gigabyte.com/Files/Manual/mb_manual_g1.sniper5_e.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      266,
+      107,
+      405,
+      265
+    ],
+    [
+      "DIMM_SLOT",
+      434,
+      36,
+      460,
+      339
+    ],
+    [
+      "DIMM_SLOT",
+      459,
+      31,
+      484,
+      339
+    ],
+    [
+      "DIMM_SLOT",
+      483,
+      36,
+      505,
+      339
+    ],
+    [
+      "DIMM_SLOT",
+      504,
+      31,
+      528,
+      339
+    ],
+    [
+      "PCIe_X16",
+      109,
+      330,
+      353,
+      360
+    ],
+    [
+      "PCIe_X16",
+      109,
+      410,
+      353,
+      441
+    ],
+    [
+      "PCIe_X16",
+      109,
+      492,
+      353,
+      522
+    ],
+    [
+      "PCIe_X16",
+      109,
+      573,
+      353,
+      604
+    ],
+    [
+      "PCIe_X1",
+      111,
+      372,
+      178,
+      397
+    ],
+    [
+      "PCIe_X1",
+      111,
+      453,
+      178,
+      478
+    ],
+    [
+      "PCIe_X1",
+      111,
+      535,
+      178,
+      560
+    ],
+    [
+      "SATA_PORT",
+      564,
+      419,
+      604,
+      457
+    ],
+    [
+      "SATA_PORT",
+      564,
+      457,
+      604,
+      490
+    ],
+    [
+      "SATA_PORT",
+      564,
+      490,
+      604,
+      523
+    ],
+    [
+      "SATA_PORT",
+      564,
+      523,
+      604,
+      556
+    ],
+    [
+      "SATA_PORT",
+      564,
+      556,
+      604,
+      590
+    ],
+    [
+      "ATX_POWER",
+      564,
+      182,
+      597,
+      296
+    ],
+    [
+      "CPU_POWER",
+      110,
+      22,
+      156,
+      51
+    ],
+    [
+      "FAN_HEADER",
+      411,
+      28,
+      444,
+      44
+    ],
+    [
+      "FAN_HEADER",
+      411,
+      44,
+      444,
+      59
+    ],
+    [
+      "FAN_HEADER",
+      562,
+      97,
+      585,
+      121
+    ],
+    [
+      "FAN_HEADER",
+      562,
+      122,
+      585,
+      145
+    ],
+    [
+      "FAN_HEADER",
+      127,
+      306,
+      145,
+      332
+    ],
+    [
+      "FAN_HEADER",
+      122,
+      603,
+      154,
+      625
+    ],
+    [
+      "FAN_HEADER",
+      193,
+      603,
+      224,
+      625
+    ],
+    [
+      "FAN_HEADER",
+      361,
+      603,
+      396,
+      625
+    ],
+    [
+      "FAN_HEADER",
+      542,
+      603,
+      575,
+      625
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "c1be4f6a8bf8a58a004571088ea593e4cd84eda022a6817465138d76778c2281",
+  "split": "train",
+  "notes": [
+    "PCB G1.Sniper 5 identity matched to official manual layout page 7; internal headers pages 25-27.",
+    "Four long slots physically x16 even where wired x8; three physical x1 slots. No M.2 on this model.",
+    "Five stacked SATA housings correspond to ten ports; annotations describe bodies, not port counts.",
+    "Nine CPU/system/optional fan headers. Chipset fan HP_PWR is concealed/connected under heatsink and omitted; HP_PWR_PCH supplies LEDs and is not a fan header (manual page 27).",
+    "ATX4P auxiliary graphics power is excluded from CPU_POWER.",
+    "New training model; source adds green PCIe/DIMM connectors and older high-end Intel layout. Not part of active 18-model v3 dataset."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "image": "datasets/connectors-nine-review/images/000134.jpg",
+  "status": "identity_unresolved_exclude_from_training",
+  "findings": [
+    "Perspective MSI AM4 photograph inspected at original size and enlarged.",
+    "Model lettering is insufficiently legible to distinguish similar PRO-VDH variants reliably.",
+    "Do not infer exact identity or fan-header labels from visual similarity. No reviewed labels or independent holdout membership assigned."
+  ],
+  "split": null
+}

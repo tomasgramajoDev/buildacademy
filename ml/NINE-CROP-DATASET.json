@@ -1,5 +1,5 @@
 {
-  "status": "queued_not_trained",
+  "status": "training",
   "prepared_data": "datasets\\connectors-nine-prepared-20models-crops\\data.yaml",
   "audit": {
     "images": 76,

@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 16,
-  "models": 16,
-  "boxes": 316,
+  "reviewed_images": 17,
+  "models": 17,
+  "boxes": 340,
   "splits": {
-    "train": 10,
+    "train": 11,
     "val": 3,
     "test": 3
   },
-  "status": "second_run_evaluated_more_diverse_annotations_required",
+  "status": "expanding_reviewed_data_after_second_run",
   "coverage": {
     "train": [
-      10,
-      34,
-      22,
-      10,
-      19,
+      11,
       38,
-      10,
-      13,
-      49
+      24,
+      11,
+      21,
+      44,
+      11,
+      14,
+      55
     ],
     "val": [
       3,
@@ -72,5 +72,11 @@
     "completed": true
   },
   "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
-  "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json"
+  "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
+  "next_dataset": {
+    "path": "datasets/connectors-nine-prepared-17models/data.yaml",
+    "manifest_sha256": "a73df5728d269e8f344139b7a306f10f04a6e64dc7138fa2daeb57e303e53027",
+    "trained": false,
+    "note": "One additional training motherboard; validation/test membership unchanged. Existing v2 metrics belong to the previous 16-model dataset."
+  }
 }

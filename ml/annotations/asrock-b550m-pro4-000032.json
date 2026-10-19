@@ -1,0 +1,205 @@
+{
+  "image": "datasets/connectors-nine-review/images/000032.jpg",
+  "model_id": "ASRock B550M Pro4",
+  "model_group": "asrock-b550m-pro4",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.asrock.com/Manual/B550M%20Pro4.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      278,
+      151,
+      444,
+      290
+    ],
+    [
+      "DIMM_SLOT",
+      489,
+      27,
+      514,
+      417
+    ],
+    [
+      "DIMM_SLOT",
+      514,
+      27,
+      539,
+      417
+    ],
+    [
+      "DIMM_SLOT",
+      539,
+      27,
+      562,
+      417
+    ],
+    [
+      "DIMM_SLOT",
+      563,
+      27,
+      589,
+      417
+    ],
+    [
+      "PCIe_X16",
+      126,
+      413,
+      402,
+      453
+    ],
+    [
+      "PCIe_X16",
+      125,
+      573,
+      402,
+      601
+    ],
+    [
+      "PCIe_X1",
+      125,
+      524,
+      196,
+      547
+    ],
+    [
+      "M2_SLOT",
+      273,
+      518,
+      300,
+      573
+    ],
+    [
+      "M2_SLOT",
+      599,
+      552,
+      632,
+      611
+    ],
+    [
+      "SATA_PORT",
+      597,
+      364,
+      615,
+      408
+    ],
+    [
+      "SATA_PORT",
+      615,
+      364,
+      639,
+      408
+    ],
+    [
+      "SATA_PORT",
+      596,
+      451,
+      615,
+      498
+    ],
+    [
+      "SATA_PORT",
+      615,
+      451,
+      639,
+      498
+    ],
+    [
+      "SATA_PORT",
+      596,
+      498,
+      615,
+      547
+    ],
+    [
+      "SATA_PORT",
+      615,
+      498,
+      639,
+      547
+    ],
+    [
+      "ATX_POWER",
+      609,
+      148,
+      640,
+      289
+    ],
+    [
+      "CPU_POWER",
+      117,
+      1,
+      175,
+      42
+    ],
+    [
+      "FAN_HEADER",
+      456,
+      7,
+      489,
+      27
+    ],
+    [
+      "FAN_HEADER",
+      456,
+      29,
+      489,
+      49
+    ],
+    [
+      "FAN_HEADER",
+      73,
+      351,
+      104,
+      394
+    ],
+    [
+      "FAN_HEADER",
+      276,
+      615,
+      305,
+      639
+    ],
+    [
+      "FAN_HEADER",
+      305,
+      615,
+      336,
+      639
+    ],
+    [
+      "FAN_HEADER",
+      457,
+      614,
+      488,
+      639
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "d67da7eb92dcbc188455a4e1681300251ecc15d46f4ad479a94cc8a35d418427",
+  "split": "train",
+  "notes": [
+    "PCB reads B550M Pro4; micro-ATX model, not the distinct B550 Pro4 ATX variant. Manufacturer manual printed pages 7-8 checked.",
+    "One SSD M.2 socket is hidden by its heatsink; exposed SSD and Wi-Fi sockets included.",
+    "Six separate SATA connector bodies; right edge and bottom header bodies partly clipped by source photo.",
+    "Six CPU/chassis/pump headers cross-checked against manual; RGB, USB, COM and front panel excluded.",
+    "Assigned to train as a new model group; all later images of this motherboard must retain train split."
+  ]
+}

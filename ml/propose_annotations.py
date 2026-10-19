@@ -20,6 +20,8 @@ def propose(model_dir, queue_dir, output):
         json.loads(p.read_text(encoding='utf-8'))['image_sha256']
         for p in (ROOT / 'ml/annotations').glob('*.json')
     }
+    reservation_file = ROOT / 'ml/HOLDOUT-RESERVATIONS.json'
+    reserved = {r['image_sha256'] for r in json.loads(reservation_file.read_text(encoding='utf-8'))['reservations']} if reservation_file.exists() else set()
     detector = ConnectorDetector(model_dir, threshold=.25)
     if detector.classes != TARGET_CLASSES:
         raise ValueError('Proposals require the nine-class model.')
@@ -31,7 +33,7 @@ def propose(model_dir, queue_dir, output):
             raise ValueError('Image path outside review queue.')
         data = path.read_bytes()
         digest = hashlib.sha256(data).hexdigest()
-        if digest in reviewed:
+        if digest in reviewed or digest in reserved:
             continue
         result = detector.recognize(data)
         with Image.open(path) as image:

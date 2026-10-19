@@ -1,0 +1,4 @@
+# Inference only; versions used for the local integration checks.
+numpy==2.5.3
+Pillow==12.3.0
+onnxruntime==1.30.0

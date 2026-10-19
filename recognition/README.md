@@ -4,7 +4,7 @@ Estado: módulo ejecutable con el piloto de cuatro clases por defecto y soporte 
 
 ## Backend Python
 
-Instalar `ml/requirements.txt`. ONNX Runtime ejecuta en CPU sin llamadas externas ni API keys. Crear una instancia por worker y reutilizarla:
+Instalar `python -m pip install -r recognition/requirements.txt` para ejecutar el detector. Este archivo contiene las dependencias de inferencia; `ml/requirements.txt` corresponde al entrenamiento y exportación. ONNX Runtime ejecuta en CPU sin llamadas externas ni API keys. Crear una instancia por worker y reutilizarla:
 
 ```python
 from recognition import ConnectorDetector, RecognitionError

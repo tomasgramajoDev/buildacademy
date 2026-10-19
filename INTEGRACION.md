@@ -17,7 +17,7 @@ Código y contrato: `recognition/README.md`. Hay dos paquetes disponibles en el 
 | Piloto de cuatro clases | `dist/models` | Predeterminado; se conservó tras comparar el candidato de cuatro clases |
 | Nueve clases, segunda corrida | `ml/artifacts/nine-reviewed-v2` | Experimental, disponible para integración; no aprobado para reemplazar el piloto |
 
-Instalar las dependencias de `ml/requirements.txt` en un entorno Python. Para probar el modelo de nueve clases desde la raíz:
+Instalar las dependencias de inferencia con `python -m pip install -r recognition/requirements.txt` en un entorno Python. No hace falta instalar las herramientas de entrenamiento para ejecutar el ONNX. Para probar el modelo de nueve clases desde la raíz:
 
 ```powershell
 python -m recognition.server --model-dir ml/artifacts/nine-reviewed-v2 --port 8771

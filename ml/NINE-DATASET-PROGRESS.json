@@ -7,7 +7,7 @@
     "val": 3,
     "test": 3
   },
-  "status": "expanding_reviewed_data_after_second_run",
+  "status": "third_run_training_with_18_reviewed_models",
   "coverage": {
     "train": [
       12,
@@ -61,6 +61,28 @@
   },
   "note": "Collection target is a practical initial diversity target, not a guarantee of generalization or sufficient statistical power.",
   "training": {
+    "name": "nine-reviewed-18models-v3",
+    "epochs": 300,
+    "input_size": 640,
+    "batch": 2,
+    "patience": 100,
+    "data": "datasets/connectors-nine-prepared-18models/data.yaml",
+    "manifest_sha256": "00ef7dafaae32b2c34dee6b41b3611e62a2a9ee15f39c4553f1f16066660e118",
+    "publication_approved": false,
+    "completed": false,
+    "job_output": "tmp/nine-v3-job",
+    "initialization": "COCO yolo11n.pt; not the four-class motherboard pilot",
+    "experiment": "Same hyperparameters as v2; two additional reviewed training models."
+  },
+  "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
+  "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
+  "next_dataset": {
+    "path": "datasets/connectors-nine-prepared-18models/data.yaml",
+    "manifest_sha256": "00ef7dafaae32b2c34dee6b41b3611e62a2a9ee15f39c4553f1f16066660e118",
+    "trained": false,
+    "note": "Two additional training motherboards; validation/test membership unchanged. Existing v2 metrics belong to the previous 16-model dataset."
+  },
+  "previous_training": {
     "name": "nine-reviewed-16models-long-20261019",
     "epochs": 300,
     "input_size": 640,
@@ -70,13 +92,5 @@
     "publication_approved": false,
     "patience": 100,
     "completed": true
-  },
-  "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
-  "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
-  "next_dataset": {
-    "path": "datasets/connectors-nine-prepared-18models/data.yaml",
-    "manifest_sha256": "00ef7dafaae32b2c34dee6b41b3611e62a2a9ee15f39c4553f1f16066660e118",
-    "trained": false,
-    "note": "Two additional training motherboards; validation/test membership unchanged. Existing v2 metrics belong to the previous 16-model dataset."
   }
 }

@@ -1,5 +1,5 @@
 {
-  "status": "prepared_not_trained",
+  "status": "queued_not_trained",
   "prepared_data": "datasets\\connectors-nine-prepared-20models-crops\\data.yaml",
   "audit": {
     "images": 76,
@@ -98,5 +98,14 @@
       ],
       "limitation": "Crops are augmentation, not new motherboards or independent samples. Partial visible boxes retained."
     }
+  },
+  "experiment": {
+    "epochs": 100,
+    "batch": 2,
+    "seed": 42,
+    "size": 640,
+    "initialization": "COCO yolo11n.pt",
+    "selection": "Compare candidate validation metrics; test reused for diagnostic reporting only. No automatic deployment.",
+    "dependency": "Successful completion of nine-reviewed-18models-v3 including ONNX runtime and HTTP evaluation."
   }
 }

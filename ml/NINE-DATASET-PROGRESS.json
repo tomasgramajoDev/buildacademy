@@ -100,6 +100,14 @@
     "images": 76,
     "independent_models": 20,
     "derived_train_crops": 56,
-    "held_out_transformed": false
+    "held_out_transformed": false,
+    "status": "queued_after_v3_success",
+    "name": "nine-reviewed-20models-crops-v4",
+    "epochs": 100,
+    "batch": 2,
+    "size": 640,
+    "job_output": "tmp/nine-v4-crops-job",
+    "queue_status": "tmp/nine-v4-queue.json",
+    "note": "One queued experiment; 70 training images including crops. Same original validation/test files. Combined data-and-crop experiment, not an isolated crop ablation."
   }
 }

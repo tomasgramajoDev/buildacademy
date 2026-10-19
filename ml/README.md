@@ -108,3 +108,11 @@ Se revisaron dieciséis imágenes de dieciséis modelos, con 316 cajas en total,
 La corrida inicial terminó sus 80 épocas y exportó ONNX de forma correcta. La prueba obtuvo mAP50 0,2953 y mAP50-95 0,1418, con recall 0,2052 en la evaluación Ultralytics. Esto no equivale al punto de operación del servicio: con su umbral fijo 0,5, NMS 0,45 y matching IoU 0,5, el runtime real detectó sólo 2 de 55 cajas de test. En train detectó 19 de 205, con un falso positivo. No se aprueba este candidato para despliegue.
 
 La evidencia queda en REVISION-NUEVE-CLASES-V1.json. `evaluate_runtime.py` ejecuta el mismo ConnectorDetector usado por el backend y reporta TP/FP/FN por clase; no ajusta umbrales a partir del test. Se inició otra corrida desde los pesos generales YOLO11n, con 300 épocas, batch 2 y paciencia 100, manteniendo el dataset y sus separaciones. Los pesos del piloto de cuatro clases no se usan como inicialización porque su dataset podría incluir las placas reservadas. El test ya consultado se considera diagnóstico, no certificación independiente. La muestra pequeña sigue limitando las conclusiones.
+
+## Trazabilidad del conjunto preparado
+
+NINE-DATASET-PROVENANCE.json vincula las 16 imágenes y etiquetas usadas por ambas corridas con modelo, split, fuente, manual y hashes SHA-256. Se verificaron las copias preparadas contra los originales revisados, incluyendo ausencia de archivos extra. No acredita revisión humana independiente ni precisión de las anotaciones.
+
+```powershell
+python ml/verify_prepared_dataset.py --manifest datasets/nine-reviewed/manifest.json --prepared datasets/connectors-nine-prepared-16models --output tmp/provenance.json
+```

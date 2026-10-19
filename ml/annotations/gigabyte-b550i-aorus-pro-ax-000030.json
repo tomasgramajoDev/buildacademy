@@ -1,0 +1,129 @@
+{
+  "image": "datasets/connectors-nine-review/images/000030.jpg",
+  "model_id": "Gigabyte B550I AORUS PRO AX",
+  "model_group": "gigabyte-b550i-aorus-pro-ax",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_b550i-aorus-pro-ax_e_1003.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      247,
+      160,
+      443,
+      331
+    ],
+    [
+      "DIMM_SLOT",
+      520,
+      57,
+      549,
+      558
+    ],
+    [
+      "DIMM_SLOT",
+      549,
+      57,
+      579,
+      558
+    ],
+    [
+      "PCIe_X16",
+      188,
+      595,
+      512,
+      627
+    ],
+    [
+      "CPU_POWER",
+      44,
+      27,
+      112,
+      71
+    ],
+    [
+      "ATX_POWER",
+      579,
+      79,
+      636,
+      269
+    ],
+    [
+      "SATA_PORT",
+      586,
+      321,
+      614,
+      382
+    ],
+    [
+      "SATA_PORT",
+      614,
+      321,
+      639,
+      382
+    ],
+    [
+      "SATA_PORT",
+      586,
+      383,
+      614,
+      441
+    ],
+    [
+      "SATA_PORT",
+      614,
+      383,
+      639,
+      441
+    ],
+    [
+      "FAN_HEADER",
+      114,
+      28,
+      137,
+      70
+    ],
+    [
+      "FAN_HEADER",
+      192,
+      550,
+      209,
+      595
+    ],
+    [
+      "FAN_HEADER",
+      582,
+      545,
+      604,
+      596
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "21fcde8af93a0827fc75e1a9a9e23f6476d6a71b12977185e704dd12b797b286",
+  "split": "train",
+  "notes": [
+    "Model printed on PCB; layout compared against manufacturer manual page 4. All revisions grouped conservatively.",
+    "Two individual DIMM slots include end latches. Four separate upright SATA housings.",
+    "CPU_FAN beside EPS power, SYS_FAN2 beside audio area, SYS_FAN1 beside lower DIMM ends verified against layout.",
+    "Top SSD M.2 hidden by thermal cover; rear SSD M.2 and Wi-Fi connector not visible. Do not label hidden connectors.",
+    "No physical PCIe x1 slot. White front-panel and USB headers are excluded from fan class.",
+    "Added after v4 evaluation; not part of any already trained package."
+  ]
+}

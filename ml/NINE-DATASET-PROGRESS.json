@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 20,
-  "models": 20,
-  "boxes": 403,
+  "reviewed_images": 21,
+  "models": 21,
+  "boxes": 416,
   "splits": {
-    "train": 14,
+    "train": 15,
     "val": 3,
     "test": 3
   },
-  "status": "third_run_evaluated_crop_experiment_training",
+  "status": "selected_v3_experimental_expanding_training_data",
   "coverage": {
     "train": [
-      14,
-      46,
-      30,
+      15,
+      48,
+      31,
       17,
       23,
-      55,
-      14,
-      18,
-      75
+      59,
+      15,
+      19,
+      78
     ],
     "val": [
       3,
@@ -77,10 +77,10 @@
   "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
   "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
   "next_dataset": {
-    "path": "datasets/connectors-nine-prepared-20models/data.yaml",
-    "manifest_sha256": "932079ef86b3d6184e4c8823e89ea8befbb09e4aaf0fdecad8191f8899cc0ced",
+    "path": "datasets/connectors-nine-prepared-21models/data.yaml",
+    "manifest_sha256": "39f814ef38885c9e0851c052b7bd3772097372ba25e039994ad39b58109a8119",
     "trained": false,
-    "note": "20-model source dataset used with derived crops for completed v4. Validation/test membership unchanged."
+    "note": "Adds B550I AORUS PRO AX after v4. Same validation/test boards; no new training launched."
   },
   "previous_training": {
     "name": "nine-reviewed-16models-long-20261019",

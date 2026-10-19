@@ -9,14 +9,16 @@
         "Gigabyte B660M DS3H AX DDR4",
         "Gigabyte B660M DS3H DDR4"
       ],
-      "status": "identity_checked_annotations_pending",
+      "status": "annotations_reviewed_not_evaluated",
       "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_b660m-ds3h-ax-ddr4_e_230213.pdf",
       "notes": [
         "Name visible on PCB after mirroring source for inspection. Source pixels remain unchanged.",
         "AX variant has rear wireless antenna connectors. Conservatively reserve non-AX sibling too.",
         "Manufacturer motherboard layout inspected; bounding boxes not yet reviewed.",
-        "Do not run either candidate on this image until selection based on existing validation is finalized."
-      ]
+        "Do not run either candidate on this image until selection based on existing validation is finalized.",
+        "Legacy v2 proposals predate reservation and were not used for manual labels. No v3/v4 prediction or scoring used."
+      ],
+      "annotation": "ml/holdout_annotations/gigabyte-b660m-ds3h-ax-ddr4-000141.json"
     }
   ]
 }

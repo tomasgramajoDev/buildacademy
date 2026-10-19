@@ -1,0 +1,164 @@
+{
+  "image": "datasets/connectors-nine-review/images/000141.jpg",
+  "model_id": "Gigabyte B660M DS3H AX DDR4",
+  "model_group": "gigabyte-b660m-ds3h-ax-ddr4",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_b660m-ds3h-ax-ddr4_e_230213.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      213.5,
+      146.0,
+      355.0,
+      348.5
+    ],
+    [
+      "DIMM_SLOT",
+      128.5,
+      93.5,
+      206.0,
+      413.0
+    ],
+    [
+      "DIMM_SLOT",
+      108.5,
+      95.0,
+      185.5,
+      419.0
+    ],
+    [
+      "DIMM_SLOT",
+      89.0,
+      97.0,
+      164.5,
+      423.0
+    ],
+    [
+      "DIMM_SLOT",
+      67.5,
+      99.5,
+      145.0,
+      425.5
+    ],
+    [
+      "PCIe_X16",
+      252.0,
+      383,
+      500.0,
+      426.0
+    ],
+    [
+      "PCIe_X1",
+      434.5,
+      472.5,
+      511.5,
+      498.0
+    ],
+    [
+      "PCIe_X1",
+      440.5,
+      516.5,
+      516.5,
+      541.0
+    ],
+    [
+      "M2_SLOT",
+      246.0,
+      485.5,
+      271.0,
+      540.5
+    ],
+    [
+      "SATA_PORT",
+      33.0,
+      294.0,
+      61.0,
+      335.0
+    ],
+    [
+      "SATA_PORT",
+      39.5,
+      335.0,
+      68.5,
+      372.5
+    ],
+    [
+      "SATA_PORT",
+      46.0,
+      459.0,
+      75.5,
+      504.0
+    ],
+    [
+      "ATX_POWER",
+      19.5,
+      154.5,
+      62.5,
+      282.0
+    ],
+    [
+      "CPU_POWER",
+      398.0,
+      30.0,
+      444.0,
+      69.0
+    ],
+    [
+      "FAN_HEADER",
+      441.0,
+      33.0,
+      456.5,
+      63.5
+    ],
+    [
+      "FAN_HEADER",
+      152.0,
+      91.0,
+      182.0,
+      113.0
+    ],
+    [
+      "FAN_HEADER",
+      69.5,
+      315.5,
+      84.5,
+      343.0
+    ],
+    [
+      "FAN_HEADER",
+      157.0,
+      587.0,
+      190.5,
+      617.5
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "1d02ac8768db3b1a9e432867243c1602d485ac271071c56c980ad6e04557d568",
+  "split": "independent_test",
+  "notes": [
+    "Dedicated post-selection holdout; not used for model selection.",
+    "Source photo mirrored relative to manufacturer layout. Boxes mapped back to original pixels after reviewing mirrored enlargement.",
+    "AX identity and rear Wi-Fi antenna connections visible; group non-AX sibling conservatively outside training.",
+    "Upper SSD M.2 covered by heatsink; lower SSD body visible. Wi-Fi body concealed by rear module and omitted.",
+    "Three SATA housings represent two individual upright ports plus one stacked pair. Four fan headers verified against manual page 4.",
+    "Old v2 automated proposals existed before reservation but were not consulted for this manual annotation; no v3/v4 inference performed."
+  ]
+}

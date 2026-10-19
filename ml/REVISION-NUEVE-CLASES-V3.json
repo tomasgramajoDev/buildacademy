@@ -1,0 +1,279 @@
+{
+  "status": "evaluated_pending_crop_comparison_not_deployed",
+  "epochs_completed": 300,
+  "model_sha256": "2bd181e3090af829c3db94a33d7d17fb356392b07073145fba9774bb02661de2",
+  "evaluation": {
+    "model": "runs/detect/runs/buildacademy/nine-reviewed-18models-v3/weights/best.pt",
+    "data_audit": {
+      "images": 18,
+      "boards": 18,
+      "boxes": {
+        "train": [
+          12,
+          40,
+          25,
+          13,
+          23,
+          47,
+          12,
+          15,
+          59
+        ],
+        "val": [
+          3,
+          8,
+          4,
+          3,
+          3,
+          16,
+          3,
+          4,
+          12
+        ],
+        "test": [
+          3,
+          10,
+          6,
+          3,
+          2,
+          9,
+          3,
+          4,
+          15
+        ]
+      },
+      "classes": [
+        "CPU_SOCKET",
+        "DIMM_SLOT",
+        "PCIe_X16",
+        "PCIe_X1",
+        "M2_SLOT",
+        "SATA_PORT",
+        "ATX_POWER",
+        "CPU_POWER",
+        "FAN_HEADER"
+      ],
+      "manifest_sha256": "00ef7dafaae32b2c34dee6b41b3611e62a2a9ee15f39c4553f1f16066660e118",
+      "limitation": "El validador detecta duplicados exactos; revisar manualmente similares y la identidad de cada placa.",
+      "review_gate": "passed",
+      "model_count": 18
+    },
+    "input_size": 640,
+    "test": {
+      "metrics/precision(B)": 0.6235022226910153,
+      "metrics/recall(B)": 0.7534817652215753,
+      "metrics/mAP50(B)": 0.7191029151047993,
+      "metrics/mAP50-95(B)": 0.3883590148930605,
+      "fitness": 0.3883590148930605
+    },
+    "per_class_map50_95": {
+      "CPU_SOCKET": 0.81275,
+      "DIMM_SLOT": 0.23789167080015367,
+      "PCIe_X16": 0.2644285714285714,
+      "PCIe_X1": 0.41137499999999994,
+      "M2_SLOT": 0.38116666666666665,
+      "SATA_PORT": 0.18413600464576077,
+      "ATX_POWER": 0.7300000000000001,
+      "CPU_POWER": 0.44258333333333333,
+      "FAN_HEADER": 0.030899887163058044
+    },
+    "claim": "Evaluaci\u00f3n de este dataset. No certifica generalizaci\u00f3n a nuevas placas ni compatibilidad el\u00e9ctrica."
+  },
+  "runtime_val": {
+    "split": "val",
+    "model": "nine-reviewed-18models-v3",
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "DIMM_SLOT": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 7,
+        "precision": 0.3333333333333333,
+        "recall": 0.125
+      },
+      "PCIe_X16": {
+        "tp": 4,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8,
+        "recall": 1.0
+      },
+      "PCIe_X1": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.6666666666666666
+      },
+      "M2_SLOT": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "SATA_PORT": {
+        "tp": 9,
+        "fp": 1,
+        "fn": 7,
+        "precision": 0.9,
+        "recall": 0.5625
+      },
+      "ATX_POWER": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "CPU_POWER": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 2,
+        "precision": 0.6666666666666666,
+        "recall": 0.5
+      },
+      "FAN_HEADER": {
+        "tp": 1,
+        "fp": 7,
+        "fn": 11,
+        "precision": 0.125,
+        "recall": 0.08333333333333333
+      }
+    },
+    "images": [
+      {
+        "image": "000001.jpg",
+        "tp": 8,
+        "fp": 7,
+        "fn": 17
+      },
+      {
+        "image": "000011.jpg",
+        "tp": 7,
+        "fp": 3,
+        "fn": 8
+      },
+      {
+        "image": "000013.jpg",
+        "tp": 9,
+        "fp": 2,
+        "fn": 7
+      }
+    ],
+    "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+  },
+  "runtime_test": {
+    "split": "test",
+    "model": "nine-reviewed-18models-v3",
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "DIMM_SLOT": {
+        "tp": 6,
+        "fp": 6,
+        "fn": 4,
+        "precision": 0.5,
+        "recall": 0.6
+      },
+      "PCIe_X16": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 5,
+        "precision": 1.0,
+        "recall": 0.16666666666666666
+      },
+      "PCIe_X1": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1.0,
+        "recall": 0.3333333333333333
+      },
+      "M2_SLOT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "precision": null,
+        "recall": 0.0
+      },
+      "SATA_PORT": {
+        "tp": 8,
+        "fp": 1,
+        "fn": 1,
+        "precision": 0.8888888888888888,
+        "recall": 0.8888888888888888
+      },
+      "ATX_POWER": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "CPU_POWER": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.25
+      },
+      "FAN_HEADER": {
+        "tp": 2,
+        "fp": 4,
+        "fn": 13,
+        "precision": 0.3333333333333333,
+        "recall": 0.13333333333333333
+      }
+    },
+    "images": [
+      {
+        "image": "000008.jpg",
+        "tp": 7,
+        "fp": 0,
+        "fn": 7
+      },
+      {
+        "image": "000012.jpg",
+        "tp": 10,
+        "fp": 9,
+        "fn": 8
+      },
+      {
+        "image": "000014.jpg",
+        "tp": 8,
+        "fp": 2,
+        "fn": 15
+      }
+    ],
+    "claim": "Small grouped dataset; reused test results are diagnostic, not independent certification."
+  },
+  "http_checks": {
+    "real_model_http": true,
+    "invalid_image_400": true,
+    "unsupported_type_415": true,
+    "method_405": true
+  },
+  "deployment_approved": false,
+  "reason": "Runtime M2 recall remains zero on reused test and fan-header recall remains low. Wait for validation comparison with v4.",
+  "independent_holdout_used": false
+}

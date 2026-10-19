@@ -7,7 +7,7 @@
     "val": 3,
     "test": 3
   },
-  "status": "third_run_training_with_18_reviewed_models",
+  "status": "third_run_evaluated_crop_experiment_training",
   "coverage": {
     "train": [
       14,
@@ -69,7 +69,7 @@
     "data": "datasets/connectors-nine-prepared-18models/data.yaml",
     "manifest_sha256": "00ef7dafaae32b2c34dee6b41b3611e62a2a9ee15f39c4553f1f16066660e118",
     "publication_approved": false,
-    "completed": false,
+    "completed": true,
     "job_output": "tmp/nine-v3-job",
     "initialization": "COCO yolo11n.pt; not the four-class motherboard pilot",
     "experiment": "Same hyperparameters as v2; two additional reviewed training models."
@@ -101,7 +101,7 @@
     "independent_models": 20,
     "derived_train_crops": 56,
     "held_out_transformed": false,
-    "status": "queued_after_v3_success",
+    "status": "training",
     "name": "nine-reviewed-20models-crops-v4",
     "epochs": 100,
     "batch": 2,
@@ -109,5 +109,6 @@
     "job_output": "tmp/nine-v4-crops-job",
     "queue_status": "tmp/nine-v4-queue.json",
     "note": "One queued experiment; 70 training images including crops. Same original validation/test files. Combined data-and-crop experiment, not an isolated crop ablation."
-  }
+  },
+  "third_run_review": "ml/REVISION-NUEVE-CLASES-V3.json"
 }

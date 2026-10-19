@@ -107,6 +107,14 @@ Los prompts no son una barrera infalible. Un segundo pase del mismo modelo tampo
 
 ## Pruebas
 
+Para escribir preguntas propias desde una terminal abierta en la raíz del proyecto:
+
+```text
+npm run chat:demo
+```
+
+Empieza en la alerta de BIOS del ejemplo. `/armado` cambia al paso de colocación del procesador; `/compatibilidad` vuelve a la alerta; `/reiniciar` borra el historial actual y `/salir` termina. También admite una sola pregunta: `npm run chat:demo -- --question "¿Por qué aparece esta alerta?"`. La demo carga `.env`, mantiene sólo turnos aceptados en memoria, limita la sesión a 30 llamadas y las separa por 15 segundos. No es un endpoint de producción ni está vinculada al armado de la web. El límite local se reinicia al cerrar el proceso; backend sigue necesitando control persistente por usuario y proyecto. No ingresar datos personales ni secretos.
+
 ```text
 node --test tests/consultation.test.mjs
 node --env-file=.env consultation/evaluate-live.mjs

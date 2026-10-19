@@ -1,0 +1,77 @@
+# Reconocimiento de conectores: integración
+
+Estado: módulo ejecutable con el piloto de cuatro clases. El modelo de nueve clases está pendiente de completar y revisar el dataset. `coversNineClasses` es false para el modelo actual. No asumir categorías que el modelo no admite.
+
+## Backend Python
+
+Instalar `ml/requirements.txt`. ONNX Runtime ejecuta en CPU sin llamadas externas ni API keys. Crear una instancia por worker y reutilizarla:
+
+```python
+from recognition import ConnectorDetector, RecognitionError
+detector = ConnectorDetector()
+result = detector.recognize(image_bytes)
+```
+
+El modelo se valida mediante el SHA-256 del manifiesto local. Las rutas del modelo son configuración de confianza del servidor, nunca datos del cliente. La imagen no se guarda ni se envía a Gemini. Se admiten JPG, PNG y WebP estáticos, hasta 15 MB, 20 megapíxeles y mínimo 32 px por dimensión.
+
+## Adaptador HTTP local
+
+```powershell
+.\.venv\Scripts\python.exe -m recognition.server
+```
+
+Escucha exclusivamente en `127.0.0.1:8770`. `POST /v1/recognitions`, cuerpo binario de imagen, Content-Type image/jpeg, image/png o image/webp y Content-Length. No enviar multipart ni JSON base64. Backend puede reutilizar `create_app()` como WSGI o llamar directamente al detector.
+
+Ejemplo desde Node/backend:
+
+```js
+const response = await fetch('http://127.0.0.1:8770/v1/recognitions', {
+  method: 'POST', headers: {'Content-Type': imageMime}, body: imageBytes,
+  signal: AbortSignal.timeout(30000)
+});
+const result = await response.json();
+if (!response.ok) throw new Error(result.error.code);
+```
+
+El servidor incluido es para desarrollo/integración local. Producción requiere servidor WSGI adecuado, límite y timeout de lectura en el proxy, autenticación, autorización del armado, cuotas y registro de errores del backend. No exponer el servidor de desarrollo a Internet. No se ofrece CORS directo: frontend utiliza el backend autenticado de la aplicación. No hay reintentos automáticos.
+
+## Respuesta estable v1
+
+```json
+{
+  "schemaVersion": 1,
+  "model": {
+    "version": "bis497-v5-yolo11n-pilot-1",
+    "classes": ["CPU_SOCKET", "PCIE_SLOT", "POWER_CONNECTOR", "DIMM_SLOT"],
+    "coversNineClasses": false
+  },
+  "image": {"width": 640, "height": 480, "orientation": "exif_transposed"},
+  "detections": [
+    {"classId": "CPU_SOCKET", "confidence": 0.8,
+     "bbox": {"x": 100, "y": 100, "width": 80, "height": 90}}
+  ],
+  "compatibilityVerified": false
+}
+```
+
+Ejemplo ilustrativo. Las cajas usan píxeles de la imagen original después de aplicar EXIF. `x,y` es la esquina superior izquierda. Una lista vacía significa que no hubo detecciones claras; no certifica que la placa carezca de conectores. El resultado no determina compatibilidad, protocolo M.2, líneas PCIe, versión ni estado eléctrico.
+
+Se filtra con 0,5 y NMS por clase con IoU 0,45; máximo 100 cajas. Es un detalle interno. No mostrar porcentajes de confianza ni controles de umbral al usuario.
+
+Errores HTTP: 400 imagen inválida/incompleta, 413 tamaño excedido, 415 tipo no admitido, 429 detector ocupado, 500 fallo interno. Respuesta `{ "error": { "code": "..." } }`; no devuelve rutas internas, traceback ni secretos.
+
+## Frontend, sin construir una interfaz nueva
+
+Importar `toDisplayBoxes` de `recognition/frontend.js` y pasar la respuesta más el ancho/alto del área ocupada por la imagen. Devuelve cajas escaladas sin confianza. Si se utiliza object-fit:contain, sumar por separado los márgenes de la imagen dentro del contenedor. Mostrar la imagen orientada con EXIF, nombres de conexiones y una indicación de revisar las marcas. No modificar la configuración del armado por una detección.
+
+## Prueba por terminal
+
+```powershell
+.\.venv\Scripts\python.exe -m recognition foto.jpg
+.\.venv\Scripts\python.exe -m unittest discover -s tests -p test_recognition.py
+node --test tests/recognition.test.mjs
+```
+
+## Modelo ampliado pendiente
+
+El contrato admite el orden de nueve clases de `ml/prepare_dataset.py`. Cambiar el manifiesto sin entrenar pesos de nueve clases no agrega capacidades. Antes de integrar ese modelo: completar anotaciones revisadas, separar por motherboard/modelo, entrenar, evaluar fotos independientes y validar el ONNX. El objetivo de nueve categorías sigue abierto.

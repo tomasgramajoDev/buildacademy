@@ -92,5 +92,14 @@
     "publication_approved": false,
     "patience": 100,
     "completed": true
+  },
+  "crop_experiment": {
+    "data": "datasets/connectors-nine-prepared-20models-crops/data.yaml",
+    "report": "ml/NINE-CROP-DATASET.json",
+    "trained": false,
+    "images": 76,
+    "independent_models": 20,
+    "derived_train_crops": 56,
+    "held_out_transformed": false
   }
 }

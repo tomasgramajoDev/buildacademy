@@ -20,3 +20,9 @@ Las revisiones visuales asistidas por el manual no son una certificación humana
 `python ml/propose_annotations.py --model-dir PAQUETE_NUEVE_CLASES --output DIRECTORIO_NUEVO` genera propuestas y vistas numeradas para las fotos todavía no anotadas. Los números corresponden al orden de clases del detector. Conserva fuente y hash, no asigna modelo ni split y no escribe en `ml/annotations`. Revisar también las fotos sin detecciones: el modelo omite conectores y no debe decidir qué existe en la imagen.
 
 Las discrepancias de identidad se registran en `ml/annotation-review-notes`. Una foto con identidad sin resolver no se incorpora al entrenamiento. Las propuestas no reemplazan la inspección del manual ni las anotaciones canónicas revisadas.
+
+## Recortes derivados de entrenamiento
+
+`python ml/augment_training.py MANIFIESTO_REVISADO --output DIRECTORIO_NUEVO` conserva las fotos completas y añade cuatro recortes por foto de entrenamiento. Cada recorte ocupa el 60 % del ancho y alto original y conserva todas las intersecciones positivas de las cajas, incluidas partes recortadas. No infiere conexiones ocultas ni genera etiquetas nuevas mediante el detector.
+
+Cada variante conserva el modelo y grupo de la placa original. Las fotos y etiquetas de validación/prueba se referencian sin transformaciones y sus hashes quedan registrados. Los recortes no aumentan la cantidad de placas independientes. Pasar el manifiesto resultante por `review_gate.py` antes de entrenar. Evaluar después sobre fotos completas: ampliar detalles durante entrenamiento no demuestra por sí mismo una mejora en inferencia.

@@ -1,0 +1,102 @@
+{
+  "status": "prepared_not_trained",
+  "prepared_data": "datasets\\connectors-nine-prepared-20models-crops\\data.yaml",
+  "audit": {
+    "images": 76,
+    "boards": 20,
+    "boxes": {
+      "train": [
+        70,
+        146,
+        106,
+        42,
+        62,
+        125,
+        36,
+        37,
+        176
+      ],
+      "val": [
+        3,
+        8,
+        4,
+        3,
+        3,
+        16,
+        3,
+        4,
+        12
+      ],
+      "test": [
+        3,
+        10,
+        6,
+        3,
+        2,
+        9,
+        3,
+        4,
+        15
+      ]
+    },
+    "classes": [
+      "CPU_SOCKET",
+      "DIMM_SLOT",
+      "PCIe_X16",
+      "PCIe_X1",
+      "M2_SLOT",
+      "SATA_PORT",
+      "ATX_POWER",
+      "CPU_POWER",
+      "FAN_HEADER"
+    ],
+    "manifest_sha256": "a4df1b95d87daf8346a41efebb5177a01a75d358f90c02e009432535cfb9cecf",
+    "limitation": "El validador detecta duplicados exactos; revisar manualmente similares y la identidad de cada placa.",
+    "review_gate": "passed",
+    "model_count": 20,
+    "augmentation": {
+      "source_manifest_sha256": "932079ef86b3d6184e4c8823e89ea8befbb09e4aaf0fdecad8191f8899cc0ced",
+      "original_images": 20,
+      "derived_train_crops": 56,
+      "held_out_originals": [
+        {
+          "model_id": "ASRock B550M Steel Legend",
+          "split": "val",
+          "image_sha256": "8eda754b03cf477aa123a94a9485844a0c074762655b0882214511e04572563c",
+          "label_sha256": "defd4027d4b958fe3f8c034ec50fa222720b924b90951f985c470ca04e787a2b"
+        },
+        {
+          "model_id": "Gigabyte B460M GAMING HD",
+          "split": "test",
+          "image_sha256": "09358764b83214919543f7890e11b53d5dc35d1822c37b5ae7d81991cb0e3ae0",
+          "label_sha256": "69e7579a7b31bfb301aaa6b1b01213f1f52ce299506bd7f910e2697528bf42e5"
+        },
+        {
+          "model_id": "Gigabyte H610M S2H DDR4",
+          "split": "val",
+          "image_sha256": "c95fe3f4a67fbfba721a828574b45e2c2bec253dc7795b7911414395cb93bc85",
+          "label_sha256": "f8f051cf1c27f37e00db8e6193339432d66038161ea80333c67f409909cee41c"
+        },
+        {
+          "model_id": "Gigabyte X670 GAMING X AX",
+          "split": "test",
+          "image_sha256": "fb037ac920eb181a477e44d844b7ba079c028eaabad005869c7fa8e7bdae3386",
+          "label_sha256": "1d8f58b229761e6eb6ce8bfd5f443b75eff3f84fbf5f915753ef0dc0214d8aa1"
+        },
+        {
+          "model_id": "MSI A55M-E35",
+          "split": "val",
+          "image_sha256": "65be66757141f3d58a79eb6bcf332cf956f348ff0f829b3163c62ea90a5ac787",
+          "label_sha256": "7862aca2cb5d6c629a0463a43e531e066ebcdd1cb828d00b1ea74ae7087acfb3"
+        },
+        {
+          "model_id": "MSI B550-A PRO",
+          "split": "test",
+          "image_sha256": "f2144e7032163dd0611d2296b242ca693bcec2cca1c09398a0cad7826515d4fa",
+          "label_sha256": "16cf81e896bc62b9c1d439e79ce962172209f54f3323c7a7d0f82a8408015299"
+        }
+      ],
+      "limitation": "Crops are augmentation, not new motherboards or independent samples. Partial visible boxes retained."
+    }
+  }
+}

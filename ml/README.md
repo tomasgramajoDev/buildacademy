@@ -122,3 +122,7 @@ python ml/verify_prepared_dataset.py --manifest datasets/nine-reviewed/manifest.
 Desde la raíz del repositorio, `python ml/train_and_evaluate.py --data DATASET/data.yaml --manifest MANIFIESTO --name NOMBRE_NUEVO --output CARPETA_NUEVA` verifica las copias del dataset, entrena 300 épocas como máximo y luego exporta, empaqueta y evalúa el ONNX mediante el runtime y HTTP. Conserva el manifiesto y la procedencia utilizados. Cada etapa escribe `status.json`; los errores terminan la ejecución sin reintentar ni publicar.
 
 El estado escrito no demuestra que un proceso siga vivo: para investigar una interrupción comprobar el PID y el registro. `completed` requiere todas las etapas exitosas, pero no aprueba la precisión del detector. Los informes de test reutilizado son diagnósticos; hace falta evaluar placas independientes para una conclusión final.
+
+## Comparación de candidatos
+
+`python ml/compare_candidates.py CARPETA_JOB_A CARPETA_JOB_B --output INFORME.json` compara pipelines completados con el mismo conjunto de validación. Exige coincidencia de hashes de imágenes y etiquetas, grupos de placa y parámetros de inferencia. Ordena por F1 macro (igual peso para cada clase) y señala clases sin aciertos. No lee métricas de test, no despliega pesos y no aprueba automáticamente al candidato mejor puntuado. Debe revisarse su comportamiento por clase y evaluarse con placas independientes antes de publicar.

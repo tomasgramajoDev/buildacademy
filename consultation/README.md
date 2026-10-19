@@ -4,9 +4,17 @@ Módulo de servidor para que front y back integren el chat en Compatibilidad y G
 
 ## Proveedor y ejecución
 
-Node.js 22 o posterior, sin dependencias adicionales. OpenAI Responses API, modelo predeterminado `gpt-4.1-mini-2025-04-14`; se puede cambiar con `CONSULTATION_MODEL` por otro compatible con Structured Outputs y estos parámetros, después de evaluar nuevamente. La clave `OPENAI_API_KEY` se configura en el gestor de secretos o entorno del backend. Nunca usar variables públicas `VITE_*`/`NEXT_PUBLIC_*`, incluirla en una respuesta ni pedirla al usuario en el chat.
+Node.js 22 o posterior, sin dependencias adicionales. El proveedor predeterminado es **Gemini 2.5 Flash** (`gemini-2.5-flash`), con `GEMINI_API_KEY` configurada únicamente en el entorno del servidor. Se eligió para poder utilizar la cuota gratuita publicada por Google. La clave no confirma el plan de facturación: verificar en AI Studio que el proyecto siga en Free. El módulo no activa facturación ni cambia automáticamente a un proveedor pago.
 
-Se eligió este modelo por su soporte de salidas estructuradas y el tamaño acotado de la tarea. No se hizo una comparación experimental contra Gemini. Cada consulta válida utiliza hasta tres llamadas pagadas: clasificación, explicación y revisión. Rechazos locales no consumen tokens; un rechazo semántico normalmente consume una llamada. Se informa uso real de entrada/salida, sin convertirlo a pesos o dólares con una tarifa fija desactualizable. `store:false` evita almacenar el objeto de respuesta para recuperarlo mediante la API; no significa ausencia de toda retención operativa del proveedor. Se envían pregunta, contexto e historial autorizado a OpenAI.
+Configuración local: copiar `.env.example` a `.env` sólo si éste no existe, completar `GEMINI_API_KEY` y ejecutar Node con `--env-file=.env`. El archivo `.env` está excluido de Git. En producción usar el gestor de secretos del backend. Nunca usar variables públicas `VITE_*`/`NEXT_PUBLIC_*`, incluir la clave en una respuesta ni pegarla en un chat.
+
+- `CONSULTATION_PROVIDER=gemini` (predeterminado).
+- `GEMINI_MODEL=gemini-2.5-flash` (predeterminado). El adaptador también admite `gemini-2.5-flash-lite`, pero hay que evaluar sus respuestas antes de cambiarlo.
+- OpenAI se conserva como alternativa explícita: `CONSULTATION_PROVIDER=openai`, `OPENAI_API_KEY` y opcionalmente `CONSULTATION_MODEL`. No se utiliza como fallback.
+
+Cada consulta válida utiliza hasta tres solicitudes: clasificación, explicación y revisión. Rechazos locales no consumen tokens; un rechazo semántico normalmente utiliza una solicitud. Gemini tiene cuotas por proyecto/modelo que pueden cambiar; hay que consultarlas en AI Studio. HTTP 429 produce `rate_limited`, sin reintentos automáticos. Los tokens se contabilizan aunque sean cubiertos por la cuota gratuita; no se calcula un precio con tarifas fijas.
+
+Pregunta, contexto e historial autorizado se envían al proveedor seleccionado. En la modalidad gratuita de Gemini, Google puede utilizar el contenido para mejorar sus productos: usar datos sintéticos para pruebas y no incluir datos personales. El adaptador no crea sesiones remotas ni habilita herramientas, búsqueda, ejecución o caché explícita. En OpenAI se mantiene `store:false`, que no garantiza ausencia de toda retención operativa.
 
 ## Contrato para front y back
 
@@ -27,10 +35,10 @@ El backend construye una única instancia y llama a `bot.reply(body, {userId: au
 
 ```js
 import {createConsultationBot} from './consultation/chatbot.js';
-import {createOpenAIProvider} from './consultation/openai.js';
+import {createConsultationProvider} from './consultation/provider.js';
 
 const bot = createConsultationBot({
-  complete: createOpenAIProvider(),
+  complete: createConsultationProvider(),
   loadContext: consultationRepository.loadAuthorizedContext,
   admit: consultationBudget.reserve,
   settle: consultationBudget.settle
@@ -101,15 +109,25 @@ Los prompts no son una barrera infalible. Un segundo pase del mismo modelo tampo
 
 ```text
 node --test tests/consultation.test.mjs
-node consultation/evaluate-live.mjs
+node --env-file=.env consultation/evaluate-live.mjs
 ```
 
-El primer comando usa un proveedor simulado: comprueba el flujo y sus fronteras, no la resistencia real de GPT. El segundo requiere `OPENAI_API_KEY`, realiza llamadas pagadas sobre datos sintéticos e imprime resultados para revisión. No se ejecuta automáticamente con `npm test`.
+El primer comando usa un proveedor simulado: comprueba el flujo y sus fronteras, no la resistencia real del modelo. El segundo carga `.env`, requiere la clave del proveedor elegido, utiliza su cuota sobre datos sintéticos e imprime resultados para revisión. Separa las solicitudes por 15 segundos (`EVAL_INTERVAL_MS`, sólo para esta evaluación) y se detiene si el proveedor falla; no reintenta ni cambia de proveedor. No se ejecuta automáticamente con `npm test`.
 
 Antes de integrar, ejecutar la evaluación real y ampliarla con alertas y pasos del backend, conversaciones de varios turnos, instrucciones maliciosas dentro de documentos, errores de diagnóstico, componentes de distintos sockets e intentos en varios idiomas. Una evaluación sin fallas no garantiza bloquear todas las evasiones.
 
+### Verificación del 19/10/2026
+
+- 46 pruebas automáticas del repositorio aprobadas (adaptadores con proveedor simulado).
+- Evaluación real con `gemini-2.5-flash`: 9/9 estados esperados, 14 llamadas, sin interrupciones. Tres consultas educativas respondidas (dos sobre BIOS y una de montaje); seis pedidos fuera de alcance rechazados (uno por filtro local, cinco por clasificador).
+- Uso reportado en esa ejecución: 5352 tokens de entrada y 445 de salida. Esto documenta consumo, no comprueba el plan de facturación de la cuenta ni garantiza cuota futura.
+- Se revisó el texto de las tres respuestas: mantuvieron la BIOS como pendiente de verificar y recomendaron detener el montaje si el procesador no encaja. No se validó una integración HTTP o interfaz, que corresponde a backend/front. El conjunto de nueve casos no prueba resistencia universal a evasiones.
+
 ## Referencias de implementación
 
+- https://ai.google.dev/api/generate-content
+- https://ai.google.dev/gemini-api/docs/pricing
+- https://ai.google.dev/gemini-api/docs/rate-limits
 - https://developers.openai.com/api/docs/guides/structured-outputs
 - https://developers.openai.com/api/docs/models/gpt-4.1-mini
 

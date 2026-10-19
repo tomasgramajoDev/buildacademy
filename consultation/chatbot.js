@@ -53,7 +53,7 @@ export function createConsultationBot({complete,loadContext,admit,settle}){
    const verdict=await call(review,{...data,candidate},decisionSchema,'review',100);
    if(!exactKeys(verdict,['allowed'])||verdict.allowed!==true)return result('insufficient_context',insufficient);
    return {...result('answered',candidate.answer,[...new Set(candidate.evidenceIds)]),revision:context.revision};
-  }catch{return result('unavailable','No pude preparar una respuesta verificada. Intentá nuevamente; el resultado del programa no cambió.');}
+  }catch(error){if(error?.code==='PROVIDER_RATE_LIMIT')return result('rate_limited','Se alcanzó la cuota del servicio de IA. Probá más tarde; el resultado del programa no cambió.');return result('unavailable','No pude preparar una respuesta verificada. Intentá nuevamente; el resultado del programa no cambió.');}
   finally{await settle({userId,reservation,usage:{...usage}})}
  }};
 }

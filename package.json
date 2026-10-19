@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "build:ai": "esbuild node_modules/@mlc-ai/web-llm/lib/index.js --bundle --format=esm --minify --outfile=dist/vendor/webllm.js"
+    "build:ai": "esbuild node_modules/@mlc-ai/web-llm/lib/index.js --bundle --format=esm --minify --outfile=dist/vendor/webllm.js",
+    "test:consultation:live": "node --env-file=.env consultation/evaluate-live.mjs"
   },
   "dependencies": {
     "@mlc-ai/web-llm": "0.2.85",

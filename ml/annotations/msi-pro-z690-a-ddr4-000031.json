@@ -1,0 +1,226 @@
+{
+  "image": "datasets/connectors-nine-review/images/000031.jpg",
+  "model_id": "MSI PRO Z690-A DDR4",
+  "identity_evidence": "https://download.msi.com/archive/mnu_exe/mb/PROZ690-AWIFIDDR4_PROZ690-ADDR4100x150.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      287,
+      111,
+      389,
+      290
+    ],
+    [
+      "DIMM_SLOT",
+      412,
+      42,
+      429,
+      359
+    ],
+    [
+      "DIMM_SLOT",
+      429,
+      42,
+      444,
+      359
+    ],
+    [
+      "DIMM_SLOT",
+      445,
+      42,
+      460,
+      359
+    ],
+    [
+      "DIMM_SLOT",
+      461,
+      42,
+      477,
+      359
+    ],
+    [
+      "PCIe_X16",
+      199,
+      372,
+      369,
+      398
+    ],
+    [
+      "PCIe_X16",
+      198,
+      498,
+      370,
+      524
+    ],
+    [
+      "PCIe_X16",
+      198,
+      582,
+      370,
+      608
+    ],
+    [
+      "PCIe_X1",
+      199,
+      458,
+      246,
+      484
+    ],
+    [
+      "M2_SLOT",
+      369,
+      442,
+      390,
+      494
+    ],
+    [
+      "M2_SLOT",
+      325,
+      533,
+      344,
+      585
+    ],
+    [
+      "M2_SLOT",
+      472,
+      534,
+      488,
+      585
+    ],
+    [
+      "SATA_PORT",
+      489,
+      499,
+      515,
+      540
+    ],
+    [
+      "SATA_PORT",
+      489,
+      541,
+      515,
+      578
+    ],
+    [
+      "SATA_PORT",
+      423,
+      619,
+      453,
+      639
+    ],
+    [
+      "SATA_PORT",
+      454,
+      619,
+      483,
+      639
+    ],
+    [
+      "ATX_POWER",
+      497,
+      105,
+      518,
+      219
+    ],
+    [
+      "CPU_POWER",
+      198,
+      0,
+      228,
+      26
+    ],
+    [
+      "CPU_POWER",
+      229,
+      0,
+      261,
+      26
+    ],
+    [
+      "FAN_HEADER",
+      425,
+      0,
+      445,
+      19
+    ],
+    [
+      "FAN_HEADER",
+      449,
+      0,
+      469,
+      19
+    ],
+    [
+      "FAN_HEADER",
+      473,
+      0,
+      493,
+      19
+    ],
+    [
+      "FAN_HEADER",
+      505,
+      26,
+      521,
+      51
+    ],
+    [
+      "FAN_HEADER",
+      505,
+      57,
+      521,
+      82
+    ],
+    [
+      "FAN_HEADER",
+      229,
+      284,
+      253,
+      303
+    ],
+    [
+      "FAN_HEADER",
+      245,
+      620,
+      265,
+      639
+    ],
+    [
+      "FAN_HEADER",
+      270,
+      620,
+      288,
+      639
+    ]
+  ],
+  "status": "reviewed",
+  "unresolved": [],
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "model_group": "msi-pro-z690-a-ddr4",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "2ffe583061b15f341b50842af20a2749fc09ac5bdef2e5d6471597035b6f2237",
+  "notes": [
+    "CPU_SOCKET includes the visible retention assembly and its protective cap, not a cooler covering the assembly.",
+    "SATA boxes identify visible connector housings; stacked housings do not establish individual port count.",
+    "FAN_HEADER includes CPU/system fan and pump headers confirmed by the manual; RGB/USB/SMBus headers excluded.",
+    "M2_1 is hidden under its heatsink and omitted; three uncovered M.2 connector bodies annotated.",
+    "Each DIMM slot has its own box; PCIe classes describe physical slot length, not wired lanes."
+  ],
+  "split": "train"
+}

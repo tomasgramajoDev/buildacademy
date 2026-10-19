@@ -1,0 +1,190 @@
+{
+  "image": "datasets/connectors-nine-review/images/000021.jpg",
+  "model_id": "ASUS PRIME B560M-A",
+  "model_group": "asus-prime-b560m-a",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1200/PRIME_B560M-A/E18905_PRIME_B560M-A_v2_UM_WEB.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      266,
+      151,
+      420,
+      330
+    ],
+    [
+      "DIMM_SLOT",
+      414,
+      95,
+      460,
+      410
+    ],
+    [
+      "DIMM_SLOT",
+      435,
+      98,
+      480,
+      411
+    ],
+    [
+      "DIMM_SLOT",
+      456,
+      101,
+      500,
+      414
+    ],
+    [
+      "DIMM_SLOT",
+      477,
+      104,
+      522,
+      416
+    ],
+    [
+      "PCIe_X16",
+      149,
+      393,
+      445,
+      440
+    ],
+    [
+      "PCIe_X16",
+      144,
+      549,
+      447,
+      585
+    ],
+    [
+      "PCIe_X1",
+      143,
+      503,
+      236,
+      535
+    ],
+    [
+      "M2_SLOT",
+      349,
+      444,
+      379,
+      504
+    ],
+    [
+      "M2_SLOT",
+      39,
+      309,
+      130,
+      338
+    ],
+    [
+      "ATX_POWER",
+      548,
+      161,
+      608,
+      286
+    ],
+    [
+      "CPU_POWER",
+      149,
+      30,
+      238,
+      76
+    ],
+    [
+      "SATA_PORT",
+      533,
+      332,
+      572,
+      367
+    ],
+    [
+      "SATA_PORT",
+      536,
+      364,
+      577,
+      402
+    ],
+    [
+      "SATA_PORT",
+      586,
+      486,
+      626,
+      526
+    ],
+    [
+      "SATA_PORT",
+      592,
+      524,
+      630,
+      564
+    ],
+    [
+      "SATA_PORT",
+      463,
+      600,
+      506,
+      623
+    ],
+    [
+      "SATA_PORT",
+      507,
+      600,
+      547,
+      622
+    ],
+    [
+      "FAN_HEADER",
+      123,
+      31,
+      151,
+      66
+    ],
+    [
+      "FAN_HEADER",
+      405,
+      100,
+      435,
+      137
+    ],
+    [
+      "FAN_HEADER",
+      98,
+      370,
+      114,
+      402
+    ],
+    [
+      "FAN_HEADER",
+      285,
+      602,
+      322,
+      626
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "5d96c81d7057f650d4f473c7b5576695fec5dbcd682604d8907fb66ea57f7426",
+  "split": "train",
+  "notes": [
+    "M2_1 hidden under heatsink omitted; visible M2_2 and M.2 WiFi connector included. M2_SLOT does not imply SSD compatibility or key type.",
+    "Four fan headers located against the official layout; CHA_FAN1 body is partially visible near the audio block.",
+    "Six individually distinguishable SATA housings.",
+    "One box per DIMM slot; perspective causes bounding boxes to overlap."
+  ]
+}

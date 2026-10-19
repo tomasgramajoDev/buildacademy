@@ -1,6 +1,6 @@
 # Detección de conectores
 
-Estado: pipeline implementado; entrenamiento real bloqueado por falta de imágenes etiquetadas. No se entregan pesos ni métricas inventadas. El dataset Motherboard Part Locater de BIS497 (CC BY 4.0) tiene 4 clases generales, requiere cuenta de Roboflow para exportar y no cubre las 9 clases del proyecto. El dataset de miraclefactory es de defectos de fabricación y fue descartado para esta tarea.
+Estado: piloto YOLO de cuatro clases entrenado y exportado; ver EVALUACION-PILOTO.md. La ampliación a nueve clases está pendiente de nuevas anotaciones revisadas. El dataset Motherboard Part Locater de BIS497 (CC BY 4.0) tiene 4 clases generales, requiere cuenta de Roboflow para exportar y no cubre las 9 clases del proyecto. El dataset de miraclefactory es de defectos de fabricación y fue descartado para esta tarea.
 
 ## Recolección
 
@@ -19,7 +19,7 @@ python -m venv .venv
 .\.venv\Scripts\python.exe ml/train.py --epochs 80 --batch 8
 ```
 
-El script usa CUDA si PyTorch la tiene disponible y CPU en caso contrario. Para entrenamiento prolongado, instalar el wheel CUDA apropiado desde la página oficial de PyTorch. El entorno local instalado inicialmente utiliza CPU; no se descargó un modelo de visión ni se ejecutó entrenamiento.
+El script usa CUDA si PyTorch la tiene disponible y CPU en caso contrario. Para entrenamiento prolongado, instalar el wheel CUDA apropiado desde la página oficial de PyTorch. El entorno local utiliza PyTorch CPU. El piloto ya se entrenó; el entrenamiento de nueve clases aún no se ejecutó.
 
 El entrenamiento descarga la inicialización oficial YOLO11n; guarda pesos, métricas por clase, gráficos y exportación ONNX. Ultralytics utiliza AGPL-3.0 o licencia comercial: revisar sus términos para la distribución elegida. No se publica automáticamente un modelo que sólo terminó de entrenar. Medir falsos positivos, recall de conectores pequeños, fotos fuera de distribución y rendimiento en placas no vistas, además de mAP. Conservar procedencia, licencias y versión del dataset.
 
@@ -33,7 +33,7 @@ Cuando esté disponible el ZIP YOLOv8 de BIS497 Motherboard Part Locater, ejecut
 .\.venv\Scripts\python.exe ml/import_roboflow.py "C:\Users\torik\Downloads\dataset.zip" --output datasets/bis497-pilot
 ```
 
-El importador conserva CPU_SOCKET, DIMM_SLOT, PCIE_SLOT y POWER_CONNECTOR. No divide artificialmente las dos categorías generales en subtipos que no estén etiquetados. Comprueba rutas del ZIP y excluye duplicados de píxeles y nombres originales entre splits. Esto no prueba separación por placa física: el piloto no permite afirmar generalización a modelos de motherboard nuevos. Conserva atribución CC BY 4.0 y un registro de exclusiones. El entrenamiento y publicación de pesos requieren una descarga real y evaluación posterior; manifest.json permanece ready:false.
+El importador conserva CPU_SOCKET, DIMM_SLOT, PCIE_SLOT y POWER_CONNECTOR. No divide artificialmente las dos categorías generales en subtipos que no estén etiquetados. Comprueba rutas del ZIP y excluye duplicados de píxeles y nombres originales entre splits. Esto no prueba separación por placa física: el piloto no permite afirmar generalización a modelos de motherboard nuevos. Conserva atribución CC BY 4.0 y un registro de exclusiones. El piloto fue descargado, entrenado y evaluado; dist/models/manifest.json registra su disponibilidad y sus cuatro clases reales.
 
 ## Si la ventana de exportación de Roboflow se queda trabada
 
@@ -46,3 +46,19 @@ Comprobado el 21/09/2026: localhost responde HTTP 200. La API del dataset respon
 El ZIP BIS497 v5 se recibió el 21/09/2026 por la API. SHA-256: 5021e1337d6c60de540ba8c79723818708ff367c0db379671ba4f69cc8df2442. Contiene 472 imágenes (399 train, 49 val, 24 test), derivadas de 206 grupos de nombres originales. El importador convirtió 1616 polígonos a sus cajas rectangulares envolventes; preservó las cajas existentes y verificó coordenadas y clases. Los originales permanecen intactos en raw. No se encontraron duplicados exactos ni cruces de grupo por nombre; esto no prueba separación por modelo físico de placa.
 
 La salida preparada está en datasets/bis497-detection/prepared. El entrenamiento piloto usa YOLO11n, entrada 320, 30 épocas y semilla 42. La evaluación final y exportación se escriben al terminar. `prepare_web_model.py` valida el contrato ONNX y prepara los pesos para la demo únicamente después de revisar esa evaluación.
+
+## Ampliación a nueve clases (19/10/2026)
+
+Se eligió completar las anotaciones y entrenar YOLO. No se reemplaza el detector por Gemini.
+
+`annotation_queue.py` prepara una foto por grupo de nombre original, conserva las etiquetas de cuatro clases en `reference_labels` y deja identidad, split y etiquetas nuevas pendientes. Estos grupos no demuestran placas físicas diferentes. No usar las etiquetas de referencia como nueve clases ni asignar splits hasta revisar identidad y duplicados visuales.
+
+```powershell
+.\.venv\Scripts\python.exe ml/annotation_queue.py datasets/bis497-pilot/manifest.json
+```
+
+La cola local contiene 206 fotos de 472 variantes; ninguna está todavía revisada para las nueve clases. Para cada foto, identificar marca/modelo y placa física cuando sea posible, dibujar todas las conexiones visibles, separar ranuras DIMM individuales, comprobar formato físico PCIe y distinguir ATX/EPS. No etiquetar un disipador como un socket M.2 oculto ni un soporte de ventilador como FAN_HEADER. Reservar placas/modelos completos para validación y test. Una vez revisadas, crear el manifiesto descrito arriba y ejecutar la validación antes del entrenamiento.
+
+Fuente adicional candidata: [Motherboard Sockets](https://universe.roboflow.com/computer-vision-assembly-instructions/motherboard-sockets), Computer Vision Assembly Instructions, CC BY 4.0. Publica clases de alimentación y M.2, pero requiere revisión y no resuelve por sí sola SATA, FAN_HEADER ni la división PCIe x1/x16. Su descarga autenticada aún está pendiente; ROBOFLOW_API_KEY debe mantenerse sólo en el entorno local.
+
+La pantalla no muestra porcentajes ni un selector de confianza. El detector conserva su umbral interno de 0.5 y NMS; el campo confidence sigue en las anotaciones técnicas exportadas.

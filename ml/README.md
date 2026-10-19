@@ -93,12 +93,12 @@ ANOTACION-Z690-BORRADOR.json registra 27 cajas propuestas para una foto de MSI P
 
 `review_gate.py manifest.json --output datasets/connectors-nine-prepared` exige identidad con evidencia, revisión completa, ausencia de ambigüedades y separación por modelo. Luego ejecuta la validación geométrica y de cobertura. Estos controles verifican lo declarado en el manifiesto, no sustituyen la inspección de fotos. `train.py` exige este informe para entrenar las nueve clases. La auditoría de cuatro clases conserva su flujo existente.
 
-Estado: revisión del candidato de cuatro clases terminada; anotación de nueve clases y separación global por modelo incompletas; entrenamiento de nueve clases no iniciado.
+Estado: revisión del candidato de cuatro clases terminada. Conjunto inicial de nueve clases anotado y separado por modelo; primera corrida de entrenamiento iniciada. Evaluación e incorporación del modelo ampliado pendientes.
 
 ## Progreso de anotación revisada
 
 La fuente vigente es `ml/annotations/*.json`, bajo la política `ml/ANNOTATION-POLICY.md`. El borrador ANOTACION-Z690-BORRADOR.json se conserva como antecedente; la anotación revisada de esa foto está en annotations/msi-pro-z690-a-ddr4-000031.json. Los criterios de carcasas SATA y sockets con tapa están documentados explícitamente, no se afirma contar puertos a partir de cajas.
 
-Se revisaron catorce imágenes de catorce modelos, con 267 cajas en total, usando esquemas del fabricante. Hay nueve modelos en train, dos en val y tres en test; los modelos reservados quedan excluidos del entrenamiento. La cobertura de nueve categorías pasa en los tres conjuntos, pero falta diversidad antes de entrenar: objetivo inicial de recolección de 10/3/3 modelos (no garantiza generalización). Estado y conteos en NINE-DATASET-PROGRESS.json. No se ejecutó entrenamiento de nueve clases.
+Se revisaron dieciséis imágenes de dieciséis modelos, con 316 cajas en total, usando esquemas del fabricante. Hay diez modelos en train, tres en val y tres en test; los modelos reservados quedan excluidos del entrenamiento. La cobertura de nueve categorías pasa en los tres conjuntos. Se alcanzó el objetivo inicial de recolección de 10/3/3 modelos, que no garantiza generalización. Se inició la primera corrida de nueve clases a 640 px, hasta 80 épocas, batch 4. Estado y conteos en NINE-DATASET-PROGRESS.json. Entrenamiento y evaluación todavía pendientes de cierre; no se autoriza publicar estos pesos por completar la corrida.
 
 `python ml/build_reviewed_manifest.py` verifica los hashes de las fotos, genera etiquetas YOLO y vistas de revisión en datasets/nine-reviewed. El manifiesto pasa los controles geométricos, de identidad declarada y cobertura; esto no implica suficiencia del dataset ni aprobación del modelo. La cola de 206 imágenes es un inventario inicial, no una certificación de revisión de todas ellas.

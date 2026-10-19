@@ -1,0 +1,212 @@
+{
+  "image": "datasets/connectors-nine-review/images/000042.jpg",
+  "model_id": "ASRock B550M Steel Legend",
+  "model_group": "asrock-b550m-steel-legend",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.asrock.com/Manual/B550M%20Steel%20Legend.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      296,
+      168,
+      413,
+      292
+    ],
+    [
+      "DIMM_SLOT",
+      450,
+      42,
+      468,
+      417
+    ],
+    [
+      "DIMM_SLOT",
+      468,
+      42,
+      486,
+      417
+    ],
+    [
+      "DIMM_SLOT",
+      486,
+      42,
+      504,
+      417
+    ],
+    [
+      "DIMM_SLOT",
+      504,
+      42,
+      522,
+      417
+    ],
+    [
+      "PCIe_X16",
+      165,
+      420,
+      380,
+      451
+    ],
+    [
+      "PCIe_X16",
+      164,
+      574,
+      379,
+      601
+    ],
+    [
+      "PCIe_X1",
+      164,
+      526,
+      218,
+      545
+    ],
+    [
+      "M2_SLOT",
+      282,
+      519,
+      302,
+      573
+    ],
+    [
+      "M2_SLOT",
+      552,
+      555,
+      566,
+      608
+    ],
+    [
+      "SATA_PORT",
+      543,
+      373,
+      555,
+      415
+    ],
+    [
+      "SATA_PORT",
+      555,
+      373,
+      567,
+      415
+    ],
+    [
+      "SATA_PORT",
+      543,
+      448,
+      555,
+      489
+    ],
+    [
+      "SATA_PORT",
+      555,
+      448,
+      567,
+      489
+    ],
+    [
+      "SATA_PORT",
+      543,
+      490,
+      555,
+      532
+    ],
+    [
+      "SATA_PORT",
+      555,
+      490,
+      567,
+      532
+    ],
+    [
+      "ATX_POWER",
+      546,
+      161,
+      568,
+      299
+    ],
+    [
+      "CPU_POWER",
+      164,
+      24,
+      205,
+      55
+    ],
+    [
+      "CPU_POWER",
+      206,
+      24,
+      226,
+      55
+    ],
+    [
+      "FAN_HEADER",
+      428,
+      28,
+      451,
+      41
+    ],
+    [
+      "FAN_HEADER",
+      428,
+      42,
+      451,
+      56
+    ],
+    [
+      "FAN_HEADER",
+      206,
+      345,
+      223,
+      372
+    ],
+    [
+      "FAN_HEADER",
+      247,
+      615,
+      286,
+      635
+    ],
+    [
+      "FAN_HEADER",
+      287,
+      615,
+      315,
+      635
+    ],
+    [
+      "FAN_HEADER",
+      397,
+      615,
+      422,
+      635
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "8eda754b03cf477aa123a94a9485844a0c074762655b0882214511e04572563c",
+  "split": "val",
+  "notes": [
+    "PCB model text and all header roles checked against manufacturer layout page 7.",
+    "M2_1 under heatsink omitted. Visible M.2 Wi-Fi connector and M2_2 SSD connector annotated.",
+    "Six discrete side-facing SATA housings visible along board edge; narrow projection from frontal view.",
+    "Six fan/pump headers; two EPS connectors are 8-pin and 4-pin.",
+    "Reserved for validation; all photos of this model remain out of train and test."
+  ]
+}

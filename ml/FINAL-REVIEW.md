@@ -34,3 +34,9 @@ python ml/assess_target.py ml/EVALUACION-INDEPENDIENTE-V5.json --output ml/OBJET
 Este comando sólo lee los resultados guardados: no vuelve a ejecutar el detector ni consume otra evaluación independiente. Recalcula precisión y recall agregados a partir de TP/FP/FN, contrasta las sumas por imagen y categoría y muestra ambos requisitos por separado. Los denominadores vacíos no cuentan como éxito. Conserva los resultados de las nueve clases, incluso las que no tuvieron aciertos.
 
 El informe de v5 falla ambos requisitos. Cumplirlos en una muestra pequeña tampoco certificaría el rendimiento en todas las placas: el script no verifica por sí mismo la independencia o representatividad del dataset y nunca autoriza un despliegue. Las métricas agregadas usan micro-promedio; el desglose por categoría permite detectar problemas que ese promedio podría ocultar.
+
+## Experimento de inferencia por sectores
+
+Se probó un único esquema sobre las tres imágenes de validación de v5: foto completa más cuatro recortes de esquina de 60%, incorporando de los recortes sólo M.2, SATA y FAN_HEADER, con los mismos umbrales de detección y NMS. Se descartaron cajas cortadas por bordes internos. No se consultó la reserva independiente.
+
+El método original obtuvo 30 TP, 1 FP y 26 FN; con recortes obtuvo 30 TP, 2 FP y 26 FN. Macro F1 bajó de 0,69769 a 0,69441 y las llamadas ONNX por imagen aumentaron de una a cinco. Se rechazó el cambio: el runtime de integración permanece igual. El informe está en `EXPERIMENTO-RECORTES-INFERENCIA-V5.json` y la reproducción en `experiment_tiled_validation.py`.

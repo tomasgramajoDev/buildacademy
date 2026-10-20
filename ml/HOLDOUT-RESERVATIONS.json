@@ -37,6 +37,23 @@
         "No independent inference yet. All same-model views and non-WIFI sibling remain excluded from development."
       ],
       "annotation": "ml/holdout_annotations/gigabyte-z390-aorus-pro-wifi-000003.json"
+    },
+    {
+      "image": "datasets/connectors-nine-review/images/000011.jpg",
+      "image_sha256": "a35b3aed6e5ea9552c26437b680fdeb905717750aabdf349ef7e818412f74053",
+      "model_id": "ASUS TUF Z390-PLUS GAMING (WI-FI)",
+      "excluded_model_ids": [
+        "ASUS TUF Z390-PLUS GAMING (WI-FI)",
+        "ASUS TUF Z390-PLUS GAMING",
+        "ASUS TUF Z390-PLUS GAMING WIFI"
+      ],
+      "status": "annotations_reviewed_not_evaluated",
+      "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1151/TUF_Z390-PLUS_GAMING_WI-FI/E15014_TUF_Z390-PLUS_GAMING_WiFi_UM_v2_web.pdf",
+      "annotation": "ml/holdout_annotations/asus-tuf-z390-plus-gaming-wifi-000011.json",
+      "notes": [
+        "No v3/v5 inference consulted. Reserve non-WIFI sibling conservatively.",
+        "One exposed M.2 connector contributes positive M.2 ground truth."
+      ]
     }
   ]
 }

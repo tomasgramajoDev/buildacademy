@@ -1,0 +1,213 @@
+{
+  "image": "datasets/connectors-nine-review/images/000011.jpg",
+  "model_id": "ASUS TUF Z390-PLUS GAMING (WI-FI)",
+  "model_group": "asus-tuf-z390-plus-gaming-wifi",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1151/TUF_Z390-PLUS_GAMING_WI-FI/E15014_TUF_Z390-PLUS_GAMING_WiFi_UM_v2_web.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      286,
+      105,
+      383,
+      265
+    ],
+    [
+      "DIMM_SLOT",
+      407,
+      28,
+      425,
+      356
+    ],
+    [
+      "DIMM_SLOT",
+      423,
+      28,
+      441,
+      356
+    ],
+    [
+      "DIMM_SLOT",
+      439,
+      28,
+      457,
+      356
+    ],
+    [
+      "DIMM_SLOT",
+      455,
+      28,
+      474,
+      356
+    ],
+    [
+      "PCIe_X16",
+      201,
+      369,
+      370,
+      401
+    ],
+    [
+      "PCIe_X16",
+      200,
+      493,
+      375,
+      530
+    ],
+    [
+      "PCIe_X1",
+      201,
+      334,
+      246,
+      354
+    ],
+    [
+      "PCIe_X1",
+      200,
+      454,
+      248,
+      478
+    ],
+    [
+      "PCIe_X1",
+      200,
+      541,
+      248,
+      563
+    ],
+    [
+      "PCIe_X1",
+      200,
+      582,
+      248,
+      605
+    ],
+    [
+      "M2_SLOT",
+      367,
+      315,
+      385,
+      361
+    ],
+    [
+      "ATX_POWER",
+      483,
+      157,
+      505,
+      271
+    ],
+    [
+      "CPU_POWER",
+      202,
+      7,
+      237,
+      34
+    ],
+    [
+      "SATA_PORT",
+      485,
+      354,
+      505,
+      390
+    ],
+    [
+      "SATA_PORT",
+      485,
+      390,
+      505,
+      426
+    ],
+    [
+      "SATA_PORT",
+      405,
+      583,
+      433,
+      601
+    ],
+    [
+      "SATA_PORT",
+      434,
+      583,
+      460,
+      601
+    ],
+    [
+      "SATA_PORT",
+      405,
+      617,
+      433,
+      638
+    ],
+    [
+      "SATA_PORT",
+      434,
+      617,
+      460,
+      638
+    ],
+    [
+      "FAN_HEADER",
+      379,
+      30,
+      405,
+      44
+    ],
+    [
+      "FAN_HEADER",
+      379,
+      44,
+      405,
+      59
+    ],
+    [
+      "FAN_HEADER",
+      222,
+      282,
+      244,
+      296
+    ],
+    [
+      "FAN_HEADER",
+      222,
+      297,
+      244,
+      311
+    ],
+    [
+      "FAN_HEADER",
+      474,
+      609,
+      498,
+      623
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "a35b3aed6e5ea9552c26437b680fdeb905717750aabdf349ef7e818412f74053",
+  "split": "independent_test",
+  "notes": [
+    "Reserved independently of candidate predictions; never training or validation.",
+    "Exact model printed on PCB. Manufacturer manual page 1-2 (PDF page 16) inspected.",
+    "Upper M.2 connector body visible; lower SSD M.2 covered by heatsink. Wireless connection concealed by rear cover.",
+    "Four separate DIMM slots include end latches. Two physical x16 slots and four x1 slots.",
+    "CPU_FAN, CPU_OPT, AIO_PUMP, CHA_FAN1 and CHA_FAN2 verified against layout; RGB and USB excluded.",
+    "Six separate SATA housings. Review is visual, without independent human certification."
+  ]
+}

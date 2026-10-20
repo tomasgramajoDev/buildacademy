@@ -1,0 +1,186 @@
+{
+  "image": "datasets/connectors-nine-review/images/000166.jpg",
+  "model_id": "MSI MPG Z790 CARBON WIFI",
+  "model_group": "msi-mpg-z790-carbon-wifi",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.msi.com/archive/mnu_exe/mb/MPGZ790CARBONWIFI.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      296,
+      133,
+      402,
+      285
+    ],
+    [
+      "DIMM_SLOT",
+      417,
+      63,
+      450,
+      334
+    ],
+    [
+      "DIMM_SLOT",
+      435,
+      62,
+      468,
+      335
+    ],
+    [
+      "DIMM_SLOT",
+      453,
+      61,
+      486,
+      336
+    ],
+    [
+      "DIMM_SLOT",
+      471,
+      60,
+      505,
+      337
+    ],
+    [
+      "PCIe_X16",
+      169,
+      393,
+      359,
+      428
+    ],
+    [
+      "PCIe_X16",
+      154,
+      555,
+      348,
+      587
+    ],
+    [
+      "PCIe_X1",
+      163,
+      483,
+      216,
+      504
+    ],
+    [
+      "ATX_POWER",
+      522,
+      162,
+      548,
+      264
+    ],
+    [
+      "CPU_POWER",
+      206,
+      60,
+      231,
+      73
+    ],
+    [
+      "CPU_POWER",
+      232,
+      56,
+      261,
+      69
+    ],
+    [
+      "SATA_PORT",
+      519,
+      398,
+      542,
+      434
+    ],
+    [
+      "SATA_PORT",
+      517,
+      434,
+      540,
+      469
+    ],
+    [
+      "SATA_PORT",
+      515,
+      469,
+      538,
+      505
+    ],
+    [
+      "FAN_HEADER",
+      450,
+      41,
+      473,
+      55
+    ],
+    [
+      "FAN_HEADER",
+      483,
+      35,
+      507,
+      50
+    ],
+    [
+      "FAN_HEADER",
+      548,
+      57,
+      561,
+      77
+    ],
+    [
+      "FAN_HEADER",
+      546,
+      86,
+      560,
+      107
+    ],
+    [
+      "FAN_HEADER",
+      266,
+      600,
+      290,
+      615
+    ],
+    [
+      "FAN_HEADER",
+      298,
+      600,
+      322,
+      615
+    ],
+    [
+      "FAN_HEADER",
+      411,
+      600,
+      434,
+      615
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "7e8193ff42aeab18df15c30d71bf1ec78238a809de8bf0d7960eb751fd5871a6",
+  "split": "train",
+  "notes": [
+    "Product placard identifies MPG Z790 CARBON WIFI; connector arrangement matches official overview on printed page 27 / PDF page 29.",
+    "Not the Z690 CARBON photo 000190: PCIe slot topology and heatsink geometry differ. Do not merge those models.",
+    "All five storage M.2 connector bodies covered by heatsinks; rear Wi-Fi M.2 hidden. No positive M.2 boxes.",
+    "Two physical x16 PCIe slots and one x1 slot. SATA annotations are three visible stacked housings, not six individual ports.",
+    "CPU power connectors partly hidden: box only their visible upper edges. Four DIMM boxes include perspective and latches.",
+    "CPU_FAN1, PUMP_FAN1 and SYS_FAN1 through SYS_FAN5 checked against layout. Adjacent RGB, USB and debug headers excluded.",
+    "Visual review only, not independent human certification. New training-only model after v5."
+  ]
+}

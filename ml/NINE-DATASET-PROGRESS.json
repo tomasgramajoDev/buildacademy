@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 24,
-  "models": 23,
-  "boxes": 483,
+  "reviewed_images": 25,
+  "models": 24,
+  "boxes": 504,
   "splits": {
-    "train": 18,
+    "train": 19,
     "val": 3,
     "test": 3
   },
   "status": "v5_evaluated_generalization_insufficient",
   "coverage": {
     "train": [
-      18,
-      60,
-      38,
-      23,
-      27,
-      68,
-      18,
+      19,
+      64,
+      40,
       24,
-      96
+      27,
+      71,
+      19,
+      26,
+      103
     ],
     "val": [
       3,
@@ -77,11 +77,11 @@
   "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
   "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
   "next_dataset": {
-    "path": "datasets/connectors-nine-prepared-24images-23models/data.yaml",
-    "manifest_sha256": "17c7a3141dc142aa8e855581390ccdd78f05adaded717fe5582760f3d11f9db9",
+    "path": "datasets/connectors-nine-prepared-25images-24models/data.yaml",
+    "manifest_sha256": "baa7d72bc759ab1558b89e08c62cd9f24a03664120f321b773ec6f7b4a127f25",
     "trained": false,
     "training_started": false,
-    "note": "Two additional models after v5, Z690-A and Z790-S WIFI. Accumulate more reviewed diversity before another run."
+    "note": "Three new training models after v5. Next collection priority: uncovered M.2 bodies on additional identified boards; covered connectors remain excluded."
   },
   "previous_training": {
     "name": "nine-reviewed-16models-long-20261019",

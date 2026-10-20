@@ -1,0 +1,193 @@
+{
+  "image": "datasets/connectors-nine-review/images/000002.jpg",
+  "model_id": "ASUS ROG STRIX Z690-A GAMING WIFI D4",
+  "model_group": "asus-rog-strix-z690-a-gaming-wifi-d4",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1700/ROG_STRIX_Z690-A_GAMING_WIFI_D4/E19937_ROG_STRIX_Z690-A_GAMING_WIFI_D4_UM_V6_WEB.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      294,
+      153,
+      407,
+      300
+    ],
+    [
+      "DIMM_SLOT",
+      423,
+      88,
+      440,
+      342
+    ],
+    [
+      "DIMM_SLOT",
+      440,
+      88,
+      457,
+      342
+    ],
+    [
+      "DIMM_SLOT",
+      457,
+      88,
+      474,
+      342
+    ],
+    [
+      "DIMM_SLOT",
+      474,
+      88,
+      492,
+      342
+    ],
+    [
+      "PCIe_X16",
+      182,
+      373,
+      385,
+      394
+    ],
+    [
+      "PCIe_X16",
+      182,
+      545,
+      384,
+      566
+    ],
+    [
+      "PCIe_X1",
+      183,
+      479,
+      230,
+      496
+    ],
+    [
+      "ATX_POWER",
+      508,
+      163,
+      530,
+      255
+    ],
+    [
+      "CPU_POWER",
+      181,
+      70,
+      217,
+      86
+    ],
+    [
+      "CPU_POWER",
+      217,
+      70,
+      251,
+      86
+    ],
+    [
+      "SATA_PORT",
+      508,
+      395,
+      532,
+      423
+    ],
+    [
+      "SATA_PORT",
+      508,
+      423,
+      532,
+      450
+    ],
+    [
+      "SATA_PORT",
+      508,
+      450,
+      532,
+      477
+    ],
+    [
+      "FAN_HEADER",
+      252,
+      72,
+      269,
+      85
+    ],
+    [
+      "FAN_HEADER",
+      371,
+      72,
+      390,
+      85
+    ],
+    [
+      "FAN_HEADER",
+      260,
+      304,
+      273,
+      325
+    ],
+    [
+      "FAN_HEADER",
+      274,
+      304,
+      287,
+      325
+    ],
+    [
+      "FAN_HEADER",
+      514,
+      477,
+      529,
+      498
+    ],
+    [
+      "FAN_HEADER",
+      222,
+      575,
+      243,
+      589
+    ],
+    [
+      "FAN_HEADER",
+      434,
+      575,
+      454,
+      589
+    ],
+    [
+      "FAN_HEADER",
+      458,
+      575,
+      478,
+      589
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "1ec7f795e9b8705f168d711d3cbe8d1b4fe5b4c65110b23e69ad1ebdccc66198",
+  "split": "train",
+  "notes": [
+    "PCB model text visible below upper PCIe slot. Silver heatsink layout matches manufacturer manual page 1-2 (PDF page 16).",
+    "Four DIMM slots individually boxed with their latches. Two physical x16 slots and one x1 slot.",
+    "Four storage M.2 connector bodies covered by heatsinks; Wi-Fi M.2 hidden by rear I/O cover. No visible M.2 boxes.",
+    "Three SATA housings represent six stacked ports, not six visible housings.",
+    "CPU_OPT, CPU_FAN, AIO_PUMP and five CHA_FAN positions checked against manufacturer layout; RGB and USB headers excluded.",
+    "Top headers are small and partly occluded by heatsinks; annotate visible bodies only. Visual review is not independent human certification.",
+    "New training model added after v5 evaluation; not used by v5. Never add this model to a future independent holdout."
+  ]
+}

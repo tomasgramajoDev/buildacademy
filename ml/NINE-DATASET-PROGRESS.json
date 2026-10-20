@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 22,
-  "models": 21,
-  "boxes": 440,
+  "reviewed_images": 23,
+  "models": 22,
+  "boxes": 462,
   "splits": {
-    "train": 16,
+    "train": 17,
     "val": 3,
     "test": 3
   },
   "status": "v5_evaluated_generalization_insufficient",
   "coverage": {
     "train": [
-      16,
-      52,
-      34,
-      19,
-      26,
-      63,
-      16,
+      17,
+      56,
+      36,
       20,
-      83
+      26,
+      66,
+      17,
+      22,
+      91
     ],
     "val": [
       3,
@@ -77,11 +77,11 @@
   "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
   "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
   "next_dataset": {
-    "path": "datasets/connectors-nine-prepared-22images-21models/data.yaml",
-    "manifest_sha256": "a97fa5ec013e7230c374bca6846b8c42042ff6485d18db865f599dc4688e7868",
-    "trained": true,
-    "note": "21 models, 22 images: adds B550I and another H670 view; same-model views stay in training.",
-    "training_started": true
+    "path": "datasets/connectors-nine-prepared-23images-22models/data.yaml",
+    "manifest_sha256": "bd1ef1bae148dbea6f1123bfc8349e2d12324d884001a5553620e39a7f87a1cc",
+    "trained": false,
+    "training_started": false,
+    "note": "Added one reviewed Z690-A model with 22 visible boxes after v5. Accumulate diverse reviewed examples before another training run."
   },
   "previous_training": {
     "name": "nine-reviewed-16models-long-20261019",

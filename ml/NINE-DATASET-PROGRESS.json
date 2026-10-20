@@ -135,8 +135,9 @@
   "latest_selection": "ml/SELECCION-V3-V5.json",
   "latest_independent_evaluation": "ml/EVALUACION-INDEPENDIENTE-V5.json",
   "acceptance_target": {
-    "requested_percent": 95,
-    "metric_definition": "pending_precision_recall_clarification",
+    "precision_min": 0.95,
+    "recall_min": 0.95,
+    "evaluation": "Independent motherboard models excluded from training and tuning; report per-class metrics as well as aggregate.",
     "met": false
   }
 }

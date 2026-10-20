@@ -52,6 +52,9 @@ def execute(args):
             raise RuntimeError('HTTP integration check failed.')
         state('completed', training_report=str(report),
               note='Experimental candidate; accuracy review required. No deployment performed.')
+        if getattr(args, 'compare_job', None):
+            from compare_candidates import compare
+            write('validation-comparison.json', compare(args.compare_job, output))
     except Exception as error:
         state('failed', error_type=type(error).__name__)
         raise
@@ -64,4 +67,5 @@ if __name__ == '__main__':
     parser.add_argument('--name', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--epochs', type=int, default=300)
+    parser.add_argument('--compare-job', help='Completed baseline job to compare on identical validation data; no independent-test inference.')
     execute(parser.parse_args())

@@ -7,7 +7,7 @@
     "val": 3,
     "test": 3
   },
-  "status": "v5_training_on_expanded_dataset",
+  "status": "v5_evaluated_generalization_insufficient",
   "coverage": {
     "train": [
       16,
@@ -79,7 +79,7 @@
   "next_dataset": {
     "path": "datasets/connectors-nine-prepared-22images-21models/data.yaml",
     "manifest_sha256": "a97fa5ec013e7230c374bca6846b8c42042ff6485d18db865f599dc4688e7868",
-    "trained": false,
+    "trained": true,
     "note": "21 models, 22 images: adds B550I and another H670 view; same-model views stay in training.",
     "training_started": true
   },
@@ -126,9 +126,17 @@
     "baseline": "tmp/nine-v3-job",
     "data": "datasets/connectors-nine-prepared-22images-21models/data.yaml",
     "manifest_sha256": "a97fa5ec013e7230c374bca6846b8c42042ff6485d18db865f599dc4688e7868",
-    "status": "training",
+    "status": "completed",
     "initialization": "COCO yolo11n.pt",
     "auto_compare": "validation only, macro F1, fixed 0.5 operating threshold",
-    "deployment_approved": false
+    "deployment_approved": false,
+    "epochs_completed": 279
+  },
+  "latest_selection": "ml/SELECCION-V3-V5.json",
+  "latest_independent_evaluation": "ml/EVALUACION-INDEPENDIENTE-V5.json",
+  "acceptance_target": {
+    "requested_percent": 95,
+    "metric_definition": "pending_precision_recall_clarification",
+    "met": false
   }
 }

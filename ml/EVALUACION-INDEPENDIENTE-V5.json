@@ -1,0 +1,130 @@
+{
+  "result": {
+    "split": "test",
+    "model": "nine-reviewed-22images-21models-v5",
+    "confidence_threshold": 0.5,
+    "nms_iou": 0.45,
+    "matching_iou": 0.5,
+    "runtime": "recognition.ConnectorDetector ONNXRuntime CPU",
+    "per_class": {
+      "CPU_SOCKET": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "DIMM_SLOT": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 7,
+        "precision": 0.3333333333333333,
+        "recall": 0.125
+      },
+      "PCIe_X16": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.8333333333333334,
+        "recall": 1.0
+      },
+      "PCIe_X1": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 3,
+        "precision": 1.0,
+        "recall": 0.5714285714285714
+      },
+      "M2_SLOT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "precision": null,
+        "recall": 0.0
+      },
+      "SATA_PORT": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "precision": null,
+        "recall": 0.0
+      },
+      "ATX_POWER": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "CPU_POWER": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1,
+        "precision": 1.0,
+        "recall": 0.5
+      },
+      "FAN_HEADER": {
+        "tp": 1,
+        "fp": 2,
+        "fn": 11,
+        "precision": 0.3333333333333333,
+        "recall": 0.08333333333333333
+      }
+    },
+    "images": [
+      {
+        "image": "000000.jpg",
+        "tp": 7,
+        "fp": 5,
+        "fn": 18
+      },
+      {
+        "image": "000001.jpg",
+        "tp": 8,
+        "fp": 0,
+        "fn": 15
+      }
+    ],
+    "claim": "Independent post-selection diagnostic on a small manually reviewed holdout; not production certification.",
+    "selection_used_this_data": false
+  },
+  "provenance": {
+    "purpose": "independent_post_selection_only",
+    "review_gate": "not_a_training_dataset",
+    "classes": [
+      "CPU_SOCKET",
+      "DIMM_SLOT",
+      "PCIe_X16",
+      "PCIe_X1",
+      "M2_SLOT",
+      "SATA_PORT",
+      "ATX_POWER",
+      "CPU_POWER",
+      "FAN_HEADER"
+    ],
+    "images": 2,
+    "models": 2,
+    "files": [
+      {
+        "model_id": "ASUS TUF Z390-PLUS GAMING (WI-FI)",
+        "image_sha256": "a35b3aed6e5ea9552c26437b680fdeb905717750aabdf349ef7e818412f74053",
+        "label_sha256": "145f9b541cc68434c1783e1fcc5866f7592d51b838fc0745a17b0f3c8588e81f",
+        "annotation_sha256": "7bda1a3e8cc450fd263b8bce653953260de266be4130575986f71e3135f57e91",
+        "boxes": 25,
+        "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1151/TUF_Z390-PLUS_GAMING_WI-FI/E15014_TUF_Z390-PLUS_GAMING_WiFi_UM_v2_web.pdf"
+      },
+      {
+        "model_id": "Gigabyte Z390 AORUS PRO WIFI",
+        "image_sha256": "179fd686069c51dfd5d27fe69dfa6795c8f0e559a500ffdbc44964e2c7c9dc58",
+        "label_sha256": "98159e6e105e81702d3d26f481fb1879c1b4ad50c07f941c4b4f49ca019f3e9c",
+        "annotation_sha256": "bab567c5a75f4f8728a0af99fde0b4243adbb615259ad5d36ec3a2fe68299b74",
+        "boxes": 23,
+        "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_z390-aorus-pro_wifi_1001_190708_e.pdf"
+      }
+    ],
+    "evaluated": false,
+    "limitation": "Small manually annotated holdout; not independent human certification. Never use for candidate selection."
+  },
+  "deployment_approved": false,
+  "decision": "15 TP, 5 FP, 33 FN on two fresh reserved boards. Poor RAM, M2, SATA and fan recall. Retain experimental status; do not deploy or tune on this holdout."
+}

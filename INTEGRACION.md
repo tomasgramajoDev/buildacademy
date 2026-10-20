@@ -18,10 +18,12 @@ Código y contrato: `recognition/README.md`. Paquetes disponibles en el reposito
 | Nueve clases, segunda corrida | `ml/artifacts/nine-reviewed-v2` | Experimental, disponible para integración; no aprobado para reemplazar el piloto |
 | Nueve clases, tercera corrida | `ml/artifacts/nine-reviewed-v3` | Candidato elegido frente a v4 por validación; experimental, con omisiones importantes |
 
+| Nueve clases, quinta corrida | `ml/artifacts/nine-reviewed-v5` | Último candidato seleccionado por validación; experimental, no aprobado para despliegue |
+
 Instalar las dependencias de inferencia con `python -m pip install -r recognition/requirements.txt` en un entorno Python. No hace falta instalar las herramientas de entrenamiento para ejecutar el ONNX. Para probar el modelo de nueve clases desde la raíz:
 
 ```powershell
-python -m recognition.server --model-dir ml/artifacts/nine-reviewed-v3 --port 8771
+python -m recognition.server --model-dir ml/artifacts/nine-reviewed-v5 --port 8771
 ```
 
 Backend envía la foto como cuerpo binario a `POST http://127.0.0.1:8771/v1/recognitions`. El proceso escucha en loopback; el backend del equipo debe aplicar autenticación, límites y autorización antes de llamarlo. No incluye una API pública desplegada.
@@ -30,9 +32,7 @@ Front utiliza `toDisplayBoxes` de `recognition/frontend.js` para adaptar las coo
 
 ## Evidencia y límites del modelo ampliado
 
-La cuarta corrida terminó con 20 modelos de motherboard y 56 recortes adicionales sólo de entrenamiento. No superó a v3: macro F1 en las mismas tres placas de validación fue 0,541 frente a 0,582. La selección se hizo sin consultar la prueba independiente. El paquete v3 queda disponible para la integración experimental.
-
-En una motherboard reservada, v3 encontró 9 de 18 conexiones sin falsos positivos: omitió las cuatro ranuras RAM, M.2, una PCIe x1 y tres de cuatro conectores de ventiladores. Una sola placa no demuestra generalización. No se ajustó el umbral con este resultado ni se reemplazó el piloto. Ver `ml/SELECCION-NUEVE-CLASES.json` y `ml/EVALUACION-INDEPENDIENTE-V3.json`.
+V5 terminó tras 279 épocas sobre 22 fotos de 21 modelos y 440 cajas. Superó a v3 en validación (macro F1: 0,698 frente a 0,582). En dos placas nuevas encontró 15 de 48 conexiones y agregó 5 falsas detecciones: precisión 75% y recall 31,25%. La muestra es pequeña y no demuestra generalización. El paquete `ml/artifacts/nine-reviewed-v5` es experimental; el piloto de cuatro clases sigue predeterminado. Ver `ml/SELECCION-V3-V5.json` y `ml/EVALUACION-INDEPENDIENTE-V5.json`.
 
 Los siguientes resultados de v2 se conservan como referencia histórica:
 

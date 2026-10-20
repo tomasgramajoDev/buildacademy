@@ -1,6 +1,6 @@
 # Reconocimiento de conectores: integración
 
-Estado: módulo ejecutable con el piloto de cuatro clases por defecto y soporte probado para paquetes de nueve clases. Cuatro corridas de nueve clases terminaron. V3 superó a v4 en validación y está disponible en `ml/artifacts/nine-reviewed-v3` para integración experimental. En la prueba independiente de una placa encontró 9/18 conexiones sin falsos positivos, con omisiones en RAM, M.2, PCIe x1 y ventiladores; no se aprueba reemplazar el piloto. V2 se conserva como referencia. `coversNineClasses` describe el contrato del modelo cargado, no certifica precisión. Ver `INTEGRACION.md`, `ml/SELECCION-NUEVE-CLASES.json` y `ml/EVALUACION-INDEPENDIENTE-V3.json`.
+Estado actual: cinco corridas de nueve clases terminadas. V5 terminó tras 279 épocas sobre 22 fotos de 21 modelos y 440 cajas. Superó a v3 en validación (macro F1: 0,698 frente a 0,582). En dos placas nuevas encontró 15 de 48 conexiones y agregó 5 falsas detecciones: precisión 75% y recall 31,25%. La muestra es pequeña y no demuestra generalización. El paquete `ml/artifacts/nine-reviewed-v5` es experimental; el piloto de cuatro clases sigue predeterminado. Ver `ml/SELECCION-V3-V5.json` y `ml/EVALUACION-INDEPENDIENTE-V5.json`.
 
 ## Backend Python
 

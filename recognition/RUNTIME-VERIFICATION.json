@@ -15,5 +15,13 @@
   },
   "command": "python ml/smoke_integration.py --model-dir ml/artifacts/nine-reviewed-v2 --image datasets/connectors-nine-review/images/000031.jpg --output tmp/runtime-only-smoke.json",
   "scope": "Installation and HTTP integration only. Not model accuracy or other-platform certification.",
-  "additional_model_verified_with_same_checks": "ml/artifacts/nine-reviewed-v3"
+  "additional_model_verified_with_same_checks": "ml/artifacts/nine-reviewed-v3",
+  "v5_verification": {
+    "date": "2026-10-20",
+    "model": "ml/artifacts/nine-reviewed-v5",
+    "same_checks_passed": true,
+    "report": "tmp/runtime-only-v5-smoke-retry.json",
+    "initial_attempt": "Local socket aborted: WinError 10053. One retry passed.",
+    "scope": "Protocol/runtime only; not detection accuracy."
+  }
 }

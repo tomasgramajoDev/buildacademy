@@ -17,3 +17,10 @@ Los resultados quedan en `tmp/nine-final-review`: selección, procedencia, métr
 ## Calibración posterior de v3
 
 Se comparó un conjunto fijo de umbrales internos (0,25; 0,35; 0,5) sólo en las tres placas de validación. En `CALIBRACION-V3.json`, 0,25 alcanzó el mayor macro F1 (0,669), frente a 0,582 con 0,5. Pasó de 24 a 32 aciertos, pero también de 12 a 23 falsos positivos sobre las mismas 56 conexiones reales. Por ese aumento de errores y la falta de una nueva evaluación independiente, el umbral predeterminado sigue en 0,5. El resultado reservado anterior corresponde exclusivamente a 0,5 y no se reutilizó para calibrar. No presentar esta calibración como mejora confirmada en placas nuevas ni exponer sus valores como controles al usuario.
+
+
+## Quinta corrida: revisión del 20 de octubre de 2026
+
+V5 terminó tras 279 épocas sobre 22 fotos de 21 modelos y 440 cajas. Superó a v3 en validación (macro F1: 0,698 frente a 0,582). En dos placas nuevas encontró 15 de 48 conexiones y agregó 5 falsas detecciones: precisión 75% y recall 31,25%. La muestra es pequeña y no demuestra generalización. El paquete `ml/artifacts/nine-reviewed-v5` es experimental; el piloto de cuatro clases sigue predeterminado. Ver `ml/SELECCION-V3-V5.json` y `ml/EVALUACION-INDEPENDIENTE-V5.json`.
+
+Las dos placas reservadas quedaron consumidas tras esta evaluación. No reutilizarlas para ajustar el modelo y luego presentarlas como independientes. El objetivo solicitado es 95%; queda pendiente precisar si aplica a precisión, recall o ambos. No equivale a subir el umbral interno a 0,95. La siguiente mejora requiere más anotaciones y diversidad, especialmente en DIMM, M.2, SATA y FAN_HEADER, y una nueva reserva de evaluación.

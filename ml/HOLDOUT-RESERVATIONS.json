@@ -29,14 +29,15 @@
         "Gigabyte Z390 AORUS PRO WIFI",
         "Gigabyte Z390 AORUS PRO"
       ],
-      "status": "annotations_reviewed_not_evaluated",
+      "status": "evaluated_once_post_selection",
       "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_z390-aorus-pro_wifi_1001_190708_e.pdf",
       "notes": [
         "Manual page 5 and official product photograph inspected; 23 visible connector boxes reviewed without model predictions.",
         "Two covered SSD M.2 connectors are excluded; this image cannot test positive M.2 recall.",
-        "No independent inference yet. All same-model views and non-WIFI sibling remain excluded from development."
+        "Independent inference completed after validation selection. All same-model views and non-WIFI sibling remain excluded from development."
       ],
-      "annotation": "ml/holdout_annotations/gigabyte-z390-aorus-pro-wifi-000003.json"
+      "annotation": "ml/holdout_annotations/gigabyte-z390-aorus-pro-wifi-000003.json",
+      "evaluation": "ml/EVALUACION-INDEPENDIENTE-V5.json"
     },
     {
       "image": "datasets/connectors-nine-review/images/000011.jpg",
@@ -47,13 +48,14 @@
         "ASUS TUF Z390-PLUS GAMING",
         "ASUS TUF Z390-PLUS GAMING WIFI"
       ],
-      "status": "annotations_reviewed_not_evaluated",
+      "status": "evaluated_once_post_selection",
       "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1151/TUF_Z390-PLUS_GAMING_WI-FI/E15014_TUF_Z390-PLUS_GAMING_WiFi_UM_v2_web.pdf",
       "annotation": "ml/holdout_annotations/asus-tuf-z390-plus-gaming-wifi-000011.json",
       "notes": [
         "No v3/v5 inference consulted. Reserve non-WIFI sibling conservatively.",
         "One exposed M.2 connector contributes positive M.2 ground truth."
-      ]
+      ],
+      "evaluation": "ml/EVALUACION-INDEPENDIENTE-V5.json"
     }
   ]
 }

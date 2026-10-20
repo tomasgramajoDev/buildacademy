@@ -2,7 +2,7 @@
 
 Estado actual: cinco corridas de nueve clases terminadas. V5 terminó tras 279 épocas sobre 22 fotos de 21 modelos y 440 cajas. Superó a v3 en validación (macro F1: 0,698 frente a 0,582). En dos placas nuevas encontró 15 de 48 conexiones y agregó 5 falsas detecciones: precisión 75% y recall 31,25%. La muestra es pequeña y no demuestra generalización. El paquete `ml/artifacts/nine-reviewed-v5` es experimental; el piloto de cuatro clases sigue predeterminado. Ver `ml/SELECCION-V3-V5.json` y `ml/EVALUACION-INDEPENDIENTE-V5.json`.
 
-Ampliación posterior a v5: 25 fotos de 24 modelos, con 504 cajas revisadas. Se agregaron Z690-A, Z790-S WIFI y Z790 Carbon WIFI; la segunda aporta un M.2 descubierto y otra vista de DIMM, SATA y alimentación. Los conectores ocultos se excluyen. Esta ampliación todavía no se entrenó.
+Ampliación posterior a v5: 26 fotos de 25 modelos, con 530 cajas revisadas. Se agregaron Z690-A, Z790-S WIFI, Z790 Carbon WIFI y Z890 Taichi Lite; la segunda aporta un M.2 descubierto y otra vista de DIMM, SATA y alimentación. Los conectores ocultos se excluyen. V6 inició su entrenamiento con esta ampliación: mismos parámetros que v5 y comparación automática sólo sobre validación. No hay resultados nuevos aún ni reemplazo automático del piloto.
 
 El dataset original Motherboard Part Locater de BIS497 (CC BY 4.0) tiene cuatro clases generales. Las nueve categorías provienen de nuevas anotaciones revisadas, no de renombrar esas cuatro clases. El dataset de miraclefactory es de defectos de fabricación y fue descartado para esta tarea. La colección Motherboard Sockets contiene fotos de armado útiles como candidatas, pero sus etiquetas y particiones no se importan automáticamente: hay conectores ocultos y vistas repetidas de la misma placa.
 

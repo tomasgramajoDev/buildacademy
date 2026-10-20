@@ -1,0 +1,221 @@
+{
+  "image": "datasets/connectors-nine-review/images/000106.jpg",
+  "model_id": "ASRock Z890 Taichi Lite",
+  "model_group": "asrock-z890-taichi-lite",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download.asrock.com/Manual/Z890%20Taichi%20Lite.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      353,
+      277,
+      509,
+      419
+    ],
+    [
+      "DIMM_SLOT",
+      295,
+      466,
+      565,
+      490
+    ],
+    [
+      "DIMM_SLOT",
+      295,
+      489,
+      565,
+      513
+    ],
+    [
+      "DIMM_SLOT",
+      295,
+      511,
+      565,
+      535
+    ],
+    [
+      "DIMM_SLOT",
+      295,
+      534,
+      566,
+      559
+    ],
+    [
+      "PCIe_X16",
+      246,
+      140,
+      269,
+      367
+    ],
+    [
+      "PCIe_X16",
+      90,
+      139,
+      114,
+      366
+    ],
+    [
+      "M2_SLOT",
+      276,
+      186,
+      318,
+      205
+    ],
+    [
+      "M2_SLOT",
+      206,
+      333,
+      249,
+      359
+    ],
+    [
+      "M2_SLOT",
+      161,
+      307,
+      204,
+      331
+    ],
+    [
+      "M2_SLOT",
+      118,
+      289,
+      161,
+      315
+    ],
+    [
+      "M2_SLOT",
+      121,
+      512,
+      167,
+      538
+    ],
+    [
+      "M2_SLOT",
+      77,
+      539,
+      97,
+      596
+    ],
+    [
+      "ATX_POWER",
+      386,
+      599,
+      487,
+      631
+    ],
+    [
+      "CPU_POWER",
+      570,
+      136,
+      593,
+      182
+    ],
+    [
+      "CPU_POWER",
+      570,
+      184,
+      593,
+      228
+    ],
+    [
+      "SATA_PORT",
+      180,
+      610,
+      211,
+      639
+    ],
+    [
+      "SATA_PORT",
+      149,
+      610,
+      180,
+      639
+    ],
+    [
+      "FAN_HEADER",
+      550,
+      443,
+      565,
+      465
+    ],
+    [
+      "FAN_HEADER",
+      577,
+      551,
+      593,
+      578
+    ],
+    [
+      "FAN_HEADER",
+      577,
+      578,
+      593,
+      605
+    ],
+    [
+      "FAN_HEADER",
+      297,
+      110,
+      322,
+      125
+    ],
+    [
+      "FAN_HEADER",
+      39,
+      459,
+      57,
+      481
+    ],
+    [
+      "FAN_HEADER",
+      39,
+      488,
+      57,
+      510
+    ],
+    [
+      "FAN_HEADER",
+      39,
+      517,
+      57,
+      539
+    ],
+    [
+      "FAN_HEADER",
+      39,
+      545,
+      57,
+      570
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "c906f754a8c4881072d8ce56c0e649e16431d4d406ce3104ea6c8efea9e37c8c",
+  "split": "train",
+  "notes": [
+    "PCB reads Z890 TAICHI LITE; two PCIe slots and six SSD M.2 connectors match manufacturer layout, printed page 7 / PDF page 11.",
+    "Photo rotated clockwise relative to official layout. Reviewed in a counterclockwise preview, then boxes transformed back to the original 640x640 image.",
+    "Six visible storage M.2 connector bodies individually annotated, including the horizontal M2_6. Installed Wi-Fi module obscures its connector, omitted.",
+    "Two physical x16 slots; no x1 slots. Two stacked SATA housings, four ports. USB housings adjacent to SATA excluded.",
+    "CPU_FAN1, CPU_FAN2, AIO_PUMP, CHA_FAN1 through CHA_FAN4 and W_PUMP matched to layout. RGB, debug, USB and power/reset buttons excluded.",
+    "Distinct from already reviewed Z790 Taichi Lite 000172; do not conflate model groups.",
+    "Visual review against manual, not independent human certification. New training-only board after v5."
+  ]
+}

@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 25,
-  "models": 24,
-  "boxes": 504,
+  "reviewed_images": 26,
+  "models": 25,
+  "boxes": 530,
   "splits": {
-    "train": 19,
+    "train": 20,
     "val": 3,
     "test": 3
   },
-  "status": "v5_evaluated_generalization_insufficient",
+  "status": "v6_training",
   "coverage": {
     "train": [
-      19,
-      64,
-      40,
+      20,
+      68,
+      42,
       24,
-      27,
-      71,
-      19,
-      26,
-      103
+      33,
+      73,
+      20,
+      28,
+      111
     ],
     "val": [
       3,
@@ -77,11 +77,11 @@
   "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
   "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
   "next_dataset": {
-    "path": "datasets/connectors-nine-prepared-25images-24models/data.yaml",
-    "manifest_sha256": "baa7d72bc759ab1558b89e08c62cd9f24a03664120f321b773ec6f7b4a127f25",
+    "path": "datasets/connectors-nine-prepared-26images-25models/data.yaml",
+    "manifest_sha256": "868210a8233d64fd1239ac93bca343f7154eb8aeef93e29f62c13397444b4750",
     "trained": false,
-    "training_started": false,
-    "note": "Three new training models after v5. Next collection priority: uncovered M.2 bodies on additional identified boards; covered connectors remain excluded."
+    "training_started": true,
+    "note": "Four additional training models after v5; includes six uncovered M.2 connectors on Z890 Taichi Lite."
   },
   "previous_training": {
     "name": "nine-reviewed-16models-long-20261019",
@@ -116,6 +116,30 @@
   "selection": "ml/SELECCION-NUEVE-CLASES.json",
   "independent_evaluation": "ml/EVALUACION-INDEPENDIENTE-V3.json",
   "current_training": {
+    "name": "nine-reviewed-26images-25models-v6",
+    "epochs": 300,
+    "size": 640,
+    "batch": 2,
+    "patience": 100,
+    "seed": 42,
+    "job_output": "tmp/nine-v6-job",
+    "baseline": "tmp/nine-v5-job",
+    "data": "datasets/connectors-nine-prepared-26images-25models/data.yaml",
+    "manifest_sha256": "868210a8233d64fd1239ac93bca343f7154eb8aeef93e29f62c13397444b4750",
+    "status": "training",
+    "initialization": "COCO yolo11n.pt",
+    "auto_compare": "validation only, macro F1, fixed 0.5 operating threshold",
+    "deployment_approved": false
+  },
+  "latest_selection": "ml/SELECCION-V3-V5.json",
+  "latest_independent_evaluation": "ml/EVALUACION-INDEPENDIENTE-V5.json",
+  "acceptance_target": {
+    "precision_min": 0.95,
+    "recall_min": 0.95,
+    "evaluation": "Independent motherboard models excluded from training and tuning; report per-class metrics as well as aggregate.",
+    "met": false
+  },
+  "v5_training": {
     "name": "nine-reviewed-22images-21models-v5",
     "epochs": 300,
     "size": 640,
@@ -131,13 +155,5 @@
     "auto_compare": "validation only, macro F1, fixed 0.5 operating threshold",
     "deployment_approved": false,
     "epochs_completed": 279
-  },
-  "latest_selection": "ml/SELECCION-V3-V5.json",
-  "latest_independent_evaluation": "ml/EVALUACION-INDEPENDIENTE-V5.json",
-  "acceptance_target": {
-    "precision_min": 0.95,
-    "recall_min": 0.95,
-    "evaluation": "Independent motherboard models excluded from training and tuning; report per-class metrics as well as aggregate.",
-    "met": false
   }
 }

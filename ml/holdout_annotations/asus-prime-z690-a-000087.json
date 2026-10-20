@@ -1,0 +1,200 @@
+{
+  "image": "datasets/connectors-nine-review/images/000087.jpg",
+  "model_id": "ASUS PRIME Z690-A",
+  "model_group": "asus-prime-z690-a",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1700/PRIME_Z690-A/E18708_PRIME_Z690-A_UM_WEB.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      356,
+      291,
+      510,
+      440
+    ],
+    [
+      "DIMM_SLOT",
+      296,
+      478,
+      575,
+      502
+    ],
+    [
+      "DIMM_SLOT",
+      296,
+      502,
+      575,
+      526
+    ],
+    [
+      "DIMM_SLOT",
+      296,
+      526,
+      575,
+      550
+    ],
+    [
+      "DIMM_SLOT",
+      296,
+      550,
+      575,
+      574
+    ],
+    [
+      "PCIe_X16",
+      249,
+      125,
+      280,
+      400
+    ],
+    [
+      "PCIe_X16",
+      62,
+      125,
+      90,
+      399
+    ],
+    [
+      "PCIe_X1",
+      204,
+      125,
+      224,
+      193
+    ],
+    [
+      "PCIe_X1",
+      142,
+      125,
+      162,
+      193
+    ],
+    [
+      "M2_SLOT",
+      145,
+      430,
+      190,
+      453
+    ],
+    [
+      "ATX_POWER",
+      397,
+      606,
+      496,
+      637
+    ],
+    [
+      "CPU_POWER",
+      575,
+      124,
+      597,
+      173
+    ],
+    [
+      "CPU_POWER",
+      575,
+      175,
+      597,
+      223
+    ],
+    [
+      "SATA_PORT",
+      228,
+      607,
+      272,
+      639
+    ],
+    [
+      "SATA_PORT",
+      194,
+      607,
+      228,
+      639
+    ],
+    [
+      "FAN_HEADER",
+      575,
+      226,
+      591,
+      249
+    ],
+    [
+      "FAN_HEADER",
+      577,
+      391,
+      593,
+      415
+    ],
+    [
+      "FAN_HEADER",
+      325,
+      235,
+      349,
+      251
+    ],
+    [
+      "FAN_HEADER",
+      325,
+      253,
+      349,
+      272
+    ],
+    [
+      "FAN_HEADER",
+      143,
+      606,
+      167,
+      620
+    ],
+    [
+      "FAN_HEADER",
+      143,
+      622,
+      167,
+      636
+    ],
+    [
+      "FAN_HEADER",
+      42,
+      150,
+      60,
+      175
+    ],
+    [
+      "FAN_HEADER",
+      42,
+      549,
+      60,
+      576
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "13c8256b4165f380d4397ce6ea7f38f1b6e65d623a5b20494331f1e4ed4c61c0",
+  "split": "independent_test",
+  "notes": [
+    "Independent reservation only; never training or validation. Reviewed against manual page 1-2 without candidate predictions.",
+    "Image rotated clockwise from official layout. Reviewed in upright preview and transformed back to original pixels.",
+    "Only M2_2 connector body visible; M2_1, M2_3 and M2_4 covered by heatsinks, omitted.",
+    "Two physical x16 slots and two x1 slots. Physical PCIe x4 slot is outside nine-class vocabulary and deliberately not labeled as x1/x16.",
+    "Two stacked SATA housings, four ports; USB housings excluded.",
+    "CPU_FAN, CPU_OPT, AIO_PUMP, W_PUMP and CHA_FAN1-4 matched to layout. Power button, RGB and USB headers excluded.",
+    "Visual review only; no independent human certification."
+  ]
+}

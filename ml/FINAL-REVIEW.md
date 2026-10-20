@@ -24,3 +24,13 @@ Se comparó un conjunto fijo de umbrales internos (0,25; 0,35; 0,5) sólo en las
 V5 terminó tras 279 épocas sobre 22 fotos de 21 modelos y 440 cajas. Superó a v3 en validación (macro F1: 0,698 frente a 0,582). En dos placas nuevas encontró 15 de 48 conexiones y agregó 5 falsas detecciones: precisión 75% y recall 31,25%. La muestra es pequeña y no demuestra generalización. El paquete `ml/artifacts/nine-reviewed-v5` es experimental; el piloto de cuatro clases sigue predeterminado. Ver `ml/SELECCION-V3-V5.json` y `ml/EVALUACION-INDEPENDIENTE-V5.json`.
 
 Las dos placas reservadas quedaron consumidas tras esta evaluación. No reutilizarlas para ajustar el modelo y luego presentarlas como independientes. El objetivo confirmado es precisión >= 95% y recall >= 95% en placas independientes. Reportar también resultados por categoría para que el agregado no oculte fallos. El resultado actual no cumple ninguno de los dos requisitos. No equivale a subir el umbral interno a 0,95. La siguiente mejora requiere más anotaciones y diversidad, especialmente en DIMM, M.2, SATA y FAN_HEADER, y una nueva reserva de evaluación.
+
+## Comprobación reproducible del objetivo
+
+```powershell
+python ml/assess_target.py ml/EVALUACION-INDEPENDIENTE-V5.json --output ml/OBJETIVO-95-V5.json
+```
+
+Este comando sólo lee los resultados guardados: no vuelve a ejecutar el detector ni consume otra evaluación independiente. Recalcula precisión y recall agregados a partir de TP/FP/FN, contrasta las sumas por imagen y categoría y muestra ambos requisitos por separado. Los denominadores vacíos no cuentan como éxito. Conserva los resultados de las nueve clases, incluso las que no tuvieron aciertos.
+
+El informe de v5 falla ambos requisitos. Cumplirlos en una muestra pequeña tampoco certificaría el rendimiento en todas las placas: el script no verifica por sí mismo la independencia o representatividad del dataset y nunca autoriza un despliegue. Las métricas agregadas usan micro-promedio; el desglose por categoría permite detectar problemas que ese promedio podría ocultar.

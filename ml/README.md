@@ -130,3 +130,8 @@ El estado escrito no demuestra que un proceso siga vivo: para investigar una int
 ## Comparación de candidatos
 
 `python ml/compare_candidates.py CARPETA_JOB_A CARPETA_JOB_B --output INFORME.json` compara pipelines completados con el mismo conjunto de validación. Exige coincidencia de hashes de imágenes y etiquetas, grupos de placa y parámetros de inferencia. Ordena por F1 macro (igual peso para cada clase) y señala clases sin aciertos. No lee métricas de test, no despliega pesos y no aprueba automáticamente al candidato mejor puntuado. Debe revisarse su comportamiento por clase y evaluarse con placas independientes antes de publicar.
+
+
+### Revisión de diversidad de Motherboard Sockets v2
+
+El 20 de octubre se inspeccionaron 32 representantes espaciados entre 1.073 grupos de nombres. Las miniaturas muestran vistas repetidas de una familia Gigabyte UD; tres imágenes se revisaron ampliadas sin confirmar el SKU exacto. Esto no certifica que todo el dataset sea una sola placa, pero impide tratar sus 4.399 fotos como diversidad de modelos. Todas están exportadas a 640 × 640 y sus etiquetas no cubren exhaustivamente las nueve categorías. Se conserva la colección como candidata, sin agregarla al entrenamiento. Rutas y hashes de las muestras: `CANDIDATO-SOCKETS-V2.json`.

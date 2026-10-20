@@ -53,5 +53,147 @@
       "PCIe samples mark only the main long slot; other visible slots are not exhaustively labeled."
     ],
     "decision": "Do not train the nine-class connector detector on these labels as-is."
+  },
+  "diversity_followup": {
+    "date": "2026-10-20",
+    "sampling": "32 evenly spaced representatives of 1073 numerically ordered filename groups; first sorted file per group. Non-random descriptive sample, not an estimate of unique-board count.",
+    "samples": [
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_0_jpg.rf.b9f79481b9e6c99624e404ab05a0a2e3.jpg",
+        "sha256": "a1e99417aed4e5696b5fda5b60c009fc34f63181d05a64c0341b9b00be437238"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_121_jpg.rf.0d27433fe6edaeeacbfb32235da2ebec.jpg",
+        "sha256": "e01407c2aab749a457345c36f64db4961feedd1e2c77a49a2a365c4c7d881b13"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_188_jpg.rf.153c39e23e1ae611641c6b5b0a930864.jpg",
+        "sha256": "6d43a765e451713e3297d100040256520fe8fc41b80d2bddd15b7dc7375f900f"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_246_jpg.rf.2d2cc1f1d6914ebe4b08ab26d7db31db.jpg",
+        "sha256": "e226e1d351f0a888d7ee73053e314ecb67fd7330daf2efe2019202a607ff0dd3"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_298_jpg.rf.19710ffaf7b2b44627c38639033d2ed9.jpg",
+        "sha256": "a5f5551fd213464bcf3ebeec729ff84c7d9213d073ed86db8514eecf27c178be"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_456_jpg.rf.85c15f50c53f723ecdfb21b6d2ff6ef8.jpg",
+        "sha256": "79ee6659d27ef1e5c40590975f9bfd717cc8bef7416a1c27cda80cde50b8d970"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_1180_jpg.rf.0ddfdd91a0ed28c8360f7152dad53ab4.jpg",
+        "sha256": "0a0e813f29ab37c7c75281ee506e67631f6b041a889c98e95da6601e576d8708"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_1270_jpg.rf.061ad73eccedc7c59faf257d0cc6a637.jpg",
+        "sha256": "a6c1c8dbda5e068497945ffab94077576803e07719f2d5b3acfcf8c6408bc2b1"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_1357_jpg.rf.3694dd815fc470f7f3a25b6e5ad356a8.jpg",
+        "sha256": "f880bf1a0f922de10de6f02a3b84283d99ebd1c3ce31140fbf49f60bebbb9c90"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_1445_jpg.rf.0ee30fac45956d67c9ac65f242922815.jpg",
+        "sha256": "6fc77c27550f0d27c7d42f4da02b573bbf4d53fad8f2bbde777acb208db2cea2"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_1535_jpg.rf.fc7cf55f8222f10e56bc87e016918be7.jpg",
+        "sha256": "c714115535e0f4a3ce79f5cc9193e12124f9fc99d7404c8e7a7a06f2a6517e8d"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_1623_jpg.rf.35a9682dae3feadad9692add8ae98a77.jpg",
+        "sha256": "7c7c2b282bf2f2ba86f0c4be1c8bf633cb0744b1661068fc3b95b3d8689afaa2"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_1774_jpg.rf.9f6f76ff542a92553b2a537935a28a38.jpg",
+        "sha256": "6764846988364a4e5ab0828c4ee5e6316f587e3eeb8f2427831a55c628dbe5ae"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_1936_jpg.rf.011b32054dd79e54a6f06e250f1dbe0c.jpg",
+        "sha256": "e2877ccbedff75bcdc69e3480c2f2c7711c8b5af7c4479ea0898a3b36b0b7750"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2138_jpg.rf.63a9950772cc540497755c8523ad7eaf.jpg",
+        "sha256": "aeafa198f29ae17e1dd615c9d481387015b5d81fb9a6c4e536e2dd7e103c1246"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2189_jpg.rf.0b9846a9343a063eb3f3cc349c8fb5bb.jpg",
+        "sha256": "73ab82c1b1f95772fa32c0e567eb014339bb7a1649dd2db413ca0729a08f144d"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_2238_jpg.rf.a994123778ba4c5e895b7eec6301c6f0.jpg",
+        "sha256": "88b37e043fed7ac1fce37d0d1a78a1e2abc9c690e532918c7c9ce8e0b8f942c7"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_2290_jpg.rf.70aad0ea7e9befaadb9fef1f89f7866f.jpg",
+        "sha256": "1bf5c76349748c2c65213a1cb04e275f617d84fb229e7a99478d7a65cdd9ba6f"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2341_jpg.rf.5de4d149d9376eb48f0c5ce788d4d123.jpg",
+        "sha256": "ca1a54babec5209fb80126943d4ca807ec58edf21b0d78a8a9b10a20afdb0f3f"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2398_jpg.rf.2db84718089f7759b06b81093417f37e.jpg",
+        "sha256": "7a15b9803b50a932089dfc607050aaa946f09d373e356ab5bb76009a31e29aec"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2446_jpg.rf.2e768ee6ef25b9d62c06bd9fceddace4.jpg",
+        "sha256": "8982bb8309cd0d9b54eaaa66931c57beba0f830bf2ff2bc7b17cd4089931684d"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2496_jpg.rf.7b303a2dcb058ebdd1beb47803ad5463.jpg",
+        "sha256": "8fab31b76f406dc14d42674072a9ff52fe98abacfc4565a66507ee9f972e61cf"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_2550_jpg.rf.47648deb79ec5c12bc220d62f2414f68.jpg",
+        "sha256": "8bcefd6ef01f0228fe9191fddaffa5c245ec922cd291d536042e9c37aa511345"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2598_jpg.rf.1b235540e2d94962b3f404f7d1b46ab7.jpg",
+        "sha256": "31260f8de68aebe907d1bc35d96f01e46ec718a6307042441020cb9e5d899cc6"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_2649_jpg.rf.74a2ea89a374d7d69a40b1bb260b5167.jpg",
+        "sha256": "7abbb601a7dda957fa312c690e736f8fc046a371621410b360fb4f9b2cac8a37"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2714_jpg.rf.50f203c2643b42e122808d8b05b23fc0.jpg",
+        "sha256": "30f3331c2a4e491765e73c70be617fb92761ed393a3a7be8ce22b31a286fa7a8"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2772_jpg.rf.2146ad582176b5861d6a7d3913ae6508.jpg",
+        "sha256": "13a702ef2d072da0fe11b90afc264a35eb2a0d3a3637d25fdd9554f05c6b2349"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2828_jpg.rf.0bd71e20c7779968ef1a12485a415b3e.jpg",
+        "sha256": "c1fd7cc7700f536c977de67677f5638460c224f48e977cf70d7244089955b807"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_2900_jpg.rf.04bd8530ea8c4c7f5cd5298866693ae0.jpg",
+        "sha256": "12a9065a89c8c9a600688f78a7e429a538f79fce74325b3c37f875edbb092bf8"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/test/images/screenshot_11062_jpg.rf.584fae6af60e04923cd4f9ca603e75c2.jpg",
+        "sha256": "d2c91e777ae67a4a421680b1a726e165837b54411e47beca219162e2fd5d959c"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_21078_jpg.rf.4a53c7dc0715931e793667449fecd60c.jpg",
+        "sha256": "23496d58f6eaee5039f259f82b521828e0713cf47d47103f4f7e00defbb700e4"
+      },
+      {
+        "path": "datasets/motherboard-sockets-v2-audited/raw/train/images/screenshot_21320_jpg.rf.387507c20bab939361b963c64498de96.jpg",
+        "sha256": "d225cf90b42dee0bdfd22c6c1bf729ffcfbe424b15f3350a375c790a16a0e738"
+      }
+    ],
+    "findings": [
+      "All 32 thumbnails show repeated views consistent with the same Gigabyte UD board family, including rotations, installed RAM/CPU and heatsink changes. Exact variants remain unverified.",
+      "Full-size inspection of screenshots 2598, 1445 and 456 did not establish an exact model identifier. Do not assign Z790 UD / AC / AX solely from appearance.",
+      "All original exported images are 640x640; this collection offers no confirmed resolution increase.",
+      "An installed SSD and partially obscured connections require new visible-body labels; source boxes are not exhaustive nine-class annotations."
+    ],
+    "decision": "Do not import in bulk. Potential future training-only views after identity/layout confirmation and full relabeling; do not count filename groups as independent motherboards.",
+    "training_images_added": 0
   }
 }

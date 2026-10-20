@@ -20,6 +20,21 @@
       ],
       "annotation": "ml/holdout_annotations/gigabyte-b660m-ds3h-ax-ddr4-000141.json",
       "evaluation": "ml/EVALUACION-INDEPENDIENTE-V3.json"
+    },
+    {
+      "image": "datasets/connectors-nine-review/images/000003.jpg",
+      "image_sha256": "179fd686069c51dfd5d27fe69dfa6795c8f0e559a500ffdbc44964e2c7c9dc58",
+      "model_id": "Gigabyte Z390 AORUS PRO WIFI",
+      "excluded_model_ids": [
+        "Gigabyte Z390 AORUS PRO WIFI",
+        "Gigabyte Z390 AORUS PRO"
+      ],
+      "status": "reserved_pending_manual_annotation",
+      "identity_evidence": "Model visible on product box and PCB in the reserved source photo. Manufacturer layout review pending.",
+      "notes": [
+        "Do not consult v3/v5 predictions for annotation or use this board for training or validation.",
+        "Conservatively exclude the non-WIFI sibling. No labels completed or evaluation performed."
+      ]
     }
   ]
 }

@@ -28,6 +28,10 @@ def build(output):
         reservation = reserved.get(data['image_sha256'])
         if not reservation or data['model_id']!=reservation['model_id']:
             raise ValueError('Image and model must match an explicit reservation.')
+        if reservation.get('evaluation') or reservation.get('status','').startswith('evaluated'):
+            # A fresh output directory must not make a previously consulted board
+            # appear to be a new independent test.
+            continue
         if dev_models.intersection(n.strip().casefold() for n in reservation['excluded_model_ids']) or data['image_sha256'] in dev_images:
             raise ValueError('Reserved motherboard overlaps development data.')
         image = ROOT/data['image']

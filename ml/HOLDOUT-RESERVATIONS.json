@@ -29,12 +29,14 @@
         "Gigabyte Z390 AORUS PRO WIFI",
         "Gigabyte Z390 AORUS PRO"
       ],
-      "status": "reserved_pending_manual_annotation",
-      "identity_evidence": "Model visible on product box and PCB in the reserved source photo. Manufacturer layout review pending.",
+      "status": "annotations_reviewed_not_evaluated",
+      "identity_evidence": "https://download.gigabyte.com/FileList/Manual/mb_manual_z390-aorus-pro_wifi_1001_190708_e.pdf",
       "notes": [
-        "Do not consult v3/v5 predictions for annotation or use this board for training or validation.",
-        "Conservatively exclude the non-WIFI sibling. No labels completed or evaluation performed."
-      ]
+        "Manual page 5 and official product photograph inspected; 23 visible connector boxes reviewed without model predictions.",
+        "Two covered SSD M.2 connectors are excluded; this image cannot test positive M.2 recall.",
+        "No independent inference yet. All same-model views and non-WIFI sibling remain excluded from development."
+      ],
+      "annotation": "ml/holdout_annotations/gigabyte-z390-aorus-pro-wifi-000003.json"
     }
   ]
 }

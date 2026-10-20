@@ -1,0 +1,6 @@
+{
+  "image": "datasets/connectors-nine-review/images/000145.jpg",
+  "status": "excluded_pending_review",
+  "reason": "Exact motherboard manufacturer/model not readable. Do not infer model from socket/layout alone.",
+  "included_in_training": false
+}

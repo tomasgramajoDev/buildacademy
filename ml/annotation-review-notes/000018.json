@@ -1,0 +1,6 @@
+{
+  "image": "datasets/connectors-nine-review/images/000018.jpg",
+  "status": "excluded_pending_review",
+  "reason": "Additional printed motherboard image on packaging and reflection require a consistent secondary-image annotation policy before inclusion.",
+  "included_in_training": false
+}

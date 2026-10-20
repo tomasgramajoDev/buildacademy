@@ -1,0 +1,6 @@
+{
+  "image": "datasets/connectors-nine-review/images/000069.jpg",
+  "status": "excluded_pending_review",
+  "reason": "Model is identifiable, but image is soft at small headers. Defer until sharper source or defensible visible-boundary review.",
+  "included_in_training": false
+}

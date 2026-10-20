@@ -1,0 +1,6 @@
+{
+  "image": "datasets/connectors-nine-review/images/000194.jpg",
+  "status": "excluded_pending_review",
+  "reason": "AM5 ASUS TUF board; exact B650/X670 and Wi-Fi variant not established from visible text. Exclude until identity is confirmed.",
+  "included_in_training": false
+}

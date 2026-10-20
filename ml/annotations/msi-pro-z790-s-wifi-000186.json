@@ -1,0 +1,186 @@
+{
+  "image": "datasets/connectors-nine-review/images/000186.jpg",
+  "model_id": "MSI PRO Z790-S WIFI",
+  "model_group": "msi-pro-z790-s-wifi",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://download-2.msi.com/archive/mnu_exe/mb/PROZ790-SWIFI.pdf",
+  "width": 640,
+  "height": 640,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      438,
+      124,
+      515,
+      285
+    ],
+    [
+      "DIMM_SLOT",
+      534,
+      43,
+      557,
+      340
+    ],
+    [
+      "DIMM_SLOT",
+      548,
+      41,
+      571,
+      339
+    ],
+    [
+      "DIMM_SLOT",
+      562,
+      39,
+      584,
+      338
+    ],
+    [
+      "DIMM_SLOT",
+      576,
+      37,
+      597,
+      337
+    ],
+    [
+      "PCIe_X16",
+      356,
+      365,
+      494,
+      400
+    ],
+    [
+      "PCIe_X16",
+      350,
+      494,
+      491,
+      524
+    ],
+    [
+      "PCIe_X1",
+      352,
+      454,
+      395,
+      481
+    ],
+    [
+      "PCIe_X1",
+      347,
+      538,
+      386,
+      560
+    ],
+    [
+      "PCIe_X1",
+      344,
+      582,
+      389,
+      609
+    ],
+    [
+      "M2_SLOT",
+      497,
+      298,
+      519,
+      350
+    ],
+    [
+      "ATX_POWER",
+      604,
+      72,
+      627,
+      179
+    ],
+    [
+      "CPU_POWER",
+      376,
+      36,
+      403,
+      63
+    ],
+    [
+      "CPU_POWER",
+      401,
+      34,
+      417,
+      48
+    ],
+    [
+      "SATA_PORT",
+      600,
+      485,
+      622,
+      524
+    ],
+    [
+      "SATA_PORT",
+      599,
+      524,
+      621,
+      563
+    ],
+    [
+      "FAN_HEADER",
+      548,
+      14,
+      574,
+      34
+    ],
+    [
+      "FAN_HEADER",
+      575,
+      9,
+      594,
+      31
+    ],
+    [
+      "FAN_HEADER",
+      595,
+      5,
+      615,
+      26
+    ],
+    [
+      "FAN_HEADER",
+      617,
+      25,
+      635,
+      50
+    ],
+    [
+      "FAN_HEADER",
+      375,
+      617,
+      397,
+      636
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection against manufacturer layout, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+  "license": "CC BY 4.0; BIS497",
+  "image_sha256": "e50c268d5a106c7a3d6288c2ba5a694d06700923c8ade8793384e9abaeb7ea91",
+  "split": "train",
+  "notes": [
+    "Exact model name visible on both PCB and box. Manufacturer overview: printed page 25 / PDF page 27.",
+    "Angled view: axis-aligned individual DIMM boxes include perspective and latches; adjacent boxes can overlap.",
+    "M2_1 connector body visible above main PCIe slot. M2_2 covered by heatsink. Wi-Fi module is installed; no unobscured connector body annotated beneath it.",
+    "Two physical x16 and three x1 slots. Two stacked SATA housings represent four ports.",
+    "CPU_PWR2 partly hidden behind top heatsink; only visible part boxed. SYS_FAN4 obscured by rear I/O assembly, omitted.",
+    "CPU_FAN1, PUMP_FAN1, SYS_FAN1/2/3 checked against manufacturer overview. Not independent human certification.",
+    "Added after v5; training only. No claims of achieved detection quality."
+  ]
+}

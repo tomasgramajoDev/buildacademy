@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "manifest_sha256": "bd1ef1bae148dbea6f1123bfc8349e2d12324d884001a5553620e39a7f87a1cc",
+  "manifest_sha256": "17c7a3141dc142aa8e855581390ccdd78f05adaded717fe5582760f3d11f9db9",
   "classes": [
     "CPU_SOCKET",
     "DIMM_SLOT",
@@ -278,11 +278,23 @@
       "identity_evidence": "https://download.msi.com/archive/mnu_exe/mb/PROZ790-P_PROZ790-PWIFI.pdf"
     },
     {
-      "model_id": "MSI Z370I GAMING PRO CARBON AC",
-      "board_id": "conservative-model-msi-z370i-gaming-pro-carbon-ac",
+      "model_id": "MSI PRO Z790-S WIFI",
+      "board_id": "conservative-model-msi-pro-z790-s-wifi",
       "split": "train",
       "image": "train/images/000022.jpg",
       "label": "train/labels/000022.txt",
+      "image_sha256": "e50c268d5a106c7a3d6288c2ba5a694d06700923c8ade8793384e9abaeb7ea91",
+      "label_sha256": "53d0ba0d1374ad4870c74a4ca45f19f069dd4a46f188cbf239d0a56f960bfaf5",
+      "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",
+      "license": "CC BY 4.0; BIS497",
+      "identity_evidence": "https://download-2.msi.com/archive/mnu_exe/mb/PROZ790-SWIFI.pdf"
+    },
+    {
+      "model_id": "MSI Z370I GAMING PRO CARBON AC",
+      "board_id": "conservative-model-msi-z370i-gaming-pro-carbon-ac",
+      "split": "train",
+      "image": "train/images/000023.jpg",
+      "label": "train/labels/000023.txt",
       "image_sha256": "856aeace93ddc37801727888f93ade76826db4be69e6bb1d21a288659e99f2f6",
       "label_sha256": "fd0283f4c1575bb7bd17e64e67e0f8a95802a76a89616b5bcd8de728e6ab9460",
       "source": "https://universe.roboflow.com/bis497/motherboard-part-locater/dataset/5",

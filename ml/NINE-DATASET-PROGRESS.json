@@ -1,24 +1,24 @@
 {
-  "reviewed_images": 23,
-  "models": 22,
-  "boxes": 462,
+  "reviewed_images": 24,
+  "models": 23,
+  "boxes": 483,
   "splits": {
-    "train": 17,
+    "train": 18,
     "val": 3,
     "test": 3
   },
   "status": "v5_evaluated_generalization_insufficient",
   "coverage": {
     "train": [
-      17,
-      56,
-      36,
-      20,
-      26,
-      66,
-      17,
-      22,
-      91
+      18,
+      60,
+      38,
+      23,
+      27,
+      68,
+      18,
+      24,
+      96
     ],
     "val": [
       3,
@@ -77,11 +77,11 @@
   "first_run_review": "ml/REVISION-NUEVE-CLASES-V1.json",
   "second_run_review": "ml/REVISION-NUEVE-CLASES-V2.json",
   "next_dataset": {
-    "path": "datasets/connectors-nine-prepared-23images-22models/data.yaml",
-    "manifest_sha256": "bd1ef1bae148dbea6f1123bfc8349e2d12324d884001a5553620e39a7f87a1cc",
+    "path": "datasets/connectors-nine-prepared-24images-23models/data.yaml",
+    "manifest_sha256": "17c7a3141dc142aa8e855581390ccdd78f05adaded717fe5582760f3d11f9db9",
     "trained": false,
     "training_started": false,
-    "note": "Added one reviewed Z690-A model with 22 visible boxes after v5. Accumulate diverse reviewed examples before another training run."
+    "note": "Two additional models after v5, Z690-A and Z790-S WIFI. Accumulate more reviewed diversity before another run."
   },
   "previous_training": {
     "name": "nine-reviewed-16models-long-20261019",

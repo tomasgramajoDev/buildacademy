@@ -38,7 +38,8 @@ def execute(args):
     try:
         state('training')
         report = run(SimpleNamespace(data=str(dataset), name=args.name, epochs=args.epochs,
-                                    patience=100, batch=2, size=640, resume=None))
+                                    patience=100, batch=2, size=640, resume=None,
+                                    weights=args.weights))
         state('packaging', training_report=str(report))
         prepare(report.parent, output / 'model', args.name)
         state('evaluating_runtime')
@@ -66,6 +67,7 @@ if __name__ == '__main__':
     parser.add_argument('--manifest', required=True)
     parser.add_argument('--name', required=True)
     parser.add_argument('--output', required=True)
+    parser.add_argument('--weights', default='yolo11n.pt', help='Pretrained Ultralytics initialization.')
     parser.add_argument('--epochs', type=int, default=300)
     parser.add_argument('--compare-job', help='Completed baseline job to compare on identical validation data; no independent-test inference.')
     execute(parser.parse_args())

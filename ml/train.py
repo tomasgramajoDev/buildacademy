@@ -12,7 +12,7 @@ def run(args):
     classes=audit.get('classes');allowed=set(CLASSES+['PCIE_SLOT','POWER_CONNECTOR'])
     if not classes or any(c not in allowed for c in classes): raise ValueError('Clases distintas al contrato de BuildAcademy')
     if classes==CLASSES and audit.get('review_gate')!='passed': raise ValueError('Las nueve clases requieren revisión completa y separación por modelo mediante review_gate.py.')
-    model=YOLO(args.resume or 'yolo11n.pt') # Official Ultralytics pretrained initialization.
+    model=YOLO(args.resume or getattr(args,'weights','yolo11n.pt')) # Official Ultralytics pretrained initialization.
     device=0 if torch.cuda.is_available() else 'cpu'
     torch.set_num_threads(8)
     if args.resume:

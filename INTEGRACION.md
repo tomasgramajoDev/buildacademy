@@ -10,6 +10,8 @@ El proveedor predeterminado es Gemini. `GEMINI_API_KEY` pertenece exclusivamente
 
 ## Reconocimiento de conectores
 
+Actualización de entrega: v6 terminó y no superó a v5 en validación; ver `ml/RESULTADO-V6.md`. V5 continúa como paquete experimental de nueve clases para integración. Los entrenamientos posteriores no cambian automáticamente el modelo entregado.
+
 Código y contrato: `recognition/README.md`. Paquetes disponibles en el repositorio:
 
 | Paquete | Ubicación | Estado |

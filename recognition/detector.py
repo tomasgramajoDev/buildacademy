@@ -60,7 +60,7 @@ class ConnectorDetector:
         manifest = json.loads((root/'manifest.json').read_text(encoding='utf-8'))
         self.classes = manifest.get('classes')
         self.size = manifest.get('inputSize')
-        if not manifest.get('ready') or self.classes not in [TARGET_CLASSES, PILOT_CLASSES] or self.size not in [320, 416, 640]:
+        if not manifest.get('ready') or self.classes not in [TARGET_CLASSES, PILOT_CLASSES] or self.size not in [320, 416, 640, 960, 1280]:
             raise RecognitionError('model_unavailable', 'Modelo no disponible o contrato desconocido.')
         model = (root/'connectors.onnx').read_bytes()
         if hashlib.sha256(model).hexdigest() != manifest.get('sha256'):

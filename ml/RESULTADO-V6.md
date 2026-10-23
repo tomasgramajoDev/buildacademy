@@ -158,3 +158,9 @@ Conclusión: Commons está agotado para placas modernas bien fotografiadas; segu
 - Conectores reales sin etiquetar no sólo bajan el recall: si el modelo los detecta, cuentan como falsos positivos y distorsionan la evaluación en ambos sentidos; además enseñan al modelo a suprimirlos. Pendiente: auditar etiquetas de FAN_HEADER, SATA y DIMM.
 - Evaluar los 5 modelos de los folds sobre una misma placa (Prime Z690-A) sigue siendo UNA placa independiente, no cinco pruebas.
 - v22 en curso; no encadenar variantes similares si no mejora.
+
+## v22: validación cruzada con aumento de datos en caliente fuerte (1280 px, mismos folds que v19)
+
+`ml/VALIDACION-CRUZADA-V22-AUMENTO.json`. flipud 0.5, degrees 10, scale 0.7, mixup 0.15, hsv, translate 0.15, 250 épocas.
+- **P 83.4 %, R 41.4 %** (v19 sin ese aumento: P 83.4 / R 49.4). Recall por fold 33-47 %. Peor que v19: el aumento fuerte no ayuda con este dataset.
+- Cierra la serie de variantes de hiperparámetros/aumento: ninguna supera a v17/v19 (1280 px, aumento por defecto). No encadenar más; el siguiente paso es auditar etiquetas (FAN_HEADER, SATA, DIMM) y conseguir fotos más diversas.

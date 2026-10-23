@@ -1,0 +1,105 @@
+{
+  "image": "datasets/commons-boards/images/c0626.jpg",
+  "model_id": "ASUS P5PL-AM EPU",
+  "model_group": "asus-p5pl-am-epu",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Placa_Base_MicroATX.JPG",
+  "width": 1920,
+  "height": 2560,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      630,
+      490,
+      1150,
+      910
+    ],
+    [
+      "DIMM_SLOT",
+      1415,
+      218,
+      1500,
+      1575
+    ],
+    [
+      "DIMM_SLOT",
+      1550,
+      218,
+      1640,
+      1575
+    ],
+    [
+      "ATX_POWER",
+      1770,
+      718,
+      1860,
+      1190
+    ],
+    [
+      "CPU_POWER",
+      328,
+      277,
+      423,
+      380
+    ],
+    [
+      "PCIe_X16",
+      450,
+      1805,
+      1330,
+      1895
+    ],
+    [
+      "SATA_PORT",
+      1405,
+      2245,
+      1538,
+      2385
+    ],
+    [
+      "SATA_PORT",
+      1550,
+      2245,
+      1680,
+      2385
+    ],
+    [
+      "SATA_PORT",
+      1705,
+      2245,
+      1830,
+      2385
+    ],
+    [
+      "FAN_HEADER",
+      1310,
+      225,
+      1400,
+      277
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Placa_Base_MicroATX.JPG",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/w/index.php?title=User:TorQue_Astur&amp;action=",
+  "image_sha256": "f7301edbbf626854d4150f578179f1105868a0b0d5f4efdf45122e6e0fa73674",
+  "split": "train",
+  "notes": [
+    "PCB reads P5PL-AM EPU (LGA775, DDR2, micro-ATX); photo rotated slightly, dim lighting. Two DDR2 slots, one PCIe x16 (the short white slot above it is PCI/ambiguous and left unlabeled), two legacy PCI excluded, three red SATA ports at the bottom edge, IDE excluded.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

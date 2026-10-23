@@ -1,0 +1,154 @@
+{
+  "image": "datasets/commons-boards/images/c0526.jpg",
+  "model_id": "Gigabyte GA-P35-DS3R",
+  "model_group": "gigabyte-ga-p35-ds3r",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Gigabyte_Mainboard_GA-P35-DS3R_Rev_2.1_17974.JPG",
+  "width": 1920,
+  "height": 1385,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1280,
+      455,
+      1620,
+      830
+    ],
+    [
+      "DIMM_SLOT",
+      896,
+      979,
+      1805,
+      1020
+    ],
+    [
+      "DIMM_SLOT",
+      896,
+      1022,
+      1805,
+      1073
+    ],
+    [
+      "DIMM_SLOT",
+      896,
+      1123,
+      1805,
+      1178
+    ],
+    [
+      "DIMM_SLOT",
+      896,
+      1181,
+      1805,
+      1240
+    ],
+    [
+      "ATX_POWER",
+      1255,
+      1272,
+      1568,
+      1353
+    ],
+    [
+      "CPU_POWER",
+      1737,
+      418,
+      1833,
+      489
+    ],
+    [
+      "PCIe_X16",
+      729,
+      368,
+      781,
+      1010
+    ],
+    [
+      "PCIe_X1",
+      490,
+      368,
+      562,
+      529
+    ],
+    [
+      "PCIe_X1",
+      614,
+      368,
+      676,
+      529
+    ],
+    [
+      "PCIe_X1",
+      840,
+      368,
+      900,
+      529
+    ],
+    [
+      "SATA_PORT",
+      262,
+      1108,
+      396,
+      1220
+    ],
+    [
+      "SATA_PORT",
+      428,
+      1108,
+      552,
+      1220
+    ],
+    [
+      "SATA_PORT",
+      262,
+      1224,
+      384,
+      1336
+    ],
+    [
+      "SATA_PORT",
+      424,
+      1224,
+      552,
+      1336
+    ],
+    [
+      "FAN_HEADER",
+      955,
+      368,
+      1000,
+      398
+    ],
+    [
+      "FAN_HEADER",
+      785,
+      1283,
+      838,
+      1324
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_Mainboard_GA-P35-DS3R_Rev_2.1_17974.JPG",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"https://de.wikipedia.org/wiki/Benutzer:Michael_w\" class=\"extiw\" title=\"",
+  "image_sha256": "7322ac59741ad8032c0a1fe1893eade1a8e10d56f03425ebdef10ad9f5979b68",
+  "split": "train",
+  "notes": [
+    "PCB reads GA-P35-DS3R (LGA775, DDR2). Studio-quality top view on a dark mat. Three legacy PCI slots excluded; one PCIe x16 and three x1; four DDR2 slots in alternating yellow/red; four SATA housings (one purple) in two stacked pairs; IDE and floppy excluded; SYS_FAN1 and PWR_FAN by silkscreen, CPU_FAN not located.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

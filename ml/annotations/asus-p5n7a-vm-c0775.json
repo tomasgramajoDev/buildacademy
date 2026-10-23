@@ -1,0 +1,112 @@
+{
+  "image": "datasets/commons-boards/images/c0775.jpg",
+  "model_id": "ASUS P5N7A-VM",
+  "model_group": "asus-p5n7a-vm",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_P5N7A-VM.JPG",
+  "width": 1920,
+  "height": 1440,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "ATX_POWER",
+      727,
+      1300,
+      1035,
+      1370
+    ],
+    [
+      "CPU_POWER",
+      1568,
+      320,
+      1622,
+      375
+    ],
+    [
+      "PCIe_X16",
+      626,
+      324,
+      673,
+      830
+    ],
+    [
+      "PCIe_X1",
+      732,
+      324,
+      792,
+      460
+    ],
+    [
+      "SATA_PORT",
+      342,
+      1020,
+      419,
+      1104
+    ],
+    [
+      "SATA_PORT",
+      342,
+      1111,
+      419,
+      1195
+    ],
+    [
+      "SATA_PORT",
+      342,
+      1216,
+      419,
+      1293
+    ],
+    [
+      "DIMM_SLOT",
+      664,
+      1022,
+      1555,
+      1068
+    ],
+    [
+      "DIMM_SLOT",
+      664,
+      1073,
+      1555,
+      1116
+    ],
+    [
+      "DIMM_SLOT",
+      664,
+      1142,
+      1555,
+      1187
+    ],
+    [
+      "DIMM_SLOT",
+      664,
+      1194,
+      1555,
+      1238
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_P5N7A-VM.JPG",
+  "license": "CC0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/w/index.php?title=User:Soeb&amp;action=edit&amp",
+  "image_sha256": "b78a60e44a3284a1b4f9a35ee7174977f96d833d1b07a876852a44a34b87608c",
+  "split": "train",
+  "notes": [
+    "PCB reads P5N7A-VM (LGA775, DDR2). Stock cooler covers CPU socket and CPU_FAN header: both unlabeled. Two legacy PCI slots excluded, one PCIe x16 and one x1; three SATA ports at the left edge; ATX 24-pin; 4-pin 12V; IDE and floppy excluded. Also photographed in c0627 from another angle (same model, must stay in train).",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

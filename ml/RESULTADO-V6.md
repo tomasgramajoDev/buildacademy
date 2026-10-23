@@ -122,3 +122,10 @@ Resumen en `ml/VALIDACION-CRUZADA-V17-1280.json` y `ml/VALIDACION-CRUZADA-V18-PE
 - Reponderar la pérdida no aporta.
 - FAN_HEADER se queda en 13-14 % con cualquier variante: es un problema de datos/etiquetas, no de hiperparámetros.
 - Ninguna variante supera ~51 % de recall con ~87 % de precision. 95/95 no se alcanza; nada publicado como detector.
+
+## v19: validación cruzada a 1280 px con 4 placas más (56 modelos / 58 fotos; +ASRock A320M-DVS, ASUS P5N7A-VM, Gigabyte GA-P35-DS3R, ASUS P5PL-AM EPU)
+
+`ml/VALIDACION-CRUZADA-V19-1280.json`. Umbral 0.5, otros folds (la asignación cambia con los datos), 1.068 objetos.
+- P 83.4 %, R 49.4 % (v17 con 52 modelos: P 85.8 %, R 51.0 %). Sin mejora: la diferencia está dentro del ruido entre asignaciones de folds.
+- Recall por clase: CPU_SOCKET 100, PCIe x16 77, ATX 79, CPU_POWER 67, PCIe x1 67, DIMM 48, M.2 45, SATA 33, FAN_HEADER 17.
+- Las 4 placas nuevas son de LGA775/AM4 económicas con pocos conectores de las clases difíciles; añadir cuatro placas más no mueve el techo (~50 % recall con ~85 % precision). 95/95 no alcanzado.

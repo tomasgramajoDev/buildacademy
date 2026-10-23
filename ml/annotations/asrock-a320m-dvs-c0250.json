@@ -1,0 +1,112 @@
+{
+  "image": "datasets/commons-boards/images/c0250.jpg",
+  "model_id": "ASRock A320M-DVS",
+  "model_group": "asrock-a320m-dvs",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:2023_P%C5%82yta_g%C5%82%C3%B3wna_ASRock_A320M-DVS.jpg",
+  "width": 1920,
+  "height": 2091,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      880,
+      625,
+      1290,
+      1005
+    ],
+    [
+      "DIMM_SLOT",
+      1447,
+      265,
+      1502,
+      1340
+    ],
+    [
+      "DIMM_SLOT",
+      1503,
+      265,
+      1568,
+      1340
+    ],
+    [
+      "ATX_POWER",
+      1640,
+      550,
+      1722,
+      950
+    ],
+    [
+      "CPU_POWER",
+      465,
+      275,
+      548,
+      372
+    ],
+    [
+      "PCIe_X16",
+      557,
+      1520,
+      1256,
+      1585
+    ],
+    [
+      "PCIe_X1",
+      552,
+      1360,
+      747,
+      1435
+    ],
+    [
+      "SATA_PORT",
+      1611,
+      1523,
+      1734,
+      1649
+    ],
+    [
+      "SATA_PORT",
+      1611,
+      1652,
+      1734,
+      1766
+    ],
+    [
+      "FAN_HEADER",
+      1315,
+      213,
+      1395,
+      262
+    ],
+    [
+      "FAN_HEADER",
+      500,
+      1292,
+      590,
+      1345
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:2023_P%C5%82yta_g%C5%82%C3%B3wna_ASRock_A320M-DVS.jpg",
+  "license": "CC BY-SA 4.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Jacek_Halicki\" title=\"User:Jacek Hali",
+  "image_sha256": "5290958a04a2c31227163258c303f2ab92a9734de15c02e5ab04ac4a46179f11",
+  "split": "train",
+  "notes": [
+    "PCB reads A320M-DVS (AM4, micro-ATX). Clean product photo on white background. Two DIMM slots only, one PCIe x16 and one x1, one vertical M.2/Wi-Fi strip near BIOS left unlabeled (key unclear), two SATA housings at the right edge; CPU_FAN1 and CHA_FAN1 by silkscreen; 4-pin ATX12V as CPU_POWER.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

@@ -146,3 +146,8 @@ Una sola vez, con los 5 modelos de los folds de la validación cruzada (ninguno 
 ## v21: validación cruzada a 1600 px (mismos folds y datos que v19)
 
 `ml/VALIDACION-CRUZADA-V21-1600.json`. P 84.7 %, R 45.0 % (v19 a 1280: 83.4 / 49.4). Peor en DIMM (38 vs 48), M.2 (27 vs 45), PCIe x16 (66 vs 77); mejor sólo en SATA (41 vs 33). Más resolución deja de ayudar después de 1280 px; el soporte 1600 queda en el código por si se amplía el dataset, pero el techo sigue siendo la cantidad/diversidad de datos.
+
+## Recorrido del árbol de categorías de Commons (2026-10-23)
+
+Se recorrieron 357 categorías (4.223 archivos; 1.726 JPEG de >= 1100 px con licencia abierta tras filtrar). Un filtro con el detector v20 sobre miniaturas dejó 73 candidatas, casi todas placas antiguas, servidores o piezas sueltas. Se descargaron 9 y se revisaron 5 como utilizables (ASRock FM2A75M-DGS, Supermicro X10SLM+-LN4F, ASUS M5A99FX PRO, ASRock 945GCM-S, Gigabyte GA-965P-DS3); no se incorporó ninguna: la anotación de la primera salió desfasada en varias clases y no se guardó para no contaminar el dataset. Las imágenes bajadas quedan en `datasets/commons-boards/images` (ignoradas por Git) con su procedencia en `provenance.json`.
+Conclusión: Commons está agotado para placas modernas bien fotografiadas; seguir anotando placas de ese origen tiene rendimientos nulos (v19: +4 placas, sin mejora).

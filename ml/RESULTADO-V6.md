@@ -136,3 +136,9 @@ Una sola vez, con los 5 modelos de los folds de la validación cruzada (ninguno 
 - **Precision 85.2 %, recall 40.0 %** (46 TP / 8 FP / 69 FN).
 - Por clase (TP/FP/FN agrupados): CPU_SOCKET 5/0/0, M.2 5/0/0, DIMM 16/0/4, PCIe x16 8/3/2, CPU_POWER 7/0/3, ATX 4/0/1, PCIe x1 1/1/9, SATA 0/1/10, FAN_HEADER 0/3/40.
 - Coherente con la validación cruzada (P ~84 / R ~49): no hay holdout favorable. Este holdout queda consumido. 95/95 no alcanzado.
+
+## v20: paquete final experimental (YOLO11s, 1280 px, todas las placas anotadas salvo Prime Z690-A)
+
+58 fotos / 56 modelos, partición por modelo (val/test del manifiesto actual, no independientes de este entrenamiento). Paquete local en `ml/artifacts/nine-reviewed-v20-1280-experimental` (no versionado en Git: pesos de 38 MB, modelo de baja precisión). Comprobaciones HTTP 200/400/415/405 correctas; eso valida la integración, no la precisión.
+- Precisión esperada fuera de muestra: la de la validación cruzada y la de Prime Z690-A (P ~83-85 %, R ~40-49 %), NO las métricas de val/test de este job.
+- `recognition` acepta el manifiesto con `inputSize` 1280. El detector web por defecto no se reemplaza. No usar en producción sin acordar con el PM y el backend.

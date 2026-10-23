@@ -100,3 +100,11 @@ Placas nunca vistas (ASUS ROG STRIX Z390-H, MSI MAG B550 Tomahawk, ASUS M5A99X E
 - 54 TP / 28 FP / 36 FN: **precision 65.9 %, recall 60.0 %**, F1 62.8 %, mAP50 0.55, recall de objetos pequeños 40.4 %.
 - Por clase (TP/FP/FN): DIMM 16/8/4, PCIe x16 12/3/1, PCIe x1 10/3/2, ATX 5/0/0, SATA 5/1/13, CPU_POWER 1/3/4, CPU_SOCKET 3/2/2, M.2 2/1/1, FAN_HEADER 0/7/9.
 - Conclusión honesta: muy lejos de 95/95. Resultado coherente con test y validación; la ordenación de modelos no cambia. Los holdouts quedan consumidos: no usarlos para ajustar. Prime Z690-A (000087) sigue sin evaluar.
+
+## Validación cruzada por placa (YOLO11s, 960 px, 5 folds, 52 modelos / 54 fotos, todas puntuadas fuera de entrenamiento)
+
+`ml/cross_validate.py`; resumen en `ml/VALIDACION-CRUZADA-V16.json`, folds en `ml/VALIDACION-CRUZADA-V16-FOLDS.json`. Ahora los 5 holdouts consumidos se usan como datos de desarrollo; sólo Prime Z690-A queda independiente.
+- Umbral 0.5: **P 86.7 %, R 47.4 %** (1.019 objetos). Recall por fold 34-65 %.
+- Por clase (recall): CPU_SOCKET 96 %, ATX 83 %, PCIe x16 75 %, PCIe x1 73 %, CPU_POWER 66 %, M.2 53 %, SATA 40 %, DIMM 31 %, FAN_HEADER 14 %.
+- Barrido de umbral global (fuera de entrenamiento): 0.10 -> P 67.2 / R 68.2; 0.20 -> P 75.3 / R 63.9; 0.30 -> P 81.1 / R 58.6. Ningún punto se acerca a 95/95; el techo observable ronda F1 0.69.
+- Las clases con peor recall son las de mayor número de cajas pequeñas/adyacentes (FAN_HEADER, DIMM, SATA): con ~50 placas el modelo no aprende bien a separarlas.

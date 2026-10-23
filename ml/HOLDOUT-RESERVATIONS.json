@@ -64,14 +64,16 @@
       "excluded_model_ids": [
         "ASUS PRIME Z690-A"
       ],
-      "status": "reserved_reviewed_not_evaluated",
+      "status": "evaluated_once_post_selection",
       "identity_evidence": "https://dlcdnets.asus.com/pub/ASUS/mb/LGA1700/PRIME_Z690-A/E18708_PRIME_Z690-A_UM_WEB.pdf",
       "annotation": "ml/holdout_annotations/asus-prime-z690-a-000087.json",
       "notes": [
         "PCB model text visible. Manual page 1-2 / PDF page 14 checked.",
         "No v5/v6 predictions consulted for labels; legacy draft proposals not used.",
-        "All same-model photos excluded from development. Not ROG STRIX Z690-A GAMING WIFI D4."
-      ]
+        "All same-model photos excluded from development. Not ROG STRIX Z690-A GAMING WIFI D4.",
+        "Evaluated once with the five fold models of the 1280 px cross-validation configuration (none trained on this board); pooled counts. No threshold tuning."
+      ],
+      "evaluation": "ml/EVALUACION-INDEPENDIENTE-V19-PRIME-Z690-A.json"
     },
     {
       "image": "datasets/commons-boards/holdout/c1126.jpg",

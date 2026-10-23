@@ -129,3 +129,10 @@ Resumen en `ml/VALIDACION-CRUZADA-V17-1280.json` y `ml/VALIDACION-CRUZADA-V18-PE
 - P 83.4 %, R 49.4 % (v17 con 52 modelos: P 85.8 %, R 51.0 %). Sin mejora: la diferencia está dentro del ruido entre asignaciones de folds.
 - Recall por clase: CPU_SOCKET 100, PCIe x16 77, ATX 79, CPU_POWER 67, PCIe x1 67, DIMM 48, M.2 45, SATA 33, FAN_HEADER 17.
 - Las 4 placas nuevas son de LGA775/AM4 económicas con pocos conectores de las clases difíciles; añadir cuatro placas más no mueve el techo (~50 % recall con ~85 % precision). 95/95 no alcanzado.
+
+## Evaluación independiente final: ASUS PRIME Z690-A (000087, 23 cajas), configuración v19 (1280 px)
+
+Una sola vez, con los 5 modelos de los folds de la validación cruzada (ninguno entrenó con esta placa), conteos agrupados (5 x 23 = 115 objetos), umbral 0.5, sin ajustes. `ml/EVALUACION-INDEPENDIENTE-V19-PRIME-Z690-A.json`.
+- **Precision 85.2 %, recall 40.0 %** (46 TP / 8 FP / 69 FN).
+- Por clase (TP/FP/FN agrupados): CPU_SOCKET 5/0/0, M.2 5/0/0, DIMM 16/0/4, PCIe x16 8/3/2, CPU_POWER 7/0/3, ATX 4/0/1, PCIe x1 1/1/9, SATA 0/1/10, FAN_HEADER 0/3/40.
+- Coherente con la validación cruzada (P ~84 / R ~49): no hay holdout favorable. Este holdout queda consumido. 95/95 no alcanzado.

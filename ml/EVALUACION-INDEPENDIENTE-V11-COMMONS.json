@@ -1,0 +1,166 @@
+{
+  "split": "test",
+  "model": "nine-reviewed-36images-35models-v11-960",
+  "operating_threshold": 0.5,
+  "ap_threshold": 0.05,
+  "counts": {
+    "tp": 54,
+    "fp": 28,
+    "fn": 36,
+    "images": 5,
+    "small_objects": 47
+  },
+  "per_class": {
+    "CPU_SOCKET": {
+      "tp": 3,
+      "fp": 2,
+      "fn": 2,
+      "ap50": 0.504950495049505,
+      "ap50_95": 0.42425742574257425
+    },
+    "DIMM_SLOT": {
+      "tp": 16,
+      "fp": 8,
+      "fn": 4,
+      "ap50": 0.6939336790821937,
+      "ap50_95": 0.27500677588767275
+    },
+    "PCIe_X16": {
+      "tp": 12,
+      "fp": 3,
+      "fn": 1,
+      "ap50": 0.8733773377337739,
+      "ap50_95": 0.4484614175703287
+    },
+    "PCIe_X1": {
+      "tp": 10,
+      "fp": 3,
+      "fn": 2,
+      "ap50": 0.7938793879387938,
+      "ap50_95": 0.39021827182718266
+    },
+    "M2_SLOT": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 1,
+      "ap50": 0.4422442244224422,
+      "ap50_95": 0.23300330033003297
+    },
+    "SATA_PORT": {
+      "tp": 5,
+      "fp": 1,
+      "fn": 13,
+      "ap50": 0.4957095709570957,
+      "ap50_95": 0.23468646864686468
+    },
+    "ATX_POWER": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "ap50": 1.0,
+      "ap50_95": 0.4863861386138614
+    },
+    "CPU_POWER": {
+      "tp": 1,
+      "fp": 3,
+      "fn": 4,
+      "ap50": 0.10396039603960396,
+      "ap50_95": 0.051980198019801985
+    },
+    "FAN_HEADER": {
+      "tp": 0,
+      "fp": 7,
+      "fn": 9,
+      "ap50": 0.041404140414041404,
+      "ap50_95": 0.010657065706570658
+    }
+  },
+  "metrics": {
+    "precision": {
+      "value": 0.6585365853658537,
+      "minimum": 0.9,
+      "mvp": 0.95,
+      "mvp_met": false
+    },
+    "recall": {
+      "value": 0.6,
+      "minimum": 0.85,
+      "mvp": 0.95,
+      "mvp_met": false
+    },
+    "f1": {
+      "value": 0.627906976744186,
+      "minimum": 0.87,
+      "mvp": 0.95,
+      "mvp_met": false
+    },
+    "map50": {
+      "value": 0.5499399146263833,
+      "minimum": 0.85,
+      "mvp": 0.95,
+      "mvp_met": false
+    },
+    "map50_95": {
+      "value": 0.2838507847049878,
+      "minimum": 0.65,
+      "mvp": 0.8,
+      "mvp_met": false
+    },
+    "critical_ap50_min": {
+      "value": 0.041404140414041404,
+      "minimum": 0.85,
+      "mvp": 0.95,
+      "mvp_met": false
+    },
+    "critical_precision_min": {
+      "value": 0.0,
+      "minimum": 0.9,
+      "mvp": 0.98,
+      "mvp_met": false
+    },
+    "detection_recall_any_class": {
+      "value": 0.6111111111111112,
+      "minimum": null,
+      "mvp": 0.97,
+      "mvp_met": false
+    },
+    "identification_accuracy": {
+      "value": 0.9818181818181818,
+      "minimum": null,
+      "mvp": 0.98,
+      "mvp_met": true
+    },
+    "critical_confusion_rate": {
+      "value": 0.0,
+      "minimum": null,
+      "mvp": 0.01,
+      "mvp_met": true
+    },
+    "complete_boards": {
+      "value": 0.0,
+      "minimum": null,
+      "mvp": 0.9,
+      "mvp_met": false
+    },
+    "small_recall": {
+      "value": 0.40425531914893614,
+      "minimum": null,
+      "mvp": 0.9,
+      "mvp_met": false
+    }
+  },
+  "provisional_definitions": {
+    "critical_classes": [
+      "CPU_SOCKET",
+      "DIMM_SLOT",
+      "M2_SLOT",
+      "ATX_POWER",
+      "CPU_POWER",
+      "FAN_HEADER"
+    ],
+    "small_object": "GT box area < 0.5% of image",
+    "aggregation": "micro for P/R/F1; macro over classes with ground truth for AP/mAP"
+  },
+  "targets_note": "Tomi's precision/recall >= 95 % override the PM recall proposal (92 %).",
+  "not_covered": "Identification of specific headers (DIMM_A1, CPU_FAN, ...); photo groups by manufacturer/model."
+}

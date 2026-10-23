@@ -93,3 +93,10 @@ Misma val de 4 modelos que v11; test de 5 modelos (medido una sola vez más).
 - Punto 0.5: val P 89.5 / R 31.5; test P 69.6 / R 31.4. Peor que v11 (val 88.5/63.9; test 70.5/53.9).
 - Barrido de umbral sólo con val (0.15-0.5) y aplicado una vez a test: v11 mejor F1 en 0.5 (test P 70.5 / R 53.9); v15 mejor en 0.25 (test P 59.3 / R 52.9). Mayor capacidad no ayuda con ~45 placas; el techo sigue siendo la cantidad/diversidad de datos.
 - El umbral 0.5 de v11 es razonable; no hay umbral que acerque ningún modelo a 95/95 (a 0.15 el recall val no pasa de 70 % y la precision cae a 71 %).
+
+## Evaluación independiente de v11 (5 placas de Commons reservadas, evaluada una sola vez)
+
+Placas nunca vistas (ASUS ROG STRIX Z390-H, MSI MAG B550 Tomahawk, ASUS M5A99X EVO, ASUS B85-PLUS, MSI Z97A GAMING 5), anotadas a mano antes de cualquier inferencia. v11 elegido por validación. Umbral 0.5, sin ajustes.
+- 54 TP / 28 FP / 36 FN: **precision 65.9 %, recall 60.0 %**, F1 62.8 %, mAP50 0.55, recall de objetos pequeños 40.4 %.
+- Por clase (TP/FP/FN): DIMM 16/8/4, PCIe x16 12/3/1, PCIe x1 10/3/2, ATX 5/0/0, SATA 5/1/13, CPU_POWER 1/3/4, CPU_SOCKET 3/2/2, M.2 2/1/1, FAN_HEADER 0/7/9.
+- Conclusión honesta: muy lejos de 95/95. Resultado coherente con test y validación; la ordenación de modelos no cambia. Los holdouts quedan consumidos: no usarlos para ajustar. Prime Z690-A (000087) sigue sin evaluar.

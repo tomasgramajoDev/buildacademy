@@ -1,0 +1,118 @@
+{
+  "image": "datasets/commons-boards/holdout/c0569.jpg",
+  "model_id": "MSI MAG B550 TOMAHAWK",
+  "model_group": "msi-mag-b550-tomahawk",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:MSI_B550_Tomahawk_19354.jpg",
+  "width": 1920,
+  "height": 1625,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1143,
+      746,
+      1402,
+      1049
+    ],
+    [
+      "DIMM_SLOT",
+      845,
+      1195,
+      1700,
+      1232
+    ],
+    [
+      "DIMM_SLOT",
+      845,
+      1245,
+      1700,
+      1282
+    ],
+    [
+      "DIMM_SLOT",
+      845,
+      1292,
+      1700,
+      1328
+    ],
+    [
+      "DIMM_SLOT",
+      845,
+      1340,
+      1700,
+      1378
+    ],
+    [
+      "ATX_POWER",
+      1069,
+      1486,
+      1400,
+      1572
+    ],
+    [
+      "CPU_POWER",
+      1775,
+      345,
+      1845,
+      445
+    ],
+    [
+      "PCIe_X16",
+      355,
+      395,
+      430,
+      935
+    ],
+    [
+      "PCIe_X16",
+      715,
+      395,
+      775,
+      950
+    ],
+    [
+      "PCIe_X1",
+      455,
+      395,
+      510,
+      525
+    ],
+    [
+      "FAN_HEADER",
+      1545,
+      1500,
+      1634,
+      1540
+    ],
+    [
+      "FAN_HEADER",
+      1640,
+      1500,
+      1735,
+      1540
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:MSI_B550_Tomahawk_19354.jpg",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"https://de.wikipedia.org/wiki/Benutzer:Michael_w\" class=\"extiw\" title=\"",
+  "image_sha256": "ca81d913965f313d9972634bf0b305fcf13ce71218e20f572215a0a2d24a5179",
+  "split": "independent_test",
+  "notes": [
+    "Independent post-selection reserve, never training or validation. No candidate predictions consulted; annotated manually before any inference.",
+    "PCB reads MAG B550 TOMAHAWK (AM4). Top view with heatsink shields: both M.2 sockets and all SATA ports are covered and excluded; the second PCIe x16 and a third x1 are hidden under the chipset shield. Only the first two x16-size slots and one x1 are visible. CPU_FAN/PUMP_FAN near the top edge are under the VRM shield and excluded; SYS_FAN1/2 boxed."
+  ]
+}

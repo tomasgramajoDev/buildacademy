@@ -1,0 +1,167 @@
+{
+  "image": "datasets/commons-boards/holdout/c0211.jpg",
+  "model_id": "MSI Z97A GAMING 5",
+  "model_group": "msi-z97a-gaming-5",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:MSI_Z97A_GAMING_5.jpg",
+  "width": 1181,
+  "height": 1399,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      505,
+      293,
+      745,
+      595
+    ],
+    [
+      "DIMM_SLOT",
+      805,
+      140,
+      848,
+      725
+    ],
+    [
+      "DIMM_SLOT",
+      849,
+      140,
+      892,
+      725
+    ],
+    [
+      "DIMM_SLOT",
+      893,
+      140,
+      936,
+      725
+    ],
+    [
+      "DIMM_SLOT",
+      937,
+      140,
+      980,
+      725
+    ],
+    [
+      "ATX_POWER",
+      1025,
+      395,
+      1090,
+      602
+    ],
+    [
+      "CPU_POWER",
+      298,
+      117,
+      366,
+      184
+    ],
+    [
+      "PCIe_X16",
+      280,
+      796,
+      644,
+      834
+    ],
+    [
+      "PCIe_X16",
+      280,
+      1042,
+      644,
+      1088
+    ],
+    [
+      "PCIe_X16",
+      280,
+      1202,
+      644,
+      1247
+    ],
+    [
+      "PCIe_X1",
+      280,
+      712,
+      386,
+      754
+    ],
+    [
+      "PCIe_X1",
+      280,
+      879,
+      386,
+      917
+    ],
+    [
+      "PCIe_X1",
+      280,
+      955,
+      386,
+      997
+    ],
+    [
+      "PCIe_X1",
+      280,
+      1122,
+      386,
+      1164
+    ],
+    [
+      "M2_SLOT",
+      698,
+      684,
+      752,
+      765
+    ],
+    [
+      "SATA_PORT",
+      1017,
+      945,
+      1098,
+      1022
+    ],
+    [
+      "SATA_PORT",
+      1020,
+      1024,
+      1098,
+      1230
+    ],
+    [
+      "FAN_HEADER",
+      1040,
+      885,
+      1095,
+      932
+    ],
+    [
+      "FAN_HEADER",
+      988,
+      1264,
+      1042,
+      1305
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:MSI_Z97A_GAMING_5.jpg",
+  "license": "CC BY-SA 4.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/w/index.php?title=User:Liebevoll&amp;action=edi",
+  "image_sha256": "bb45d58e98675b06e5a1198262ba564b5824283a9a3417f373bc5eee34a340ac",
+  "split": "independent_test",
+  "notes": [
+    "Independent post-selection reserve, never training or validation. No candidate predictions consulted; annotated manually before any inference.",
+    "PCB reads Z97A GAMING 5 (MS-7917, LGA1150). Photo is a smaller (1181 px) phone-style top view with soft focus; boxes are looser than on other boards. Seven physical PCIe slots (three x16-size, four x1), one vertical M.2 socket, two SATA housings at the right edge (one is the SATA Express block), SYSFAN3 and SYSFAN2 boxed; CPUFAN and other headers not located reliably and left unlabeled."
+  ]
+}

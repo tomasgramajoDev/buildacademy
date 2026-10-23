@@ -1,0 +1,153 @@
+{
+  "image": "datasets/commons-boards/holdout/c0056.jpg",
+  "model_id": "ASUS M5A99X EVO",
+  "model_group": "asus-m5a99x-evo",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_M5A99X_EVO-top_PNr%C2%B00375.jpg",
+  "width": 1920,
+  "height": 1633,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      370,
+      535,
+      690,
+      925
+    ],
+    [
+      "DIMM_SLOT",
+      125,
+      210,
+      950,
+      264
+    ],
+    [
+      "DIMM_SLOT",
+      125,
+      266,
+      950,
+      315
+    ],
+    [
+      "DIMM_SLOT",
+      125,
+      326,
+      950,
+      378
+    ],
+    [
+      "DIMM_SLOT",
+      125,
+      388,
+      950,
+      440
+    ],
+    [
+      "ATX_POWER",
+      562,
+      29,
+      894,
+      106
+    ],
+    [
+      "CPU_POWER",
+      29,
+      980,
+      90,
+      1096
+    ],
+    [
+      "PCIe_X16",
+      1118,
+      610,
+      1194,
+      1290
+    ],
+    [
+      "PCIe_X16",
+      1596,
+      790,
+      1694,
+      1338
+    ],
+    [
+      "PCIe_X16",
+      1756,
+      612,
+      1810,
+      1290
+    ],
+    [
+      "PCIe_X1",
+      1240,
+      1125,
+      1300,
+      1285
+    ],
+    [
+      "PCIe_X1",
+      1362,
+      1125,
+      1424,
+      1285
+    ],
+    [
+      "SATA_PORT",
+      1315,
+      34,
+      1403,
+      135
+    ],
+    [
+      "SATA_PORT",
+      1403,
+      34,
+      1502,
+      135
+    ],
+    [
+      "SATA_PORT",
+      1502,
+      34,
+      1600,
+      135
+    ],
+    [
+      "SATA_PORT",
+      1600,
+      34,
+      1694,
+      135
+    ],
+    [
+      "FAN_HEADER",
+      1030,
+      876,
+      1090,
+      950
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_M5A99X_EVO-top_PNr%C2%B00375.jpg",
+  "license": "CC BY-SA 3.0 at; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:D-Kuru\" title=\"User:D-Kuru\">D-Kuru</a",
+  "image_sha256": "3568366c23c096a4f7714f075c1cc60ed8038a2c4007aff9a89219b450465cff",
+  "split": "independent_test",
+  "notes": [
+    "Independent post-selection reserve, never training or validation. No candidate predictions consulted; annotated manually before any inference.",
+    "PCB reads M5A99X EVO (AM3+); photo rotated 90 degrees (DIMMs at top, I/O at bottom). Studio photo. Three PCIe x16-size and two x1 slots, one legacy PCI excluded; four SATA housings at the top edge, the leftmost black one is a different color and may be an additional controller port. CHA_FAN1 boxed; CPU_FAN, CPU_OPT near the left edge too small to box reliably and left unlabeled; EATX12V boxed at left."
+  ]
+}

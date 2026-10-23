@@ -1,0 +1,202 @@
+{
+  "image": "datasets/commons-boards/holdout/c1126.jpg",
+  "model_id": "ASUS ROG STRIX Z390-H GAMING",
+  "model_group": "asus-rog-strix-z390-h-gaming",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Asus_ROG_Strix_Z390-H_motherboard.JPG",
+  "width": 1920,
+  "height": 1280,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1050,
+      560,
+      1395,
+      810
+    ],
+    [
+      "DIMM_SLOT",
+      925,
+      898,
+      1555,
+      926
+    ],
+    [
+      "DIMM_SLOT",
+      925,
+      934,
+      1555,
+      970
+    ],
+    [
+      "DIMM_SLOT",
+      925,
+      978,
+      1555,
+      1018
+    ],
+    [
+      "DIMM_SLOT",
+      925,
+      1022,
+      1555,
+      1062
+    ],
+    [
+      "ATX_POWER",
+      1032,
+      1126,
+      1268,
+      1172
+    ],
+    [
+      "CPU_POWER",
+      1533,
+      312,
+      1574,
+      402
+    ],
+    [
+      "PCIe_X16",
+      308,
+      298,
+      352,
+      748
+    ],
+    [
+      "PCIe_X16",
+      487,
+      298,
+      533,
+      748
+    ],
+    [
+      "PCIe_X16",
+      756,
+      298,
+      806,
+      748
+    ],
+    [
+      "PCIe_X1",
+      403,
+      300,
+      449,
+      418
+    ],
+    [
+      "PCIe_X1",
+      581,
+      300,
+      628,
+      418
+    ],
+    [
+      "PCIe_X1",
+      850,
+      300,
+      893,
+      418
+    ],
+    [
+      "M2_SLOT",
+      360,
+      935,
+      465,
+      970
+    ],
+    [
+      "M2_SLOT",
+      833,
+      765,
+      905,
+      792
+    ],
+    [
+      "SATA_PORT",
+      370,
+      1141,
+      446,
+      1194
+    ],
+    [
+      "SATA_PORT",
+      449,
+      1141,
+      521,
+      1194
+    ],
+    [
+      "SATA_PORT",
+      524,
+      1141,
+      600,
+      1194
+    ],
+    [
+      "SATA_PORT",
+      601,
+      1141,
+      675,
+      1194
+    ],
+    [
+      "SATA_PORT",
+      677,
+      1141,
+      750,
+      1194
+    ],
+    [
+      "SATA_PORT",
+      753,
+      1141,
+      828,
+      1194
+    ],
+    [
+      "FAN_HEADER",
+      905,
+      1075,
+      960,
+      1112
+    ],
+    [
+      "FAN_HEADER",
+      1472,
+      826,
+      1508,
+      882
+    ],
+    [
+      "FAN_HEADER",
+      1512,
+      826,
+      1546,
+      882
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Asus_ROG_Strix_Z390-H_motherboard.JPG",
+  "license": "Public domain; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:MKFI\" title=\"User:MKFI\">MKFI</a>",
+  "image_sha256": "84bf1ac04de19e9fd9b2909363572914690103138d620fc6d1089436302e5d28",
+  "split": "independent_test",
+  "notes": [
+    "Independent post-selection reserve, never training or validation. No candidate predictions consulted; annotated manually before any inference.",
+    "PCB reads ROG STRIX Z390-H GAMING. Clean studio photo, top view. Three PCIe x16-size and three x1 slots, two M.2 sockets (one beside the chipset shield, one under the shield edge), six SATA housings, CPU_FAN/CPU_OPT/CHA_FAN1 by silkscreen. Other fan, RGB and USB headers excluded."
+  ]
+}

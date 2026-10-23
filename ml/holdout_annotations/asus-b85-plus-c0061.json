@@ -1,0 +1,160 @@
+{
+  "image": "datasets/commons-boards/holdout/c0061.jpg",
+  "model_id": "ASUS B85-PLUS",
+  "model_group": "asus-b85-plus",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Asus_B85_Plus_19366.jpg",
+  "width": 1920,
+  "height": 1421,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1125,
+      575,
+      1565,
+      925
+    ],
+    [
+      "DIMM_SLOT",
+      905,
+      997,
+      1865,
+      1040
+    ],
+    [
+      "DIMM_SLOT",
+      905,
+      1052,
+      1865,
+      1096
+    ],
+    [
+      "DIMM_SLOT",
+      905,
+      1113,
+      1865,
+      1162
+    ],
+    [
+      "DIMM_SLOT",
+      905,
+      1172,
+      1865,
+      1224
+    ],
+    [
+      "ATX_POWER",
+      1060,
+      1293,
+      1390,
+      1390
+    ],
+    [
+      "CPU_POWER",
+      1650,
+      345,
+      1752,
+      462
+    ],
+    [
+      "PCIe_X16",
+      712,
+      378,
+      800,
+      1040
+    ],
+    [
+      "PCIe_X16",
+      362,
+      380,
+      430,
+      1000
+    ],
+    [
+      "PCIe_X1",
+      600,
+      378,
+      675,
+      540
+    ],
+    [
+      "PCIe_X1",
+      843,
+      378,
+      910,
+      550
+    ],
+    [
+      "SATA_PORT",
+      815,
+      1315,
+      905,
+      1390
+    ],
+    [
+      "SATA_PORT",
+      910,
+      1315,
+      1045,
+      1390
+    ],
+    [
+      "SATA_PORT",
+      66,
+      1165,
+      130,
+      1272
+    ],
+    [
+      "SATA_PORT",
+      66,
+      1274,
+      130,
+      1378
+    ],
+    [
+      "SATA_PORT",
+      160,
+      1168,
+      224,
+      1275
+    ],
+    [
+      "SATA_PORT",
+      160,
+      1277,
+      224,
+      1382
+    ],
+    [
+      "FAN_HEADER",
+      1395,
+      1318,
+      1460,
+      1375
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Asus_B85_Plus_19366.jpg",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"https://de.wikipedia.org/wiki/Benutzer:Michael_w\" class=\"extiw\" title=\"",
+  "image_sha256": "90cc653b9ad0cec86e77a32ad764f9941992751ff6ba1e60364d8891a160901d",
+  "split": "independent_test",
+  "notes": [
+    "Independent post-selection reserve, never training or validation. No candidate predictions consulted; annotated manually before any inference.",
+    "PCB reads B85-PLUS (LGA1150, ATX). Top view on carpet. Two x16-size slots (one yellow, one black) and two x1; three legacy PCI slots excluded; six SATA ports in four housings (two horizontal at bottom, two stacked pairs at left); CHA_FAN2 boxed, CPU_FAN/CHA_FAN1 not reliably located and left unlabeled; no M.2 socket on this model."
+  ]
+}

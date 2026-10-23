@@ -81,11 +81,14 @@
         "ASUS ROG STRIX Z390-H GAMING",
         "ASUS ROG STRIX Z390-H"
       ],
-      "status": "reserved_not_annotated",
+      "status": "evaluated_once_post_selection",
       "identity_evidence": "https://commons.wikimedia.org/wiki/File:Asus_ROG_Strix_Z390-H_motherboard.JPG",
       "notes": [
-        "Wikimedia Commons, Public domain. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
-      ]
+        "Wikimedia Commons, Public domain. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking.",
+        "Annotated manually before any inference (no model predictions consulted). Evaluated once with v11 after v11 was selected on validation. No threshold tuning on this holdout; all same-model photos stay out of development."
+      ],
+      "annotation": "ml/holdout_annotations/asus-rog-strix-z390-h-gaming-c1126.json",
+      "evaluation": "ml/EVALUACION-INDEPENDIENTE-V11-COMMONS.json"
     },
     {
       "image": "datasets/commons-boards/holdout/c0569.jpg",
@@ -95,11 +98,14 @@
         "MSI MAG B550 TOMAHAWK",
         "MSI B550 TOMAHAWK"
       ],
-      "status": "reserved_not_annotated",
+      "status": "evaluated_once_post_selection",
       "identity_evidence": "https://commons.wikimedia.org/wiki/File:MSI_B550_Tomahawk_19354.jpg",
       "notes": [
-        "Wikimedia Commons, CC BY-SA 3.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
-      ]
+        "Wikimedia Commons, CC BY-SA 3.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking.",
+        "Annotated manually before any inference (no model predictions consulted). Evaluated once with v11 after v11 was selected on validation. No threshold tuning on this holdout; all same-model photos stay out of development."
+      ],
+      "annotation": "ml/holdout_annotations/msi-mag-b550-tomahawk-c0569.json",
+      "evaluation": "ml/EVALUACION-INDEPENDIENTE-V11-COMMONS.json"
     },
     {
       "image": "datasets/commons-boards/holdout/c0056.jpg",
@@ -109,11 +115,14 @@
         "ASUS M5A99X EVO",
         "ASUS M5A99X EVO R2.0"
       ],
-      "status": "reserved_not_annotated",
+      "status": "evaluated_once_post_selection",
       "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_M5A99X_EVO-top_PNr%C2%B00375.jpg",
       "notes": [
-        "Wikimedia Commons, CC BY-SA 3.0 at. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
-      ]
+        "Wikimedia Commons, CC BY-SA 3.0 at. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking.",
+        "Annotated manually before any inference (no model predictions consulted). Evaluated once with v11 after v11 was selected on validation. No threshold tuning on this holdout; all same-model photos stay out of development."
+      ],
+      "annotation": "ml/holdout_annotations/asus-m5a99x-evo-c0056.json",
+      "evaluation": "ml/EVALUACION-INDEPENDIENTE-V11-COMMONS.json"
     },
     {
       "image": "datasets/commons-boards/holdout/c0061.jpg",
@@ -123,11 +132,14 @@
         "ASUS B85-PLUS",
         "ASUS B85 PLUS"
       ],
-      "status": "reserved_not_annotated",
+      "status": "evaluated_once_post_selection",
       "identity_evidence": "https://commons.wikimedia.org/wiki/File:Asus_B85_Plus_19366.jpg",
       "notes": [
-        "Wikimedia Commons, CC BY-SA 3.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
-      ]
+        "Wikimedia Commons, CC BY-SA 3.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking.",
+        "Annotated manually before any inference (no model predictions consulted). Evaluated once with v11 after v11 was selected on validation. No threshold tuning on this holdout; all same-model photos stay out of development."
+      ],
+      "annotation": "ml/holdout_annotations/asus-b85-plus-c0061.json",
+      "evaluation": "ml/EVALUACION-INDEPENDIENTE-V11-COMMONS.json"
     },
     {
       "image": "datasets/commons-boards/holdout/c0211.jpg",
@@ -137,11 +149,14 @@
         "MSI Z97A GAMING 5",
         "MSI Z97A GAMING 5 (MS-7916)"
       ],
-      "status": "reserved_not_annotated",
+      "status": "evaluated_once_post_selection",
       "identity_evidence": "https://commons.wikimedia.org/wiki/File:MSI_Z97A_GAMING_5.jpg",
       "notes": [
-        "Wikimedia Commons, CC BY-SA 4.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
-      ]
+        "Wikimedia Commons, CC BY-SA 4.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking.",
+        "Annotated manually before any inference (no model predictions consulted). Evaluated once with v11 after v11 was selected on validation. No threshold tuning on this holdout; all same-model photos stay out of development."
+      ],
+      "annotation": "ml/holdout_annotations/msi-z97a-gaming-5-c0211.json",
+      "evaluation": "ml/EVALUACION-INDEPENDIENTE-V11-COMMONS.json"
     }
   ]
 }

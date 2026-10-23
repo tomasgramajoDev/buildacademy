@@ -151,3 +151,10 @@ Una sola vez, con los 5 modelos de los folds de la validación cruzada (ninguno 
 
 Se recorrieron 357 categorías (4.223 archivos; 1.726 JPEG de >= 1100 px con licencia abierta tras filtrar). Un filtro con el detector v20 sobre miniaturas dejó 73 candidatas, casi todas placas antiguas, servidores o piezas sueltas. Se descargaron 9 y se revisaron 5 como utilizables (ASRock FM2A75M-DGS, Supermicro X10SLM+-LN4F, ASUS M5A99FX PRO, ASRock 945GCM-S, Gigabyte GA-965P-DS3); no se incorporó ninguna: la anotación de la primera salió desfasada en varias clases y no se guardó para no contaminar el dataset. Las imágenes bajadas quedan en `datasets/commons-boards/images` (ignoradas por Git) con su procedencia en `provenance.json`.
 Conclusión: Commons está agotado para placas modernas bien fotografiadas; seguir anotando placas de ese origen tiene rendimientos nulos (v19: +4 placas, sin mejora).
+
+
+## Nota metodológica (23/10)
+
+- Conectores reales sin etiquetar no sólo bajan el recall: si el modelo los detecta, cuentan como falsos positivos y distorsionan la evaluación en ambos sentidos; además enseñan al modelo a suprimirlos. Pendiente: auditar etiquetas de FAN_HEADER, SATA y DIMM.
+- Evaluar los 5 modelos de los folds sobre una misma placa (Prime Z690-A) sigue siendo UNA placa independiente, no cinco pruebas.
+- v22 en curso; no encadenar variantes similares si no mejora.

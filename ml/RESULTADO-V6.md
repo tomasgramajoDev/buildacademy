@@ -108,3 +108,17 @@ Placas nunca vistas (ASUS ROG STRIX Z390-H, MSI MAG B550 Tomahawk, ASUS M5A99X E
 - Por clase (recall): CPU_SOCKET 96 %, ATX 83 %, PCIe x16 75 %, PCIe x1 73 %, CPU_POWER 66 %, M.2 53 %, SATA 40 %, DIMM 31 %, FAN_HEADER 14 %.
 - Barrido de umbral global (fuera de entrenamiento): 0.10 -> P 67.2 / R 68.2; 0.20 -> P 75.3 / R 63.9; 0.30 -> P 81.1 / R 58.6. Ningún punto se acerca a 95/95; el techo observable ronda F1 0.69.
 - Las clases con peor recall son las de mayor número de cajas pequeñas/adyacentes (FAN_HEADER, DIMM, SATA): con ~50 placas el modelo no aprende bien a separarlas.
+
+## Variantes con validación cruzada (mismos 5 folds, 52 modelos / 54 fotos, umbral 0.5)
+
+| Variante | Precision | Recall | DIMM | SATA | M.2 | FAN_HEADER |
+|---|---:|---:|---:|---:|---:|---:|
+| v16 YOLO11s 960 px (base) | 86.7 | 47.4 | 31 | 40 | 53 | 14 |
+| v17 YOLO11s 1280 px | 85.8 | 51.0 | 53 | 43 | 43 | 13 |
+| v18 960 px, cls 1.5 / box 10 / close_mosaic 30 | 83.6 | 48.2 | 40 | 45 | 51 | 13 |
+
+Resumen en `ml/VALIDACION-CRUZADA-V17-1280.json` y `ml/VALIDACION-CRUZADA-V18-PERDIDA.json`.
+- 1280 px es la mejor opción medida (+3.6 pts de recall, DIMM 31 -> 53 %), con precision casi igual; cuesta ~2x de cómputo y el runtime ya acepta 1280.
+- Reponderar la pérdida no aporta.
+- FAN_HEADER se queda en 13-14 % con cualquier variante: es un problema de datos/etiquetas, no de hiperparámetros.
+- Ninguna variante supera ~51 % de recall con ~87 % de precision. 95/95 no se alcanza; nada publicado como detector.

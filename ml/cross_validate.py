@@ -78,7 +78,7 @@ def run_fold(index, folds, boards, output, args):
     model = YOLO(args.weights)
     model.train(data=str(root / 'data.yaml'), epochs=args.epochs, imgsz=args.size, batch=args.batch,
                 device=0 if torch.cuda.is_available() else 'cpu', workers=0, seed=42, deterministic=True,
-                project=str((output / 'runs').resolve()), name=name, exist_ok=False, patience=args.patience, plots=False)
+                project=str((output / 'runs').resolve()), name=name, exist_ok=False, patience=args.patience, plots=False, **json.loads(args.train_args))
     best = YOLO(str(model.trainer.best))
     onnx = Path(best.export(format='onnx', imgsz=args.size, opset=17, simplify=False, dynamic=False, nms=False))
     package = root / 'model'
@@ -122,6 +122,7 @@ if __name__ == '__main__':
     parser.add_argument('--epochs', type=int, default=200)
     parser.add_argument('--patience', type=int, default=50)
     parser.add_argument('--threshold', type=float, default=.5)
+    parser.add_argument('--train-args', default='{}', help='JSON of extra Ultralytics train arguments, e.g. {"cls":1.5}')
     parser.add_argument('--exclude', nargs='*', default=['Prime Z690-A'])
     args = parser.parse_args()
     output = (ROOT / args.output).resolve()

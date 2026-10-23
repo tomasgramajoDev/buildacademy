@@ -1,0 +1,133 @@
+{
+  "image": "datasets/commons-boards/images/c0195.jpg",
+  "model_id": "MSI 760GM-E51 (FX)",
+  "model_group": "msi-760gm-e51-fx",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:MSI_760GM-E51_(FX)-5362.jpg",
+  "width": 1920,
+  "height": 1927,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1130,
+      720,
+      1650,
+      1335
+    ],
+    [
+      "DIMM_SLOT",
+      708,
+      1330,
+      1850,
+      1390
+    ],
+    [
+      "DIMM_SLOT",
+      708,
+      1392,
+      1850,
+      1445
+    ],
+    [
+      "DIMM_SLOT",
+      708,
+      1445,
+      1850,
+      1508
+    ],
+    [
+      "DIMM_SLOT",
+      708,
+      1510,
+      1850,
+      1572
+    ],
+    [
+      "ATX_POWER",
+      690,
+      1660,
+      1005,
+      1775
+    ],
+    [
+      "CPU_POWER",
+      1728,
+      428,
+      1790,
+      497
+    ],
+    [
+      "PCIe_X16",
+      505,
+      445,
+      575,
+      1100
+    ],
+    [
+      "PCIe_X1",
+      650,
+      440,
+      730,
+      675
+    ],
+    [
+      "SATA_PORT",
+      248,
+      1758,
+      375,
+      1869
+    ],
+    [
+      "SATA_PORT",
+      378,
+      1758,
+      505,
+      1869
+    ],
+    [
+      "SATA_PORT",
+      258,
+      1664,
+      388,
+      1722
+    ],
+    [
+      "FAN_HEADER",
+      1735,
+      1140,
+      1790,
+      1212
+    ],
+    [
+      "FAN_HEADER",
+      173,
+      1758,
+      246,
+      1822
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:MSI_760GM-E51_(FX)-5362.jpg",
+  "license": "CC BY-SA 4.0; Wikimedia Commons, author: <bdi><a href=\"https://www.wikidata.org/wiki/Q108103612\" class=\"extiw\" title=\"d:Q",
+  "image_sha256": "189d765f21aa95a1ddcb24044dee7ea146790c950403c459a89db2d64726370c",
+  "split": "train",
+  "notes": [
+    "PCB reads 760GM-E51 (FX), MS-7596 (AM3+). Studio photo, board rotated 180 degrees (DIMMs at bottom). Installed CPU inside the socket frame: retention frame boxed. Two legacy PCI slots excluded. One PCIe x16 and one x1; SATA1 is a horizontal port, plus two stacked 2-port housings; IDE and floppy excluded.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

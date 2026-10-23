@@ -1,0 +1,182 @@
+{
+  "image": "datasets/commons-boards/images/c0116.jpg",
+  "model_id": "Gigabyte GA-EP45-UD3LR",
+  "model_group": "gigabyte-ga-ep45-ud3lr",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-EP45-UD3LR.jpg",
+  "width": 1920,
+  "height": 1440,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1343,
+      492,
+      1730,
+      829
+    ],
+    [
+      "DIMM_SLOT",
+      800,
+      908,
+      1530,
+      953
+    ],
+    [
+      "DIMM_SLOT",
+      800,
+      955,
+      1530,
+      1000
+    ],
+    [
+      "DIMM_SLOT",
+      800,
+      1068,
+      1530,
+      1113
+    ],
+    [
+      "DIMM_SLOT",
+      800,
+      1118,
+      1530,
+      1163
+    ],
+    [
+      "ATX_POWER",
+      1255,
+      1210,
+      1560,
+      1280
+    ],
+    [
+      "CPU_POWER",
+      1660,
+      382,
+      1736,
+      434
+    ],
+    [
+      "SATA_PORT",
+      345,
+      1054,
+      396,
+      1150
+    ],
+    [
+      "SATA_PORT",
+      402,
+      1054,
+      450,
+      1150
+    ],
+    [
+      "SATA_PORT",
+      455,
+      1054,
+      501,
+      1150
+    ],
+    [
+      "SATA_PORT",
+      342,
+      1152,
+      390,
+      1248
+    ],
+    [
+      "SATA_PORT",
+      393,
+      1152,
+      444,
+      1248
+    ],
+    [
+      "SATA_PORT",
+      450,
+      1152,
+      498,
+      1248
+    ],
+    [
+      "PCIe_X16",
+      682,
+      390,
+      740,
+      920
+    ],
+    [
+      "PCIe_X1",
+      475,
+      390,
+      535,
+      534
+    ],
+    [
+      "PCIe_X1",
+      580,
+      390,
+      637,
+      534
+    ],
+    [
+      "PCIe_X1",
+      793,
+      390,
+      847,
+      534
+    ],
+    [
+      "PCIe_X1",
+      901,
+      390,
+      958,
+      534
+    ],
+    [
+      "FAN_HEADER",
+      1608,
+      1004,
+      1652,
+      1054
+    ],
+    [
+      "FAN_HEADER",
+      1608,
+      1070,
+      1652,
+      1118
+    ],
+    [
+      "FAN_HEADER",
+      800,
+      1218,
+      866,
+      1262
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-EP45-UD3LR.jpg",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Drgulcu\" title=\"User:Drgulcu\">Drgulcu",
+  "image_sha256": "f79b6babce5e29db36c8f675f7eaddb8c9d0aafb2f18219a6309ac881f21a158",
+  "split": "train",
+  "notes": [
+    "PCB reads GA-EP45-UD3LR (LGA775, DDR2). Older board: two PCI slots, IDE, floppy and SPDIF excluded. One PCIe x16 and four x1; six SATA ports in two rows; ATX 24-pin, 4-pin 12V; CPU_FAN, PWR_FAN, SYS_FAN2 by silkscreen.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

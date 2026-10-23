@@ -1,0 +1,140 @@
+{
+  "image": "datasets/commons-boards/images/c0058.jpg",
+  "model_id": "ASUS P5WD2 Premium",
+  "model_group": "asus-p5wd2-premium",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_P5WD2_Premium_mainboard.jpg",
+  "width": 1920,
+  "height": 2351,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      635,
+      376,
+      1095,
+      790
+    ],
+    [
+      "DIMM_SLOT",
+      1385,
+      190,
+      1455,
+      1300
+    ],
+    [
+      "DIMM_SLOT",
+      1455,
+      190,
+      1535,
+      1300
+    ],
+    [
+      "DIMM_SLOT",
+      1560,
+      190,
+      1640,
+      1300
+    ],
+    [
+      "DIMM_SLOT",
+      1640,
+      190,
+      1745,
+      1300
+    ],
+    [
+      "ATX_POWER",
+      1765,
+      918,
+      1850,
+      1300
+    ],
+    [
+      "CPU_POWER",
+      400,
+      158,
+      493,
+      248
+    ],
+    [
+      "PCIe_X16",
+      423,
+      1378,
+      1095,
+      1455
+    ],
+    [
+      "PCIe_X16",
+      420,
+      1818,
+      1083,
+      1905
+    ],
+    [
+      "SATA_PORT",
+      1604,
+      1767,
+      1740,
+      1822
+    ],
+    [
+      "SATA_PORT",
+      1747,
+      1773,
+      1873,
+      1825
+    ],
+    [
+      "SATA_PORT",
+      1614,
+      1688,
+      1734,
+      1757
+    ],
+    [
+      "SATA_PORT",
+      1747,
+      1688,
+      1870,
+      1757
+    ],
+    [
+      "FAN_HEADER",
+      1370,
+      148,
+      1432,
+      215
+    ],
+    [
+      "SATA_PORT",
+      405,
+      872,
+      462,
+      1000
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_P5WD2_Premium_mainboard.jpg",
+  "license": "CC BY-SA 4.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:TheStriker\" title=\"User:TheStriker\">T",
+  "image_sha256": "c399fabc8c57a1ac8f6a9c91c7d3ab03e1cfc4fde3ff9af5afe228979abea480",
+  "split": "train",
+  "notes": [
+    "PCB reads P5WD2 Premium (LGA775, DDR2). Photo taken in a plastic bag. Three legacy PCI slots excluded; short white slot near the CMOS battery is ambiguous (PCI or PCIe x1) and left unlabeled; IDE headers, 4-pin Molex, floppy excluded. One extra single SATA header near the audio area plus four SATA ports at lower right. EATX12V 4-pin counted as CPU_POWER. Fan headers other than CPU_FAN not located reliably.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

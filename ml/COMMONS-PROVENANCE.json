@@ -1,0 +1,255 @@
+{
+ "c0033": {
+  "title": "Gigabyte GA-Z68XP-UD3-5256.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-Z68XP-UD3-5256.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q108103612\" class=\"extiw\" title=\"d:Q",
+  "sha256": "2c153ee83cd87bffa54039258ca5e0008d9e6fc6435cf0cf3e3947e67e7be01f"
+ },
+ "c0170": {
+  "title": "GAZ68AD3HB3rev1320200618000.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:GAZ68AD3HB3rev1320200618000.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:OnionBulb\" title=\"User:OnionBulb\">Oni",
+  "sha256": "66b2582bcf7bab59060e7a8889d2f1f04b62ade07e96a7489c1c3c943a721a55"
+ },
+ "c0039": {
+  "title": "ASRock AB350M Pro4 01.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASRock_AB350M_Pro4_01.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Ilya_p\" title=\"User:Ilya p\">Ilya Plek",
+  "sha256": "d3b113b553fca5c39130e1d785ee70fc1bc8c972a61a70785a93feea44a67d8c"
+ },
+ "c0054": {
+  "title": "ASUS Crosshair IV Formula-top PNr°0301.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_Crosshair_IV_Formula-top_PNr%C2%B00301.jpg",
+  "license": "CC BY-SA 3.0 at",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:D-Kuru\" title=\"User:D-Kuru\">D-Kuru</a",
+  "sha256": "7d03f4b49a2391f0d1546900d24e0a623b38df780061a2439367905bb7fc53c3"
+ },
+ "c0055": {
+  "title": "ASUS F1A75-M PRO-top PNr°0366.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_F1A75-M_PRO-top_PNr%C2%B00366.jpg",
+  "license": "CC BY-SA 3.0 at",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:D-Kuru\" title=\"User:D-Kuru\">D-Kuru</a",
+  "sha256": "7d0811e2960f68492946a4f96bd486bbb71e00ebe3aeb9e748be416e3b8a9424"
+ },
+ "c0806": {
+  "title": "ASUS P7P55D-E EVO, in 2010-08-25.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_P7P55D-E_EVO,_in_2010-08-25.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Mukasora&amp;action=edit",
+  "sha256": "f47bcdbed55eafebc0f71ade7270e79952e3091ed3ffc6eac6849efc6218689d"
+ },
+ "c0828": {
+  "title": "ASUS M5A87 Rev1.00.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_M5A87_Rev1.00.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Solomon203\" title=\"User:Solomon203\">S",
+  "sha256": "0fd90cc0a4c90c33d32b289bf73c4bc512264f3dc907d141182ad5ee337b0ad4"
+ },
+ "c0219": {
+  "title": "Taipei IT Month MSI Z87 MPower Max 20131130.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Taipei_IT_Month_MSI_Z87_MPower_Max_20131130.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Solomon203\" title=\"User:Solomon203\">S",
+  "sha256": "d9d5042c2e910450e62c50be674eeebc3ce6737482c58809e9680cff5a61547d"
+ },
+ "c0107": {
+  "title": "Gigabyte G1.Sniper 5 20130910.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_G1.Sniper_5_20130910.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Solomon203\" title=\"User:Solomon203\">S",
+  "sha256": "07b40b342fefb562d04362a12984048cd1a077864ba0fc31a1700d1762bbcadc"
+ },
+ "c0108": {
+  "title": "Gigabyte G1.Sniper B5 20130910.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_G1.Sniper_B5_20130910.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Solomon203\" title=\"User:Solomon203\">S",
+  "sha256": "9f640e2fe6d01ce0da86459347807125c03c2eba92c3e17d8fe2029171694bd1"
+ },
+ "c0109": {
+  "title": "Gigabyte G1.Sniper M5 20130910.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_G1.Sniper_M5_20130910.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Solomon203\" title=\"User:Solomon203\">S",
+  "sha256": "306df6b9bb52d83cdbf6d2324c8394c7d110ecfb9f8c16ac18778086c9cba52a",
+  "note": "Re-encoded from MPO (2 frames) to a single-frame JPEG, first frame only; pixel content and box coordinates unchanged. Original MPO sha256: bd33855982214929c3faff304183971d8ec9c1f1ac8748f68e45633052c30791"
+ },
+ "c0117": {
+  "title": "Gigabyte GA-H67MA-UD2H-B3 20110417.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-H67MA-UD2H-B3_20110417.jpg",
+  "license": "CC BY 2.0",
+  "artist": "MiNe",
+  "sha256": "02210546881fb44887bb95267a55bf156a3514c6ef651d793df8e89712de012e"
+ },
+ "c0146": {
+  "title": "Gigabyte - GA-B150M-D3H – CeBIT 2016 01.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_-_GA-B150M-D3H_%E2%80%93_CeBIT_2016_01.jpg",
+  "license": "CC BY 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Huhu_Uet\" title=\"User:Huhu Uet\">Frank",
+  "sha256": "eef347f88e1f08d02b0ad85c33f0bed825221cfd8ce9995b5bf17aa231253acd"
+ },
+ "c0147": {
+  "title": "Gigabyte - GA-Z170X-Gaming 7 – CeBIT 2016 01.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_-_GA-Z170X-Gaming_7_%E2%80%93_CeBIT_2016_01.jpg",
+  "license": "CC BY 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Huhu_Uet\" title=\"User:Huhu Uet\">Frank",
+  "sha256": "c2e5571a795d4ead0af144d01436aacbc5177e7b700579c3ea3bd18c6d51076c"
+ },
+ "c1125": {
+  "title": "ASUS Prime X570-P.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_Prime_X570-P.jpg",
+  "license": "CC0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Oligopolism\" class=\"mw-redirect\" titl",
+  "sha256": "0637f90681cd919a9c37c2387ff3657dd5e476de4e6a3d33a3c02cd782596561"
+ },
+ "c0366": {
+  "title": "Mucai H61-XB (Z77) Motherboard.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Mucai_H61-XB_(Z77)_Motherboard.jpg",
+  "license": "CC BY 4.0",
+  "artist": "<div class=\"fn value\">\n<a href=\"//commons.wikimedia.org/wiki/User:The_Harvett_Va",
+  "sha256": "931bdaae2a8dfa59abdcc8ff748a8110c8d0252923b3c11aa8c357e8c2d8eeac"
+ },
+ "c0420": {
+  "title": "Dell Optiplex 9020 Mobo (1).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Dell_Optiplex_9020_Mobo_(1).jpg",
+  "license": "CC0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Oligopolism\" class=\"mw-redirect\" titl",
+  "sha256": "33c92f59896a88c3b901144bbc7469eff30f221a683e4fa6d0ef6f8a8e119c03"
+ },
+ "c1126": {
+  "title": "Asus ROG Strix Z390-H motherboard.JPG",
+  "source": "https://commons.wikimedia.org/wiki/File:Asus_ROG_Strix_Z390-H_motherboard.JPG",
+  "license": "Public domain",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:MKFI\" title=\"User:MKFI\">MKFI</a>",
+  "sha256": "84bf1ac04de19e9fd9b2909363572914690103138d620fc6d1089436302e5d28"
+ },
+ "c0569": {
+  "title": "MSI B550 Tomahawk 19354.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:MSI_B550_Tomahawk_19354.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"https://de.wikipedia.org/wiki/Benutzer:Michael_w\" class=\"extiw\" title=\"",
+  "sha256": "ca81d913965f313d9972634bf0b305fcf13ce71218e20f572215a0a2d24a5179"
+ },
+ "c0056": {
+  "title": "ASUS M5A99X EVO-top PNr°0375.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_M5A99X_EVO-top_PNr%C2%B00375.jpg",
+  "license": "CC BY-SA 3.0 at",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:D-Kuru\" title=\"User:D-Kuru\">D-Kuru</a",
+  "sha256": "3568366c23c096a4f7714f075c1cc60ed8038a2c4007aff9a89219b450465cff"
+ },
+ "c0061": {
+  "title": "Asus B85 Plus 19366.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Asus_B85_Plus_19366.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"https://de.wikipedia.org/wiki/Benutzer:Michael_w\" class=\"extiw\" title=\"",
+  "sha256": "90cc653b9ad0cec86e77a32ad764f9941992751ff6ba1e60364d8891a160901d"
+ },
+ "c0211": {
+  "title": "MSI Z97A GAMING 5.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:MSI_Z97A_GAMING_5.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Liebevoll&amp;action=edi",
+  "sha256": "bb45d58e98675b06e5a1198262ba564b5824283a9a3417f373bc5eee34a340ac"
+ },
+ "c0116": {
+  "title": "Gigabyte GA-EP45-UD3LR.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-EP45-UD3LR.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Drgulcu\" title=\"User:Drgulcu\">Drgulcu",
+  "sha256": "f79b6babce5e29db36c8f675f7eaddb8c9d0aafb2f18219a6309ac881f21a158"
+ },
+ "c0095": {
+  "title": "GIGABYTE P55-UD6 Motherboard Unboxed -5041.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:GIGABYTE_P55-UD6_Motherboard_Unboxed_-5041.jpg",
+  "license": "CC BY 2.0",
+  "artist": "Axel Bührmann",
+  "sha256": "cb393b1a05439ac7d4fcf054043749603f6e81485463dbc38bc86cc12a9b254a"
+ },
+ "c0195": {
+  "title": "MSI 760GM-E51 (FX)-5362.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:MSI_760GM-E51_(FX)-5362.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<bdi><a href=\"https://www.wikidata.org/wiki/Q108103612\" class=\"extiw\" title=\"d:Q",
+  "sha256": "189d765f21aa95a1ddcb24044dee7ea146790c950403c459a89db2d64726370c"
+ },
+ "c0200": {
+  "title": "MSI H67MA-GD65 at Computex Taipei 20100603.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:MSI_H67MA-GD65_at_Computex_Taipei_20100603.jpg",
+  "license": "CC BY 2.0",
+  "artist": "Masaru Kamikura",
+  "sha256": "da6d90437a3f226352ca4d387b7c6fbbd276aaad922b021df232b347d80011bd"
+ },
+ "c0058": {
+  "title": "ASUS P5WD2 Premium mainboard.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_P5WD2_Premium_mainboard.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:TheStriker\" title=\"User:TheStriker\">T",
+  "sha256": "c399fabc8c57a1ac8f6a9c91c7d3ab03e1cfc4fde3ff9af5afe228979abea480"
+ },
+ "c0077": {
+  "title": "Mainboard Asus P5Q-E 18015.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Mainboard_Asus_P5Q-E_18015.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"https://de.wikipedia.org/wiki/Benutzer:Michael_w\" class=\"extiw\" title=\"",
+  "sha256": "64c6155b347eaf539ab7d12748058c774a9673f75b19673eb35ca368a18456ca"
+ },
+ "c0188": {
+  "title": "2007Intel45nmProcessorLaunchInTaiwan MSI X38DiamondCombo.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:2007Intel45nmProcessorLaunchInTaiwan_MSI_X38DiamondCombo.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:BrockF5\" title=\"User:BrockF5\">Rico Sh",
+  "sha256": "61972266fdbb21732e75320363515acdcc30b6d421bde1aad000b7e0b36f9f3e"
+ },
+ "c0189": {
+  "title": "2008Computex MSI P45 Diamond.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:2008Computex_MSI_P45_Diamond.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:BrockF5\" title=\"User:BrockF5\">Rico Sh",
+  "sha256": "458a8997a202d047f7d447ab571758cf7adc2dc03697f3855031dd78911350d1"
+ },
+ "c0066": {
+  "title": "Asus P5N32-E SLI Rev. 1.00G 20080229.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Asus_P5N32-E_SLI_Rev._1.00G_20080229.jpg",
+  "license": "CC BY-SA 3.0",
+  "artist": "<a href=\"https://de.wikipedia.org/wiki/User:MrBurns\" class=\"extiw\" title=\"de:Use",
+  "sha256": "5148b612ea84c3514a17a6b86a791554a94b843c6927e7dd51f2d488232451cb"
+ },
+ "c0074": {
+  "title": "Mainboard ASUS M2N68LA recap IMG 8496.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Mainboard_ASUS_M2N68LA_recap_IMG_8496.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Hans_Haase\" title=\"User:Hans Haase\">H",
+  "sha256": "67f96010ca06f9b75221b5c05db4df9b8b8d2a2774d7deb54b6170f200424031"
+ },
+ "c0078": {
+  "title": "P6T Deluxe V2.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:P6T_Deluxe_V2.jpg",
+  "license": "GFDL",
+  "artist": "<a href=\"https://de.wikipedia.org/wiki/Benutzer:Diamond\" class=\"extiw\" title=\"de",
+  "sha256": "53ccb512781e944ec8c809c3173eaddaa2ae3648ad0987795ccab187f4d4b9fe"
+ },
+ "c0260": {
+  "title": "ASRock K7S8X Rev 3.01.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASRock_K7S8X_Rev_3.01.jpg",
+  "license": "CC BY 3.0",
+  "artist": "<a href=\"//commons.wikimedia.org/wiki/User:Zunter\" title=\"User:Zunter\">Santeri V",
+  "sha256": "81f60b8501287fd343be905a6f52b0f80740f61953068ff5c90c031fd29ff8cd"
+ },
+ "c0266": {
+  "title": "ASRock X58 SuperComputer (3332207975).jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:ASRock_X58_SuperComputer_(3332207975).jpg",
+  "license": "CC BY 2.0",
+  "artist": "<a rel=\"nofollow\" class=\"external text\" href=\"https://www.flickr.com/people/2877",
+  "sha256": "1802fb382a6d9dac2f4c5feb8d4e8b532b984875527ee1459b13e4aea7ddf377"
+ },
+ "c0354": {
+  "title": "Intel S2600CP4.jpg",
+  "source": "https://commons.wikimedia.org/wiki/File:Intel_S2600CP4.jpg",
+  "license": "CC BY-SA 4.0",
+  "artist": "<a rel=\"mw:WikiLink\" href=\"https://commons.wikimedia.org/wiki/User:Phiarc\" title",
+  "sha256": "9768c61fb1dcf2b1b9faa5990c4dbece9852fda8a75546517dee37a6482c7448"
+ }
+}

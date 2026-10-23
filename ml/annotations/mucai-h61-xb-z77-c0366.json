@@ -1,0 +1,91 @@
+{
+  "image": "datasets/commons-boards/images/c0366.jpg",
+  "model_id": "Mucai H61-XB (Z77)",
+  "model_group": "mucai-h61-xb-z77",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Mucai_H61-XB_(Z77)_Motherboard.jpg",
+  "width": 1920,
+  "height": 1564,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      644,
+      270,
+      1000,
+      760
+    ],
+    [
+      "DIMM_SLOT",
+      1130,
+      70,
+      1205,
+      1090
+    ],
+    [
+      "DIMM_SLOT",
+      1205,
+      70,
+      1290,
+      1090
+    ],
+    [
+      "ATX_POWER",
+      1327,
+      173,
+      1404,
+      577
+    ],
+    [
+      "CPU_POWER",
+      269,
+      317,
+      375,
+      394
+    ],
+    [
+      "SATA_PORT",
+      1298,
+      846,
+      1404,
+      946
+    ],
+    [
+      "SATA_PORT",
+      1298,
+      950,
+      1404,
+      1048
+    ],
+    [
+      "PCIe_X16",
+      519,
+      1317,
+      1300,
+      1425
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Mucai_H61-XB_(Z77)_Motherboard.jpg",
+  "license": "CC BY 4.0; Wikimedia Commons, author: <div class=\"fn value\">\n<a href=\"//commons.wikimedia.org/wiki/User:The_Harvett_Va",
+  "image_sha256": "931bdaae2a8dfa59abdcc8ff748a8110c8d0252923b3c11aa8c357e8c2d8eeac",
+  "split": "train",
+  "notes": [
+    "Mini-ITX board from a hobbyist top-down photo; identity from Commons title only (PCB shows H61 chipset marks), weaker evidence than other boards. Installed CPU inside the socket frame: the retention frame is boxed. Two vertical M.2/Wi-Fi sockets near the bottom were too ambiguous to box and are left unlabeled. Fan headers, front-panel and USB headers not located reliably and left unlabeled.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

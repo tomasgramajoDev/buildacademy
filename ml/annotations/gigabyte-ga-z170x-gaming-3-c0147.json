@@ -1,0 +1,161 @@
+{
+  "image": "datasets/commons-boards/images/c0147.jpg",
+  "model_id": "Gigabyte GA-Z170X-Gaming 3",
+  "model_group": "gigabyte-ga-z170x-gaming-3",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Gigabyte_-_GA-Z170X-Gaming_7_%E2%80%93_CeBIT_2016_01.jpg",
+  "width": 1920,
+  "height": 2357,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      824,
+      474,
+      1148,
+      948
+    ],
+    [
+      "DIMM_SLOT",
+      1304,
+      180,
+      1360,
+      1128
+    ],
+    [
+      "DIMM_SLOT",
+      1352,
+      180,
+      1414,
+      1128
+    ],
+    [
+      "DIMM_SLOT",
+      1406,
+      180,
+      1468,
+      1128
+    ],
+    [
+      "DIMM_SLOT",
+      1460,
+      180,
+      1522,
+      1128
+    ],
+    [
+      "ATX_POWER",
+      1596,
+      496,
+      1660,
+      858
+    ],
+    [
+      "M2_SLOT",
+      1036,
+      996,
+      1112,
+      1128
+    ],
+    [
+      "M2_SLOT",
+      1040,
+      1363,
+      1112,
+      1502
+    ],
+    [
+      "PCIe_X16",
+      505,
+      1253,
+      1172,
+      1327
+    ],
+    [
+      "PCIe_X16",
+      505,
+      1613,
+      1160,
+      1697
+    ],
+    [
+      "PCIe_X16",
+      690,
+      1858,
+      1172,
+      1937
+    ],
+    [
+      "PCIe_X1",
+      505,
+      1138,
+      672,
+      1212
+    ],
+    [
+      "PCIe_X1",
+      505,
+      1498,
+      672,
+      1572
+    ],
+    [
+      "PCIe_X1",
+      505,
+      1748,
+      672,
+      1817
+    ],
+    [
+      "CPU_POWER",
+      515,
+      170,
+      630,
+      246
+    ],
+    [
+      "FAN_HEADER",
+      1214,
+      1056,
+      1280,
+      1098
+    ],
+    [
+      "FAN_HEADER",
+      1214,
+      305,
+      1280,
+      360
+    ],
+    [
+      "FAN_HEADER",
+      472,
+      222,
+      512,
+      292
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_-_GA-Z170X-Gaming_7_%E2%80%93_CeBIT_2016_01.jpg",
+  "license": "CC BY 4.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Huhu_Uet\" title=\"User:Huhu Uet\">Frank",
+  "image_sha256": "c2e5571a795d4ead0af144d01436aacbc5177e7b700579c3ea3bd18c6d51076c",
+  "split": "train",
+  "notes": [
+    "PCB silkscreen reads GA-Z170X-Gaming 3 (Commons title says Z170X-Gaming 7; the two Commons titles appear swapped). Different model from Z170X-Gaming 7 but near-identical layout, so both are kept in train. Trade-show unit on a stand: SATA Express housings, SATA3 ports and lower-edge headers excluded or hidden; bottom PCIe slot partly hidden by the stand.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

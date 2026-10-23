@@ -1,0 +1,175 @@
+{
+  "image": "datasets/commons-boards/images/c0033.jpg",
+  "model_id": "Gigabyte GA-Z68XP-UD3",
+  "model_group": "gigabyte-ga-z68xp-ud3",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-Z68XP-UD3-5256.jpg",
+  "width": 1920,
+  "height": 1602,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1108,
+      672,
+      1545,
+      1015
+    ],
+    [
+      "DIMM_SLOT",
+      906,
+      1090,
+      1790,
+      1134
+    ],
+    [
+      "DIMM_SLOT",
+      906,
+      1138,
+      1790,
+      1186
+    ],
+    [
+      "DIMM_SLOT",
+      906,
+      1220,
+      1790,
+      1267
+    ],
+    [
+      "DIMM_SLOT",
+      906,
+      1272,
+      1790,
+      1322
+    ],
+    [
+      "PCIe_X16",
+      387,
+      362,
+      450,
+      957
+    ],
+    [
+      "PCIe_X16",
+      739,
+      362,
+      800,
+      950
+    ],
+    [
+      "PCIe_X1",
+      503,
+      362,
+      570,
+      517
+    ],
+    [
+      "PCIe_X1",
+      620,
+      362,
+      682,
+      517
+    ],
+    [
+      "PCIe_X1",
+      856,
+      362,
+      910,
+      517
+    ],
+    [
+      "SATA_PORT",
+      314,
+      1434,
+      415,
+      1528
+    ],
+    [
+      "SATA_PORT",
+      415,
+      1434,
+      515,
+      1528
+    ],
+    [
+      "SATA_PORT",
+      518,
+      1434,
+      616,
+      1528
+    ],
+    [
+      "SATA_PORT",
+      664,
+      1440,
+      760,
+      1528
+    ],
+    [
+      "ATX_POWER",
+      942,
+      1428,
+      1247,
+      1499
+    ],
+    [
+      "CPU_POWER",
+      1653,
+      322,
+      1750,
+      397
+    ],
+    [
+      "FAN_HEADER",
+      1759,
+      452,
+      1801,
+      512
+    ],
+    [
+      "FAN_HEADER",
+      1766,
+      940,
+      1801,
+      992
+    ],
+    [
+      "FAN_HEADER",
+      1355,
+      1457,
+      1395,
+      1487
+    ],
+    [
+      "FAN_HEADER",
+      205,
+      1452,
+      271,
+      1487
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-Z68XP-UD3-5256.jpg",
+  "license": "CC BY-SA 4.0; Wikimedia Commons, author: <bdi><a href=\"https://www.wikidata.org/wiki/Q108103612\" class=\"extiw\" title=\"d:Q",
+  "image_sha256": "2c153ee83cd87bffa54039258ca5e0008d9e6fc6435cf0cf3e3947e67e7be01f",
+  "split": "train",
+  "notes": [
+    "PCB reads GA-Z68XP-UD3 (rev 1.3). Two PCI slots excluded. Two mSATA connectors excluded (not M.2). Four SATA boxes are stacked right-angle housings.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

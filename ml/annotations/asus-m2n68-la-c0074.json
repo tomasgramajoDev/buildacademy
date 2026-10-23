@@ -1,0 +1,133 @@
+{
+  "image": "datasets/commons-boards/images/c0074.jpg",
+  "model_id": "ASUS M2N68-LA (OEM)",
+  "model_group": "asus-m2n68-la",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Mainboard_ASUS_M2N68LA_recap_IMG_8496.jpg",
+  "width": 1732,
+  "height": 1624,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      695,
+      255,
+      1075,
+      570
+    ],
+    [
+      "ATX_POWER",
+      1590,
+      670,
+      1720,
+      1010
+    ],
+    [
+      "CPU_POWER",
+      460,
+      610,
+      525,
+      685
+    ],
+    [
+      "PCIe_X16",
+      358,
+      1048,
+      970,
+      1110
+    ],
+    [
+      "PCIe_X1",
+      358,
+      1175,
+      545,
+      1225
+    ],
+    [
+      "PCIe_X1",
+      358,
+      1315,
+      545,
+      1370
+    ],
+    [
+      "SATA_PORT",
+      1315,
+      1125,
+      1405,
+      1230
+    ],
+    [
+      "SATA_PORT",
+      1425,
+      1125,
+      1510,
+      1230
+    ],
+    [
+      "SATA_PORT",
+      1320,
+      1240,
+      1405,
+      1350
+    ],
+    [
+      "DIMM_SLOT",
+      1200,
+      60,
+      1250,
+      1060
+    ],
+    [
+      "DIMM_SLOT",
+      1262,
+      60,
+      1325,
+      1060
+    ],
+    [
+      "DIMM_SLOT",
+      1335,
+      60,
+      1393,
+      1060
+    ],
+    [
+      "DIMM_SLOT",
+      1393,
+      60,
+      1450,
+      1060
+    ],
+    [
+      "FAN_HEADER",
+      560,
+      876,
+      620,
+      926
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Mainboard_ASUS_M2N68LA_recap_IMG_8496.jpg",
+  "license": "CC BY-SA 4.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Hans_Haase\" title=\"User:Hans Haase\">H",
+  "image_sha256": "67f96010ca06f9b75221b5c05db4df9b8b8d2a2774d7deb54b6170f200424031",
+  "split": "val",
+  "notes": [
+    "PCB reads M2N68-LA (HP/Compaq OEM, AM2). Studio photo, very different look (gold PCB) from retail boards, which makes it a useful validation board. One PCIe x16 and two x1 slots, one legacy PCI excluded; three SATA ports boxed, the white 7-pin connector next to them was not identified and is left unlabeled; IDE and floppy excluded; CHASSIS_FAN1 boxed.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

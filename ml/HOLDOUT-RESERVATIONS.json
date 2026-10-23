@@ -72,6 +72,76 @@
         "No v5/v6 predictions consulted for labels; legacy draft proposals not used.",
         "All same-model photos excluded from development. Not ROG STRIX Z690-A GAMING WIFI D4."
       ]
+    },
+    {
+      "image": "datasets/commons-boards/holdout/c1126.jpg",
+      "image_sha256": "84bf1ac04de19e9fd9b2909363572914690103138d620fc6d1089436302e5d28",
+      "model_id": "ASUS ROG STRIX Z390-H GAMING",
+      "excluded_model_ids": [
+        "ASUS ROG STRIX Z390-H GAMING",
+        "ASUS ROG STRIX Z390-H"
+      ],
+      "status": "reserved_not_annotated",
+      "identity_evidence": "https://commons.wikimedia.org/wiki/File:Asus_ROG_Strix_Z390-H_motherboard.JPG",
+      "notes": [
+        "Wikimedia Commons, Public domain. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
+      ]
+    },
+    {
+      "image": "datasets/commons-boards/holdout/c0569.jpg",
+      "image_sha256": "ca81d913965f313d9972634bf0b305fcf13ce71218e20f572215a0a2d24a5179",
+      "model_id": "MSI MAG B550 TOMAHAWK",
+      "excluded_model_ids": [
+        "MSI MAG B550 TOMAHAWK",
+        "MSI B550 TOMAHAWK"
+      ],
+      "status": "reserved_not_annotated",
+      "identity_evidence": "https://commons.wikimedia.org/wiki/File:MSI_B550_Tomahawk_19354.jpg",
+      "notes": [
+        "Wikimedia Commons, CC BY-SA 3.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
+      ]
+    },
+    {
+      "image": "datasets/commons-boards/holdout/c0056.jpg",
+      "image_sha256": "3568366c23c096a4f7714f075c1cc60ed8038a2c4007aff9a89219b450465cff",
+      "model_id": "ASUS M5A99X EVO",
+      "excluded_model_ids": [
+        "ASUS M5A99X EVO",
+        "ASUS M5A99X EVO R2.0"
+      ],
+      "status": "reserved_not_annotated",
+      "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_M5A99X_EVO-top_PNr%C2%B00375.jpg",
+      "notes": [
+        "Wikimedia Commons, CC BY-SA 3.0 at. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
+      ]
+    },
+    {
+      "image": "datasets/commons-boards/holdout/c0061.jpg",
+      "image_sha256": "90cc653b9ad0cec86e77a32ad764f9941992751ff6ba1e60364d8891a160901d",
+      "model_id": "ASUS B85-PLUS",
+      "excluded_model_ids": [
+        "ASUS B85-PLUS",
+        "ASUS B85 PLUS"
+      ],
+      "status": "reserved_not_annotated",
+      "identity_evidence": "https://commons.wikimedia.org/wiki/File:Asus_B85_Plus_19366.jpg",
+      "notes": [
+        "Wikimedia Commons, CC BY-SA 3.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
+      ]
+    },
+    {
+      "image": "datasets/commons-boards/holdout/c0211.jpg",
+      "image_sha256": "bb45d58e98675b06e5a1198262ba564b5824283a9a3417f373bc5eee34a340ac",
+      "model_id": "MSI Z97A GAMING 5",
+      "excluded_model_ids": [
+        "MSI Z97A GAMING 5",
+        "MSI Z97A GAMING 5 (MS-7916)"
+      ],
+      "status": "reserved_not_annotated",
+      "identity_evidence": "https://commons.wikimedia.org/wiki/File:MSI_Z97A_GAMING_5.jpg",
+      "notes": [
+        "Wikimedia Commons, CC BY-SA 4.0. Reserved 2026-10-22 before any annotation or inference with candidate models. Never use for training, validation or ranking."
+      ]
     }
   ]
 }

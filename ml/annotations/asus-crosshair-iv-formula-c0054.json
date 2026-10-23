@@ -1,0 +1,154 @@
+{
+  "image": "datasets/commons-boards/images/c0054.jpg",
+  "model_id": "ASUS Crosshair IV Formula",
+  "model_group": "asus-crosshair-iv-formula",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_Crosshair_IV_Formula-top_PNr%C2%B00301.jpg",
+  "width": 1920,
+  "height": 1592,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      211,
+      484,
+      797,
+      979
+    ],
+    [
+      "DIMM_SLOT",
+      83,
+      214,
+      985,
+      276
+    ],
+    [
+      "DIMM_SLOT",
+      83,
+      274,
+      985,
+      331
+    ],
+    [
+      "DIMM_SLOT",
+      83,
+      327,
+      985,
+      381
+    ],
+    [
+      "DIMM_SLOT",
+      83,
+      379,
+      985,
+      439
+    ],
+    [
+      "PCIe_X16",
+      1105,
+      585,
+      1205,
+      1258
+    ],
+    [
+      "PCIe_X16",
+      1243,
+      760,
+      1306,
+      1300
+    ],
+    [
+      "PCIe_X16",
+      1358,
+      585,
+      1455,
+      1257
+    ],
+    [
+      "PCIe_X16",
+      1489,
+      757,
+      1556,
+      1300
+    ],
+    [
+      "PCIe_X16",
+      1604,
+      572,
+      1704,
+      1257
+    ],
+    [
+      "PCIe_X16",
+      1731,
+      572,
+      1827,
+      1257
+    ],
+    [
+      "SATA_PORT",
+      1124,
+      20,
+      1226,
+      136
+    ],
+    [
+      "SATA_PORT",
+      1226,
+      20,
+      1322,
+      136
+    ],
+    [
+      "SATA_PORT",
+      1322,
+      20,
+      1432,
+      136
+    ],
+    [
+      "ATX_POWER",
+      671,
+      55,
+      983,
+      135
+    ],
+    [
+      "FAN_HEADER",
+      74,
+      550,
+      116,
+      600
+    ],
+    [
+      "FAN_HEADER",
+      554,
+      90,
+      621,
+      130
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_Crosshair_IV_Formula-top_PNr%C2%B00301.jpg",
+  "license": "CC BY-SA 3.0 at; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:D-Kuru\" title=\"User:D-Kuru\">D-Kuru</a",
+  "image_sha256": "7d03f4b49a2391f0d1546900d24e0a623b38df780061a2439367905bb7fc53c3",
+  "split": "test",
+  "notes": [
+    "PCB reads CROSSHAIR IV FORMULA; photo rotated 90 degrees (I/O at bottom). Six physical PCIe x16-size slots (two black x8/x1-electrical). Three red SATA housings plus SATA_E1 excluded. EATX12V at lower-left is too small/occluded to box reliably and is left unlabeled; PWR_FAN header not located.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

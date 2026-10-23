@@ -1,0 +1,161 @@
+{
+  "image": "datasets/commons-boards/images/c0828.jpg",
+  "model_id": "ASUS M5A87",
+  "model_group": "asus-m5a87",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_M5A87_Rev1.00.jpg",
+  "width": 1600,
+  "height": 1200,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      962,
+      512,
+      1402,
+      832
+    ],
+    [
+      "DIMM_SLOT",
+      786,
+      896,
+      1520,
+      940
+    ],
+    [
+      "DIMM_SLOT",
+      786,
+      946,
+      1520,
+      992
+    ],
+    [
+      "DIMM_SLOT",
+      786,
+      994,
+      1520,
+      1040
+    ],
+    [
+      "DIMM_SLOT",
+      786,
+      1040,
+      1520,
+      1088
+    ],
+    [
+      "PCIe_X16",
+      532,
+      306,
+      594,
+      840
+    ],
+    [
+      "PCIe_X1",
+      443,
+      302,
+      492,
+      436
+    ],
+    [
+      "PCIe_X1",
+      642,
+      306,
+      706,
+      436
+    ],
+    [
+      "SATA_PORT",
+      202,
+      865,
+      252,
+      943
+    ],
+    [
+      "SATA_PORT",
+      202,
+      949,
+      252,
+      1022
+    ],
+    [
+      "SATA_PORT",
+      202,
+      1027,
+      252,
+      1103
+    ],
+    [
+      "SATA_PORT",
+      274,
+      865,
+      324,
+      943
+    ],
+    [
+      "SATA_PORT",
+      274,
+      949,
+      324,
+      1022
+    ],
+    [
+      "SATA_PORT",
+      274,
+      1027,
+      324,
+      1103
+    ],
+    [
+      "ATX_POWER",
+      592,
+      1065,
+      852,
+      1150
+    ],
+    [
+      "CPU_POWER",
+      1404,
+      388,
+      1449,
+      442
+    ],
+    [
+      "FAN_HEADER",
+      1485,
+      605,
+      1530,
+      640
+    ],
+    [
+      "FAN_HEADER",
+      1485,
+      766,
+      1530,
+      821
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_M5A87_Rev1.00.jpg",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Solomon203\" title=\"User:Solomon203\">S",
+  "image_sha256": "0fd90cc0a4c90c33d32b289bf73c4bc512264f3dc907d141182ad5ee337b0ad4",
+  "split": "train",
+  "notes": [
+    "PCB reads M5A87 (AM3+). Three PCI slots excluded; one PCIe x16 and two x1; six separate right-angle SATA ports; 4-pin 12V CPU power; PWR_FAN and CPU_FAN identified from silkscreen. Left-edge USB headers and unlabeled white header excluded.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

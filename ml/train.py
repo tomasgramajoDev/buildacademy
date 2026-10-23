@@ -28,4 +28,4 @@ def run(args):
     return report_path
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--data',default='datasets/prepared/data.yaml');p.add_argument('--epochs',type=int,default=80);p.add_argument('--patience',type=int,default=20);p.add_argument('--batch',type=int,default=8);p.add_argument('--size',type=int,choices=[320,416,640],default=640);p.add_argument('--name',default='connectors');p.add_argument('--resume',help='Checkpoint last.pt para continuar el entrenamiento interrumpido');run(p.parse_args())
+    p=argparse.ArgumentParser();p.add_argument('--data',default='datasets/prepared/data.yaml');p.add_argument('--epochs',type=int,default=80);p.add_argument('--patience',type=int,default=20);p.add_argument('--batch',type=int,default=8);p.add_argument('--size',type=int,choices=[320,416,640,960,1280],default=640);p.add_argument('--name',default='connectors');p.add_argument('--resume',help='Checkpoint last.pt para continuar el entrenamiento interrumpido');run(p.parse_args())

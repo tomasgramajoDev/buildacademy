@@ -1,0 +1,127 @@
+{
+  "image": "datasets/commons-boards/images/c0109.jpg",
+  "model_id": "Gigabyte G1.Sniper M5",
+  "model_group": "gigabyte-g1-sniper-m5",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Gigabyte_G1.Sniper_M5_20130910.jpg",
+  "width": 1740,
+  "height": 1740,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      740,
+      427,
+      1071,
+      880
+    ],
+    [
+      "DIMM_SLOT",
+      1202,
+      140,
+      1262,
+      1110
+    ],
+    [
+      "DIMM_SLOT",
+      1262,
+      140,
+      1335,
+      1110
+    ],
+    [
+      "DIMM_SLOT",
+      1335,
+      140,
+      1400,
+      1110
+    ],
+    [
+      "DIMM_SLOT",
+      1400,
+      140,
+      1470,
+      1110
+    ],
+    [
+      "ATX_POWER",
+      1585,
+      634,
+      1652,
+      957
+    ],
+    [
+      "CPU_POWER",
+      385,
+      125,
+      495,
+      180
+    ],
+    [
+      "FAN_HEADER",
+      1074,
+      145,
+      1143,
+      200
+    ],
+    [
+      "FAN_HEADER",
+      415,
+      1062,
+      480,
+      1108
+    ],
+    [
+      "PCIe_X16",
+      407,
+      1123,
+      1088,
+      1212
+    ],
+    [
+      "PCIe_X16",
+      407,
+      1385,
+      1088,
+      1477
+    ],
+    [
+      "PCIe_X16",
+      407,
+      1511,
+      1088,
+      1608
+    ],
+    [
+      "PCIe_X1",
+      407,
+      1258,
+      590,
+      1320
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_G1.Sniper_M5_20130910.jpg",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Solomon203\" title=\"User:Solomon203\">S",
+  "image_sha256": "306df6b9bb52d83cdbf6d2324c8394c7d110ecfb9f8c16ac18778086c9cba52a",
+  "split": "test",
+  "notes": [
+    "PCB reads G1.Sniper M5 (LGA1150, micro-ATX). Distinct from G1.Sniper 5 and B5 but same family and look; kept in test so family-level similarity is a known, documented limitation. Three PCIe x16-size slots and one x1 (partly under silkscreen); CPU_FAN boxed, CPU_OPT left unlabeled; SATA ports hidden in dark area and left unlabeled.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split.",
+    "Source file was an MPO with two frames; re-encoded to single-frame JPEG (first frame, quality 97) so the runtime accepts it. Box coordinates unchanged."
+  ]
+}

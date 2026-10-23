@@ -1,0 +1,175 @@
+{
+  "image": "datasets/commons-boards/images/c0806.jpg",
+  "model_id": "ASUS P7P55D-E EVO",
+  "model_group": "asus-p7p55d-e-evo",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_P7P55D-E_EVO,_in_2010-08-25.jpg",
+  "width": 1920,
+  "height": 1440,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1128,
+      588,
+      1548,
+      892
+    ],
+    [
+      "DIMM_SLOT",
+      935,
+      962,
+      1785,
+      1000
+    ],
+    [
+      "DIMM_SLOT",
+      935,
+      1000,
+      1785,
+      1058
+    ],
+    [
+      "DIMM_SLOT",
+      935,
+      1060,
+      1785,
+      1128
+    ],
+    [
+      "DIMM_SLOT",
+      935,
+      1130,
+      1785,
+      1186
+    ],
+    [
+      "ATX_POWER",
+      1050,
+      1272,
+      1376,
+      1356
+    ],
+    [
+      "SATA_PORT",
+      930,
+      1220,
+      1016,
+      1277
+    ],
+    [
+      "SATA_PORT",
+      930,
+      1296,
+      1016,
+      1352
+    ],
+    [
+      "SATA_PORT",
+      284,
+      1304,
+      381,
+      1368
+    ],
+    [
+      "SATA_PORT",
+      386,
+      1304,
+      482,
+      1368
+    ],
+    [
+      "FAN_HEADER",
+      1800,
+      1263,
+      1846,
+      1316
+    ],
+    [
+      "FAN_HEADER",
+      138,
+      1245,
+      178,
+      1296
+    ],
+    [
+      "PCIe_X1",
+      205,
+      331,
+      253,
+      476
+    ],
+    [
+      "PCIe_X16",
+      306,
+      296,
+      364,
+      745
+    ],
+    [
+      "PCIe_X16",
+      536,
+      296,
+      589,
+      745
+    ],
+    [
+      "PCIe_X16",
+      748,
+      325,
+      832,
+      872
+    ],
+    [
+      "PCIe_X1",
+      867,
+      334,
+      917,
+      486
+    ],
+    [
+      "CPU_POWER",
+      1722,
+      556,
+      1790,
+      622
+    ],
+    [
+      "FAN_HEADER",
+      970,
+      472,
+      1036,
+      522
+    ],
+    [
+      "FAN_HEADER",
+      974,
+      538,
+      1032,
+      582
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_P7P55D-E_EVO,_in_2010-08-25.jpg",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/w/index.php?title=User:Mukasora&amp;action=edit",
+  "image_sha256": "f47bcdbed55eafebc0f71ade7270e79952e3091ed3ffc6eac6849efc6218689d",
+  "split": "val",
+  "notes": [
+    "PCB reads P7P55D-E EVO (LGA1156). Two PCI slots excluded; three physical PCIe x16-size slots and two x1; four SATA boxes (two stacked pairs near bottom edge, two blue pairs at lower center); EIDE, USB and white unlabeled header excluded; 8-pin CPU power partly hidden by heatsink but visible.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

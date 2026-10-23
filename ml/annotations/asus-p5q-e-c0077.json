@@ -1,0 +1,161 @@
+{
+  "image": "datasets/commons-boards/images/c0077.jpg",
+  "model_id": "ASUS P5Q-E",
+  "model_group": "asus-p5q-e",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Mainboard_Asus_P5Q-E_18015.jpg",
+  "width": 1920,
+  "height": 1569,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1300,
+      570,
+      1680,
+      920
+    ],
+    [
+      "DIMM_SLOT",
+      700,
+      1120,
+      1550,
+      1175
+    ],
+    [
+      "DIMM_SLOT",
+      700,
+      1180,
+      1550,
+      1235
+    ],
+    [
+      "DIMM_SLOT",
+      700,
+      1255,
+      1550,
+      1310
+    ],
+    [
+      "DIMM_SLOT",
+      700,
+      1315,
+      1550,
+      1370
+    ],
+    [
+      "ATX_POWER",
+      950,
+      1480,
+      1250,
+      1565
+    ],
+    [
+      "CPU_POWER",
+      1678,
+      380,
+      1770,
+      455
+    ],
+    [
+      "PCIe_X16",
+      625,
+      345,
+      712,
+      870
+    ],
+    [
+      "PCIe_X16",
+      138,
+      335,
+      215,
+      900
+    ],
+    [
+      "PCIe_X16",
+      275,
+      335,
+      340,
+      860
+    ],
+    [
+      "PCIe_X1",
+      495,
+      345,
+      550,
+      490
+    ],
+    [
+      "PCIe_X1",
+      858,
+      345,
+      908,
+      490
+    ],
+    [
+      "SATA_PORT",
+      640,
+      1400,
+      725,
+      1530
+    ],
+    [
+      "SATA_PORT",
+      730,
+      1405,
+      780,
+      1510
+    ],
+    [
+      "SATA_PORT",
+      790,
+      1405,
+      840,
+      1510
+    ],
+    [
+      "SATA_PORT",
+      845,
+      1405,
+      895,
+      1510
+    ],
+    [
+      "FAN_HEADER",
+      485,
+      1380,
+      555,
+      1420
+    ],
+    [
+      "FAN_HEADER",
+      1380,
+      1440,
+      1450,
+      1500
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Mainboard_Asus_P5Q-E_18015.jpg",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"https://de.wikipedia.org/wiki/Benutzer:Michael_w\" class=\"extiw\" title=\"",
+  "image_sha256": "64c6155b347eaf539ab7d12748058c774a9673f75b19673eb35ca368a18456ca",
+  "split": "train",
+  "notes": [
+    "PCB reads P5Q-E (LGA775, DDR2). Photo on a carpet-like surface. Two legacy PCI slots excluded; three PCIe x16-size slots (blue main, two black at left) and two x1; first red SATA housing plus three smaller SATA; Hot-air heatpipe cooler leaves CHA_FAN2 header unlabeled; CPU_FAN, PWR_FAN boxed; PRI_EIDE and SATA_E12 excluded.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

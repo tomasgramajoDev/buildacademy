@@ -1,0 +1,133 @@
+{
+  "image": "datasets/commons-boards/images/c0039.jpg",
+  "model_id": "ASRock AB350M Pro4",
+  "model_group": "asrock-ab350m-pro4",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASRock_AB350M_Pro4_01.jpg",
+  "width": 1920,
+  "height": 1440,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      566,
+      489,
+      893,
+      758
+    ],
+    [
+      "DIMM_SLOT",
+      345,
+      250,
+      912,
+      280
+    ],
+    [
+      "DIMM_SLOT",
+      345,
+      294,
+      912,
+      324
+    ],
+    [
+      "DIMM_SLOT",
+      345,
+      338,
+      912,
+      370
+    ],
+    [
+      "DIMM_SLOT",
+      345,
+      383,
+      912,
+      414
+    ],
+    [
+      "ATX_POWER",
+      600,
+      108,
+      898,
+      198
+    ],
+    [
+      "CPU_POWER",
+      209,
+      879,
+      295,
+      1031
+    ],
+    [
+      "SATA_PORT",
+      1256,
+      99,
+      1350,
+      212
+    ],
+    [
+      "SATA_PORT",
+      1356,
+      99,
+      1455,
+      212
+    ],
+    [
+      "M2_SLOT",
+      1484,
+      98,
+      1614,
+      212
+    ],
+    [
+      "M2_SLOT",
+      1156,
+      449,
+      1295,
+      523
+    ],
+    [
+      "PCIe_X1",
+      1220,
+      858,
+      1285,
+      1000
+    ],
+    [
+      "PCIe_X16",
+      1337,
+      480,
+      1430,
+      1008
+    ],
+    [
+      "PCIe_X16",
+      1590,
+      480,
+      1717,
+      1005
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASRock_AB350M_Pro4_01.jpg",
+  "license": "CC BY-SA 4.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Ilya_p\" title=\"User:Ilya p\">Ilya Plek",
+  "image_sha256": "d3b113b553fca5c39130e1d785ee70fc1bc8c972a61a70785a93feea44a67d8c",
+  "split": "train",
+  "notes": [
+    "PCB reads AB350M Pro4 (AM4); photo rotated 90 degrees. Distinct from the ASRock B550M Pro4 in train. Two M.2 sockets (Ultra M.2 and top-right), two x16-size slots and one x1, two SATA housings of two ports each at top edge. Fan, front-panel and USB headers not individually verified and left unlabeled. M.2 SSD mounting strip excluded.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

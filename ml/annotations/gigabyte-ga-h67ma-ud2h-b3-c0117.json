@@ -1,0 +1,161 @@
+{
+  "image": "datasets/commons-boards/images/c0117.jpg",
+  "model_id": "Gigabyte GA-H67MA-UD2H-B3",
+  "model_group": "gigabyte-ga-h67ma-ud2h-b3",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-H67MA-UD2H-B3_20110417.jpg",
+  "width": 1920,
+  "height": 1280,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1000,
+      370,
+      1475,
+      715
+    ],
+    [
+      "DIMM_SLOT",
+      690,
+      771,
+      1750,
+      831
+    ],
+    [
+      "DIMM_SLOT",
+      690,
+      831,
+      1750,
+      891
+    ],
+    [
+      "DIMM_SLOT",
+      690,
+      891,
+      1750,
+      951
+    ],
+    [
+      "DIMM_SLOT",
+      690,
+      951,
+      1750,
+      1011
+    ],
+    [
+      "PCIe_X16",
+      262,
+      92,
+      346,
+      668
+    ],
+    [
+      "PCIe_X16",
+      672,
+      92,
+      748,
+      668
+    ],
+    [
+      "PCIe_X1",
+      419,
+      96,
+      486,
+      265
+    ],
+    [
+      "PCIe_X1",
+      549,
+      96,
+      620,
+      265
+    ],
+    [
+      "SATA_PORT",
+      262,
+      840,
+      308,
+      960
+    ],
+    [
+      "SATA_PORT",
+      324,
+      840,
+      375,
+      934
+    ],
+    [
+      "SATA_PORT",
+      311,
+      941,
+      364,
+      1058
+    ],
+    [
+      "SATA_PORT",
+      383,
+      832,
+      431,
+      941
+    ],
+    [
+      "SATA_PORT",
+      375,
+      941,
+      428,
+      1065
+    ],
+    [
+      "ATX_POWER",
+      767,
+      1120,
+      1152,
+      1238
+    ],
+    [
+      "CPU_POWER",
+      1543,
+      44,
+      1661,
+      93
+    ],
+    [
+      "FAN_HEADER",
+      850,
+      606,
+      888,
+      682
+    ],
+    [
+      "FAN_HEADER",
+      311,
+      1086,
+      350,
+      1157
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_GA-H67MA-UD2H-B3_20110417.jpg",
+  "license": "CC BY 2.0; Wikimedia Commons, author: MiNe",
+  "image_sha256": "02210546881fb44887bb95267a55bf156a3514c6ef651d793df8e89712de012e",
+  "split": "train",
+  "notes": [
+    "PCB reads GA-H67MA-UD2H-B3; photo crops the top and bottom board edges. Two x16-size and two x1 PCIe slots; five visible SATA housings; 8-pin CPU power; CPU_FAN and SYS_FAN identified by silkscreen/location.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

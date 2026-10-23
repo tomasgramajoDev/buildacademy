@@ -1,0 +1,161 @@
+{
+  "image": "datasets/commons-boards/images/c0055.jpg",
+  "model_id": "ASUS F1A75-M PRO",
+  "model_group": "asus-f1a75-m-pro",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_F1A75-M_PRO-top_PNr%C2%B00366.jpg",
+  "width": 1892,
+  "height": 1979,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      290,
+      640,
+      992,
+      1090
+    ],
+    [
+      "DIMM_SLOT",
+      60,
+      240,
+      1143,
+      305
+    ],
+    [
+      "DIMM_SLOT",
+      60,
+      305,
+      1143,
+      375
+    ],
+    [
+      "DIMM_SLOT",
+      60,
+      375,
+      1143,
+      442
+    ],
+    [
+      "DIMM_SLOT",
+      60,
+      442,
+      1143,
+      515
+    ],
+    [
+      "ATX_POWER",
+      706,
+      55,
+      1098,
+      157
+    ],
+    [
+      "SATA_PORT",
+      1410,
+      32,
+      1545,
+      165
+    ],
+    [
+      "SATA_PORT",
+      1535,
+      32,
+      1666,
+      165
+    ],
+    [
+      "SATA_PORT",
+      1664,
+      32,
+      1792,
+      165
+    ],
+    [
+      "FAN_HEADER",
+      1120,
+      64,
+      1193,
+      112
+    ],
+    [
+      "PCIe_X16",
+      1190,
+      740,
+      1292,
+      1552
+    ],
+    [
+      "PCIe_X16",
+      1525,
+      948,
+      1602,
+      1597
+    ],
+    [
+      "PCIe_X16",
+      1650,
+      738,
+      1752,
+      1553
+    ],
+    [
+      "PCIe_X1",
+      1365,
+      1353,
+      1441,
+      1492
+    ],
+    [
+      "FAN_HEADER",
+      92,
+      692,
+      148,
+      770
+    ],
+    [
+      "CPU_POWER",
+      70,
+      1152,
+      157,
+      1329
+    ],
+    [
+      "FAN_HEADER",
+      1047,
+      1590,
+      1128,
+      1648
+    ],
+    [
+      "FAN_HEADER",
+      1130,
+      1590,
+      1193,
+      1648
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_F1A75-M_PRO-top_PNr%C2%B00366.jpg",
+  "license": "CC BY-SA 3.0 at; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:D-Kuru\" title=\"User:D-Kuru\">D-Kuru</a",
+  "image_sha256": "7d0811e2960f68492946a4f96bd486bbb71e00ebe3aeb9e748be416e3b8a9424",
+  "split": "train",
+  "notes": [
+    "PCB reads F1A75-M PRO (FM1); photo rotated 90 degrees. Three physical PCIe x16-size slots and one x1; three stacked SATA housings; EATX12V 8-pin counted as CPU_POWER; four fan headers (CPU, CHA_FAN x2, PWR_FAN) identified by silkscreen/location. USB headers and top-right front-panel pin headers excluded.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

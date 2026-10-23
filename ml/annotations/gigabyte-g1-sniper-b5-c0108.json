@@ -1,0 +1,161 @@
+{
+  "image": "datasets/commons-boards/images/c0108.jpg",
+  "model_id": "Gigabyte G1.Sniper B5",
+  "model_group": "gigabyte-g1-sniper-b5",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:Gigabyte_G1.Sniper_B5_20130910.jpg",
+  "width": 1280,
+  "height": 1707,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      565,
+      395,
+      815,
+      700
+    ],
+    [
+      "DIMM_SLOT",
+      937,
+      154,
+      1000,
+      925
+    ],
+    [
+      "DIMM_SLOT",
+      1000,
+      154,
+      1040,
+      925
+    ],
+    [
+      "DIMM_SLOT",
+      1043,
+      154,
+      1085,
+      925
+    ],
+    [
+      "DIMM_SLOT",
+      1085,
+      154,
+      1128,
+      925
+    ],
+    [
+      "ATX_POWER",
+      1165,
+      504,
+      1198,
+      752
+    ],
+    [
+      "CPU_POWER",
+      332,
+      179,
+      423,
+      247
+    ],
+    [
+      "PCIe_X16",
+      325,
+      1017,
+      812,
+      1060
+    ],
+    [
+      "PCIe_X16",
+      325,
+      1308,
+      855,
+      1350
+    ],
+    [
+      "PCIe_X1",
+      325,
+      1120,
+      445,
+      1162
+    ],
+    [
+      "PCIe_X1",
+      325,
+      1214,
+      445,
+      1265
+    ],
+    [
+      "SATA_PORT",
+      1032,
+      1482,
+      1105,
+      1527
+    ],
+    [
+      "SATA_PORT",
+      1108,
+      1482,
+      1182,
+      1527
+    ],
+    [
+      "SATA_PORT",
+      1032,
+      1530,
+      1105,
+      1572
+    ],
+    [
+      "SATA_PORT",
+      1108,
+      1530,
+      1182,
+      1572
+    ],
+    [
+      "FAN_HEADER",
+      481,
+      793,
+      517,
+      846
+    ],
+    [
+      "FAN_HEADER",
+      479,
+      871,
+      517,
+      924
+    ],
+    [
+      "FAN_HEADER",
+      650,
+      165,
+      775,
+      225
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:Gigabyte_G1.Sniper_B5_20130910.jpg",
+  "license": "CC BY-SA 3.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Solomon203\" title=\"User:Solomon203\">S",
+  "image_sha256": "9f640e2fe6d01ce0da86459347807125c03c2eba92c3e17d8fe2029171694bd1",
+  "split": "val",
+  "notes": [
+    "PCB reads G1.Sniper B5 (LGA1150, ATX). Distinct model from G1.Sniper 5 (train). Two PCIe x16-size slots and two x1, two legacy PCI slots excluded; four SATA ports in two stacked housings; CPU_FAN and SYS_FAN1/2 identified by silkscreen; 4+4 pin CPU power under shroud edge; lower-edge headers and audio excluded.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "image": "datasets/commons-boards/images/c1125.jpg",
+  "model_id": "ASUS PRIME X570-P",
+  "model_group": "asus-prime-x570-p",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:ASUS_Prime_X570-P.jpg",
+  "width": 1920,
+  "height": 1422,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "DIMM_SLOT",
+      284,
+      144,
+      1054,
+      188
+    ],
+    [
+      "DIMM_SLOT",
+      284,
+      192,
+      1054,
+      236
+    ],
+    [
+      "DIMM_SLOT",
+      284,
+      240,
+      1054,
+      284
+    ],
+    [
+      "DIMM_SLOT",
+      284,
+      287,
+      1054,
+      331
+    ],
+    [
+      "PCIe_X16",
+      1085,
+      555,
+      1165,
+      1130
+    ],
+    [
+      "PCIe_X16",
+      1405,
+      555,
+      1487,
+      1130
+    ],
+    [
+      "PCIe_X1",
+      1010,
+      985,
+      1080,
+      1115
+    ],
+    [
+      "PCIe_X1",
+      1520,
+      985,
+      1583,
+      1115
+    ],
+    [
+      "PCIe_X1",
+      1640,
+      985,
+      1703,
+      1115
+    ],
+    [
+      "M2_SLOT",
+      1485,
+      356,
+      1605,
+      402
+    ],
+    [
+      "M2_SLOT",
+      1266,
+      636,
+      1388,
+      688
+    ],
+    [
+      "SATA_PORT",
+      1598,
+      64,
+      1636,
+      150
+    ],
+    [
+      "SATA_PORT",
+      1598,
+      152,
+      1636,
+      238
+    ],
+    [
+      "SATA_PORT",
+      1714,
+      64,
+      1752,
+      150
+    ],
+    [
+      "SATA_PORT",
+      1714,
+      152,
+      1752,
+      238
+    ],
+    [
+      "ATX_POWER",
+      563,
+      72,
+      810,
+      148
+    ],
+    [
+      "CPU_POWER",
+      155,
+      965,
+      215,
+      1122
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:ASUS_Prime_X570-P.jpg",
+  "license": "CC0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:Oligopolism\" class=\"mw-redirect\" titl",
+  "image_sha256": "0637f90681cd919a9c37c2387ff3657dd5e476de4e6a3d33a3c02cd782596561",
+  "split": "test",
+  "notes": [
+    "PCB reads PRIME X570-P. Stock cooler hides the CPU socket (excluded); two RAM modules installed but all four DIMM slots boxed along their full body. Two M.2 sockets, two x16-size and three x1 PCIe slots, four right-angle SATA ports at right edge; SATA ports under the chipset fan shroud, CPU fan header and PWR_FAN partially occluded and left unlabeled. Distinct from ASUS Prime Z690-A holdout.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

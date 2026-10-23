@@ -1,0 +1,168 @@
+{
+  "image": "datasets/commons-boards/images/c0170.jpg",
+  "model_id": "Gigabyte GA-Z68A-D3H-B3",
+  "model_group": "gigabyte-ga-z68a-d3h-b3",
+  "physical_identity": "Unknown; conservatively group every image of this model together.",
+  "identity_evidence": "https://commons.wikimedia.org/wiki/File:GAZ68AD3HB3rev1320200618000.jpg",
+  "width": 1920,
+  "height": 1080,
+  "classes": [
+    "CPU_SOCKET",
+    "DIMM_SLOT",
+    "PCIe_X16",
+    "PCIe_X1",
+    "M2_SLOT",
+    "SATA_PORT",
+    "ATX_POWER",
+    "CPU_POWER",
+    "FAN_HEADER"
+  ],
+  "boxes_xyxy": [
+    [
+      "CPU_SOCKET",
+      1006,
+      433,
+      1322,
+      676
+    ],
+    [
+      "DIMM_SLOT",
+      878,
+      741,
+      1517,
+      778
+    ],
+    [
+      "DIMM_SLOT",
+      878,
+      779,
+      1517,
+      819
+    ],
+    [
+      "DIMM_SLOT",
+      878,
+      838,
+      1517,
+      876
+    ],
+    [
+      "DIMM_SLOT",
+      878,
+      878,
+      1517,
+      919
+    ],
+    [
+      "PCIe_X16",
+      472,
+      262,
+      528,
+      731
+    ],
+    [
+      "PCIe_X16",
+      561,
+      262,
+      608,
+      735
+    ],
+    [
+      "PCIe_X16",
+      734,
+      262,
+      782,
+      732
+    ],
+    [
+      "PCIe_X1",
+      650,
+      262,
+      702,
+      374
+    ],
+    [
+      "PCIe_X1",
+      819,
+      262,
+      862,
+      374
+    ],
+    [
+      "SATA_PORT",
+      349,
+      986,
+      428,
+      1062
+    ],
+    [
+      "SATA_PORT",
+      425,
+      986,
+      506,
+      1062
+    ],
+    [
+      "SATA_PORT",
+      502,
+      984,
+      582,
+      1060
+    ],
+    [
+      "ATX_POWER",
+      925,
+      971,
+      1171,
+      1028
+    ],
+    [
+      "CPU_POWER",
+      1453,
+      254,
+      1516,
+      308
+    ],
+    [
+      "FAN_HEADER",
+      1485,
+      481,
+      1521,
+      525
+    ],
+    [
+      "FAN_HEADER",
+      1350,
+      974,
+      1383,
+      999
+    ],
+    [
+      "FAN_HEADER",
+      243,
+      524,
+      282,
+      556
+    ],
+    [
+      "FAN_HEADER",
+      243,
+      788,
+      282,
+      826
+    ]
+  ],
+  "status": "reviewed",
+  "review_method": "visual inspection on gridded high-resolution crops with overlay verification, not independent human certification",
+  "annotation_policy": "connectors-v1",
+  "unresolved": [],
+  "source": "https://commons.wikimedia.org/wiki/File:GAZ68AD3HB3rev1320200618000.jpg",
+  "license": "CC BY-SA 4.0; Wikimedia Commons, author: <a href=\"//commons.wikimedia.org/wiki/User:OnionBulb\" title=\"User:OnionBulb\">Oni",
+  "image_sha256": "66b2582bcf7bab59060e7a8889d2f1f04b62ade07e96a7489c1c3c943a721a55",
+  "split": "train",
+  "notes": [
+    "PCB reads GA-Z68A-D3H-B3. Two PCI slots excluded. Three PCIe x16-size slots, two x1; 3 stacked SATA housings; 4-pin ATX12V counted as CPU_POWER. Near-sibling layout of GA-Z68XP-UD3, so both kept in train.",
+    "Annotation by visual inspection without model proposals. Legacy PCI, mSATA, USB, RGB and audio headers excluded.",
+    "All later images of this motherboard must retain this split."
+  ]
+}

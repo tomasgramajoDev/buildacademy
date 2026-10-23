@@ -16,7 +16,7 @@ def manifest_for(report, model, version):
         raise ValueError('Contrato de clases desconocido.')
     if classes == NINE and audit.get('review_gate') != 'passed':
         raise ValueError('Falta la revisión de anotaciones y separación por modelo.')
-    if report['input_size'] not in [320,416,640,960,1280] or not report.get('test'):
+    if report['input_size'] not in [320,416,640,960,1280,1600] or not report.get('test'):
         raise ValueError('Falta evaluación o tamaño de entrada válido.')
     limitations = ['Una detección no comprueba compatibilidad, protocolo ni estado físico.']
     if classes == PILOT:

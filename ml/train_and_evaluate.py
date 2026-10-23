@@ -68,7 +68,7 @@ if __name__ == '__main__':
     parser.add_argument('--name', required=True)
     parser.add_argument('--output', required=True)
     parser.add_argument('--weights', default='yolo11n.pt', help='Pretrained Ultralytics initialization.')
-    parser.add_argument('--size', type=int, default=640, choices=[640, 960, 1280])
+    parser.add_argument('--size', type=int, default=640, choices=[640, 960, 1280, 1600])
     parser.add_argument('--batch', type=int, default=2)
     parser.add_argument('--epochs', type=int, default=300)
     parser.add_argument('--compare-job', help='Completed baseline job to compare on identical validation data; no independent-test inference.')

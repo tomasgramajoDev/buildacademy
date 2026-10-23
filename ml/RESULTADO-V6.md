@@ -142,3 +142,7 @@ Una sola vez, con los 5 modelos de los folds de la validación cruzada (ninguno 
 58 fotos / 56 modelos, partición por modelo (val/test del manifiesto actual, no independientes de este entrenamiento). Paquete local en `ml/artifacts/nine-reviewed-v20-1280-experimental` (no versionado en Git: pesos de 38 MB, modelo de baja precisión). Comprobaciones HTTP 200/400/415/405 correctas; eso valida la integración, no la precisión.
 - Precisión esperada fuera de muestra: la de la validación cruzada y la de Prime Z690-A (P ~83-85 %, R ~40-49 %), NO las métricas de val/test de este job.
 - `recognition` acepta el manifiesto con `inputSize` 1280. El detector web por defecto no se reemplaza. No usar en producción sin acordar con el PM y el backend.
+
+## v21: validación cruzada a 1600 px (mismos folds y datos que v19)
+
+`ml/VALIDACION-CRUZADA-V21-1600.json`. P 84.7 %, R 45.0 % (v19 a 1280: 83.4 / 49.4). Peor en DIMM (38 vs 48), M.2 (27 vs 45), PCIe x16 (66 vs 77); mejor sólo en SATA (41 vs 33). Más resolución deja de ayudar después de 1280 px; el soporte 1600 queda en el código por si se amplía el dataset, pero el techo sigue siendo la cantidad/diversidad de datos.
